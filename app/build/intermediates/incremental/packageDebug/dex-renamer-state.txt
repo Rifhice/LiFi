@@ -1,0 +1,7 @@
+#Mon Apr 30 15:54:22 CEST 2018
+base.0=C\:\\Users\\Kevin\\Desktop\\SDK\\DemoAar\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2f4abfc0f35e39c8f0380d2287fb739861cc45a4
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Kevin\\Desktop\\SDK\\DemoAar\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_5984d85aa0b0e042ef251e796bae37495b589268\\classes.dex
+base.1=C\:\\Users\\Kevin\\Desktop\\SDK\\DemoAar\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_5984d85aa0b0e042ef251e796bae37495b589268
+file.0=C\:\\Users\\Kevin\\Desktop\\SDK\\DemoAar\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2f4abfc0f35e39c8f0380d2287fb739861cc45a4\\classes.dex

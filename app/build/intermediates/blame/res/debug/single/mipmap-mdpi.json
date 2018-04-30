@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\Kevin\\Desktop\\SDK\\DemoAar\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Kevin\\Desktop\\SDK\\DemoAar\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    }
+]
