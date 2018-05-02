@@ -1,7 +1,4 @@
-#Mon Apr 30 16:26:54 CEST 2018
-base.0=C\:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_7ebd176582df0187b1a8ff178281e15878e49f1a
-renamed.1=classes2.dex
+#Wed May 02 15:21:43 CEST 2018
+base.0=C\:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.1=C\:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_43fbe71f5091d13dfd6dfa87f7898683d36eaa96\\classes.dex
-base.1=C\:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_43fbe71f5091d13dfd6dfa87f7898683d36eaa96
-file.0=C\:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_7ebd176582df0187b1a8ff178281e15878e49f1a\\classes.dex
+file.0=C\:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

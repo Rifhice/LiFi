@@ -2,103 +2,103 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.0.0_3bf695ac1bbe00fc79343963f7e90ee8e199ea4e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_afd0087bd3c12a78da7b58f111cce824e13cc289\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="071dd368d3825016239a21eade6834fdfe7b079f">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_7ebd176582df0187b1a8ff178281e15878e49f1a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.0.0_fe4deb88b579dc46f6e1aee01c918448dde97867\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0_6762c590dbde9e624ba58b084f10b23175a01d2a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
         sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\eventbus-3.0.0_f69a4ddf6808a20cbbfd1f61578f1d93c340c489\classes.dex" />
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\eventbus-3.0.0_f69a4ddf6808a20cbbfd1f61578f1d93c340c489.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0_945ab7736eacb47dd1fb61e523b07d1dcdfd98d5\classes.dex" />
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\gson-2.7_afd0087bd3c12a78da7b58f111cce824e13cc289.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        is-multidex="false"
+        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_5738e5dd771bbaaf05450aa962ff62ae17ac69b3\classes.dex" />
+        sha1="8d2c9973ff1cfbd22f18443892b5a470abe84a1d">
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_7ebd176582df0187b1a8ff178281e15878e49f1a.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\Kevin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
         sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0_e267467cbbf6631528ada83837de65759a1c414b\classes.dex" />
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\support-annotations-24.0.0_e267467cbbf6631528ada83837de65759a1c414b.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\androidlifisdk-release\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
         sha1="1aab4c9ea07c536ef9deb521a8162bf4e42981f6">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\intermediates-exploded-aar-androidlifisdk-release_698302c9e1de655596925e3385fe2435f72c2dcb\classes.dex" />
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-androidlifisdk-release_698302c9e1de655596925e3385fe2435f72c2dcb.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="c1b8c3c53046f24b5a0aab911db4308f72beae9d">
-        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_43fbe71f5091d13dfd6dfa87f7898683d36eaa96\classes.dex" />
+        sha1="5a9bee4fdc23bd3f649f9317dd389825d6c3784a">
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\instant-run_43fbe71f5091d13dfd6dfa87f7898683d36eaa96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.0.0_fe4deb88b579dc46f6e1aee01c918448dde97867.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.0.0_6762c590dbde9e624ba58b084f10b23175a01d2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0_945ab7736eacb47dd1fb61e523b07d1dcdfd98d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0_5738e5dd771bbaaf05450aa962ff62ae17ac69b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.0.0_3bf695ac1bbe00fc79343963f7e90ee8e199ea4e.jar" />
     </item>
 
 </items>

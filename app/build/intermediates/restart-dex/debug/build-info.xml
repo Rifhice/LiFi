@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="27"
-    density="hdpi"
+    abi="armeabi-v7a,armeabi"
+    api-level="19"
+    density="mdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="1315553795068920"
+    timestamp="1484476373545334"
     token="6274493919886061667"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="779" />
+        duration="456" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="253" />
+        duration="1767" />
     <task
         name="verifier"
-        duration="94" />
+        duration="190" />
 
     <artifact
         location="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="1315553795068920"
+        timestamp="1484476373545334"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\outputs\apk\app-debug.apk"
