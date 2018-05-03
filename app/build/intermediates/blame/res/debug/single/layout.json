@@ -56,6 +56,10 @@
         "source": "C:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_screen_content_include.xml"
     },
     {
+        "merged": "C:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_layout.xml",
+        "source": "C:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\src\\main\\res\\layout\\login_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "C:\\Users\\Kevin\\Desktop\\SDK\\LiFi\\app\\src\\main\\res\\layout\\activity_main.xml"
     },

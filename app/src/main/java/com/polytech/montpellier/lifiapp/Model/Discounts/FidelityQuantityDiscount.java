@@ -13,5 +13,5 @@ public class FidelityQuantityDiscount extends QuantityDiscount {
     public FidelityQuantityDiscount(Product product, Date dateDebut, Date dateFin, Date dateCreation, int bought, int free) {
         super(product, dateDebut, dateFin, dateCreation, bought, free);
     }
-    
+
 }

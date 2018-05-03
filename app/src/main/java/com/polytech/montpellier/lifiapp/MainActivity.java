@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.oledcomm.soft.androidlifisdk.ILiFiPosition;
@@ -22,10 +23,18 @@ import com.oledcomm.soft.lifiapp.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView testText;
     LiFiSdkManager mLiFiSdkManager;
+    ImageView logo;
+    private long time;
+    private int nbClick = 0;
+    private int milliReset = 2000;
+    private int nbClickOk = 7;
+
 
     final static int PERMISSION_REQUEST_AUDIO = 1;
 
@@ -35,12 +44,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         testText = (TextView)findViewById(R.id.testText);
-        Button button = (Button)findViewById(R.id.button);
-        button.setOnTouchListener(new View.OnTouchListener() {
+        logo = (ImageView) findViewById(R.id.imageView_logo_main);
+        logo.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                testText.append("click !");
-                return true;
+            public void onClick(View view) {
+                if(nbClick == 0){
+                    nbClick=+1;
+                    time = Calendar.getInstance().getTimeInMillis();
+                }
+                else{
+                    long rightNow = Calendar.getInstance().getTimeInMillis();
+                    if(rightNow - time >= milliReset){
+                        nbClick = 0;
+                    }
+                    else{
+                        nbClick++;
+                    }
+                }
+                if(nbClick == nbClickOk){
+                    setContentView(R.layout.login_layout);
+                }
             }
         });
 

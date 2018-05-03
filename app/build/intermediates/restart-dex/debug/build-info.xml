@@ -5,29 +5,29 @@
     density="mdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="1484476373545334"
+    timestamp="1559236942115183"
     token="6274493919886061667"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="456" />
+        duration="825" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1767" />
+        duration="895" />
     <task
         name="verifier"
-        duration="190" />
+        duration="244" />
 
     <artifact
         location="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="1484476373545334"
+        timestamp="1559236942115183"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Kevin\Desktop\SDK\LiFi\app\build\outputs\apk\app-debug.apk"
