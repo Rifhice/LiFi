@@ -28,14 +28,12 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
 
     TextView testText;
-    LiFiSdkManager mLiFiSdkManager;
     ImageView logo;
     private long time;
     private int nbClick = 0;
     private int milliReset = 2000;
     private int nbClickOk = 7;
-
-
+    private LampListener listener;
     final static int PERMISSION_REQUEST_AUDIO = 1;
 
     @Override
@@ -62,16 +60,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 if(nbClick == nbClickOk){
-                    setContentView(R.layout.login_layout);
+                    Intent intent = new Intent(MainActivity.this, Login.class);
+                    startActivity(intent);
                 }
             }
         });
-
-
-        //TODO: initialize all & register LiFi callback
-
-//        mLiFiSdkManager.start();
-//        mLiFiSdkManager.init(this,"");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
@@ -91,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDismiss(DialogInterface dialog) {
                         requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, PERMISSION_REQUEST_AUDIO);
-
                     }
 
 
@@ -100,78 +92,30 @@ public class MainActivity extends AppCompatActivity {
                 builder.show();
 
             }else{
-                initLiFiManager();
-
+                listener = new LampListener(this,getApplicationContext());
             }
 
         }else{
-            initLiFiManager();
-
+            listener = new LampListener(this,getApplicationContext());
         }
-
-
-        //TODO: call an api - GetBuildingInfo & api callback
-        JSONObject sendJson = new JSONObject();
-
-//     GetBuildingInfoApi sna = new GetBuildingInfoApi(sendJson);
-
-//        GetFloorInfoApi gfi = new GetFloorInfoApi(sendJson);
-//        try {
-//            sendJson.put("id", "1");
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-//        GetSubzoneInfoApi gsia = new GetSubzoneInfoApi(sendJson);
-//        try {
-//            sendJson.put("id", "1");
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-
-//        mLiFiSdkManager.register(sna,new IApiListener(){
-//            @Override
-//            public void onApiResult(JSONObject jsonObject){
-//                testText.append("\nonApiResult:"+jsonObject.toString());
-//            }
-//
-//            @Override
-//            public void onApiResult(JSONArray jsonArray) {
-//                testText.append("\nonApiResult:"+jsonArray.toString());
-//            }
-//        });
-//        mLiFiSdkManager.send();
-
-
-
     }
 
     @Override
      protected void onResume() {
         super.onResume();
-        if(mLiFiSdkManager!=null) {
-            if (!mLiFiSdkManager.isStarted()) {
-                mLiFiSdkManager.start();
-            }
-        }
+        listener.resume();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        if(mLiFiSdkManager!=null) {
-            if (mLiFiSdkManager.isStarted()) {
-                mLiFiSdkManager.stop();
-            }
-        }
+        listener.pause();
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(mLiFiSdkManager!=null) {
-            mLiFiSdkManager.release();
-        }
-        mLiFiSdkManager = null;
-
+        listener.destroy();
     }
 
     @Override
@@ -181,14 +125,7 @@ public class MainActivity extends AppCompatActivity {
             case PERMISSION_REQUEST_AUDIO: {
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     //Log.d(TAG, "coarse location permission granted");
-                    mLiFiSdkManager = new LiFiSdkManager(getApplicationContext(), LiFiSdkManager.SIMPLE_JACK_LIB_VERSION, "", "", new ILiFiPosition() {
-                        @Override
-                        public void onLiFiPositionUpdate(JSONObject jsonObject) {
-                            testText.append("\nonLiFiPositionUpdate:"+jsonObject.toString());
-                        }
-                    });
-                    mLiFiSdkManager.init(this,"");
-                    mLiFiSdkManager.start();
+                    listener = new LampListener(this,getApplicationContext());
                 } else {
                     final AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("Functionality limited");
@@ -208,31 +145,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void initLiFiManager(){
-        mLiFiSdkManager = new LiFiSdkManager(getApplicationContext(), 1, "", "", new ILiFiPosition() {
 
-            @Override
-            public void onLiFiPositionUpdate(JSONObject jsonObject) {
-                testText.append("\nLiFi reçu: id = "+jsonObject.toString());
-                if(jsonObject.has("id")){
-                    try {
-                        testText.append("\nLiFi reçu: id = "+jsonObject.get("id"));
-                        Intent intent = new Intent(MainActivity.this, FirstLamp.class);
-                        intent.putExtra("id_lamp", jsonObject.get("id").toString());
-                        startActivity(intent);
-                        //TODO: implement your code here to treat LiFi id event
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }else{
-                    testText.append("\nSortie de la zone LiFi");
-                    //TODO: implement your code here to treat outside LiFi event
-                }
-
-            }
-        });
-        mLiFiSdkManager.init(this,"");
-        mLiFiSdkManager.start();
-    }
 }

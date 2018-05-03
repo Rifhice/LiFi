@@ -42,7 +42,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.FirstLamp" >
+        <activity android:name="com.polytech.montpellier.lifiapp.Login" >
+        </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.AdminActivity" >
+        </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.AdminLampView" >
+        </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.AdminProductView" >
+        </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.LampController" >
         </activity>
 
         <service
