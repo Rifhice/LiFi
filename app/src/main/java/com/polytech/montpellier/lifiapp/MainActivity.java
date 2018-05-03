@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.oledcomm.soft.androidlifisdk.ILiFiPosition;
 import com.oledcomm.soft.androidlifisdk.LiFiSdkManager;
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.Helper.Helper;
 
 
 import org.json.JSONException;
@@ -40,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Helper helper = new Helper(this);
+        System.out.println("helper now : ");
+        helper.GET("http://www.rifhice.com/LiFiAPI/Lamp", "lalal") ;
+        System.out.println("helper done ");
 
         testText = (TextView)findViewById(R.id.testText);
         logo = (ImageView) findViewById(R.id.imageView_logo_main);

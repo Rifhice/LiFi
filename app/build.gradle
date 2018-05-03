@@ -31,5 +31,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile(name:'androidlifisdk-release', ext:'aar')
     compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.volley:volley:1.0.0'
     compile 'org.greenrobot:eventbus:3.0.0'
 }
