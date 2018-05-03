@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         System.out.println("helper now : ");
-        Helper.getInstance(this).GET("http://www.rifhice.com/LiFiAPI/Lamp", new ResponseHandler() {
+        Helper.getInstance(this).POST("http://www.rifhice.com/LiFiAPI/Auth", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8",new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if(object instanceof JSONArray){
@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
         System.out.println("helper done ");
 
         testText = (TextView)findViewById(R.id.testText);
