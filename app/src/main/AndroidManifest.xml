@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.Login">
+
+        </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.FirstLamp">
 
         </activity>

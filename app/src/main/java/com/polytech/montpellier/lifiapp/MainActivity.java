@@ -9,21 +9,27 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.oledcomm.soft.androidlifisdk.ILiFiPosition;
 import com.oledcomm.soft.androidlifisdk.LiFiSdkManager;
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
+import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,9 +48,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Helper helper = new Helper(this);
         System.out.println("helper now : ");
-        helper.GET("http://www.rifhice.com/LiFiAPI/Lamp", "lalal") ;
+        Helper.getInstance(this).GET("http://www.rifhice.com/LiFiAPI/Lamp", new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                if(object instanceof JSONArray){
+
+                }
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
         System.out.println("helper done ");
 
         testText = (TextView)findViewById(R.id.testText);

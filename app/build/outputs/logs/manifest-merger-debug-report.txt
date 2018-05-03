@@ -1,33 +1,29 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< refs/remotes/origin/master
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-35:12
-=======
-ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-23:12
+ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-38:12
 MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.0.0.aar/15407f7fedfa0ab2d0ac06bbc61dc02c/AndroidManifest.xml:17:1-27:12
 MERGED from [:androidlifisdk-release:] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/18b2df0642268bb8d7fd8e921e05b4f0/AndroidManifest.xml:2:1-43:12
 MERGED from [com.android.volley:volley:1.0.0] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/e4f360502a2df3a1a3ee789d3b0ad407/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.0.0.aar/1e5efdc456e646b75fef1c5d4f87e4b3/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.0.0.aar/6d0672c43e38dcfebaeb50c49d071aad/AndroidManifest.xml:17:1-25:12
 MERGED from [com.android.support:support-v4:24.0.0] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/support-v4-24.0.0.aar/6dfc0f0f6de6ec5a8bb1c90b973e65f5/AndroidManifest.xml:17:1-27:12
-INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-23:12
->>>>>>> debut helper GET
+INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-38:12
 	package
 		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml
-		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-23:12
+		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-38:12
 		INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml
-		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-23:12
+		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-38:12
 		INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:11-69
@@ -38,17 +34,7 @@ MERGED from [:androidlifisdk-release:] /Users/assilelyahyaoui/.gradle/caches/tra
 	android:name
 		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:4:22-64
 application
-<<<<<<< refs/remotes/origin/master
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:5:5-33:19
-MERGED from [com.android.support:appcompat-v7:24.0.0] C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-v4:24.0.0] C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [:androidlifisdk-release:] C:\Users\Kevin\Desktop\SDK\LiFi\app\build\intermediates\exploded-aar\androidlifisdk-release\AndroidManifest.xml:31:5-41:19
-	android:label
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:8:9-41
-=======
-ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:5:5-21:19
+ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:5:5-36:19
 MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.0.0.aar/15407f7fedfa0ab2d0ac06bbc61dc02c/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.0.0.aar/15407f7fedfa0ab2d0ac06bbc61dc02c/AndroidManifest.xml:25:5-20
 MERGED from [:androidlifisdk-release:] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/18b2df0642268bb8d7fd8e921e05b4f0/AndroidManifest.xml:31:5-41:19
@@ -61,7 +47,6 @@ MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/assilely
 MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.0.0.aar/6d0672c43e38dcfebaeb50c49d071aad/AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-v4:24.0.0] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/support-v4-24.0.0.aar/6dfc0f0f6de6ec5a8bb1c90b973e65f5/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.0.0] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/support-v4-24.0.0.aar/6dfc0f0f6de6ec5a8bb1c90b973e65f5/AndroidManifest.xml:25:5-20
->>>>>>> debut helper GET
 	android:supportsRtl
 		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:9:9-35
 	android:label
@@ -71,15 +56,6 @@ MERGED from [com.android.support:support-v4:24.0.0] /Users/assilelyahyaoui/.grad
 	android:allowBackup
 		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
-<<<<<<< refs/remotes/origin/master
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:10:9-40
-activity#com.polytech.montpellier.lifiapp.MainActivity
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:11:9-17:20
-	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:11:19-79
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:12:13-16:29
-=======
 		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:10:9-40
 activity#com.polytech.montpellier.lifiapp.MainActivity
 ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:11:9-17:20
@@ -87,7 +63,6 @@ ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/A
 		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:11:19-79
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:12:13-16:29
->>>>>>> debut helper GET
 action#android.intent.action.MAIN
 ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:13:17-69
 	android:name
@@ -95,35 +70,31 @@ ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/A
 category#android.intent.category.LAUNCHER
 ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:15:17-77
 	android:name
-<<<<<<< refs/remotes/origin/master
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:15:27-74
-activity#com.polytech.montpellier.lifiapp.Login
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:18:9-20:20
-	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:18:19-72
-activity#com.polytech.montpellier.lifiapp.AdminActivity
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:21:9-23:20
-	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:21:19-80
-activity#com.polytech.montpellier.lifiapp.AdminLampView
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:24:9-26:20
-	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:24:19-80
-activity#com.polytech.montpellier.lifiapp.AdminProductView
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:27:9-29:20
-	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:27:19-83
-activity#com.polytech.montpellier.lifiapp.LampController
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:30:9-32:20
-	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:30:19-81
-=======
 		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:15:27-74
-activity#com.polytech.montpellier.lifiapp.FirstLamp
+activity#com.polytech.montpellier.lifiapp.Login
 ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:18:9-20:20
 	android:name
-		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:18:19-76
->>>>>>> debut helper GET
+		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:18:19-72
+activity#com.polytech.montpellier.lifiapp.FirstLamp
+ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:21:9-23:20
+	android:name
+		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:21:19-76
+activity#com.polytech.montpellier.lifiapp.AdminActivity
+ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:24:9-26:20
+	android:name
+		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:24:19-80
+activity#com.polytech.montpellier.lifiapp.AdminLampView
+ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:27:9-29:20
+	android:name
+		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:27:19-80
+activity#com.polytech.montpellier.lifiapp.AdminProductView
+ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:30:9-32:20
+	android:name
+		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:30:19-83
+activity#com.polytech.montpellier.lifiapp.LampController
+ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:33:9-35:20
+	android:name
+		ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:33:19-81
 uses-sdk
 INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml
