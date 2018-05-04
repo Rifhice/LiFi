@@ -149,19 +149,14 @@ public class Helper {
     }
 
 
-    public void DELETE(String url,  final ResponseHandler res){
+    public void DELETE(String url, final String token ,  final ResponseHandler res){
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.DELETE , url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
-                        try {
-                            JSONArray getJSON = new JSONArray(response);
-                            res.onSuccess(getJSON);
-                        } catch (Throwable t) {
-                            Log.e("My App", "Could not parse malformed JSON: \"" + response + "\"");
-                        }
+                        res.onSuccess(response);
 
                     }
                 }, new Response.ErrorListener() {
@@ -169,7 +164,18 @@ public class Helper {
             public void onErrorResponse(VolleyError error) {
                 res.onError(error);
             }
-        });
+        })
+        {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+            Map<String, String>  headers = new HashMap<String, String>();
+            // add headers <key,value>
+            String auth = "Bearer " + token;
+            headers.put("Authorization", auth);
+            return headers;
+        }
+        };
+
         // Add the request to the RequestQueue.
         this.queue.add(stringRequest);
 

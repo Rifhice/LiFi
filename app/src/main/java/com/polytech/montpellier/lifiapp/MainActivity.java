@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         String token = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" ;
         String url = "http://www.rifhice.com/LiFiAPI/Lamp" ;
         String urlID = "http://www.rifhice.com/LiFiAPI/Lamp/8" ;
+        String urldel = "http://www.rifhice.com/LiFiAPI/Lamp/6" ;
 
 
         Map<String, String> params = new HashMap<String, String>();
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         params.put("name", "lampe12 damn");
         params.put("idDepartment", "2") ;
 
-        Helper.getInstance(this).POST(url, token, params,  new ResponseHandler() {
+        /*Helper.getInstance(this).POST(url, token, params,  new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 System.out.println("POST"+object.toString());
@@ -112,16 +113,17 @@ public class MainActivity extends AppCompatActivity {
             public void onError(Object object) {
 
             }
-        });
+        });*/
 
-        Helper.getInstance(this).DELETE(urlID, new ResponseHandler() {
+        Helper.getInstance(this).DELETE(urldel, token ,  new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                System.out.println("DELETE" +object.toString());
+                System.out.println("DELETE ici " +object.toString());
             }
 
             @Override
             public void onError(Object object) {
+                System.out.println("delete error  " +object.toString());
 
             }
         });

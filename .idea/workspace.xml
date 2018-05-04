@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
@@ -58,8 +58,8 @@
       <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Helper/Helper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1070">
-              <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+            <state relative-caret-position="-208">
+              <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1001#1002#0" expanded="true" />
@@ -72,10 +72,7 @@
                 <element signature="e#2139#2140#0" expanded="true" />
                 <element signature="e#3318#3334#0" expanded="true" />
                 <element signature="e#4667#4683#0" expanded="true" />
-                <element signature="e#5165#5662#0" expanded="true" />
-                <element signature="e#5661#5662#0" expanded="true" />
-                <element signature="e#5664#5837#0" expanded="true" />
-                <element signature="e#5836#5837#0" expanded="true" />
+                <element signature="e#5743#5759#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,17 +91,13 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+            <state relative-caret-position="208">
+              <caret line="56" column="62" lean-forward="false" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
               <folding>
-                <element signature="e#1786#1802#0" expanded="true" />
-                <element signature="e#1940#1956#0" expanded="true" />
-                <element signature="e#2201#2202#0" expanded="true" />
-                <element signature="e#2277#2278#0" expanded="true" />
-                <element signature="e#2517#2518#0" expanded="true" />
-                <element signature="e#2594#2595#0" expanded="true" />
-                <element signature="e#4171#4941#0" expanded="true" />
-                <element signature="e#4940#4941#0" expanded="true" />
+                <element signature="e#1852#1868#0" expanded="true" />
+                <element signature="e#2006#2022#0" expanded="true" />
+                <element signature="e#4329#5099#0" expanded="true" />
+                <element signature="e#5098#5099#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,6 +142,9 @@
       <find>GET</find>
       <find>GET</find>
       <find>DELETE</find>
+      <find>delete err</find>
+      <find>delete</find>
+      <find>DELETE erro</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2441,7 +2437,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2449,11 +2444,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.50763357" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4280532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5743652" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2555,10 +2550,7 @@
             <element signature="e#2139#2140#0" expanded="true" />
             <element signature="e#3318#3334#0" expanded="true" />
             <element signature="e#4667#4683#0" expanded="true" />
-            <element signature="e#5165#5662#0" expanded="true" />
-            <element signature="e#5661#5662#0" expanded="true" />
-            <element signature="e#5664#5837#0" expanded="true" />
-            <element signature="e#5836#5837#0" expanded="true" />
+            <element signature="e#5743#5759#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2586,14 +2578,10 @@
         <state relative-caret-position="210">
           <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
           <folding>
-            <element signature="e#1786#1802#0" expanded="true" />
-            <element signature="e#1940#1956#0" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
-            <element signature="e#2277#2278#0" expanded="true" />
-            <element signature="e#2517#2518#0" expanded="true" />
-            <element signature="e#2594#2595#0" expanded="true" />
-            <element signature="e#4171#4941#0" expanded="true" />
-            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#1852#1868#0" expanded="true" />
+            <element signature="e#2006#2022#0" expanded="true" />
+            <element signature="e#4329#5099#0" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2614,10 +2602,7 @@
             <element signature="e#2139#2140#0" expanded="true" />
             <element signature="e#3318#3334#0" expanded="true" />
             <element signature="e#4667#4683#0" expanded="true" />
-            <element signature="e#5165#5662#0" expanded="true" />
-            <element signature="e#5661#5662#0" expanded="true" />
-            <element signature="e#5664#5837#0" expanded="true" />
-            <element signature="e#5836#5837#0" expanded="true" />
+            <element signature="e#5743#5759#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2627,14 +2612,10 @@
         <state relative-caret-position="270">
           <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
-            <element signature="e#1786#1802#0" expanded="true" />
-            <element signature="e#1940#1956#0" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
-            <element signature="e#2277#2278#0" expanded="true" />
-            <element signature="e#2517#2518#0" expanded="true" />
-            <element signature="e#2594#2595#0" expanded="true" />
-            <element signature="e#4171#4941#0" expanded="true" />
-            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#1852#1868#0" expanded="true" />
+            <element signature="e#2006#2022#0" expanded="true" />
+            <element signature="e#4329#5099#0" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2660,14 +2641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Helper/ResponseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -2684,10 +2657,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Helper/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1070">
-          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+        <state relative-caret-position="-208">
+          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1001#1002#0" expanded="true" />
@@ -2700,27 +2681,20 @@
             <element signature="e#2139#2140#0" expanded="true" />
             <element signature="e#3318#3334#0" expanded="true" />
             <element signature="e#4667#4683#0" expanded="true" />
-            <element signature="e#5165#5662#0" expanded="true" />
-            <element signature="e#5661#5662#0" expanded="true" />
-            <element signature="e#5664#5837#0" expanded="true" />
-            <element signature="e#5836#5837#0" expanded="true" />
+            <element signature="e#5743#5759#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        <state relative-caret-position="208">
+          <caret line="56" column="62" lean-forward="false" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
           <folding>
-            <element signature="e#1786#1802#0" expanded="true" />
-            <element signature="e#1940#1956#0" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
-            <element signature="e#2277#2278#0" expanded="true" />
-            <element signature="e#2517#2518#0" expanded="true" />
-            <element signature="e#2594#2595#0" expanded="true" />
-            <element signature="e#4171#4941#0" expanded="true" />
-            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#1852#1868#0" expanded="true" />
+            <element signature="e#2006#2022#0" expanded="true" />
+            <element signature="e#4329#5099#0" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
           </folding>
         </state>
       </provider>
