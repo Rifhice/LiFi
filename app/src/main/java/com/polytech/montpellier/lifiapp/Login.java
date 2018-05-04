@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 
 /**
  * Created by Kevin on 03/05/2018.
@@ -30,11 +31,18 @@ public class Login extends AppCompatActivity {
         validate.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(UserConnection.getInstance().login(password.getText().toString())){
-                    loginSuccess();
-                    return true;
-                }
-                return false;
+                UserConnection.getInstance().login(password.getText().toString(), new ResponseHandler() {
+                    @Override
+                    public void onSuccess(Object object) {
+                       loginSuccess();
+                    }
+
+                    @Override
+                    public void onError(Object object) {
+                        loginError();
+                    }
+                });
+                    return true ;
             }
         });
     }
@@ -43,6 +51,10 @@ public class Login extends AppCompatActivity {
         System.out.println("Login success");
         Intent intent = new Intent(Login.this, AdminActivity.class);
         startActivity(intent);
+    }
+
+    public void loginError(){
+
     }
 
 }

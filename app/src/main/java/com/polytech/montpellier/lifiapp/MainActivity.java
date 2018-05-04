@@ -50,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Helper.getInstance(this);
 
-        String token = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" ;
+       /*  String token = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" ;
         String url = "http://www.rifhice.com/LiFiAPI/Lamp" ;
         String urlID = "http://www.rifhice.com/LiFiAPI/Lamp/8" ;
         String urldel = "http://www.rifhice.com/LiFiAPI/Lamp/6" ;
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         params.put("name", "lampe12 damn");
         params.put("idDepartment", "2") ;
 
-        /*Helper.getInstance(this).POST(url, token, params,  new ResponseHandler() {
+        Helper.getInstance(this).POST(url, token, params,  new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 System.out.println("POST"+object.toString());
@@ -113,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             public void onError(Object object) {
 
             }
-        });*/
+        });
 
         Helper.getInstance(this).DELETE(urldel, token ,  new ResponseHandler() {
             @Override
@@ -140,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+*/
 
         testText = (TextView)findViewById(R.id.testText);
         logo = (ImageView) findViewById(R.id.imageView_logo_main);
