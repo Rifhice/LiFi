@@ -31,6 +31,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,13 +50,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        System.out.println("helper now : ");
-        Helper.getInstance(this).POST("http://www.rifhice.com/LiFiAPI/Auth", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8",new ResponseHandler() {
+
+        String token = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" ;
+        String url = "http://www.rifhice.com/LiFiAPI/Lamp" ;
+        String urlID = "http://www.rifhice.com/LiFiAPI/Lamp/8" ;
+
+
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("name", "lampe12");
+        params.put("idDepartment", "2") ;
+
+
+        Map<String, String> paramsput = new HashMap<String, String>();
+        params.put("name", "lampe12 damn");
+        params.put("idDepartment", "2") ;
+
+        Helper.getInstance(this).POST(url, token, params,  new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                if(object instanceof JSONArray){
-
-                }
+                System.out.println("POST"+object.toString());
             }
 
             @Override
@@ -64,7 +78,67 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        System.out.println("helper done ");
+        Helper.getInstance(this).GET(url, new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                System.out.println("GET 1"+object.toString());
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
+
+        Helper.getInstance(this).PUT(urlID, token, paramsput,  new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                System.out.println("PUT ici "+object.toString());
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
+
+        Helper.getInstance(this).GET(url, new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                System.out.println("GET apres PUT"+object.toString());
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
+
+        Helper.getInstance(this).DELETE(urlID, new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                System.out.println("DELETE" +object.toString());
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
+
+
+        Helper.getInstance(this).GET(url, new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                System.out.println("GET apres  delete "+object.toString());
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
+
 
         testText = (TextView)findViewById(R.id.testText);
         logo = (ImageView) findViewById(R.id.imageView_logo_main);

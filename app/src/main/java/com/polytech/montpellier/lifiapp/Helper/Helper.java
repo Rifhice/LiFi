@@ -10,6 +10,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 //import com.oledcomm.soft.lifiapp.R;
@@ -18,6 +19,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,7 +67,7 @@ public class Helper {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                res.onError(null);
+                res.onError(error);
         }
         });
         // Add the request to the RequestQueue.
@@ -74,33 +76,28 @@ public class Helper {
     }
 
 
-    public void POST(String url , final String token, final ResponseHandler res  ){
+    public void POST(String url , final String token, Map<String, String> params,  final ResponseHandler res ){
+
 
         // Request a string response from the provided URL.
-        StringRequest stringRequest = new StringRequest(Request.Method.POST , url,
-                new Response.Listener<String>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST , url, new JSONObject(params),
+                new Response.Listener<JSONObject>() {
                     @Override
-                    public void onResponse(String response) {
+                    public void onResponse(JSONObject response) {
                         try {
-                            JSONArray getJSON = new JSONArray(response);
-                            res.onSuccess(getJSON);
+                            res.onSuccess(response);
+
                         } catch (Throwable t) {
                             Log.e("My App", "Could not parse malformed JSON: \"" + response + "\"");
                         }
-
                     }
+
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                res.onError(null);
+                res.onError(error);
             }
         }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("password", "password");
-                return params;
-            }
 
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
@@ -112,9 +109,71 @@ public class Helper {
             }
         };
 
-        this.queue.add(stringRequest);
+        this.queue.add(jsonObjectRequest);
     }
 
+    public void PUT(String url , final String token, Map<String, String> params,  final ResponseHandler res ){
+
+
+        // Request a string response from the provided URL.
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT , url, new JSONObject(params),
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            res.onSuccess(response);
+
+                        } catch (Throwable t) {
+                            Log.e("My App", "Could not parse malformed JSON: \"" + response + "\"");
+                        }
+                    }
+
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                res.onError(error);
+            }
+        }){
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String>  headers = new HashMap<String, String>();
+                // add headers <key,value>
+                String auth = "Bearer " + token;
+                headers.put("Authorization", auth);
+                return headers;
+            }
+        };
+
+        this.queue.add(jsonObjectRequest);
+    }
+
+
+    public void DELETE(String url,  final ResponseHandler res){
+        // Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.DELETE , url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        try {
+                            JSONArray getJSON = new JSONArray(response);
+                            res.onSuccess(getJSON);
+                        } catch (Throwable t) {
+                            Log.e("My App", "Could not parse malformed JSON: \"" + response + "\"");
+                        }
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                res.onError(error);
+            }
+        });
+        // Add the request to the RequestQueue.
+        this.queue.add(stringRequest);
+
+    }
 }
 
 
