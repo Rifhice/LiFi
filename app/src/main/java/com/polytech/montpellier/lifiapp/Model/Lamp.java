@@ -6,13 +6,15 @@ package com.polytech.montpellier.lifiapp.Model;
 
 public class Lamp {
 
+    int id;
     String name;
     Department department;
 
 
-    public Lamp(String name, Department department) {
+    public Lamp(int id, String name, Department department) {
         this.department = department;
         this.name = name;
+        this.id = id;
     }
 
 

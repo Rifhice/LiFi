@@ -6,10 +6,12 @@ package com.polytech.montpellier.lifiapp.Model;
 
 public class Department {
 
+    int id;
     String name;
 
-    public Department(String name){
+    public Department(int id, String name){
         this.name = name;
+        this.id = id;
     }
 
     public String getName() {

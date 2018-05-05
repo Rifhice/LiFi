@@ -1,5 +1,6 @@
 package com.polytech.montpellier.lifiapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -20,5 +21,10 @@ public class UserUnderLampView extends AppCompatActivity {
         text.setText("salut");
     }
 
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
 
 }

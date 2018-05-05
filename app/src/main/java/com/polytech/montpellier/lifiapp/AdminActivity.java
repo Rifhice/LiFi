@@ -19,22 +19,31 @@ import com.oledcomm.soft.lifiapp.R;
 
 public class AdminActivity extends ActivityGroup {
     TabHost tabHost;
+    Intent lamp;
+    Intent product;
+    Intent discount;
+    Intent department;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_display);
+        lamp = new Intent(this, AdminLampView.class);
+        product = new Intent(this, AdminProductView.class);
+
 
         tabHost = (TabHost)findViewById(R.id.menu);
         tabHost.setup(this.getLocalActivityManager());
+
         //Tab 1
         TabHost.TabSpec spec = tabHost.newTabSpec("Lamp");
-        spec.setContent(new Intent(this, AdminLampView.class));
+        spec.setContent(lamp);
         spec.setIndicator("Lamp");
         tabHost.addTab(spec);
 
         //Tab 2
         spec = tabHost.newTabSpec("Product");
-        spec.setContent(new Intent(this, AdminProductView.class));
+        spec.setContent(product);
         spec.setIndicator("Product");
         tabHost.addTab(spec);
 

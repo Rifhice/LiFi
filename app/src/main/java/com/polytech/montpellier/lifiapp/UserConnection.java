@@ -32,7 +32,7 @@ public class UserConnection {
     
     public void login(String password, final ResponseHandler responseHandler){
 
-        String url = "http://www.rifhice.com/LiFiAPI/Auth" ;
+        String url = "http://81.64.139.113:1337/api/Auth" ;
         Map<String, String> params = new HashMap<String, String>();
         params.put("password", password);
 
@@ -47,7 +47,7 @@ public class UserConnection {
                        JSONObject json = (JSONObject) object;
                        System.out.println("login result " + object);
 
-                       if (json.getString("result").equals("success")){
+                       if (json.getInt("code") == 200){
                            setToken(json.getString("token"));
 
                            responseHandler.onSuccess(null);

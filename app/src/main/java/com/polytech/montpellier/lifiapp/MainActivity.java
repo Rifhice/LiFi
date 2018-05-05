@@ -205,19 +205,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
      protected void onResume() {
         super.onResume();
-        listener.resume();
+        if(listener != null) {
+            listener.resume();
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        listener.pause();
+        if(listener != null) {
+            listener.pause();
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        listener.destroy();
+        if(listener != null) {
+            listener.destroy();
+        }
     }
 
     @Override
@@ -247,5 +253,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed(){
+
+    }
 
 }
