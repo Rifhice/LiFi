@@ -16,28 +16,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/Login$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/Login$1.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/Login.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/Login.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/MainActivity$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/MainActivity$2.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/MainActivity$3.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/MainActivity.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/UserConnection.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/polytech/montpellier/lifiapp/UserConnection.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/Login$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/Login$1.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/Login.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/Login.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/MainActivity$1.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/MainActivity$2.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/MainActivity$3.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/MainActivity.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/UserConnection.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/polytech/montpellier/lifiapp/UserConnection.class" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Login.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Login.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/UserConnection.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/UserConnection.java" />
     </list>
 =======
     <list default="true" id="aaf12f76-030b-4cfa-a6b3-742fc182b2ec" name="Default" comment="" />
@@ -73,7 +57,11 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <state relative-caret-position="1169">
+=======
+            <state relative-caret-position="1935">
+>>>>>>> Stashed changes
               <caret line="158" column="20" lean-forward="false" selection-start-line="158" selection-start-column="20" selection-end-line="160" selection-end-column="21" />
 =======
 <<<<<<< Updated upstream
@@ -86,6 +74,7 @@
                 <element signature="e#1054#1055#0" expanded="true" />
                 <element signature="e#1263#1264#0" expanded="true" />
                 <element signature="e#1292#1293#0" expanded="true" />
+<<<<<<< Updated upstream
                 <element signature="e#1506#1969#0" expanded="true" />
                 <element signature="e#1968#1969#0" expanded="true" />
                 <element signature="e#1971#2140#0" expanded="true" />
@@ -105,6 +94,8 @@
               <folding>
                 <element signature="imports" expanded="true" />
 >>>>>>> Stashed changes
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
               </folding>
             </state>
@@ -137,15 +128,11 @@
 >>>>>>> Stashed changes
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
+            <state relative-caret-position="480">
               <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
 <<<<<<< Updated upstream
                 <element signature="imports" expanded="true" />
-                <element signature="e#4364#5134#0" expanded="true" />
-                <element signature="e#5133#5134#0" expanded="true" />
-                <element signature="e#5733#6095#0" expanded="true" />
-                <element signature="e#6094#6095#0" expanded="true" />
               </folding>
 =======
                 <element signature="e#1786#1802#0" expanded="true" />
@@ -172,15 +159,13 @@
       <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="310">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
-                <element signature="e#885#1481#0" expanded="true" />
                 <element signature="e#1193#1194#0" expanded="true" />
                 <element signature="e#1254#1255#0" expanded="true" />
                 <element signature="e#1342#1343#0" expanded="true" />
                 <element signature="e#1402#1403#0" expanded="true" />
-                <element signature="e#1480#1481#0" expanded="true" />
               </folding>
 =======
       <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
@@ -198,11 +183,10 @@
       <file leaf-file-name="UserConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/UserConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-144">
+            <state relative-caret-position="525">
               <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#829#845#0" expanded="true" />
                 <element signature="e#2202#2203#0" expanded="true" />
                 <element signature="e#2238#2239#0" expanded="true" />
                 <element signature="e#2269#2270#0" expanded="true" />
@@ -2350,10 +2334,16 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< Updated upstream
     <option name="x" value="92" />
     <option name="y" value="-9" />
     <option name="width" value="1837" />
     <option name="height" value="1098" />
+=======
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -2387,14 +2377,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+<<<<<<< Updated upstream
+=======
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+>>>>>>> Stashed changes
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="LiFi" type="1abcf292:AndroidViewProjectNode" />
+<<<<<<< Updated upstream
               <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
@@ -2417,6 +2411,8 @@
             </path>
             <path>
               <item name="LiFi" type="1abcf292:AndroidViewProjectNode" />
+=======
+>>>>>>> Stashed changes
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
@@ -2667,29 +2663,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
     <frame x="92" y="-9" width="1837" height="1098" extended-state="0" />
     <editor active="true" />
+=======
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+>>>>>>> Stashed changes
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.50763357" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47037485" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38618925" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47037485" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
 =======
 <<<<<<< Updated upstream
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4280532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
 >>>>>>> Stashed changes
+=======
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46930945" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16309012" sideWeight="0.49447513" order="0" side_tool="false" content_ui="combo" />
+<<<<<<< Updated upstream
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38694075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
 =======
@@ -2699,6 +2704,9 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24929018" sideWeight="0.49447513" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38684505" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
+=======
+      <window_info id="Build" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38618925" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
 >>>>>>> Stashed changes
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2717,7 +2725,10 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+=======
+>>>>>>> Stashed changes
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2798,6 +2809,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Helper/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="483">
           <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
           <folding />
@@ -2817,27 +2829,59 @@
         <state relative-caret-position="399">
           <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding />
+=======
+        <state relative-caret-position="1935">
+          <caret line="158" column="20" lean-forward="false" selection-start-line="158" selection-start-column="20" selection-end-line="160" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1263#1264#0" expanded="true" />
+            <element signature="e#1292#1293#0" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="462">
           <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+=======
+        <state relative-caret-position="540">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/UserConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
+            <element signature="e#2238#2239#0" expanded="true" />
+            <element signature="e#2269#2270#0" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+            <element signature="e#2338#2339#0" expanded="true" />
+            <element signature="e#2372#2373#0" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -2868,10 +2912,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+=======
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -2881,6 +2932,22 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1254#1255#0" expanded="true" />
+            <element signature="e#1342#1343#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Helper/Helper.java">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2891,6 +2958,7 @@
             <element signature="e#1054#1055#0" expanded="true" />
             <element signature="e#1263#1264#0" expanded="true" />
             <element signature="e#1292#1293#0" expanded="true" />
+<<<<<<< Updated upstream
             <element signature="e#1506#1969#0" expanded="true" />
             <element signature="e#1968#1969#0" expanded="true" />
             <element signature="e#1971#2140#0" expanded="true" />
@@ -2906,6 +2974,8 @@
             <element signature="e#5836#5837#0" expanded="true" />
 =======
 >>>>>>> Stashed changes
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           </folding>
         </state>
@@ -2948,6 +3018,7 @@
           <folding>
 <<<<<<< Updated upstream
             <element signature="imports" expanded="true" />
+<<<<<<< Updated upstream
             <element signature="e#4364#5134#0" expanded="true" />
             <element signature="e#5133#5134#0" expanded="true" />
             <element signature="e#5733#6095#0" expanded="true" />
@@ -2965,6 +3036,8 @@
 =======
             <element signature="imports" expanded="true" />
 >>>>>>> Stashed changes
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           </folding>
         </state>
@@ -2981,13 +3054,6 @@
             <element signature="e#1054#1055#0" expanded="true" />
             <element signature="e#1263#1264#0" expanded="true" />
             <element signature="e#1292#1293#0" expanded="true" />
-            <element signature="e#1506#1969#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
-            <element signature="e#1971#2140#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
-            <element signature="e#3318#3334#0" expanded="true" />
-            <element signature="e#4667#4683#0" expanded="true" />
-            <element signature="e#5743#5759#0" expanded="true" />
           </folding>
 =======
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
@@ -3003,6 +3069,7 @@
           <folding>
 <<<<<<< Updated upstream
             <element signature="imports" expanded="true" />
+<<<<<<< Updated upstream
             <element signature="e#4364#5134#0" expanded="true" />
             <element signature="e#5133#5134#0" expanded="true" />
             <element signature="e#5733#6095#0" expanded="true" />
@@ -3021,6 +3088,8 @@
             <element signature="imports" expanded="true" />
 >>>>>>> Stashed changes
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -3031,11 +3100,14 @@
 <<<<<<< Updated upstream
         <state relative-caret-position="210">
           <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+<<<<<<< Updated upstream
 =======
         <state relative-caret-position="42">
           <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
 >>>>>>> Stashed changes
           <folding />
+=======
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -3072,6 +3144,7 @@
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <state relative-caret-position="540">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
 =======
@@ -3079,6 +3152,10 @@
           <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
 >>>>>>> Stashed changes
           <folding />
+=======
+        <state relative-caret-position="30">
+          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -3122,6 +3199,7 @@
       </provider>
     </entry>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -3136,9 +3214,11 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Helper/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1169">
+        <state relative-caret-position="1935">
           <caret line="158" column="20" lean-forward="false" selection-start-line="158" selection-start-column="20" selection-end-line="160" selection-end-column="21" />
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/FirstLamp.java">
@@ -3153,6 +3233,7 @@
             <element signature="e#1054#1055#0" expanded="true" />
             <element signature="e#1263#1264#0" expanded="true" />
             <element signature="e#1292#1293#0" expanded="true" />
+<<<<<<< Updated upstream
             <element signature="e#1506#1969#0" expanded="true" />
             <element signature="e#1968#1969#0" expanded="true" />
             <element signature="e#1971#2140#0" expanded="true" />
@@ -3181,6 +3262,8 @@
             <element signature="imports" expanded="true" />
 >>>>>>> Stashed changes
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -3188,11 +3271,10 @@
 <<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/UserConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
+        <state relative-caret-position="525">
           <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#829#845#0" expanded="true" />
             <element signature="e#2202#2203#0" expanded="true" />
             <element signature="e#2238#2239#0" expanded="true" />
             <element signature="e#2269#2270#0" expanded="true" />
@@ -3205,14 +3287,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="310">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="e#885#1481#0" expanded="true" />
             <element signature="e#1193#1194#0" expanded="true" />
             <element signature="e#1254#1255#0" expanded="true" />
             <element signature="e#1342#1343#0" expanded="true" />
             <element signature="e#1402#1403#0" expanded="true" />
+<<<<<<< Updated upstream
             <element signature="e#1480#1481#0" expanded="true" />
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/LampListener.java">
@@ -3244,11 +3326,15 @@
         <state relative-caret-position="-470">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding />
+=======
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
         <state relative-caret-position="495">
           <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
@@ -3267,6 +3353,12 @@
           <folding>
             <element signature="imports" expanded="true" />
 >>>>>>> Stashed changes
+>>>>>>> Stashed changes
+=======
+        <state relative-caret-position="480">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
 >>>>>>> Stashed changes
           </folding>
         </state>
