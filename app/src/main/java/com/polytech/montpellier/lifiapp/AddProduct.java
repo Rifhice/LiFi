@@ -92,7 +92,7 @@ public class AddProduct extends AppCompatActivity{
 
 
 
-    }
+
 
     @Override
     protected void onResume() {
