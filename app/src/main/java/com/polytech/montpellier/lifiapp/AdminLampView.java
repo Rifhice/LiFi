@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-
+import android.support.v7.app.AppCompatActivity;
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
@@ -26,7 +26,7 @@ import java.sql.SQLOutput;
  * Created by Kevin on 03/05/2018.
  */
 
-public class AdminLampView extends Activity {
+public class AdminLampView extends AppCompatActivity {
 
     final Context context = this;
 

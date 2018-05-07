@@ -1,15 +1,7 @@
 package com.polytech.montpellier.lifiapp;
 
-import android.Manifest;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 
 import com.oledcomm.soft.androidlifisdk.ILiFiPosition;
 import com.oledcomm.soft.androidlifisdk.LiFiSdkManager;
@@ -29,13 +21,13 @@ public class LampListener {
         initLiFiManager(activity, context);
     }
 
-    private void initLiFiManager(Activity activity, Context context){
+    private void initLiFiManager(Activity activity, final Context context){
         mLiFiSdkManager = new LiFiSdkManager(context, LiFiSdkManager.SIMPLE_JACK_LIB_VERSION, "", "", new ILiFiPosition() {
 
             @Override
             public void onLiFiPositionUpdate(JSONObject jsonObject) {
                 try {
-                    LampController.getInstance().onNewLamp(jsonObject);
+                    LampController.getInstance().onNewLamp(jsonObject,context);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
