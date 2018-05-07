@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-45:12
 MERGED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:2:1-43:12
 MERGED from [com.android.volley:volley:1.0.0] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\bdeef0468cbb8c960fec8c370aba5004\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\f56c1a4f03c0b66aa1f77262711921df\AndroidManifest.xml:17:1-22:12
@@ -15,20 +15,20 @@ MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Kevin\
 MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\e92415c1ae113a026ac17a122c7bb485\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\ffec7c8393068ce83be39412648f28ab\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\b5252b664ae95c211b571b3699e7e473\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-44:12
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-45:12
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-44:12
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-45:12
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:11-69
@@ -39,7 +39,7 @@ MERGED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-
 	android:name
 		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:5:5-42:19
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:5:5-43:19
 MERGED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:31:5-41:19
 MERGED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:31:5-41:19
 MERGED from [com.android.volley:volley:1.0.0] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\bdeef0468cbb8c960fec8c370aba5004\AndroidManifest.xml:9:5-20
@@ -83,25 +83,27 @@ ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:24:9
 	android:name
 		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:24:19-80
 activity#com.polytech.montpellier.lifiapp.AdminLampView
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:27:9-29:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:27:9-30:20
+	android:theme
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:28:13-60
 	android:name
 		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:27:19-80
 activity#com.polytech.montpellier.lifiapp.AdminProductView
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:30:9-32:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:31:9-33:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:30:19-83
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:31:19-83
 activity#com.polytech.montpellier.lifiapp.LampController
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:33:9-35:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:34:9-36:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:33:19-81
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:34:19-81
 activity#com.polytech.montpellier.lifiapp.UserUnderLampView
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:36:9-38:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:37:9-39:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:36:19-84
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:37:19-84
 activity#com.polytech.montpellier.lifiapp.AddProduct
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:39:9-41:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:40:9-42:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:39:19-77
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:40:19-77
 uses-sdk
 INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
@@ -172,7 +174,7 @@ ADDED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1
 		ADDED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:19:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:20:5-80
-IMPLIED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-44:12 reason: com.oledcomm.soft.androidlifisdk requested WRITE_EXTERNAL_STORAGE
+IMPLIED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-45:12 reason: com.oledcomm.soft.androidlifisdk requested WRITE_EXTERNAL_STORAGE
 	android:name
 		ADDED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:20:22-77
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS

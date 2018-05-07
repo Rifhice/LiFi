@@ -1,16 +1,22 @@
 package com.polytech.montpellier.lifiapp;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.support.v7.app.AppCompatActivity;
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
+import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
@@ -21,6 +27,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 /**
  * Created by Kevin on 03/05/2018.
@@ -29,73 +36,68 @@ import java.sql.SQLOutput;
 public class AdminLampView extends AppCompatActivity {
 
     final Context context = this;
+    LampDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lamp_display);
+        setContentView(R.layout.lampall_display);
         final TableLayout tl = (TableLayout) findViewById(R.id.main_table);
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Lamp", new ResponseHandler() {
+        dao.getAll(new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                if(object instanceof JSONArray){
-                    JSONArray array = (JSONArray)object;
-                    for(int i = 0; i < array.length(); i++){
-                        try {
-                            JSONObject current = array.getJSONObject(i);
-                            Department department = null;
-                            if(current.get("idDepartment") != null){
-                                department = new Department(current.getInt("idDepartment"),current.getString("nameDepartment"));
-                            }
-                            Lamp lamp = new Lamp(current.getInt("idLamp"),current.getString("nameLamp"),department);
+                if(object instanceof ArrayList) {
+                    ArrayList<Lamp> array = (ArrayList<Lamp>)object;
+                    for(int i = 0 ; i < array.size() ; i++) {
+                        Lamp lamp = array.get(i);
+                        TableRow row = new TableRow(context);
+                        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+                        row.setId(lamp.getId());
+                        row.setGravity(Gravity.CENTER_HORIZONTAL);
 
-                            TableRow row = new TableRow(context);
-                            row.setLayoutParams(new TableLayout.LayoutParams(
-                                    TableLayout.LayoutParams.FILL_PARENT,
-                                    TableLayout.LayoutParams.WRAP_CONTENT));
-                            TextView label_lamp = new TextView(context);
-                            label_lamp.setText(lamp.getName());
-                            label_lamp.setTextColor(Color.BLACK);
-                            label_lamp.setPadding(5, 5, 5, 5);
-                            row.addView(label_lamp);
+                        TextView label_lamp = new TextView(context);
+                        label_lamp.setText(lamp.getName());
+                        label_lamp.setTextColor(Color.BLACK);
+                        label_lamp.setPadding(5, 5, 5, 5);
+                        label_lamp.setWidth(tl.getWidth() / 4);
+                        row.addView(label_lamp);
 
-                            TextView label_department = new TextView(context);
-                            String text;
-                            if(lamp.getDepartment() != null) {
-                                 text = lamp.getDepartment().getName();
-                            }
-                            else{
-                                text = "N/A";
-                            }
-                            label_department.setText(text);
-                            label_department.setTextColor(Color.BLACK); // set the color
-                            label_department.setPadding(5, 5, 5, 5); // set the padding (if required)
-                            row.addView(label_department); // add the column to the table row here
-
-                            Button delete = new Button(context);
-                            delete.setText("del");
-                            row.addView(delete);
-
-                            Button update = new Button(context);
-                            update.setText("upd");
-                            row.addView(update);
-
-                            tl.addView(row, new TableLayout.LayoutParams(
-                                    TableLayout.LayoutParams.FILL_PARENT,
-                                    TableLayout.LayoutParams.WRAP_CONTENT));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                        TextView label_department = new TextView(context);
+                        String text;
+                        if (lamp.getDepartment() != null) {
+                            text = lamp.getDepartment().getName();
+                        } else {
+                            text = "N/A";
                         }
+                        label_department.setText(text);
+                        label_department.setTextColor(Color.BLACK); // set the color
+                        label_department.setPadding(5, 5, 5, 5); // set the padding (if required)
+                        label_department.setWidth(tl.getWidth() / 4);
+                        row.addView(label_department); // add the column to the table row here
+
+                        Button delete = new Button(context);
+                        delete.setText("delete");
+                        delete.setWidth(tl.getWidth() / 4);
+                        row.addView(delete);
+
+                        Button update = new Button(context);
+                        update.setText("update");
+                        update.setWidth(tl.getWidth() / 4);
+                        row.addView(update);
+                        row.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                System.out.println(v.getId());
+                            }
+                        });
+                        tl.addView(row, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
                     }
-                }
-                else{
-                    System.out.println("Malformed response");
                 }
             }
 
             @Override
             public void onError(Object object) {
-                System.out.println("error get lamp");
+
             }
         });
     }
