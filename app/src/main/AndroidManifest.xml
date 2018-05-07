@@ -24,7 +24,8 @@
         <activity android:name="com.polytech.montpellier.lifiapp.AdminActivity">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.AdminLampView">
+        <activity android:name="com.polytech.montpellier.lifiapp.AdminLampView"
+            android:theme="@android:style/Theme.NoTitleBar">
 
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AdminProductView">

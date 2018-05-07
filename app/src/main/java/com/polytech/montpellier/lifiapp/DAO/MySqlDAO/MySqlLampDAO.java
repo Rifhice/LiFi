@@ -63,6 +63,28 @@ public class MySqlLampDAO extends LampDAO {
 
     @Override
     public void getAll(final ResponseHandler response) throws DAOException {
-        //TODO
+        final ArrayList<Lamp> lamps =  new ArrayList<Lamp>();
+        Helper.getInstance().GET("http://81.64.139.113:1337/api/Lamp/", new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                if (object instanceof JSONArray) {
+                    JSONArray array = (JSONArray) object;
+                    try {
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject current = array.getJSONObject(i);
+                            lamps.add(new Lamp(current.getInt("idLamp"), current.getString("nameLamp"), new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
+                        }
+                        response.onSuccess(lamps);
+                   } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
     }
 }
