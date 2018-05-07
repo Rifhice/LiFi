@@ -36,6 +36,9 @@
         <activity android:name="com.polytech.montpellier.lifiapp.UserUnderLampView">
 
         </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.AddProduct">
+
+        </activity>
     </application>
 
 </manifest>
