@@ -658,8 +658,8 @@ int id barrier 0x7f07001d
 int id beginning 0x7f07001e
 int id blocking 0x7f07001f
 int id bottom 0x7f070020
-int id button3 0x7f070021
-int id buttonPanel 0x7f070022
+int id buttonPanel 0x7f070021
+int id button_addProduct 0x7f070022
 int id chains 0x7f070023
 int id checkbox 0x7f070024
 int id chronometer 0x7f070025

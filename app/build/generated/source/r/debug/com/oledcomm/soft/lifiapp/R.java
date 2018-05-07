@@ -2853,8 +2853,8 @@ public final class R {
     public static final int beginning=0x7f07001e;
     public static final int blocking=0x7f07001f;
     public static final int bottom=0x7f070020;
-    public static final int button3=0x7f070021;
-    public static final int buttonPanel=0x7f070022;
+    public static final int buttonPanel=0x7f070021;
+    public static final int button_addProduct=0x7f070022;
     public static final int chains=0x7f070023;
     public static final int checkbox=0x7f070024;
     public static final int chronometer=0x7f070025;
