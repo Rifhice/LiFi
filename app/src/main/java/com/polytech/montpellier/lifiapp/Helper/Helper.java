@@ -1,8 +1,6 @@
 package com.polytech.montpellier.lifiapp.Helper;
 
 import android.content.Context;
-import android.provider.SyncStateContract;
-import android.util.Base64;
 import android.util.Log;
 
 import com.android.volley.AuthFailureError;
@@ -13,17 +11,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-//import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.DAO.MySqlDAO.MySqlDiscountDAO;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Map;
-
-import static android.provider.Telephony.Carriers.PASSWORD;
 
 public class Helper {
 
@@ -44,7 +38,7 @@ public class Helper {
         return instance;
    }
 
-   public static Helper getInstance(){
+   public static Helper getInstance(MySqlDiscountDAO mySqlDiscountDAO){
        return instance;
    }
 

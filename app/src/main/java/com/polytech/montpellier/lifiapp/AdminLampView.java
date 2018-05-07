@@ -20,8 +20,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.SQLOutput;
-
 /**
  * Created by Kevin on 03/05/2018.
  */
@@ -35,7 +33,7 @@ public class AdminLampView extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lamp_display);
         final TableLayout tl = (TableLayout) findViewById(R.id.main_table);
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Lamp", new ResponseHandler() {
+        Helper.getInstance(this).GET("http://81.64.139.113:1337/api/Lamp", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if(object instanceof JSONArray){
