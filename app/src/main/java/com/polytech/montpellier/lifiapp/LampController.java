@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
+import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
 
 import org.json.JSONException;
@@ -42,7 +43,7 @@ public class LampController extends AppCompatActivity {
         return instance;
     }
 
-    public void onNewLamp(JSONObject lamp, Context context) throws JSONException {
+    public void onNewLamp(JSONObject lamp, final Context context) throws JSONException {
         if(UserConnection.getInstance().isConnected()){
             //TODO check if lamp exists, if it doesn't, ask the user if he wants to register it
         }
@@ -50,15 +51,28 @@ public class LampController extends AppCompatActivity {
             //TODO check if lamp exists, if it does display info, if it doesn't, no behaviour
             System.out.println("\nLiFi reçu: id = " + lamp.toString());
             if(lamp.has("id")) {
-                Lamp lampObject = lampDAO.getById(lamp.getInt("id"));
-                if(lampObject != null){
-                    //TODO update the view
-                    context.startActivity(new Intent(context, UserUnderLampView.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-                    System.out.println("It exists");
-                }
-                else{
-                    System.out.println("It doesn't exists");
-                }
+                lampDAO.getById(lamp.getInt("id"), new ResponseHandler() {
+                    @Override
+                    public void onSuccess(Object object) {
+                        if(object != null){
+                            //TODO update the view
+                            Intent intent = new Intent(context, UserUnderLampView.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            Lamp lamp = (Lamp)object;
+                            //TODO Add lamp as parameter
+                            context.startActivity(intent);
+                            System.out.println("It exists");
+                        }
+                        else{
+                            System.out.println("It doesn't exists");
+                        }
+                    }
+
+                    @Override
+                    public void onError(Object object) {
+
+                    }
+                });
+
             }
         }
     }

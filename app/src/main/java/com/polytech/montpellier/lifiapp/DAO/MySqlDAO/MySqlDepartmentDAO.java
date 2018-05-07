@@ -2,6 +2,7 @@ package com.polytech.montpellier.lifiapp.DAO.MySqlDAO;
 
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DAOException;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
+import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 
 import java.util.ArrayList;
@@ -11,28 +12,29 @@ import java.util.ArrayList;
  */
 
 public class MySqlDepartmentDAO extends DepartmentDAO{
+
     @Override
-    public Department create(Department obj) throws DAOException {
-        return null;
+    public void create(Department obj, ResponseHandler response) throws DAOException {
+
     }
 
     @Override
-    public Department getById(int id) throws DAOException {
-        return null;
+    public void getById(int id, ResponseHandler response) throws DAOException {
+
     }
 
     @Override
-    public int update(Department obj) throws DAOException {
-        return 0;
+    public void update(Department obj, ResponseHandler response) throws DAOException {
+
     }
 
     @Override
-    public int delete(int id) throws DAOException {
-        return 0;
+    public void delete(int id, ResponseHandler response) throws DAOException {
+
     }
 
     @Override
-    public ArrayList<Department> getAll() throws DAOException {
-        return null;
+    public void getAll(ResponseHandler response) throws DAOException {
+
     }
 }
