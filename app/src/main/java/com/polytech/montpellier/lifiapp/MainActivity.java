@@ -204,26 +204,26 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
      protected void onResume() {
-        super.onResume();
+        super.onResume();/*
         if(listener != null) {
             listener.resume();
-        }
+        }*/
     }
 
     @Override
     protected void onPause() {
-        super.onPause();
+        super.onPause();/*
         if(listener != null) {
             listener.pause();
-        }
+        }*/
     }
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
+        super.onDestroy();/*
         if(listener != null) {
             listener.destroy();
-        }
+        }*/
     }
 
     @Override

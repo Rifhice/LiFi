@@ -2,6 +2,7 @@ package com.polytech.montpellier.lifiapp.DAO.MySqlDAO;
 
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DAOException;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
+import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class MySqlLampDAO extends LampDAO {
     @Override
     public Lamp getById(int id) throws DAOException {
         //TODO
-        return null;
+        return new Lamp(4,"first",new Department(1,"department"));
     }
 
     @Override

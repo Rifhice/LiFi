@@ -1,14 +1,8 @@
 package com.polytech.montpellier.lifiapp;
 
-import android.app.Activity;
 import android.app.ActivityGroup;
-import android.app.TabActivity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TabHost;
 
 import com.oledcomm.soft.lifiapp.R;

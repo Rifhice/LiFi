@@ -1,16 +1,15 @@
 package com.polytech.montpellier.lifiapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v7.appcompat.* ;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TableLayout;
 import android.widget.TextView;
-import android.widget.TableRow.LayoutParams;
-
 
 import com.oledcomm.soft.lifiapp.R;
 
+import android.support.v7.appcompat.* ;
+import android.support.v7.app.AppCompatActivity;
 /**
  * Created by Kevin on 03/05/2018.
  */
@@ -25,10 +24,6 @@ public class UserUnderLampView extends AppCompatActivity {
         text.setText("salut");
 
         TableLayout tl = (TableLayout) findViewById(R.id.promotionsJourTable);
-
-
-
-
 
     }
 
