@@ -75,9 +75,8 @@
 
         </TableLayout>
     </ScrollView>
-    <![CDATA[">
-    ]]>
-</ScrollView>
+
+
 
 
 </android.support.constraint.ConstraintLayout>
