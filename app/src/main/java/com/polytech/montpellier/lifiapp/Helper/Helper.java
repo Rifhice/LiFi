@@ -18,7 +18,6 @@ import com.google.gson.JsonObject;
 //import com.oledcomm.soft.lifiapp.R;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.sql.SQLOutput;
@@ -26,8 +25,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
-import static android.provider.Telephony.Carriers.PASSWORD;
 
 public class Helper {
 
@@ -48,7 +45,7 @@ public class Helper {
         return instance;
    }
 
-   public static Helper getInstance(){
+   public static Helper getInstance(MySqlDiscountDAO mySqlDiscountDAO){
        return instance;
    }
 
