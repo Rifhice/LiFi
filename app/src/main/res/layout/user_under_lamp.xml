@@ -28,19 +28,20 @@
         app:layout_constraintStart_toEndOf="@+id/rayonTV"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="132dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="50dp"
         android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/rayonTV">
 
         <TableLayout
             android:id="@+id/promotionsJourTable"
@@ -55,25 +56,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rayonTV">
 
-            <TableRow
-                android:id="@+id/header"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/promotionsJour"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
-
-            </TableRow>
 
 
         </TableLayout>
+
     </ScrollView>
 
 
