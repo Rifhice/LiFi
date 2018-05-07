@@ -1,6 +1,5 @@
 package com.polytech.montpellier.lifiapp;
 
-package com.polytech.montpellier.lifiapp;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -37,13 +36,43 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddProduct extends AppCompatActivity{
-
-    TextView textView_
+    TextView textView_name;
+    TextView textView_brand;
+    TextView textView_price;
+    TextView textView_description;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_add);
 
         Helper.getInstance(this);
 
+        textView_brand = (TextView)findViewById(R.id.textView_product_addBrand);
+        textView_name = (TextView)findViewById(R.id.textView_product_addName);
+        textView_description = (TextView)findViewById(R.id.textView_product_addDescription);
+        textView_price = (TextView)findViewById(R.id.textView_product_addPrice);
+
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+
+    @Override
+    public void onBackPressed(){
+
+    }
+
 }

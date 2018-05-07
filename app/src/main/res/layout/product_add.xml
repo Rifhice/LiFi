@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout_addProduct"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_product_addName"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:text="Nom :"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_product_addBrand"
+        android:layout_width="74dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:text="Marque : "
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_product_addName"
+        app:layout_constraintStart_toStartOf="@+id/textView_product_addName"
+        app:layout_constraintTop_toBottomOf="@+id/textView_product_addName" />
+
+    <TextView
+        android:id="@+id/textView_product_addPrice"
+        android:layout_width="39dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:text="Prix :"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_product_addBrand"
+        app:layout_constraintStart_toStartOf="@+id/textView_product_addBrand"
+        app:layout_constraintTop_toBottomOf="@+id/textView_product_addBrand" />
+
+    <TextView
+        android:id="@+id/textView_product_addDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:text="Description"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_product_addPrice"
+        app:layout_constraintStart_toStartOf="@+id/textView_product_addPrice"
+        app:layout_constraintTop_toBottomOf="@+id/textView_product_addPrice" />
+
+    <EditText
+        android:id="@+id/editText_product_addBrand"
+        android:layout_width="215dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Marque Produit"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_product_addName"
+        app:layout_constraintStart_toStartOf="@+id/editText_product_addName"
+        app:layout_constraintTop_toBottomOf="@+id/editText_product_addName" />
+
+    <EditText
+        android:id="@+id/editText_product_addName"
+        android:layout_width="215dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nom Produit"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_product_addName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_product_addPrice"
+        android:layout_width="215dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="Prix Produit"
+        app:layout_constraintEnd_toEndOf="@+id/editText_product_addBrand"
+        app:layout_constraintStart_toStartOf="@+id/editText_product_addBrand"
+        app:layout_constraintTop_toBottomOf="@+id/editText_product_addBrand" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiTextView_product_addDescription"
+        android:layout_width="282dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="8dp"
+        android:text="Descripton Produit"
+        app:layout_constraintTop_toBottomOf="@+id/textView_product_addDescription"
+        tools:layout_editor_absoluteX="51dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:text="Valider"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiTextView_product_addDescription" />
+
+
+</android.support.constraint.ConstraintLayout>
