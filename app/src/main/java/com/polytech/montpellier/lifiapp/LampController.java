@@ -2,8 +2,10 @@ package com.polytech.montpellier.lifiapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TableLayout;
 import android.widget.TextView;
@@ -43,9 +45,38 @@ public class LampController extends AppCompatActivity {
         return instance;
     }
 
-    public void onNewLamp(JSONObject lamp, final Context context) throws JSONException {
+    public void onNewLamp(final JSONObject lamp, final Context context) throws JSONException {
         if(UserConnection.getInstance().isConnected()){
             //TODO check if lamp exists, if it doesn't, ask the user if he wants to register it
+            lampDAO.getById(lamp.getInt("id"), new ResponseHandler() {
+                @Override
+                public void onSuccess(Object object) {
+                    if(object != null){
+                        System.out.println("It exists");
+                    }
+                    else{
+                        new AlertDialog.Builder(context)
+                                .setTitle("New Lamp")
+                                .setMessage("You are standing under a new lamp, do you want to add it ?")
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+                                        try {
+                                            System.out.println("It works " + lamp.getInt("id"));
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }})
+                                .setNegativeButton(android.R.string.no, null).show();
+                    }
+                }
+
+                @Override
+                public void onError(Object object) {
+
+                }
+            });
         }
         else {
             //TODO check if lamp exists, if it does display info, if it doesn't, no behaviour
