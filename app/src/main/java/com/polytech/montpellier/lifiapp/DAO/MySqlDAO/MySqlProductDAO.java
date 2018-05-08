@@ -146,7 +146,7 @@ public class MySqlProductDAO extends ProductDAO {
     @Override
     public void getAll(final ResponseHandler response) throws DAOException {
         final ArrayList<Product> products =  new ArrayList<Product>();
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Lamp/", new ResponseHandler() {
+        Helper.getInstance().GET("http://81.64.139.113:1337/api/Product/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if (object instanceof JSONArray) {
