@@ -29,12 +29,11 @@ public class MySqlProductDAO extends ProductDAO {
     public void create(Product obj, final ResponseHandler response) throws DAOException {
 
         Map<String, String> params = new HashMap<String, String>();
-        params.put("nameProduct", obj.getName());
-        params.put("descriptionProduct", obj.getDescription());
-        params.put("priceProduct",  Float.toString(obj.getPrice()));
-        params.put("brandProduct", obj.getDescription());
-        params.put("idDepartment", "obj.getDepartement().getId()") ;
-        //TODO : get id + token
+        params.put("name", obj.getName());
+        params.put("description", obj.getDescription());
+        params.put("price",  String.valueOf(obj.getPrice()));
+        params.put("brand", obj.getDescription());
+        params.put("idDepartement", String.valueOf(obj.getDepartment())) ;
 
 
         Helper.getInstance().POST("http://81.64.139.113:1337/api/Product", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", params, new ResponseHandler() {
@@ -48,7 +47,7 @@ public class MySqlProductDAO extends ProductDAO {
                     } else {
                         try {
                             JSONObject current = array.getJSONObject(0);
-                            response.onSuccess(new Product(current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
+                            response.onSuccess(new Product(current.getInt("id"), current.getString("name"),  current.getString("description"),  Float.parseFloat(current.getString("price")),  current.getString("brand"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -65,6 +64,8 @@ public class MySqlProductDAO extends ProductDAO {
 
     @Override
     public void getById(int id, final ResponseHandler response) throws DAOException {
+
+        //TODO : getbyId in product.js
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Product/" + id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
@@ -75,7 +76,7 @@ public class MySqlProductDAO extends ProductDAO {
                     } else {
                         try {
                             JSONObject current = array.getJSONObject(0);
-                            response.onSuccess(new Product(current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
+                            response.onSuccess(new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -92,13 +93,13 @@ public class MySqlProductDAO extends ProductDAO {
 
     @Override
     public void update(Product obj, final ResponseHandler response) throws DAOException {
+
         Map<String, String> params = new HashMap<String, String>();
-        params.put("nameProduct", obj.getName());
-        params.put("descriptionProduct", obj.getDescription());
-        params.put("priceProduct",  Float.toString(obj.getPrice()));
-        params.put("brandProduct", obj.getDescription());
-        params.put("idDepartment", "obj.getDepartement().getId()") ;
-        //TODO : get id + token
+        params.put("name", obj.getName());
+        params.put("description", obj.getDescription());
+        params.put("price",  String.valueOf(obj.getPrice()));
+        params.put("brand", obj.getDescription());
+        params.put("idDepartement", String.valueOf(obj.getDepartment())) ;
 
 
         Helper.getInstance().POST("http://81.64.139.113:1337/api/Product", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", params, new ResponseHandler() {
@@ -112,7 +113,7 @@ public class MySqlProductDAO extends ProductDAO {
                     } else {
                         try {
                             JSONObject current = array.getJSONObject(0);
-                            response.onSuccess(new Product(current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
+                            response.onSuccess(new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -153,7 +154,7 @@ public class MySqlProductDAO extends ProductDAO {
                     try {
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject current = array.getJSONObject(i);
-                            products.add(new Product(current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
+                            products.add(new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
                         }
                         response.onSuccess(products);
                     } catch (JSONException e) {
