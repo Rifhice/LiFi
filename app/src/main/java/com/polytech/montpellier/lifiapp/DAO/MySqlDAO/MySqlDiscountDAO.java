@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class MySqlDiscountDAO extends DiscountDAO {
 
     @Override
-    public void create(Discount obj, ResponseHandler response) throws DAOException {
+    public void create(Discount obj,String token, ResponseHandler response) throws DAOException {
 
     }
 
@@ -24,12 +24,12 @@ public class MySqlDiscountDAO extends DiscountDAO {
     }
 
     @Override
-    public void update(Discount obj, ResponseHandler response) throws DAOException {
+    public void update(Discount obj,String token, ResponseHandler response) throws DAOException {
 
     }
 
     @Override
-    public void delete(int id, ResponseHandler response) throws DAOException {
+    public void delete(int id,String token, ResponseHandler response) throws DAOException {
 
     }
 

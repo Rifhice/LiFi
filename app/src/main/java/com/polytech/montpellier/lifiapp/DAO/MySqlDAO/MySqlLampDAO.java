@@ -14,15 +14,34 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Kevin on 30/04/2018.
  */
 
 public class MySqlLampDAO extends LampDAO {
+
     @Override
-    public void create(Lamp obj, final ResponseHandler response) throws DAOException {
-        //TODO
+    public void create(Lamp obj,String token, final ResponseHandler response) throws DAOException {
+
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("idLamp", obj.getId() + "");
+        params.put("name", obj.getName());
+        params.put("idDepartment",  String.valueOf(obj.getDepartment().getId()));
+
+        Helper.getInstance().POST("http://81.64.139.113:1337/api/Lamp",token , params, new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                response.onSuccess(object);
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
     }
 
     public void getById(final int id, final ResponseHandler response) throws DAOException {
@@ -52,12 +71,12 @@ public class MySqlLampDAO extends LampDAO {
     }
 
     @Override
-    public void update(Lamp obj, final ResponseHandler response) throws DAOException {
+    public void update(Lamp obj,String token, final ResponseHandler response) throws DAOException {
         //TODO
     }
 
     @Override
-    public void delete(int id, final ResponseHandler response) throws DAOException {
+    public void delete(int id,String token, final ResponseHandler response) throws DAOException {
         //TODO
     }
 

@@ -22,7 +22,7 @@ import java.util.Map;
 public class MySqlDepartmentDAO extends DepartmentDAO{
 
     @Override
-    public void create(Department obj, final ResponseHandler response) throws DAOException {
+    public void create(Department obj,String token, final ResponseHandler response) throws DAOException {
         Map<String, String> params = new HashMap<String, String>();
         params.put("name", obj.getName());
 
@@ -80,7 +80,7 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
     }
 
     @Override
-    public void update(Department obj, final ResponseHandler response) throws DAOException {
+    public void update(Department obj,String token, final ResponseHandler response) throws DAOException {
 
         Map<String, String> params = new HashMap<String, String>();
         params.put("name", obj.getName());
@@ -113,7 +113,7 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
     }
 
     @Override
-    public void delete(int id, ResponseHandler response) throws DAOException {
+    public void delete(int id,String token, ResponseHandler response) throws DAOException {
         Helper.getInstance().DELETE("http://81.64.139.113:1337/api/Department/" + id, "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" , new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {

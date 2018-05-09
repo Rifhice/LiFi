@@ -1,5 +1,6 @@
 package com.polytech.montpellier.lifiapp;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import com.oledcomm.soft.lifiapp.R;
  */
 
 public class AdminProductView extends AppCompatActivity implements AdminTab {
+
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +37,9 @@ public class AdminProductView extends AppCompatActivity implements AdminTab {
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        System.out.println("It works " + lamp);
+                        Intent intent = new Intent(context, AddLamp.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra("lamp",lamp);
+                        context.startActivity(intent);
                     }})
                 .setNegativeButton(android.R.string.no, null).show();
     }

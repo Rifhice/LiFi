@@ -26,7 +26,7 @@ import java.util.Map;
 public class MySqlProductDAO extends ProductDAO {
 
     @Override
-    public void create(Product obj, final ResponseHandler response) throws DAOException {
+    public void create(Product obj,String token, final ResponseHandler response) throws DAOException {
 
         Map<String, String> params = new HashMap<String, String>();
         params.put("name", obj.getName());
@@ -92,7 +92,7 @@ public class MySqlProductDAO extends ProductDAO {
     }
 
     @Override
-    public void update(Product obj, final ResponseHandler response) throws DAOException {
+    public void update(Product obj,String token, final ResponseHandler response) throws DAOException {
 
         Map<String, String> params = new HashMap<String, String>();
         params.put("name", obj.getName());
@@ -129,7 +129,7 @@ public class MySqlProductDAO extends ProductDAO {
     }
 
     @Override
-    public void delete(int id, final ResponseHandler response) throws DAOException {
+    public void delete(int id,String token, final ResponseHandler response) throws DAOException {
         Helper.getInstance().DELETE("http://81.64.139.113:1337/api/Product/" + id, "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" , new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {

@@ -40,6 +40,9 @@
         <activity android:name="com.polytech.montpellier.lifiapp.AddProduct">
 
         </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.AddLamp">
+
+        </activity>
     </application>
 
 </manifest>

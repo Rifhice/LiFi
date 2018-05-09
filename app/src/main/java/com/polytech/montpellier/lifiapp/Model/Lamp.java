@@ -1,10 +1,12 @@
 package com.polytech.montpellier.lifiapp.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by Kevin on 30/04/2018.
  */
 
-public class Lamp {
+public class Lamp{
 
     int id;
     String name;

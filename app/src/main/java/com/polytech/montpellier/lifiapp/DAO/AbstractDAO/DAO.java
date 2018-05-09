@@ -28,7 +28,7 @@ public abstract class DAO <T> {
      * @param obj
      * @return T, the obj created or null if an error occurred.
      */
-    public abstract void create(T obj,ResponseHandler response) throws DAOException;
+    public abstract void create(T obj, String token, ResponseHandler response) throws DAOException;
 
     /**
      * Get an existing object by his id.
@@ -42,14 +42,14 @@ public abstract class DAO <T> {
      * @param obj
      * @return int, number of lines updated
      */
-    public abstract void update(T obj,ResponseHandler response) throws DAOException;
+    public abstract void update(T obj, String token, ResponseHandler response) throws DAOException;
 
     /**
      * Delete the object with id equals to the given one.
      * @param id, int
      * @return int, the number of rows deleted.
      */
-    public abstract void delete(int id,ResponseHandler response) throws DAOException;
+    public abstract void delete(int id, String token, ResponseHandler response) throws DAOException;
 
     /**
      * Get all the existing objects.
