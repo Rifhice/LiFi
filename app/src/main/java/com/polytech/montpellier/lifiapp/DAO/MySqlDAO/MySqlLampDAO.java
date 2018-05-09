@@ -45,6 +45,8 @@ public class MySqlLampDAO extends LampDAO {
     }
 
     public void getById(final int id, final ResponseHandler response) throws DAOException {
+
+
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Lamp/" + id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {

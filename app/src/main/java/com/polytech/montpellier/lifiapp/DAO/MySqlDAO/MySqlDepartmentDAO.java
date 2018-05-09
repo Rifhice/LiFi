@@ -6,6 +6,7 @@ import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Product;
+import com.polytech.montpellier.lifiapp.Model.Lamp;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -78,6 +79,7 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
             }
         });
     }
+
 
     @Override
     public void update(Department obj,String token, final ResponseHandler response) throws DAOException {

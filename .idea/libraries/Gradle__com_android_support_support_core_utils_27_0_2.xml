@@ -1,8 +1,24 @@
+<<<<<<< refs/remotes/origin/master
+<<<<<<< Updated upstream
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-core-utils-27.0.2">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/0dc13abc59cae480554bf7df1ba4bc22/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/0dc13abc59cae480554bf7df1ba4bc22/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-core-utils/27.0.2/800ca6dd3ce3d83aa50249ae273ca5f02f7ddc5f/support-core-utils-27.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+=======
+=======
+>>>>>>> userunderlamp
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:support-core-utils-27.0.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/6440fc34776ac324e07ae5a25b9a30cb/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/6440fc34776ac324e07ae5a25b9a30cb/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
