@@ -14,4 +14,15 @@ public class RegularPercentageDiscount extends PercentageDiscount {
         super(product, dateDebut, dateFin, dateCreation, percentage);
     }
 
+    @Override
+    public float oldPrice() {
+        return this.product.getPrice();
+    }
+
+    @Override
+    public float newPrice() {
+        float oldPrice = this.oldPrice();
+        return (oldPrice - oldPrice*getPercentage());
+    }
+
 }

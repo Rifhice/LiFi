@@ -6,7 +6,11 @@ package com.polytech.montpellier.lifiapp.Model;
 
 public class Product {
 
+<<<<<<< Updated upstream
     int id;
+=======
+    int id ;
+>>>>>>> Stashed changes
     String name;
     String description;
     float price;
@@ -14,7 +18,11 @@ public class Product {
     Department department;
 
     public Product(int id, String name, String description, float price, String brand, Department department) {
+<<<<<<< Updated upstream
         this.id = id;
+=======
+        this.id = id  ;
+>>>>>>> Stashed changes
         this.name = name;
         this.description = description;
         this.price = price;

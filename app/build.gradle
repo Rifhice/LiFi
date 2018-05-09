@@ -35,13 +35,14 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    //compile 'com.android.support:appcompat-v7:24.0.0'
     compile(name: 'androidlifisdk-release', ext: 'aar')
     compile 'com.google.code.gson:gson:2.7'
-    compile 'com.android.volley:volley:1.0.0'
+    //compile 'com.android.volley:volley:1.0.0'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.android.support:appcompat-v7:27.0.+'
-    implementation 'com.android.support:appcompat-v7:27.0.+'
+    //implementation 'com.android.support:appcompat-v7:27.0.+'
+    compile 'com.mcxiaoke.volley:library:1.0.6@aar'
+
 
     //implementation 'com.android.support:support-v4:24.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'

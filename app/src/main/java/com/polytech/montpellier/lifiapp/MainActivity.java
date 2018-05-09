@@ -19,8 +19,8 @@ import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.oledcomm.soft.androidlifisdk.ILiFiPosition;
-import com.oledcomm.soft.androidlifisdk.LiFiSdkManager;
+//import com.oledcomm.soft.androidlifisdk.ILiFiPosition;
+//import com.oledcomm.soft.androidlifisdk.LiFiSdkManager;
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
