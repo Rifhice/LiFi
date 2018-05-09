@@ -55,20 +55,11 @@ public class LampController extends AppCompatActivity {
                         System.out.println("It exists");
                     }
                     else{
-                        new AlertDialog.Builder(context)
-                                .setTitle("New Lamp")
-                                .setMessage("You are standing under a new lamp, do you want to add it ?")
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                        try {
-                                            System.out.println("It works " + lamp.getInt("id"));
-                                        } catch (JSONException e) {
-                                            e.printStackTrace();
-                                        }
-                                    }})
-                                .setNegativeButton(android.R.string.no, null).show();
+                        try {
+                            AdminActivity.getInstance().openNewLampPopUp(lamp.getInt("id"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
 

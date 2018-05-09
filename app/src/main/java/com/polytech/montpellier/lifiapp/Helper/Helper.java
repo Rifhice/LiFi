@@ -61,6 +61,7 @@ public class Helper {
                     res.onSuccess(getJSON);
                 } catch (Throwable t) {
                     Log.e("My App", "Could not parse malformed JSON: \"" + response + "\"");
+                    res.onSuccess(null);
                 }
 
             }

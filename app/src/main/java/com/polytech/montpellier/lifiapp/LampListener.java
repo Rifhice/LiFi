@@ -13,7 +13,7 @@ import org.json.JSONObject;
  * Created by Kevin on 03/05/2018.
  */
 
-public class LampListener {
+public class LampListener{
 
     LiFiSdkManager mLiFiSdkManager;
 

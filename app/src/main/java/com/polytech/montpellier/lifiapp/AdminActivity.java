@@ -18,10 +18,17 @@ public class AdminActivity extends ActivityGroup {
     Intent discount;
     Intent department;
 
+    static AdminActivity instance = null;
+
+    public static AdminActivity getInstance() {
+        return instance;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_display);
+        instance = this;
         lamp = new Intent(this, AdminLampView.class);
         product = new Intent(this, AdminProductView.class);
 
@@ -52,6 +59,10 @@ public class AdminActivity extends ActivityGroup {
         spec.setContent(R.id.department);
         spec.setIndicator("Department");
         tabHost.addTab(spec);
+    }
+
+    public void openNewLampPopUp(int lamp){
+        ((AdminTab)getCurrentActivity()).openNewLampPopUp(lamp);
     }
 
 }

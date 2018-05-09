@@ -1,15 +1,14 @@
 package com.polytech.montpellier.lifiapp;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -17,23 +16,16 @@ import android.support.v7.app.AppCompatActivity;
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
-import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
-import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 /**
  * Created by Kevin on 03/05/2018.
  */
 
-public class AdminLampView extends AppCompatActivity {
+public class AdminLampView extends AppCompatActivity implements AdminTab {
 
     final Context context = this;
     LampDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO();
@@ -108,4 +100,18 @@ public class AdminLampView extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void openNewLampPopUp(final int lamp) {
+        System.out.println("BORDEL");
+        new AlertDialog.Builder(context)
+                .setTitle("New Lamp")
+                .setMessage("You are standing under a new lamp, do you want to add it ?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        System.out.println("It works " + lamp);
+                    }})
+                .setNegativeButton(android.R.string.no, null).show();
+    }
 }
