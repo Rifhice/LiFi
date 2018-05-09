@@ -5,11 +5,8 @@ import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
-<<<<<<< Updated upstream
 import com.polytech.montpellier.lifiapp.Model.Product;
-=======
 import com.polytech.montpellier.lifiapp.Model.Lamp;
->>>>>>> Stashed changes
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -58,11 +55,7 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
 
     @Override
     public void getById(int id, final ResponseHandler response) throws DAOException {
-<<<<<<< Updated upstream
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Department/" + id, new ResponseHandler() {
-=======
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Departement/" + id, new ResponseHandler() {
->>>>>>> Stashed changes
             @Override
             public void onSuccess(Object object) {
                 if (object instanceof JSONArray) {
@@ -72,11 +65,7 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
                     } else {
                         try {
                             JSONObject current = array.getJSONObject(0);
-<<<<<<< Updated upstream
                             response.onSuccess(new Department(current.getInt("id"), current.getString("name")));
-=======
-                            response.onSuccess(new Department(current.getInt("idDepartment"), current.getString("name")));
->>>>>>> Stashed changes
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -90,6 +79,7 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
             }
         });
     }
+
 
     @Override
     public void update(Department obj,String token, final ResponseHandler response) throws DAOException {

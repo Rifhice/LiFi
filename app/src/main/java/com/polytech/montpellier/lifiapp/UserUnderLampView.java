@@ -2,6 +2,7 @@ package com.polytech.montpellier.lifiapp;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -11,7 +12,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 
-
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
@@ -29,6 +31,11 @@ import com.polytech.montpellier.lifiapp.Model.Discounts.RegularQuantityDiscount;
 
 import android.support.v7.app.AppCompatActivity;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 /**
@@ -40,8 +47,7 @@ public class UserUnderLampView extends AppCompatActivity {
 
     final Context context = this;
 
-    ProductDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
-
+    ProductDAO daoProduct = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
 
 
 
@@ -49,11 +55,12 @@ public class UserUnderLampView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_under_lamp);
-        //TextView text = (TextView)findViewById(R.id.text);
-        //text.setText("salut");
 
-        final TableLayout tl = (TableLayout) findViewById(R.id.promotionsJourTable);
+        Helper.getInstance(this);
+
+        setContentView(R.layout.user_under_lamp);
+
+        final TableLayout tl = findViewById(R.id.promotionsJourTable);
 
         TableRow tr_head = new TableRow(this);
         tr_head.setId(10);
@@ -72,9 +79,107 @@ public class UserUnderLampView extends AppCompatActivity {
 
         tl.addView(tr_head);
 
+        Intent intent = getIntent();
+        intent.getStringExtra("lampName") ;
+        int pkDep = intent.getIntExtra("lampDep", 0) ;
+
+        Helper.getInstance().GET("http://81.64.139.113:1337/api/Department/" + pkDep+ "/Products/", new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+
+                System.out.println("object on create userunderlamp");
+                if (object instanceof JSONArray){
+                    System.out.println("object on create userunderlampin instance of " +object.toString());
+
+                    JSONArray depProducts= (JSONArray) object ;
+
+                    for (int i = 0; i < depProducts.length(); i++) {
+                        try {
+                            JSONObject currentProduct = depProducts.getJSONObject(i);
+                            System.out.println("current Product  " + currentProduct);
+                            int idProduct  = currentProduct.getInt("idProduct");
+                            final String nameProduct  = currentProduct.getString("name");
+
+
+                            Helper.getInstance().GET("http://81.64.139.113:1337/api/Product/" + idProduct + "/Discounts/", new ResponseHandler() {
+
+                                @Override
+                                public void onSuccess(Object object) {
+                                    if (object == null){
+                                        System.out.println("NO PROMOTIONS");
+                                    }else{
+                                    JSONArray productDiscounts = (JSONArray) object;
+
+                                    //System.out.println("productDiscout " + object.toString());
+                                    for (int i = 0; i < productDiscounts.length(); i++) {
+
+                                        try {
+                                            JSONObject currentDiscount = productDiscounts.getJSONObject(i);
+                                            System.out.println("current Product  " + currentDiscount);
+                                            int idDiscount = currentDiscount.getInt("idDiscount");
+
+                                            TableRow row = new TableRow(context);
+                                            row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+                                            row.setGravity(Gravity.CENTER_HORIZONTAL);
+
+
+                                            TextView label_Product = new TextView(context);
+                                            label_Product.setText(nameProduct);
+                                            label_Product.setTextColor(Color.BLACK);
+                                            label_Product.setPadding(5, 5, 5, 5);
+                                            label_Product.setWidth(tl.getWidth() / 4);
+                                            row.addView(label_Product);
+
+                                            TextView id_Discount = new TextView(context);
+                                            id_Discount.setText(idDiscount + "");
+                                            id_Discount.setTextColor(Color.BLACK);
+                                            id_Discount.setPadding(5, 5, 5, 5);
+                                            id_Discount.setWidth(tl.getWidth() / 4);
+                                            row.addView(id_Discount);
+
+                                            tl.addView(row);
+
+
+
+                                        } catch (JSONException e1) {
+                                            e1.printStackTrace();
+
+                                        }//catch
+
+                                    }//for
+
+                                }
+                                }
+                                //onsuccess
+
+                                @Override
+                                public void onError(Object object) {
+                                    System.out.println("Error in getting all discounts od Product ");
+
+                                }
+                            });
+                        }catch (JSONException e ){
+                            e.printStackTrace();
+                        }
+
+
+                    }
+                }
+            }
+
+            @Override
+            public void onError(Object object) {
+                System.out.println("Error in getting all products od departement ");
+            }
+        });
+
+
+
+
+
         Helper.getInstance(this);
 
-        dao.getById(2, new ResponseHandler() {
+        daoProduct.getById(2, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 System.out.println("GET 1 "+object.toString());

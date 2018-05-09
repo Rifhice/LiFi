@@ -81,6 +81,10 @@ public class LampController extends AppCompatActivity {
                             Intent intent = new Intent(context, UserUnderLampView.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             Lamp lamp = (Lamp)object;
                             intent.putExtra("lamp",lamp.getId());
+                            intent.putExtra("lampName",lamp.getName());
+                            intent.putExtra("lampDep",lamp.getDepartment().getId());
+
+
                             //TODO Add lamp as parameter
                             context.startActivity(intent);
                             System.out.println("It exists");

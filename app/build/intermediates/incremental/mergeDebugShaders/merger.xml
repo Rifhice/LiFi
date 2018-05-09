@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 <merger version="3"><dataSet config="main"><source path="C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\Kevin\Desktop\SDK\LiFi\app\src\debug\shaders"/></dataSet></merger>
 =======
 <<<<<<< Updated upstream
@@ -8,3 +9,6 @@
 <merger version="3"><dataSet config="main"><source path="/Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/debug/shaders"/></dataSet></merger>
 >>>>>>> Stashed changes
 >>>>>>> dao getAll
+=======
+<merger version="3"><dataSet config="main"><source path="/Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/debug/shaders"/></dataSet></merger>
+>>>>>>> userunderlamp
