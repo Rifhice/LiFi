@@ -1,18 +1,33 @@
 package com.polytech.montpellier.lifiapp;
 
 import android.app.Activity;
+import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.Spinner;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.support.v7.app.AppCompatActivity;
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
+import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
+import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
+import com.polytech.montpellier.lifiapp.Model.Department;
+import com.polytech.montpellier.lifiapp.Model.Lamp;
+import com.polytech.montpellier.lifiapp.Model.Product;
 
 
 import org.json.JSONArray;
@@ -31,6 +46,7 @@ public class AddProduct extends AppCompatActivity{
     EditText editText_brand;
     EditText editText_name;
     MultiAutoCompleteTextView editText_description;
+
     //Float price;
     String price;
     String brand;
@@ -38,12 +54,15 @@ public class AddProduct extends AppCompatActivity{
     String name;
     Button validate;
     String token = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" ;
+    DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_add);
-
         Helper.getInstance(this);
+        initializeUI();
+
 
 
         editText_price = (EditText) findViewById(R.id.editText_product_addPrice);
@@ -54,7 +73,7 @@ public class AddProduct extends AppCompatActivity{
 
         //TODO: faire une alerte si un des champs est vide
 
-        if(!editText_name.getText().toString().isEmpty() && !editText_description.getText().toString().isEmpty()
+        if (!editText_name.getText().toString().isEmpty() && !editText_description.getText().toString().isEmpty()
                 && !editText_brand.getText().toString().isEmpty() && !editText_price.getText().toString().isEmpty()) {
 
             name = editText_name.getText().toString();
@@ -66,13 +85,13 @@ public class AddProduct extends AppCompatActivity{
 
         }
 
-            validate = (Button) findViewById(R.id.button_addProduct);
+        validate = (Button) findViewById(R.id.button_addProduct);
 
-            validate.setOnTouchListener(new View.OnTouchListener() {
+        validate.setOnTouchListener(new View.OnTouchListener() {
 
 
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
                    /* Helper.getInstance(this).POST("http://81.64.139.113:1337/api/Product", token, params, new ResponseHandler() {
 
                         @Override
@@ -85,10 +104,14 @@ public class AddProduct extends AppCompatActivity{
 
                         }
                     });*/
-                    return true;
-                }
-            });
-        }
+                System.out.println("click");
+                return true;
+            }
+        });
+    }
+
+
+
 
 
 
@@ -114,6 +137,40 @@ public class AddProduct extends AppCompatActivity{
     @Override
     public void onBackPressed(){
 
+    }
+
+    private void initializeUI() {
+
+        final Spinner spinnerDepartment = (Spinner) findViewById(R.id.spinner_ProductDepartement);
+        System.out.println("Nom:");
+        dao.getAll(new ResponseHandler() {
+
+            @Override
+            public void onSuccess(Object object) {
+
+                if (object instanceof ArrayList) {
+
+                    /*ArrayList<Department> array = (ArrayList<Department>) object;
+                    for (int i = 0; i < array.size(); i++) {
+                        Department department = array.get(i);
+                        System.out.println("Nom:" + department.getName());
+                        ArrayList<String> dep = new ArrayList<>();
+                        dep.add(department.getName());
+                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.product_add, dep);
+                        adapter.setDropDownViewResource(R.layout.product_add);
+                        spinnerDepartment.setAdapter(adapter);
+
+
+                    }*/
+                }
+            }
+
+            @Override
+            public void onError(Object object) {
+                System.out.println("Nom:");
+            }
+        });
+        System.out.println("Nom2:");
     }
 
 }

@@ -10,8 +10,8 @@
         android:id="@+id/textView_product_addName"
         android:layout_width="48dp"
         android:layout_height="25dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
         android:text="Nom :"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,12 +48,13 @@
         android:text="Description"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_product_addPrice"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="@+id/textView_product_addPrice"
-        app:layout_constraintTop_toBottomOf="@+id/textView_product_addPrice" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/editText_product_addBrand"
-        android:layout_width="215dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="30dp"
         android:ems="10"
@@ -66,20 +67,21 @@
 
     <EditText
         android:id="@+id/editText_product_addName"
-        android:layout_width="215dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nom Produit"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toEndOf="@+id/textView_product_addName"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText_product_addPrice"
-        android:layout_width="215dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="30dp"
         android:ems="10"
@@ -111,5 +113,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/multiTextView_product_addDescription" />
 
+    <Spinner
+        android:id="@+id/spinner_ProductDepartement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_product_addPrice"
+        app:layout_constraintStart_toStartOf="@+id/editText_product_addPrice"
+        app:layout_constraintTop_toBottomOf="@+id/editText_product_addPrice" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:text="Rayon :"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_product_addPrice"
+        app:layout_constraintStart_toStartOf="@+id/textView_product_addPrice"
+        app:layout_constraintTop_toBottomOf="@+id/textView_product_addPrice" />
 
 </android.support.constraint.ConstraintLayout>

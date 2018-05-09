@@ -86,7 +86,7 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
         params.put("name", obj.getName());
 
 
-        Helper.getInstance().POST("http://81.64.139.113:1337/api/Product", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", params, new ResponseHandler() {
+        Helper.getInstance().POST("http://81.64.139.113:1337/api/Department", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", params, new ResponseHandler() {
 
             @Override
             public void onSuccess(Object object) {
@@ -128,9 +128,9 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
     }
 
     @Override
-    public void getAll(ResponseHandler response) throws DAOException {
+    public void getAll(final ResponseHandler response) throws DAOException {
         final ArrayList<Department> departments =  new ArrayList<Department>();
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Departement/", new ResponseHandler() {
+        Helper.getInstance().GET("http://81.64.139.113:1337/api/Department/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if (object instanceof JSONArray) {
@@ -138,7 +138,7 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
                     try {
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject current = array.getJSONObject(i);
-                            departments.add(new Department(current.getInt("id"), current.getString("name")));
+                            departments.add(new Department(current.getInt("idDepartment"), current.getString("name")));
                         }
                         response.onSuccess(departments);
                     } catch (JSONException e) {
