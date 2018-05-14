@@ -2948,6 +2948,7 @@ public final class R {
     public static final int showTitle=0x7f07007d;
     public static final int spacer=0x7f07007e;
     public static final int spinner_ProductDepartement=0x7f07007f;
+<<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
     public static final int spinner_department=0x7f070080;
     public static final int split_action_bar=0x7f070081;
@@ -2989,6 +2990,8 @@ public final class R {
     public static final int wrap=0x7f0700a5;
     public static final int wrap_content=0x7f0700a6;
 =======
+=======
+>>>>>>> Discount list details and color
     public static final int split_action_bar=0x7f070080;
     public static final int spread=0x7f070081;
     public static final int spread_inside=0x7f070082;
@@ -3027,7 +3030,10 @@ public final class R {
     public static final int withText=0x7f0700a3;
     public static final int wrap=0x7f0700a4;
     public static final int wrap_content=0x7f0700a5;
+<<<<<<< refs/remotes/origin/master
 >>>>>>> Stashed changes
+=======
+>>>>>>> Discount list details and color
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f080000;

@@ -659,6 +659,7 @@ public final class R {
         public static final int select_dialog_listview = 0x7f070079;
         public static final int shortcut = 0x7f07007a;
         public static final int spacer = 0x7f07007e;
+<<<<<<< refs/remotes/origin/master
         public static final int split_action_bar = 0x7f070081;
         public static final int src_atop = 0x7f070084;
         public static final int src_in = 0x7f070085;
@@ -679,6 +680,28 @@ public final class R {
         public static final int uniform = 0x7f0700a0;
         public static final int up = 0x7f0700a1;
         public static final int wrap_content = 0x7f0700a6;
+=======
+        public static final int split_action_bar = 0x7f070080;
+        public static final int src_atop = 0x7f070083;
+        public static final int src_in = 0x7f070084;
+        public static final int src_over = 0x7f070085;
+        public static final int submenuarrow = 0x7f070088;
+        public static final int submit_area = 0x7f070089;
+        public static final int tabMode = 0x7f07008a;
+        public static final int tag_transition_group = 0x7f07008b;
+        public static final int text = 0x7f07008d;
+        public static final int text2 = 0x7f07008e;
+        public static final int textSpacerNoButtons = 0x7f07008f;
+        public static final int textSpacerNoTitle = 0x7f070090;
+        public static final int time = 0x7f070099;
+        public static final int title = 0x7f07009a;
+        public static final int titleDividerNoCustom = 0x7f07009b;
+        public static final int title_template = 0x7f07009c;
+        public static final int topPanel = 0x7f07009e;
+        public static final int uniform = 0x7f07009f;
+        public static final int up = 0x7f0700a0;
+        public static final int wrap_content = 0x7f0700a5;
+>>>>>>> Discount list details and color
     }
     public static final class integer {
         public static final int abc_config_activityDefaultDur = 0x7f080000;

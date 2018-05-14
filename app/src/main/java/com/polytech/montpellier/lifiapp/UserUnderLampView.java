@@ -119,87 +119,108 @@ public class UserUnderLampView extends AppCompatActivity {
 
                                             try {
                                                 JSONObject currentDiscount = productDiscounts.getJSONObject(i);
-                                                System.out.println("current Product  " + currentDiscount);
+                                                System.out.println("current Discounr  " + currentDiscount);
                                                 int idDiscount = currentDiscount.getInt("idDiscount");
 
                                                 Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/" + idDiscount, new ResponseHandler() {
                                                     @Override
                                                     public void onSuccess(Object object) {
-                                                        System.out.println(object);
-                                                        JSONObject discount = new JSONObject();
-                                                        discount = (JSONObject) object;
-
-                                                        try {
-
-                                                            String date_end = discount.getString("date_end");
-                                                            System.out.println("date end" + date_end);
-                                                            System.out.println("discount.lentgh " + discount.length());
-                                                            int fidelity = discount.getInt("fidelity");
-
-                                                            if (discount.length() == 8) {
-
-                                                                float percentage = (float) discount.getDouble("percentage");
-
-                                                                TableRow row = new TableRow(context);
-                                                                row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-                                                                row.setGravity(Gravity.CENTER_HORIZONTAL);
+                                                        if (object == null){
+                                                            System.out.println("NO PROMOTIONS");
+                                                        }else {
 
 
-                                                                TextView label_Product = new TextView(context);
-                                                                label_Product.setText(nameProduct);
-                                                                label_Product.setTextColor(Color.BLACK);
-                                                                label_Product.setPadding(5, 5, 5, 5);
-                                                                label_Product.setWidth(tl.getWidth() / 4);
-                                                                row.addView(label_Product);
+                                                            System.out.println("OBJECT IDDISCOUNT"+object);
 
-                                                                TextView percentage_Discount = new TextView(context);
-                                                                percentage_Discount.setText(percentage + "% off");
-                                                                percentage_Discount.setTextColor(Color.BLACK);
-                                                                percentage_Discount.setPadding(5, 5, 5, 5);
-                                                                percentage_Discount.setWidth(tl.getWidth() / 4);
-                                                                row.addView(percentage_Discount);
+                                                            JSONArray discounts = (JSONArray) object;
 
-                                                                tl.addView(row);
-                                                            } else if (discount.length() == 9) {
+                                                            for (int i = 0; i < discounts.length(); i++) {
 
+                                                                try {
+                                                                    JSONObject discount = discounts.getJSONObject(i);
 
-                                                                int bought = discount.getInt("Bought");
-                                                                int free = discount.getInt("Free");
+                                                                    String date_end = discount.getString("date_end");
+                                                                    System.out.println("date end" + date_end);
+                                                                    System.out.println("discount.lentgh " + discount.length());
+                                                                    int fidelity = discount.getInt("fidelity");
+                                                                    int color;
+                                                                    if (fidelity == 0){
+                                                                        color= Color.BLUE;
+                                                                    }else{
+                                                                        color = Color.GREEN;
+                                                                    }
 
-                                                                TableRow row = new TableRow(context);
-                                                                row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-                                                                row.setGravity(Gravity.CENTER_HORIZONTAL);
+                                                                    if (discount.length() == 8) {
 
+                                                                        float percentage = (float) discount.getDouble("percentage");
 
-                                                                TextView label_Product = new TextView(context);
-                                                                label_Product.setText(nameProduct);
-                                                                label_Product.setTextColor(Color.BLACK);
-                                                                label_Product.setPadding(5, 5, 5, 5);
-                                                                label_Product.setWidth(tl.getWidth() / 4);
-                                                                row.addView(label_Product);
-
-                                                                TextView boughtView = new TextView(context);
-                                                                boughtView.setText(bought + " acheté");
-                                                                boughtView.setTextColor(Color.BLACK);
-                                                                boughtView.setPadding(5, 5, 5, 5);
-                                                                boughtView.setWidth(tl.getWidth() / 4);
-                                                                row.addView(boughtView);
-
-                                                                TextView freeView = new TextView(context);
-                                                                freeView.setText(free + " offert");
-                                                                freeView.setTextColor(Color.BLACK);
-                                                                freeView.setPadding(5, 5, 5, 5);
-                                                                freeView.setWidth(tl.getWidth() / 4);
-                                                                row.addView(freeView);
-
-                                                                tl.addView(row);
-
-                                                            }// lseif lenght 9
+                                                                        TableRow row = new TableRow(context);
+                                                                        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+                                                                        row.setGravity(Gravity.CENTER_HORIZONTAL);
+                                                                        row.setBackgroundColor(color);
+                                                                        row.setId(discount.getInt("idDiscount"));
 
 
-                                                        } catch (JSONException e) {
-                                                            e.printStackTrace();
-                                                            System.out.println("JSON exception date_end");
+                                                                        TextView label_Product = new TextView(context);
+                                                                        label_Product.setText(nameProduct);
+                                                                        label_Product.setTextColor(Color.BLACK);
+                                                                        label_Product.setPadding(5, 5, 5, 5);
+                                                                        label_Product.setWidth(tl.getWidth() / 4);
+                                                                        row.addView(label_Product);
+
+                                                                        TextView percentage_Discount = new TextView(context);
+                                                                        percentage_Discount.setText(percentage + "% off");
+                                                                        percentage_Discount.setTextColor(Color.BLACK);
+                                                                        percentage_Discount.setPadding(5, 5, 5, 5);
+                                                                        percentage_Discount.setWidth(tl.getWidth() / 4);
+                                                                        row.addView(percentage_Discount);
+
+                                                                        tl.addView(row);
+                                                                    } else if (discount.length() == 9) {
+
+
+                                                                        int bought = discount.getInt("Bought");
+                                                                        int free = discount.getInt("Free");
+
+                                                                        TableRow row = new TableRow(context);
+                                                                        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+                                                                        row.setGravity(Gravity.CENTER_HORIZONTAL);
+                                                                        row.setBackgroundColor(color);
+                                                                        row.setId(discount.getInt("idDiscount"));
+
+
+
+                                                                        TextView label_Product = new TextView(context);
+                                                                        label_Product.setText(nameProduct);
+                                                                        label_Product.setTextColor(Color.BLACK);
+                                                                        label_Product.setPadding(5, 5, 5, 5);
+                                                                        label_Product.setWidth(tl.getWidth() / 4);
+                                                                        row.addView(label_Product);
+
+                                                                        TextView boughtView = new TextView(context);
+                                                                        boughtView.setText(bought + " acheté");
+                                                                        boughtView.setTextColor(Color.BLACK);
+                                                                        boughtView.setPadding(5, 5, 5, 5);
+                                                                        boughtView.setWidth(tl.getWidth() / 4);
+                                                                        row.addView(boughtView);
+
+                                                                        TextView freeView = new TextView(context);
+                                                                        freeView.setText(free + " offert");
+                                                                        freeView.setTextColor(Color.BLACK);
+                                                                        freeView.setPadding(5, 5, 5, 5);
+                                                                        freeView.setWidth(tl.getWidth() / 4);
+                                                                        row.addView(freeView);
+
+                                                                        tl.addView(row);
+
+                                                                    }// lseif lenght 9
+
+
+                                                                } catch (JSONException e) {
+                                                                    e.printStackTrace();
+                                                                    System.out.println("JSON exception date_end");
+                                                                }
+                                                            }
                                                         }
                                                     }// on succeess idDiscount
 
@@ -376,4 +397,3 @@ public class UserUnderLampView extends AppCompatActivity {
 }
 =======
 }
->>>>>>> Stashed changes

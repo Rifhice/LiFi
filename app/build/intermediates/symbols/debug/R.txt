@@ -753,6 +753,7 @@ int id showHome 0x7f07007c
 int id showTitle 0x7f07007d
 int id spacer 0x7f07007e
 int id spinner_ProductDepartement 0x7f07007f
+<<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
 int id spinner_department 0x7f070080
 int id split_action_bar 0x7f070081
@@ -794,6 +795,8 @@ int id withText 0x7f0700a4
 int id wrap 0x7f0700a5
 int id wrap_content 0x7f0700a6
 =======
+=======
+>>>>>>> Discount list details and color
 int id split_action_bar 0x7f070080
 int id spread 0x7f070081
 int id spread_inside 0x7f070082
@@ -832,7 +835,10 @@ int id validate 0x7f0700a2
 int id withText 0x7f0700a3
 int id wrap 0x7f0700a4
 int id wrap_content 0x7f0700a5
+<<<<<<< refs/remotes/origin/master
 >>>>>>> Stashed changes
+=======
+>>>>>>> Discount list details and color
 int integer abc_config_activityDefaultDur 0x7f080000
 int integer abc_config_activityShortDur 0x7f080001
 int integer cancel_button_image_alpha 0x7f080002
