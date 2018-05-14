@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.oledcomm.soft.sdktestapp"
     android:versionCode="1"
@@ -78,6 +79,8 @@
     </application>
 
 =======
+=======
+>>>>>>> Stashed changes
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.oledcomm.soft.sdktestapp"
     android:versionCode="1"
@@ -118,6 +121,14 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.polytech.montpellier.lifiapp.MainActivity" >
+<<<<<<< Updated upstream
+=======
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+>>>>>>> Stashed changes
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.Login" >
         </activity>
@@ -136,16 +147,26 @@
         <activity android:name="com.polytech.montpellier.lifiapp.UserUnderLampView" >
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AddProduct" >
+<<<<<<< Updated upstream
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+=======
+>>>>>>> Stashed changes
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AddLamp" >
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.UpdateLamp" >
         </activity>
+<<<<<<< Updated upstream
+=======
+        <activity android:name="com.polytech.montpellier.lifiapp.AdminDiscountView" >
+        </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.AdminDepartmentView" >
+        </activity>
+>>>>>>> Stashed changes
 
         <service
             android:name="com.oledcomm.soft.androidlifisdk.v4.BluetoothLeService"
@@ -155,5 +176,8 @@
             android:enabled="true" />
     </application>
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 </manifest>

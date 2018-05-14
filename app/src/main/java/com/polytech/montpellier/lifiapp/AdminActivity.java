@@ -31,6 +31,8 @@ public class AdminActivity extends ActivityGroup {
         instance = this;
         lamp = new Intent(this, AdminLampView.class);
         product = new Intent(this, AdminProductView.class);
+        discount = new Intent(this, AdminDiscountView.class);
+        department = new Intent(this, AdminDepartmentView.class);
 
 
         tabHost = (TabHost)findViewById(R.id.menu);
@@ -50,13 +52,13 @@ public class AdminActivity extends ActivityGroup {
 
         //Tab 3
         spec = tabHost.newTabSpec("Discount");
-        spec.setContent(R.id.discount);
+        spec.setContent(discount);
         spec.setIndicator("Discount");
         tabHost.addTab(spec);
 
         //Tab 4
         spec = tabHost.newTabSpec("Department");
-        spec.setContent(R.id.department);
+        spec.setContent(department);
         spec.setIndicator("Department");
         tabHost.addTab(spec);
     }

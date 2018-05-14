@@ -1,8 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: com.mcxiaoke.volley:library-1.0.6">
     <CLASSES>
+<<<<<<< Updated upstream
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.0.6.aar/63d2c033701c1fea6935d9fc65fb8f6c/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.0.6.aar/63d2c033701c1fea6935d9fc65fb8f6c/jars/classes.jar!/" />
+=======
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.0.6.aar/f22c7b99ce511ecf118c17b3d5cb7d29/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.0.6.aar/f22c7b99ce511ecf118c17b3d5cb7d29/res" />
+>>>>>>> Stashed changes
     </CLASSES>
     <JAVADOC />
     <SOURCES>

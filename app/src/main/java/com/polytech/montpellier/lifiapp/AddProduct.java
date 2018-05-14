@@ -6,7 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
+import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -164,9 +164,7 @@ public class AddProduct extends AppCompatActivity{
     }
 
 
-
     private void initializeUI() {
-
         final Spinner spinnerDepartment = (Spinner) findViewById(R.id.spinner_ProductDepartement);
         final ArrayList<String> dep = new ArrayList<>();
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
