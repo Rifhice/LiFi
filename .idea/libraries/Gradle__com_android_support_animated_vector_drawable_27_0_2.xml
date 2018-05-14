@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
 <component name="libraryTable">
@@ -6,6 +7,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/70306e71b3b22ea26e74daecb4a919f6/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/70306e71b3b22ea26e74daecb4a919f6/res" />
 =======
+=======
+>>>>>>> Stashed changes
 <component name="libraryTable">
   <library name="Gradle: com.android.support:animated-vector-drawable-27.0.2">
     <CLASSES>

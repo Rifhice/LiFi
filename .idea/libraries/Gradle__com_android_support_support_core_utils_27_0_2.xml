@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
 <component name="libraryTable">
@@ -6,6 +7,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/ecac15d152ec9083046fb4e067ad437c/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/ecac15d152ec9083046fb4e067ad437c/res" />
 =======
+=======
+>>>>>>> Stashed changes
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-core-utils-27.0.2">
     <CLASSES>
