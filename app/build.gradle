@@ -42,8 +42,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:27.0.+'
     //implementation 'com.android.support:appcompat-v7:27.0.+'
     compile 'com.mcxiaoke.volley:library:1.0.6@aar'
-
-
-    //implementation 'com.android.support:support-v4:24.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+
 }

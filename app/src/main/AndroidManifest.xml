@@ -11,15 +11,10 @@
         <activity android:name="com.polytech.montpellier.lifiapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-<<<<<<< refs/remotes/origin/master
-=======
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
->>>>>>> Discount list details and color
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.Login">
 

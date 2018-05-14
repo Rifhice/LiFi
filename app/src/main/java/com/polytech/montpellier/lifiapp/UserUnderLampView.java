@@ -81,196 +81,192 @@ public class UserUnderLampView extends AppCompatActivity {
         tl.addView(tr_head);
 
         Intent intent = getIntent();
-        intent.getStringExtra("lampName") ;
-        int pkDep = intent.getIntExtra("lampDep", 0) ;
+        intent.getStringExtra("lampName");
+        int pkDep = intent.getIntExtra("lampDep", 0);
 
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Department/" + pkDep+ "/Products/", new ResponseHandler() {
+        Helper.getInstance().GET("http://81.64.139.113:1337/api/Department/" + pkDep + "/Products/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if (object == null) {
                     System.out.println("NO PRODUCTS IN DEP");
                 } else {
-                System.out.println("object on create userunderlamp");
-                if (object instanceof JSONArray) {
-                    System.out.println("object on create userunderlampin instance of " + object.toString());
+                    System.out.println("object on create userunderlamp");
+                    if (object instanceof JSONArray) {
+                        System.out.println("object on create userunderlampin instance of " + object.toString());
 
-                    JSONArray depProducts = (JSONArray) object;
+                        JSONArray depProducts = (JSONArray) object;
 
-                    for (int i = 0; i < depProducts.length(); i++) {
-                        try {
-                            JSONObject currentProduct = depProducts.getJSONObject(i);
-                            System.out.println("current Product  " + currentProduct);
-                            int idProduct = currentProduct.getInt("idProduct");
-                            final String nameProduct = currentProduct.getString("name");
-
-
-                            Helper.getInstance().GET("http://81.64.139.113:1337/api/Product/" + idProduct + "/Discounts/", new ResponseHandler() {
-
-                                @Override
-                                public void onSuccess(Object object) {
-                                    if (object == null) {
-                                        System.out.println("NO PROMOTIONS");
-                                    } else {
-                                        JSONArray productDiscounts = (JSONArray) object;
-
-                                        //System.out.println("productDiscout " + object.toString());
-                                        for (int i = 0; i < productDiscounts.length(); i++) {
+                        for (int i = 0; i < depProducts.length(); i++) {
+                            try {
+                                JSONObject currentProduct = depProducts.getJSONObject(i);
+                                System.out.println("current Product  " + currentProduct);
+                                int idProduct = currentProduct.getInt("idProduct");
+                                final String nameProduct = currentProduct.getString("name");
 
 
-                                            try {
-                                                JSONObject currentDiscount = productDiscounts.getJSONObject(i);
-                                                System.out.println("current Discounr  " + currentDiscount);
-                                                int idDiscount = currentDiscount.getInt("idDiscount");
+                                Helper.getInstance().GET("http://81.64.139.113:1337/api/Product/" + idProduct + "/Discounts/", new ResponseHandler() {
 
-                                                Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/" + idDiscount, new ResponseHandler() {
-                                                    @Override
-                                                    public void onSuccess(Object object) {
-                                                        if (object == null){
-                                                            System.out.println("NO PROMOTIONS");
-                                                        }else {
+                                    @Override
+                                    public void onSuccess(Object object) {
+                                        if (object == null) {
+                                            System.out.println("NO PROMOTIONS");
+                                        } else {
+                                            JSONArray productDiscounts = (JSONArray) object;
+
+                                            //System.out.println("productDiscout " + object.toString());
+                                            for (int i = 0; i < productDiscounts.length(); i++) {
 
 
-                                                            System.out.println("OBJECT IDDISCOUNT"+object);
+                                                try {
+                                                    JSONObject currentDiscount = productDiscounts.getJSONObject(i);
+                                                    System.out.println("current Discounr  " + currentDiscount);
+                                                    int idDiscount = currentDiscount.getInt("idDiscount");
 
-                                                            JSONArray discounts = (JSONArray) object;
+                                                    Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/" + idDiscount, new ResponseHandler() {
+                                                        @Override
+                                                        public void onSuccess(Object object) {
+                                                            if (object == null) {
+                                                                System.out.println("NO PROMOTIONS");
+                                                            } else {
 
-                                                            for (int i = 0; i < discounts.length(); i++) {
 
-                                                                try {
-                                                                    JSONObject discount = discounts.getJSONObject(i);
+                                                                System.out.println("OBJECT IDDISCOUNT" + object);
 
-                                                                    String date_end = discount.getString("date_end");
-                                                                    System.out.println("date end" + date_end);
-                                                                    System.out.println("discount.lentgh " + discount.length());
-                                                                    int fidelity = discount.getInt("fidelity");
-                                                                    int color;
-                                                                    if (fidelity == 0){
-                                                                        color= Color.BLUE;
-                                                                    }else{
-                                                                        color = Color.GREEN;
+                                                                JSONArray discounts = (JSONArray) object;
+
+                                                                for (int i = 0; i < discounts.length(); i++) {
+
+                                                                    try {
+                                                                        JSONObject discount = discounts.getJSONObject(i);
+
+                                                                        String date_end = discount.getString("date_end");
+                                                                        System.out.println("date end" + date_end);
+                                                                        System.out.println("discount.lentgh " + discount.length());
+                                                                        int fidelity = discount.getInt("fidelity");
+                                                                        int color;
+                                                                        if (fidelity == 0) {
+                                                                            color = Color.BLUE;
+                                                                        } else {
+                                                                            color = Color.GREEN;
+                                                                        }
+
+                                                                        if (discount.length() == 8) {
+
+                                                                            float percentage = (float) discount.getDouble("percentage");
+
+                                                                            TableRow row = new TableRow(context);
+                                                                            row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+                                                                            row.setGravity(Gravity.CENTER_HORIZONTAL);
+                                                                            row.setBackgroundColor(color);
+                                                                            row.setId(discount.getInt("idDiscount"));
+
+
+                                                                            TextView label_Product = new TextView(context);
+                                                                            label_Product.setText(nameProduct);
+                                                                            label_Product.setTextColor(Color.BLACK);
+                                                                            label_Product.setPadding(5, 5, 5, 5);
+                                                                            label_Product.setWidth(tl.getWidth() / 4);
+                                                                            row.addView(label_Product);
+
+                                                                            TextView percentage_Discount = new TextView(context);
+                                                                            percentage_Discount.setText(percentage + "% off");
+                                                                            percentage_Discount.setTextColor(Color.BLACK);
+                                                                            percentage_Discount.setPadding(5, 5, 5, 5);
+                                                                            percentage_Discount.setWidth(tl.getWidth() / 4);
+                                                                            row.addView(percentage_Discount);
+
+                                                                            tl.addView(row);
+                                                                        } else if (discount.length() == 9) {
+
+
+                                                                            int bought = discount.getInt("Bought");
+                                                                            int free = discount.getInt("Free");
+
+                                                                            TableRow row = new TableRow(context);
+                                                                            row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+                                                                            row.setGravity(Gravity.CENTER_HORIZONTAL);
+                                                                            row.setBackgroundColor(color);
+                                                                            row.setId(discount.getInt("idDiscount"));
+
+
+                                                                            TextView label_Product = new TextView(context);
+                                                                            label_Product.setText(nameProduct);
+                                                                            label_Product.setTextColor(Color.BLACK);
+                                                                            label_Product.setPadding(5, 5, 5, 5);
+                                                                            label_Product.setWidth(tl.getWidth() / 4);
+                                                                            row.addView(label_Product);
+
+                                                                            TextView boughtView = new TextView(context);
+                                                                            boughtView.setText(bought + " acheté");
+                                                                            boughtView.setTextColor(Color.BLACK);
+                                                                            boughtView.setPadding(5, 5, 5, 5);
+                                                                            boughtView.setWidth(tl.getWidth() / 4);
+                                                                            row.addView(boughtView);
+
+                                                                            TextView freeView = new TextView(context);
+                                                                            freeView.setText(free + " offert");
+                                                                            freeView.setTextColor(Color.BLACK);
+                                                                            freeView.setPadding(5, 5, 5, 5);
+                                                                            freeView.setWidth(tl.getWidth() / 4);
+                                                                            row.addView(freeView);
+
+                                                                            tl.addView(row);
+
+                                                                        }// lseif lenght 9
+
+
+                                                                    } catch (JSONException e) {
+                                                                        e.printStackTrace();
+                                                                        System.out.println("JSON exception date_end");
                                                                     }
-
-                                                                    if (discount.length() == 8) {
-
-                                                                        float percentage = (float) discount.getDouble("percentage");
-
-                                                                        TableRow row = new TableRow(context);
-                                                                        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-                                                                        row.setGravity(Gravity.CENTER_HORIZONTAL);
-                                                                        row.setBackgroundColor(color);
-                                                                        row.setId(discount.getInt("idDiscount"));
-
-
-                                                                        TextView label_Product = new TextView(context);
-                                                                        label_Product.setText(nameProduct);
-                                                                        label_Product.setTextColor(Color.BLACK);
-                                                                        label_Product.setPadding(5, 5, 5, 5);
-                                                                        label_Product.setWidth(tl.getWidth() / 4);
-                                                                        row.addView(label_Product);
-
-                                                                        TextView percentage_Discount = new TextView(context);
-                                                                        percentage_Discount.setText(percentage + "% off");
-                                                                        percentage_Discount.setTextColor(Color.BLACK);
-                                                                        percentage_Discount.setPadding(5, 5, 5, 5);
-                                                                        percentage_Discount.setWidth(tl.getWidth() / 4);
-                                                                        row.addView(percentage_Discount);
-
-                                                                        tl.addView(row);
-                                                                    } else if (discount.length() == 9) {
-
-
-                                                                        int bought = discount.getInt("Bought");
-                                                                        int free = discount.getInt("Free");
-
-                                                                        TableRow row = new TableRow(context);
-                                                                        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-                                                                        row.setGravity(Gravity.CENTER_HORIZONTAL);
-                                                                        row.setBackgroundColor(color);
-                                                                        row.setId(discount.getInt("idDiscount"));
-
-
-
-                                                                        TextView label_Product = new TextView(context);
-                                                                        label_Product.setText(nameProduct);
-                                                                        label_Product.setTextColor(Color.BLACK);
-                                                                        label_Product.setPadding(5, 5, 5, 5);
-                                                                        label_Product.setWidth(tl.getWidth() / 4);
-                                                                        row.addView(label_Product);
-
-                                                                        TextView boughtView = new TextView(context);
-                                                                        boughtView.setText(bought + " acheté");
-                                                                        boughtView.setTextColor(Color.BLACK);
-                                                                        boughtView.setPadding(5, 5, 5, 5);
-                                                                        boughtView.setWidth(tl.getWidth() / 4);
-                                                                        row.addView(boughtView);
-
-                                                                        TextView freeView = new TextView(context);
-                                                                        freeView.setText(free + " offert");
-                                                                        freeView.setTextColor(Color.BLACK);
-                                                                        freeView.setPadding(5, 5, 5, 5);
-                                                                        freeView.setWidth(tl.getWidth() / 4);
-                                                                        row.addView(freeView);
-
-                                                                        tl.addView(row);
-
-                                                                    }// lseif lenght 9
-
-
-                                                                } catch (JSONException e) {
-                                                                    e.printStackTrace();
-                                                                    System.out.println("JSON exception date_end");
                                                                 }
                                                             }
+                                                        }// on succeess idDiscount
+
+                                                        @Override
+                                                        public void onError(Object object) {
+                                                            System.out.println("Product discounts ");
+
+
                                                         }
-                                                    }// on succeess idDiscount
-
-                                                    @Override
-                                                    public void onError(Object object) {
-                                                        System.out.println("Product discounts ");
+                                                    }); // helper idDiscount
 
 
-                                                    }
-                                                }); // helper idDiscount
+                                                } catch (JSONException e1) {
+                                                    e1.printStackTrace();
+                                                    System.out.println("JSON exception current discount");
 
 
-                                            } catch (JSONException e1) {
-                                                e1.printStackTrace();
-                                                System.out.println("JSON exception current discount");
+                                                }//catch
+                                            }// for productDiscountd
+                                        }// else
+                                    }// On success Product discounts
+
+                                    @Override
+                                    public void onError(Object object) {
+                                        System.out.println("Product discounts ");
 
 
-                                            }//catch
-                                        }// for productDiscountd
-                                    }// else
-                                }// On success Product discounts
-
-                                @Override
-                                public void onError(Object object) {
-                                    System.out.println("Product discounts ");
+                                    }
+                                });// helper product dicoounts
 
 
-                                }
-                            });// helper product dicoounts
-
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }//for depProducts
-                }// if
-            }//else On success
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }//for depProducts
+                    }// if
+                }//else On success
             } //on success
 
-                 @Override
-                 public void onError(Object object) {
-                 System.out.println("Error in getting all Products of dep ");
-            }});
+            @Override
+            public void onError(Object object) {
+                System.out.println("Error in getting all Products of dep ");
+            }
+        });
 
 
-
-
-
-        Helper.getInstance(this);
-
+    }}
       /*  daoProduct.getById(2, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
@@ -390,10 +386,6 @@ public class UserUnderLampView extends AppCompatActivity {
             });
 
 */
-        }
 
 
-<<<<<<< Updated upstream
-}
-=======
-}
+
