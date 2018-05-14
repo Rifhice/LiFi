@@ -28,6 +28,8 @@ import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
 import com.polytech.montpellier.lifiapp.Model.Product;
+import android.support.constraint.ConstraintLayout;
+import 	android.view.LayoutInflater;
 
 
 import org.json.JSONArray;
@@ -47,6 +49,8 @@ public class AddProduct extends AppCompatActivity{
     EditText editText_name;
     MultiAutoCompleteTextView editText_description;
 
+
+
     //Float price;
     String price;
     String brand;
@@ -55,6 +59,7 @@ public class AddProduct extends AppCompatActivity{
     Button validate;
     String token = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" ;
     DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,7 +147,8 @@ public class AddProduct extends AppCompatActivity{
     private void initializeUI() {
 
         final Spinner spinnerDepartment = (Spinner) findViewById(R.id.spinner_ProductDepartement);
-        System.out.println("Nom:");
+        final ArrayList<String> dep = new ArrayList<>();
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
         dao.getAll(new ResponseHandler() {
 
             @Override
@@ -150,18 +156,14 @@ public class AddProduct extends AppCompatActivity{
 
                 if (object instanceof ArrayList) {
 
-                    /*ArrayList<Department> array = (ArrayList<Department>) object;
+                    ArrayList<Department> array = (ArrayList<Department>) object;
                     for (int i = 0; i < array.size(); i++) {
                         Department department = array.get(i);
-                        System.out.println("Nom:" + department.getName());
-                        ArrayList<String> dep = new ArrayList<>();
                         dep.add(department.getName());
-                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.product_add, dep);
-                        adapter.setDropDownViewResource(R.layout.product_add);
-                        spinnerDepartment.setAdapter(adapter);
 
-
-                    }*/
+                    }
+                    adapter.setDropDownViewResource(R.layout.product_add);
+                    spinnerDepartment.setAdapter(adapter);
                 }
             }
 
@@ -170,7 +172,7 @@ public class AddProduct extends AppCompatActivity{
                 System.out.println("Nom:");
             }
         });
-        System.out.println("Nom2:");
+
     }
 
 }

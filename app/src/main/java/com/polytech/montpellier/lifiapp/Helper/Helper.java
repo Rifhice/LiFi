@@ -45,7 +45,7 @@ public class Helper {
         return instance;
    }
 
-   public static Helper getInstance(MySqlDiscountDAO mySqlDiscountDAO){
+   public static Helper getInstance(){
        return instance;
    }
 
