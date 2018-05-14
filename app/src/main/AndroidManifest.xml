@@ -14,6 +14,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.Login">
 
@@ -29,7 +30,6 @@
 
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AdminProductView">
-
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.LampController">
 
@@ -38,11 +38,7 @@
 
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AddProduct">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AddLamp">
 

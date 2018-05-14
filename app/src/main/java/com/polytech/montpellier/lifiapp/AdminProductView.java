@@ -3,10 +3,27 @@ package com.polytech.montpellier.lifiapp;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
+import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
+import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
+import com.polytech.montpellier.lifiapp.Model.Product;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 /**
  * Created by Kevin on 03/05/2018.
@@ -15,11 +32,13 @@ import com.oledcomm.soft.lifiapp.R;
 public class AdminProductView extends AppCompatActivity implements AdminTab {
 
     final Context context = this;
+    ProductDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.product_display);
+        setContentView(R.layout.lampall_display);
+        updateDataAndView();
     }
 
     @Override
@@ -42,6 +61,110 @@ public class AdminProductView extends AppCompatActivity implements AdminTab {
                         context.startActivity(intent);
                     }})
                 .setNegativeButton(android.R.string.no, null).show();
+    }
+
+    public void updateDataAndView(){
+        final TableLayout tl = (TableLayout) findViewById(R.id.main_table);
+        tl.removeAllViews();
+        dao.getAll(new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                if(object instanceof ArrayList) {
+                    tl.removeAllViews();
+                    ArrayList<Product> array = (ArrayList<Product>)object;
+                    for(int i = 0 ; i < array.size() ; i++) {
+                        Product product = array.get(i);
+                        final TableRow row = new TableRow(context);
+                        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+                        row.setId(product.getId());
+                        row.setGravity(Gravity.CENTER_HORIZONTAL);
+
+                        final TextView label_product = new TextView(context);
+                        label_product.setText(product.getName());
+                        label_product.setTextColor(Color.BLACK);
+                        label_product.setPadding(5, 5, 5, 5);
+                        label_product.setWidth(tl.getWidth() / 4);
+                        row.addView(label_product);
+
+                        final TextView label_marque = new TextView(context);
+                        String text = product.getBrand();
+
+                        label_marque.setText(text);
+                        label_marque.setTextColor(Color.BLACK); // set the color
+                        label_marque.setPadding(5, 5, 5, 5); // set the padding (if required)
+                        label_marque.setWidth(tl.getWidth() / 4);
+                        row.addView(label_marque); // add the column to the table row here
+
+                        Button delete = new Button(context);
+                        delete.setText("delete");
+                        delete.setWidth(tl.getWidth() / 4);
+                        delete.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(final View v) {
+                                new AlertDialog.Builder(context)
+                                        .setTitle("Delete Product")
+                                        .setMessage("Are you sure you want to delete this product?")
+                                        .setIcon(android.R.drawable.ic_dialog_alert)
+                                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                                            public void onClick(DialogInterface dialog, int whichButton) {
+                                                AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO().delete(row.getId(), UserConnection.getInstance().getToken(), new ResponseHandler() {
+                                                    @Override
+                                                    public void onSuccess(Object object) {
+                                                        if(object instanceof JSONObject){
+                                                            System.out.println("JSON : " + object.toString());
+                                                            JSONObject res = (JSONObject) object;
+                                                            try {
+                                                                if(res.getInt("affectedRows") != 0){
+                                                                    tl.removeView(tl.findViewById(row.getId()));
+                                                                }
+                                                            } catch (JSONException e) {
+                                                                e.printStackTrace();
+                                                            }
+                                                        }
+                                                    }
+
+                                                    @Override
+                                                    public void onError(Object object) {
+
+                                                    }
+                                                });
+                                            }})
+                                        .setNegativeButton(android.R.string.no, null).show();
+                            }
+                        });
+                        row.addView(delete);
+
+                        Button update = new Button(context);
+                        update.setText("update");
+                        update.setWidth(tl.getWidth() / 4);
+                        update.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(AdminProductView.this, UpdateProduct.class);
+                                intent.putExtra("name",label_product.getText());
+                                intent.putExtra("product",row.getId());
+                                intent.putExtra("brand", label_product.getText());
+                                startActivity(intent);
+                            }
+                        });
+                        row.addView(update);
+                        row.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                System.out.println(v.getId());
+                            }
+                        });
+                        tl.addView(row, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+                    }
+                }
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
     }
 
 }

@@ -105,7 +105,7 @@ public class MySqlProductDAO extends ProductDAO {
                     } else {
                         try {
                             JSONObject current = array.getJSONObject(0);
-                            response.onSuccess(new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
+                            response.onSuccess(new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("name"))));
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -146,7 +146,7 @@ public class MySqlProductDAO extends ProductDAO {
                     try {
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject current = array.getJSONObject(i);
-                            products.add(new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
+                            products.add(new Product(current.getInt("idProduct"), current.getString("name"),  current.getString("description"),  Float.parseFloat(current.getString("price")),  current.getString("brand"),new Department(current.getInt("idDepartment"), current.getString("name"))));
                         }
                         response.onSuccess(products);
                     } catch (JSONException e) {

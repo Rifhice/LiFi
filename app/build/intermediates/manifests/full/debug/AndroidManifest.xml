@@ -62,11 +62,14 @@
         <activity android:name="com.polytech.montpellier.lifiapp.UserUnderLampView" >
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AddProduct" >
+<<<<<<< Updated upstream
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+=======
+>>>>>>> Stashed changes
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AddLamp" >
         </activity>
