@@ -19,6 +19,7 @@ import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
+import com.polytech.montpellier.lifiapp.Model.Discounts.Discount;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
 
 import org.json.JSONException;
@@ -74,7 +75,8 @@ public class AdminDiscountView extends AppCompatActivity implements AdminTab {
             public void onSuccess(Object object) {
                 if(object instanceof ArrayList) {
                     tl.removeAllViews();
-                    ArrayList<Lamp> array = (ArrayList<Lamp>)object;
+                    ArrayList<Discount> array = (ArrayList<Discount>)object;
+                    System.out.println("DISCOUNTS : " + array.toString());/*
                     for(int i = 0 ; i < array.size() ; i++) {
                         Lamp lamp = array.get(i);
                         final TableRow row = new TableRow(context);
@@ -163,7 +165,7 @@ public class AdminDiscountView extends AppCompatActivity implements AdminTab {
                             }
                         });
                         tl.addView(row, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
-                    }
+                    }*/
                 }
             }
 
