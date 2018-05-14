@@ -1,15 +1,24 @@
+<<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
 <component name="libraryTable">
   <library name="Gradle: com.android.support:animated-vector-drawable-27.0.2">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/70306e71b3b22ea26e74daecb4a919f6/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/70306e71b3b22ea26e74daecb4a919f6/res" />
+=======
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:animated-vector-drawable-27.0.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/c9e513be2f46c6da631cc798755ad772/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/c9e513be2f46c6da631cc798755ad772/res" />
+>>>>>>> affiner liste promos
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/animated-vector-drawable/27.0.2/1a380688b78985fe5fe1494d8bf90ceba5f7eee2/animated-vector-drawable-27.0.2-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< refs/remotes/origin/master
 =======
 <component name="libraryTable">
   <library name="Gradle: com.android.support:animated-vector-drawable-27.0.2">
@@ -23,4 +32,6 @@
     </SOURCES>
   </library>
 >>>>>>> Stashed changes
+=======
+>>>>>>> affiner liste promos
 </component>
