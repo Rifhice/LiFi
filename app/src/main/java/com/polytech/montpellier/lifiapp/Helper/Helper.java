@@ -80,8 +80,6 @@ public class Helper {
 
 
     public void POST(String url , final String token, Map<String, String> params,  final ResponseHandler res ){
-
-        params.put("token" , token);
         // Request a string response from the provided URL.
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST , url, new JSONObject(params),
                 new Response.Listener<JSONObject>() {
@@ -100,7 +98,16 @@ public class Helper {
             public void onErrorResponse(VolleyError error) {
                 res.onError(error);
             }
-        });
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String>  headers = new HashMap<String, String>();
+                // add headers <key,value>
+                String auth = "Bearer " + token;
+                headers.put("Authorization", auth);
+                return headers;
+            }
+        };
 
         this.queue.add(jsonObjectRequest);
     }
@@ -158,7 +165,16 @@ public class Helper {
             public void onErrorResponse(VolleyError error) {
                 res.onError(error);
             }
-        });
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String>  headers = new HashMap<String, String>();
+                // add headers <key,value>
+                String auth = "Bearer " + token;
+                headers.put("Authorization", auth);
+                return headers;
+            }
+        };
 
         // Add the request to the RequestQueue.
         this.queue.add(jsonObjectRequest);

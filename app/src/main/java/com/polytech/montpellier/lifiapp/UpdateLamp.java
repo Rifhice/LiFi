@@ -8,8 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TableLayout;
-import android.widget.TextView;
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
@@ -17,7 +15,7 @@ import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
 
-public class AddLamp extends AppCompatActivity {
+public class UpdateLamp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +23,15 @@ public class AddLamp extends AppCompatActivity {
         setContentView(R.layout.lamp_add);
         Intent intent = getIntent();
         final int id = intent.getIntExtra("lamp",0);
+        final String name = intent.getStringExtra("name");
         final EditText text = (EditText) findViewById(R.id.nametf);
-        text.setText("");
+        text.setText(name);
         Button validate = (Button)findViewById(R.id.validate);
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Lamp lamp = new Lamp(id,text.getText().toString(),new Department(2));
-                AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO().create(lamp,"5f4dcc3b5aa765d61d8327deb882cf99", new ResponseHandler() {
+                AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO().update(lamp,UserConnection.getInstance().getToken(), new ResponseHandler() {
                     @Override
                     public void onSuccess(Object object) {
                         System.out.println(object.toString());
@@ -61,5 +60,4 @@ public class AddLamp extends AppCompatActivity {
                     }})
                 .setNegativeButton(android.R.string.no, null).show();
     }
-
 }
