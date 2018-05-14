@@ -2,9 +2,11 @@ package com.polytech.montpellier.lifiapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -101,13 +103,11 @@ public class AddProduct extends AppCompatActivity{
 
 
                     Product product = new Product(0, name, description, price, brand, new Department(idDep));
-                    System.out.println("Name: " + name +"Description: " + description + "price: " + price + "brand: " + brand + "idDep : " +idDep);
-                    //System.out.println("Product: " + product.getId());
-                    daoP.create( product, "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", new ResponseHandler() {
+                    System.out.println("Name: " + name +" Description: " + description + " price: " + price + " brand: " + brand + " idDep : " +idDep);
+                    daoP.create( product, "5f4dcc3b5aa765d61d8327deb882cf99", new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
                             System.out.println(object.toString());
-                            finish();
                         }
 
                         @Override
@@ -151,7 +151,16 @@ public class AddProduct extends AppCompatActivity{
 
     @Override
     public void onBackPressed(){
+        new AlertDialog.Builder(this)
+                .setTitle("Nouveau Produit")
+                .setMessage("Êtes-vous sûr de vouloir quitter ?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        finish();
+                    }})
+                .setNegativeButton(android.R.string.no, null).show();
     }
 
 

@@ -32,9 +32,11 @@ public class MySqlProductDAO extends ProductDAO {
         params.put("name", obj.getName());
         params.put("description", obj.getDescription());
         params.put("price",  String.valueOf(obj.getPrice()));
-        params.put("brand", obj.getDescription());
-        params.put("idDepartement", String.valueOf(obj.getDepartment().getId())) ;
+        params.put("brand", obj.getBrand());
+        params.put("idDepartment", String.valueOf(obj.getDepartment().getId())) ;
 
+        //System.out.println("Name: " + params.get("name") +" Description: " + params.get("description") + " price: " + params.get("price") + " brand: " + params.get("brand") +
+         //       " idDep : " +  params.get("idDepartement"));
 
         Helper.getInstance().POST("http://81.64.139.113:1337/api/Product",token , params, new ResponseHandler() {
             @Override

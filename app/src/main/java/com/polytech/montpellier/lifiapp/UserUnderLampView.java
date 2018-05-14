@@ -51,7 +51,6 @@ public class UserUnderLampView extends AppCompatActivity {
     ProductDAO daoProduct = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
 
 
-
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
