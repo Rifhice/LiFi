@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">E-Mart</string>
     <string name="rayon">Rayon</string>
+    <string name="marque">Marque</string>
     <string name="promotionsJour">Promotions du Jour</string>
     <string name="url">http://81.64.139.113:1337/api/</string>
 

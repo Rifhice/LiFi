@@ -33,8 +33,81 @@ public class MySqlDiscountDAO extends DiscountDAO {
     }
 
     @Override
-    public void getById(int id, ResponseHandler response) throws DAOException {
+    public void getById(int id,final ResponseHandler response) throws DAOException {
 
+        Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/" + id, new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                if (object instanceof JSONArray) {
+                    JSONArray array = (JSONArray) object;
+                    if (array.length() == 0) {
+                        response.onSuccess(null);
+                    } else {
+                        try {
+                            JSONObject current = array.getJSONObject(0);
+                            ProductDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
+                            final int fkProduct = current.getInt("idProduct");
+                            final int fidelity = current.getInt("idProduct");
+
+                            Product product;
+
+                            dao.getById(fkProduct, new ResponseHandler() {
+                                @Override
+                                public void onSuccess(Object object) {
+                                    try{
+                                        if(object instanceof JSONObject) {
+                                            JSONObject product = (JSONObject) object;
+                                            System.out.println("GET 1 " + object.toString());
+                                            Product prod = new Product(fkProduct, product.getString("name"), product.getString("description"), (float)product.getDouble("price"), product.getString("Brand"),new Department(product.getInt("idDepartment")));
+                                            if(fidelity == 0){
+                                                try{
+                                                    float percentage = (float)current.getDouble("percentage");
+                                                    discounts.add(new PercentageDiscount(prod,start,end,creation,percentage));
+                                                }catch (JSONException e){
+                                                    int bougth = current.getInt("bought");
+                                                    int free = current.getInt("free"));
+
+                                                    e.printStackTrace();
+                                                }
+                                            }
+                                            else{
+
+                                            }
+                                        }
+                                    }catch (JSONException e){
+                                        e.printStackTrace();
+
+
+                                    }
+                                }
+
+                                @Override
+                                public void onError(Object object) {
+                                    System.out.println("fail getbyid");
+                                }
+                            });
+                            if (current.length() == 8){
+                                response.onSuccess(new PercentageDiscount( new Product(curre)  ));
+                            }else{
+                                response.onSuccess(new QuantityDiscount());
+                            }
+                           // response.onSuccess(new LaDmp(current.getInt("idLamp"), current.getString("nameLamp"), new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
+                            //response.onSuccess(new Discount() {
+                           // });
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
     }
 
     @Override

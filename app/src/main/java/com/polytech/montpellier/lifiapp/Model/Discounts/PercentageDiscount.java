@@ -27,11 +27,14 @@ public class PercentageDiscount extends Discount {
 
     @Override
     public float oldPrice() {
-        return 0;
+        return this.product.getPrice();
     }
 
     @Override
     public float newPrice() {
-        return 0;
+        float oldPrice = this.oldPrice();
+        return (oldPrice - oldPrice*getPercentage());
     }
+
+
 }

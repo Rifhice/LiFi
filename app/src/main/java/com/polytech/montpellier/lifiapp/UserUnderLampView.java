@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.SoundEffectConstants;
+import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -65,7 +67,7 @@ public class UserUnderLampView extends AppCompatActivity {
 
         Intent intent = getIntent();
         intent.getStringExtra("lampName");
-        int pkDep = intent.getIntExtra("lampDep", 0);
+        final int pkDep = intent.getIntExtra("lampDep", 0);
 
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Department/" + pkDep + "/Products/", new ResponseHandler() {
             @Override
@@ -83,7 +85,7 @@ public class UserUnderLampView extends AppCompatActivity {
                             try {
                                 JSONObject currentProduct = depProducts.getJSONObject(i);
                                 System.out.println("current Product  " + currentProduct);
-                                int idProduct = currentProduct.getInt("idProduct");
+                                final int idProduct = currentProduct.getInt("idProduct");
                                 final String nameProduct = currentProduct.getString("name");
 
 
@@ -103,7 +105,7 @@ public class UserUnderLampView extends AppCompatActivity {
                                                 try {
                                                     JSONObject currentDiscount = productDiscounts.getJSONObject(i);
                                                     System.out.println("current Discounr  " + currentDiscount);
-                                                    int idDiscount = currentDiscount.getInt("idDiscount");
+                                                    final int idDiscount = currentDiscount.getInt("idDiscount");
 
                                                     Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/" + idDiscount, new ResponseHandler() {
                                                         @Override
@@ -126,6 +128,7 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                         System.out.println("date end" + date_end);
                                                                         System.out.println("discount.lentgh " + discount.length());
                                                                         int fidelity = discount.getInt("fidelity");
+
                                                                         int color;
                                                                         if (fidelity == 0) {
                                                                             color = Color.BLUE;
@@ -142,6 +145,16 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                             row.setGravity(Gravity.CENTER_HORIZONTAL);
                                                                             row.setBackgroundColor(color);
                                                                             row.setId(discount.getInt("idDiscount"));
+                                                                            row.setOnClickListener(new View.OnClickListener() {
+                                                                                @Override
+                                                                                public void onClick(View v) {
+                                                                                    Intent intent = new Intent(UserUnderLampView.this, DiscountSummary.class);
+                                                                                    intent.putExtra("idDiscount",idDiscount);
+                                                                                    intent.putExtra("idProduct",idProduct);
+                                                                                    intent.putExtra("idDepartement", pkDep);
+                                                                                    startActivity(intent);
+                                                                                }
+                                                                            });
 
 
                                                                             TextView label_Product = new TextView(context);
@@ -156,6 +169,7 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                             percentage_Discount.setTextColor(Color.BLACK);
                                                                             percentage_Discount.setPadding(5, 5, 5, 5);
                                                                             percentage_Discount.setWidth(tl.getWidth() / 4);
+
                                                                             row.addView(percentage_Discount);
 
                                                                             tl.addView(row);
@@ -170,6 +184,16 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                             row.setGravity(Gravity.CENTER_HORIZONTAL);
                                                                             row.setBackgroundColor(color);
                                                                             row.setId(discount.getInt("idDiscount"));
+                                                                            row.setOnClickListener(new View.OnClickListener() {
+                                                                                @Override
+                                                                                public void onClick(View v) {
+                                                                                    Intent intent = new Intent(UserUnderLampView.this, DiscountSummary.class);
+                                                                                    intent.putExtra("idDiscount",idDiscount);
+                                                                                    intent.putExtra("idProduct",idProduct);
+                                                                                    intent.putExtra("idDepartement", pkDep);
+                                                                                    startActivity(intent);
+                                                                                }
+                                                                            });
 
 
                                                                             TextView label_Product = new TextView(context);

@@ -35,6 +35,12 @@
 
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.UserUnderLampView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
 
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AddProduct">
@@ -50,6 +56,10 @@
 
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AdminDepartmentView">
+
+        </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.DiscountSummary"
+            android:theme="@android:style/Theme.NoTitleBar">
 
         </activity>
     </application>

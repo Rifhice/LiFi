@@ -37,11 +37,11 @@ public class QuantityDiscount extends Discount {
 
     @Override
     public float oldPrice() {
-        return 0;
+        return this.product.getPrice()*(this.bought +this.free);
     }
 
     @Override
     public float newPrice() {
-        return 0;
+        return this.product.getPrice()*(this.bought);
     }
 }
