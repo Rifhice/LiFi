@@ -1,28 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< refs/remotes/origin/master
-<<<<<<< Updated upstream
-<component name="libraryTable">
-  <library name="Gradle: com.android.support:support-vector-drawable-27.0.2">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/2fddcb5f646d7fe342796ae7b0fceb42/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/2fddcb5f646d7fe342796ae7b0fceb42/res" />
-=======
-=======
->>>>>>> Stashed changes
-<component name="libraryTable">
-  <library name="Gradle: com.android.support:support-vector-drawable-27.0.2">
-    <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/e02e2709311868cbce124cab6dcd72b1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/e02e2709311868cbce124cab6dcd72b1/jars/classes.jar!/" />
->>>>>>> affiner liste promos
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-vector-drawable/27.0.2/710838de66b0cc3faf839415bfac47f47be2e55/support-vector-drawable-27.0.2-sources.jar!/" />
-    </SOURCES>
-  </library>
-<<<<<<< refs/remotes/origin/master
-=======
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-vector-drawable-27.0.2">
     <CLASSES>
@@ -34,7 +9,4 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-vector-drawable/27.0.2/710838de66b0cc3faf839415bfac47f47be2e55/support-vector-drawable-27.0.2-sources.jar!/" />
     </SOURCES>
   </library>
->>>>>>> Stashed changes
-=======
->>>>>>> affiner liste promos
 </component>

@@ -1,28 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< refs/remotes/origin/master
-<<<<<<< Updated upstream
-<component name="libraryTable">
-  <library name="Gradle: com.android.support:appcompat-v7-27.0.2">
-    <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/887612ecb5dea5c84740d5b63fbfc2c4/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/887612ecb5dea5c84740d5b63fbfc2c4/jars/classes.jar!/" />
-=======
-=======
->>>>>>> Stashed changes
-<component name="libraryTable">
-  <library name="Gradle: com.android.support:appcompat-v7-27.0.2">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e3b78fa60a99fe9811c4854e999d46af/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e3b78fa60a99fe9811c4854e999d46af/res" />
->>>>>>> affiner liste promos
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.0.2/4ae031a24f432a35efae0d609731c5a34e65696c/appcompat-v7-27.0.2-sources.jar!/" />
-    </SOURCES>
-  </library>
-<<<<<<< refs/remotes/origin/master
-=======
 <component name="libraryTable">
   <library name="Gradle: com.android.support:appcompat-v7-27.0.2">
     <CLASSES>
@@ -34,7 +9,4 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.0.2/4ae031a24f432a35efae0d609731c5a34e65696c/appcompat-v7-27.0.2-sources.jar!/" />
     </SOURCES>
   </library>
->>>>>>> Stashed changes
-=======
->>>>>>> affiner liste promos
 </component>

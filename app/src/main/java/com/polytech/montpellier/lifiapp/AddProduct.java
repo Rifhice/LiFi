@@ -157,9 +157,6 @@ public class AddProduct extends AppCompatActivity{
                         Department department = array.get(i);
                         dep.add(department.getName());
                         depMap.put(department.getName(), department.getId());
-
-
-
                     }
                     adapter.setDropDownViewResource(R.layout.list);
                     spinnerDepartment.setAdapter(adapter);
