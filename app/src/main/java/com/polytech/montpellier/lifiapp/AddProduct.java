@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,8 +29,11 @@ import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
 import com.polytech.montpellier.lifiapp.Model.Product;
-import android.support.constraint.ConstraintLayout;
-import 	android.view.LayoutInflater;
+
+import android.widget.AdapterView.*;
+import java.util.Map.Entry;
+import java.util.Set;
+
 
 
 import org.json.JSONArray;
@@ -42,6 +46,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class AddProduct extends AppCompatActivity{
 
     EditText editText_price;
@@ -49,14 +54,13 @@ public class AddProduct extends AppCompatActivity{
     EditText editText_name;
     MultiAutoCompleteTextView editText_description;
 
-
-
     //Float price;
     String price;
     String brand;
     String description;
     String name;
     Button validate;
+    int idDep = -1;
     String token = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" ;
     DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
 
@@ -92,25 +96,12 @@ public class AddProduct extends AppCompatActivity{
 
         validate = (Button) findViewById(R.id.button_addProduct);
 
-        validate.setOnTouchListener(new View.OnTouchListener() {
 
+        validate.setOnClickListener( new View.OnClickListener() {
 
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                   /* Helper.getInstance(this).POST("http://81.64.139.113:1337/api/Product", token, params, new ResponseHandler() {
-
-                        @Override
-                        public void onSuccess(Object object) {
-                            System.out.println("POST" + object.toString());
-                        }
-
-                        @Override
-                        public void onError(Object object) {
-
-                        }
-                    });*/
+            public void onClick(View v) {
                 System.out.println("click");
-                return true;
             }
         });
     }
@@ -144,11 +135,16 @@ public class AddProduct extends AppCompatActivity{
 
     }
 
+
+
     private void initializeUI() {
 
         final Spinner spinnerDepartment = (Spinner) findViewById(R.id.spinner_ProductDepartement);
         final ArrayList<String> dep = new ArrayList<>();
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
+        final HashMap<String, Integer> depMap=new HashMap<String, Integer>();
+
+        //TODO vérifier departement non vide
         dao.getAll(new ResponseHandler() {
 
             @Override
@@ -160,18 +156,39 @@ public class AddProduct extends AppCompatActivity{
                     for (int i = 0; i < array.size(); i++) {
                         Department department = array.get(i);
                         dep.add(department.getName());
+                        depMap.put(department.getName(), department.getId());
+
+
 
                     }
-                    adapter.setDropDownViewResource(R.layout.product_add);
+                    adapter.setDropDownViewResource(R.layout.list);
                     spinnerDepartment.setAdapter(adapter);
+
+
                 }
             }
 
             @Override
             public void onError(Object object) {
-                System.out.println("Nom:");
+
             }
         });
+
+        spinnerDepartment.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String depName = (String) spinnerDepartment.getSelectedItem();
+                idDep = depMap.get(depName);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+
+            }
+
+        });
+
 
     }
 
