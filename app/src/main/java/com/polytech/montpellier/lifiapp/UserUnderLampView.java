@@ -372,4 +372,8 @@ public class UserUnderLampView extends AppCompatActivity {
         }
 
 
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

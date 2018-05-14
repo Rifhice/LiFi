@@ -2,6 +2,7 @@ package com.polytech.montpellier.lifiapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -54,15 +55,15 @@ public class AddProduct extends AppCompatActivity{
     EditText editText_name;
     MultiAutoCompleteTextView editText_description;
 
-    //Float price;
-    String price;
+    Float price;
+    //String price;
     String brand;
     String description;
     String name;
     Button validate;
     int idDep = -1;
-    String token = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" ;
     DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
+    ProductDAO daoP = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
 
 
 
@@ -76,23 +77,12 @@ public class AddProduct extends AppCompatActivity{
 
         editText_price = (EditText) findViewById(R.id.editText_product_addPrice);
         editText_brand = (EditText) findViewById(R.id.editText_product_addBrand);
-        editText_name = (EditText) findViewById(R.id.editText_product_addPrice);
+        editText_name = (EditText) findViewById(R.id.editText_product_addName);
         editText_description = (MultiAutoCompleteTextView) findViewById(R.id.multiTextView_product_addDescription);
 
 
-        //TODO: faire une alerte si un des champs est vide
 
-        if (!editText_name.getText().toString().isEmpty() && !editText_description.getText().toString().isEmpty()
-                && !editText_brand.getText().toString().isEmpty() && !editText_price.getText().toString().isEmpty()) {
 
-            name = editText_name.getText().toString();
-            description = editText_description.getText().toString();
-            //price = Float.parseFloat(editText_price.getText().toString());
-            price = editText_price.getText().toString();
-
-            brand = editText_brand.getText().toString();
-
-        }
 
         validate = (Button) findViewById(R.id.button_addProduct);
 
@@ -101,7 +91,36 @@ public class AddProduct extends AppCompatActivity{
 
             @Override
             public void onClick(View v) {
-                System.out.println("click");
+                if (!editText_name.getText().toString().isEmpty() && !editText_description.getText().toString().isEmpty()
+                        && !editText_brand.getText().toString().isEmpty() && !editText_price.getText().toString().isEmpty() && idDep>=0) {
+
+                    name = editText_name.getText().toString();
+                    description = editText_description.getText().toString();
+                    price = Float.parseFloat(editText_price.getText().toString());
+                    brand = editText_brand.getText().toString();
+
+
+                    Product product = new Product(0, name, description, price, brand, new Department(idDep));
+                    System.out.println("Name: " + name +"Description: " + description + "price: " + price + "brand: " + brand + "idDep : " +idDep);
+                    //System.out.println("Product: " + product.getId());
+                    daoP.create( product, "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", new ResponseHandler() {
+                        @Override
+                        public void onSuccess(Object object) {
+                            System.out.println(object.toString());
+                            finish();
+                        }
+
+                        @Override
+                        public void onError(Object object) {
+
+                        }
+                    });
+
+                }
+                else{
+                    //TODO: faire une alerte si un des champs est vide
+                    System.out.println("Champs vides");
+                }
             }
         });
     }
