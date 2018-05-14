@@ -8,12 +8,12 @@ import java.util.Date;
  * Created by Kevin on 02/05/2018.
  */
 
-public abstract class PercentageDiscount extends Discount {
+public class PercentageDiscount extends Discount {
 
     float percentage;
 
-    public PercentageDiscount(Product product, Date dateDebut, Date dateFin, Date dateCreation, float percentage) {
-        super(product, dateDebut, dateFin, dateCreation);
+    public PercentageDiscount(Product product, Date dateDebut, Date dateFin, Date dateCreation, float percentage,int fidelity) {
+        super(product, dateDebut, dateFin, dateCreation, fidelity);
         this.percentage = percentage;
     }
 

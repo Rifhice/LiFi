@@ -6,38 +6,22 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.SoundEffectConstants;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import com.oledcomm.soft.lifiapp.R;
-import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
-import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
-import com.polytech.montpellier.lifiapp.Model.Discounts.Discount;
-import com.polytech.montpellier.lifiapp.Model.Discounts.FidelityPercentageDiscount;
-import com.polytech.montpellier.lifiapp.Model.Discounts.FidelityQuantityDiscount;
-import com.polytech.montpellier.lifiapp.Model.Discounts.PercentageDiscount;
-import com.polytech.montpellier.lifiapp.Model.Discounts.QuantityDiscount;
-import com.polytech.montpellier.lifiapp.Model.Discounts.RegularPercentageDiscount;
-import com.polytech.montpellier.lifiapp.Model.Discounts.RegularQuantityDiscount;
 
 import android.support.v7.app.AppCompatActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * Created by Kevin on 03/05/2018.

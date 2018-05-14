@@ -14,12 +14,14 @@ public abstract class Discount {
     Date dateDebut;
     Date dateFin;
     Date dateCreation;
+    int fidelity;
 
-    public Discount(Product product, Date dateDebut, Date dateFin, Date dateCreation) {
+    public Discount(Product product, Date dateDebut, Date dateFin, Date dateCreation, int fidelity) {
         this.product = product;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
         this.dateCreation = dateCreation;
+        this.fidelity = fidelity;
     }
 
     public Product getProduct() {
@@ -53,6 +55,10 @@ public abstract class Discount {
     public void setDateCreation(Date dateCreation) {
         this.dateCreation = dateCreation;
     }
+
+    public int getFidelity(){return fidelity;}
+
+    public void setFidelity(int fidelity){this.fidelity = fidelity;}
 
     public abstract float oldPrice();
     public abstract float newPrice();

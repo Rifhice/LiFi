@@ -8,13 +8,13 @@ import java.util.Date;
  * Created by Kevin on 02/05/2018.
  */
 
-public abstract class QuantityDiscount extends Discount {
+public class QuantityDiscount extends Discount {
 
     int bought;
     int free;
 
-    public QuantityDiscount(Product product, Date dateDebut, Date dateFin, Date dateCreation, int bought, int free) {
-        super(product, dateDebut, dateFin, dateCreation);
+    public QuantityDiscount(Product product, Date dateDebut, Date dateFin, Date dateCreation, int bought, int free,int fidelity) {
+        super(product, dateDebut, dateFin, dateCreation,fidelity);
         this.bought = bought;
         this.free = free;
     }
