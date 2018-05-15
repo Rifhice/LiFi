@@ -53,97 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
         Helper.getInstance(this);
 
-       /*  String token = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" ;
-        String url = "http://www.rifhice.com/LiFiAPI/Lamp" ;
-        String urlID = "http://www.rifhice.com/LiFiAPI/Lamp/8" ;
-        String urldel = "http://www.rifhice.com/LiFiAPI/Lamp/6" ;
-
-
-        Map<String, String> params = new HashMap<String, String>();
-        params.put("name", "lampe12");
-        params.put("idDepartment", "2") ;
-
-
-        Map<String, String> paramsput = new HashMap<String, String>();
-        params.put("name", "lampe12 damn");
-        params.put("idDepartment", "2") ;
-
-        Helper.getInstance(this).POST(url, token, params,  new ResponseHandler() {
-            @Override
-            public void onSuccess(Object object) {
-                System.out.println("POST"+object.toString());
-            }
-
-            @Override
-            public void onError(Object object) {
-
-            }
-        });
-
-
-        Helper.getInstance(this).GET(url, new ResponseHandler() {
-            @Override
-            public void onSuccess(Object object) {
-                System.out.println("GET 1"+object.toString());
-            }
-
-            @Override
-            public void onError(Object object) {
-
-            }
-        });
-
-        Helper.getInstance(this).PUT(urlID, token, paramsput,  new ResponseHandler() {
-            @Override
-            public void onSuccess(Object object) {
-                System.out.println("PUT ici "+object.toString());
-            }
-
-            @Override
-            public void onError(Object object) {
-
-            }
-        });
-
-        Helper.getInstance(this).GET(url, new ResponseHandler() {
-            @Override
-            public void onSuccess(Object object) {
-                System.out.println("GET apres PUT"+object.toString());
-            }
-
-            @Override
-            public void onError(Object object) {
-
-            }
-        });
-
-        Helper.getInstance(this).DELETE(urldel, token ,  new ResponseHandler() {
-            @Override
-            public void onSuccess(Object object) {
-                System.out.println("DELETE ici " +object.toString());
-            }
-
-            @Override
-            public void onError(Object object) {
-                System.out.println("delete error  " +object.toString());
-
-            }
-        });
-
-
-        Helper.getInstance(this).GET(url, new ResponseHandler() {
-            @Override
-            public void onSuccess(Object object) {
-                System.out.println("GET apres  delete "+object.toString());
-            }
-
-            @Override
-            public void onError(Object object) {
-
-            }
-        });
-*/
-
         testText = (TextView)findViewById(R.id.testText);
         logo = (ImageView) findViewById(R.id.imageView_logo_main);
         logo.setOnClickListener(new View.OnClickListener() {
@@ -163,8 +72,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 if(nbClick == nbClickOk){
-                    Intent intent = new Intent(MainActivity.this, Login.class);
-                    startActivity(intent);
+                    if(!UserConnection.getInstance().isConnected()) {
+                        Intent intent = new Intent(MainActivity.this, Login.class);
+                        startActivity(intent);
+                    }
+                    else{
+                        Intent intent = new Intent(MainActivity.this, AdminActivity.class);
+                        startActivity(intent);
+                    }
                 }
             }
         });
@@ -256,7 +171,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(a);
     }
 
 }

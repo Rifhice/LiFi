@@ -1,10 +1,17 @@
 -- Merging decision tree log ---
 manifest
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-56:12
 INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-56:12
 INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-56:12
 INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-56:12
+=======
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-57:12
+>>>>>>> Stashed changes
 MERGED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:2:1-43:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\15e3f404b38e3b60418c3fd3fa8e13d1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\9f35b4f00daf8fd1c1a8bd0bf0d2e168\AndroidManifest.xml:17:1-22:12
@@ -24,20 +31,20 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Kevin\.gradle\caches
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\9121492e4a04a3798edbaf7895ed41bc\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\27159be82099e58c192890b0be80c292\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\65e1e6be7630cb70d264681ea6ae54ac\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-56:12
-INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-56:12
-INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-57:12
 	package
 		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-56:12
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-57:12
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-56:12
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-57:12
 		INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:11-69
@@ -48,7 +55,7 @@ MERGED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-
 	android:name
 		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:5:5-54:19
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:5:5-55:19
 MERGED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:31:5-41:19
 MERGED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:31:5-41:19
 MERGED from [com.mcxiaoke.volley:library:1.0.6] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\library-1.0.6.aar\f22c7b99ce511ecf118c17b3d5cb7d29\AndroidManifest.xml:11:5-20
@@ -66,69 +73,71 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Ke
 	android:theme
 		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:10:9-40
 activity#com.polytech.montpellier.lifiapp.MainActivity
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:11:9-17:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:11:9-18:20
+	android:noHistory
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:12:13-37
 	android:name
 		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:11:19-79
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:12:13-16:29
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:13:17-69
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:13:25-66
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:15:17-77
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:15:27-74
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:16:27-74
 activity#com.polytech.montpellier.lifiapp.Login
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:18:9-20:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:19:9-21:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:18:19-72
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:19:19-72
 activity#com.polytech.montpellier.lifiapp.FirstLamp
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:21:9-23:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:22:9-24:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:21:19-76
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:22:19-76
 activity#com.polytech.montpellier.lifiapp.AdminActivity
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:24:9-26:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:25:9-27:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:24:19-80
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:25:19-80
 activity#com.polytech.montpellier.lifiapp.AdminProductView
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:27:9-28:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:28:9-29:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:27:19-83
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:28:19-83
 activity#com.polytech.montpellier.lifiapp.LampController
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:29:9-31:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:30:9-32:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:29:19-81
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:30:19-81
 activity#com.polytech.montpellier.lifiapp.UserUnderLampView
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:32:9-34:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:33:9-35:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:32:19-84
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:33:19-84
 activity#com.polytech.montpellier.lifiapp.AddProduct
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:35:9-37:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:36:9-38:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:35:19-77
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:36:19-77
 activity#com.polytech.montpellier.lifiapp.AddLamp
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:38:9-40:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:39:9-41:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:38:19-74
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:39:19-74
 activity#com.polytech.montpellier.lifiapp.UpdateLamp
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:41:9-43:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:42:9-44:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:41:19-77
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:42:19-77
 activity#com.polytech.montpellier.lifiapp.AdminDiscountView
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:44:9-46:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:45:9-47:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:44:19-84
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:45:19-84
 activity#com.polytech.montpellier.lifiapp.AdminDepartmentView
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:47:9-49:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:48:9-50:20
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:47:19-86
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:48:19-86
 activity#com.polytech.montpellier.lifiapp.DiscountSummary
-ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:50:9-53:20
+ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:51:9-54:20
 	android:theme
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:51:13-60
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:52:13-60
 	android:name
-		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:50:19-82
+		ADDED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:51:19-82
 uses-sdk
 INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml
@@ -215,7 +224,7 @@ ADDED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1
 		ADDED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:19:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:20:5-80
-IMPLIED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-56:12 reason: com.oledcomm.soft.androidlifisdk requested WRITE_EXTERNAL_STORAGE
+IMPLIED from C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\AndroidManifest.xml:2:1-57:12 reason: com.oledcomm.soft.androidlifisdk requested WRITE_EXTERNAL_STORAGE
 	android:name
 		ADDED from [:androidlifisdk-release:] C:\Users\Kevin\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\4155cafd7c8a65069063b1aedddc7992\AndroidManifest.xml:20:22-77
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS

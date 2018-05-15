@@ -46,7 +46,8 @@ public class LampController extends AppCompatActivity {
     }
 
     public void onNewLamp(final JSONObject lamp, final Context context) throws JSONException {
-        if(UserConnection.getInstance().isConnected()){
+        System.out.println("IS INSTANCE : " + (context.getApplicationContext() instanceof AdminActivity));
+        if(context.getApplicationContext() instanceof AdminActivity){
             //TODO check if lamp exists, if it doesn't, ask the user if he wants to register it
             lampDAO.getById(lamp.getInt("id"), new ResponseHandler() {
                 @Override

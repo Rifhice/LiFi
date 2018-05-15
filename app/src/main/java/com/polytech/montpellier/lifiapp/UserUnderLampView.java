@@ -274,128 +274,13 @@ public class UserUnderLampView extends AppCompatActivity {
                 System.out.println("Error in getting all Products of dep ");
             }
         });
+    }
 
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(UserUnderLampView.this, MainActivity.class);
+        startActivity(intent);
+    }
 
-    }}
-      /*  daoProduct.getById(2, new ResponseHandler() {
-            @Override
-            public void onSuccess(Object object) {
-                System.out.println("GET 1 "+object.toString());
-
-            }
-
-            @Override
-            public void onError(Object object) {
-                System.out.println("fail getbyid");
-            }
-        });*/
-
-        /*dao.getAll(new ResponseHandler(){
-                @Override
-                public void onSuccess(Object object) {
-                    System.out.println("here dans on succes de uderunderlamp");
-                    if (object instanceof ArrayList) {
-                        ArrayList<Discount> array = (ArrayList<Discount>) object;
-                        System.out.println("here dans instance arraylist  ");
-
-                        for (int i = 0; i < array.size(); i++) {
-                            Discount discount = array.get(i);
-                            TableRow row = new TableRow(context);
-                            row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-                            // row.setId(discount.);
-                            row.setGravity(Gravity.CENTER_HORIZONTAL);
-
-                            TextView label_Product = new TextView(context);
-                            label_Product.setText(discount.getProduct().getName());
-                            label_Product.setTextColor(Color.BLACK);
-                            label_Product.setPadding(5, 5, 5, 5);
-                            label_Product.setWidth(tl.getWidth() / 4);
-                            row.addView(label_Product);
-
-                            if (discount instanceof PercentageDiscount) {
-
-                                PercentageDiscount percentageDiscount;
-                                int color;
-                                if (discount instanceof RegularPercentageDiscount) {
-                                    percentageDiscount = (RegularPercentageDiscount) discount;
-                                    color = Color.GREEN;
-
-                                }//instance reg percentage
-                                else {
-                                    percentageDiscount = (FidelityPercentageDiscount) discount;
-                                    color = Color.RED;
-
-                                }
-
-                                TextView label_prixAvant = new TextView(context);
-                                label_prixAvant.setText((int) percentageDiscount.oldPrice());
-                                label_prixAvant.setTextColor(color);
-                                label_prixAvant.setPadding(5, 5, 5, 5);
-                                label_prixAvant.setWidth(tl.getWidth() / 4);
-                                row.addView(label_prixAvant);
-
-                                TextView label_prix_apres = new TextView(context);
-                                label_prix_apres.setText((int) percentageDiscount.newPrice());
-                                label_prix_apres.setTextColor(color);
-                                label_prix_apres.setPadding(5, 5, 5, 5);
-                                label_prix_apres.setWidth(tl.getWidth() / 4);
-                                row.addView(label_prix_apres);
-
-                            }//instance Percentage
-                            else if (discount instanceof QuantityDiscount) {
-
-                                QuantityDiscount qtyDiscount;
-                                int color;
-                                if (discount instanceof RegularQuantityDiscount) {
-                                    qtyDiscount = (RegularQuantityDiscount) discount;
-                                    color = Color.GREEN;
-
-                                }//instance reg percentage
-                                else {
-                                    qtyDiscount = (FidelityQuantityDiscount) discount;
-                                    color = Color.RED;
-
-                                }
-
-                                TextView label_prixAvant = new TextView(context);
-                                label_prixAvant.setText((int) qtyDiscount.oldPrice());
-                                label_prixAvant.setTextColor(color);
-                                label_prixAvant.setPadding(5, 5, 5, 5);
-                                label_prixAvant.setWidth(tl.getWidth() / 4);
-                                row.addView(label_prixAvant);
-
-                                TextView label_prix_apres = new TextView(context);
-                                label_prix_apres.setText((int) qtyDiscount.newPrice());
-                                label_prix_apres.setTextColor(color);
-                                label_prix_apres.setPadding(5, 5, 5, 5);
-                                label_prix_apres.setWidth(tl.getWidth() / 4);
-                                row.addView(label_prix_apres);
-
-
-                            }
-
-
-                            TextView label_datefin = new TextView(context);
-                            label_datefin.setText(discount.getDateFin().toString());
-                            label_datefin.setTextColor(Color.BLACK);
-                            label_datefin.setPadding(5, 5, 5, 5);
-                            label_datefin.setWidth(tl.getWidth() / 4);
-                            row.addView(label_datefin);
-
-
-                        }//for
-
-                    }
-
-                }//Onsuccess
-
-                @Override
-                public void onError(Object object) {
-                    System.out.println("ERROR in getAllDiscounts");
-                }
-            });
-
-*/
-
-
+}
 
