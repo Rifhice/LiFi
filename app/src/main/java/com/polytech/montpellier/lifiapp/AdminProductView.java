@@ -5,10 +5,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -29,24 +32,27 @@ import java.util.ArrayList;
  * Created by Kevin on 03/05/2018.
  */
 
-public class AdminProductView extends AppCompatActivity implements AdminTab {
+public class AdminProductView extends Fragment{
 
-    final Context context = this;
     ProductDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lampall_display);
-        updateDataAndView();
     }
 
     @Override
-    public void onBackPressed(){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.lampall_display, container, false);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateDataAndView();
+    }
+
+    /*
     @Override
     public void openNewLampPopUp(final int lamp) {
         new AlertDialog.Builder(this)
@@ -62,9 +68,9 @@ public class AdminProductView extends AppCompatActivity implements AdminTab {
                     }})
                 .setNegativeButton(android.R.string.no, null).show();
     }
-
+    */
     public void updateDataAndView(){
-        final TableLayout tl = (TableLayout) findViewById(R.id.main_table);
+        final TableLayout tl = (TableLayout) getView().findViewById(R.id.main_table);
         tl.removeAllViews();
         dao.getAll(new ResponseHandler() {
             @Override
@@ -74,19 +80,19 @@ public class AdminProductView extends AppCompatActivity implements AdminTab {
                     ArrayList<Product> array = (ArrayList<Product>)object;
                     for(int i = 0 ; i < array.size() ; i++) {
                         Product product = array.get(i);
-                        final TableRow row = new TableRow(context);
+                        final TableRow row = new TableRow(getActivity());
                         row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
                         row.setId(product.getId());
                         row.setGravity(Gravity.CENTER_HORIZONTAL);
 
-                        final TextView label_product = new TextView(context);
+                        final TextView label_product = new TextView(getActivity());
                         label_product.setText(product.getName());
                         label_product.setTextColor(Color.BLACK);
                         label_product.setPadding(5, 5, 5, 5);
                         label_product.setWidth(tl.getWidth() / 4);
                         row.addView(label_product);
 
-                        final TextView label_marque = new TextView(context);
+                        final TextView label_marque = new TextView(getActivity());
                         String text = product.getBrand();
 
                         label_marque.setText(text);
@@ -95,13 +101,13 @@ public class AdminProductView extends AppCompatActivity implements AdminTab {
                         label_marque.setWidth(tl.getWidth() / 4);
                         row.addView(label_marque); // add the column to the table row here
 
-                        Button delete = new Button(context);
+                        Button delete = new Button(getActivity());
                         delete.setText("delete");
                         delete.setWidth(tl.getWidth() / 4);
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {
-                                new AlertDialog.Builder(context)
+                                new AlertDialog.Builder(getActivity())
                                         .setTitle("Delete Product")
                                         .setMessage("Are you sure you want to delete this product?")
                                         .setIcon(android.R.drawable.ic_dialog_alert)
@@ -135,17 +141,17 @@ public class AdminProductView extends AppCompatActivity implements AdminTab {
                         });
                         row.addView(delete);
 
-                        Button update = new Button(context);
+                        Button update = new Button(getActivity());
                         update.setText("update");
                         update.setWidth(tl.getWidth() / 4);
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
-                            public void onClick(View v) {
+                            public void onClick(View v) {/*
                                 Intent intent = new Intent(AdminProductView.this, UpdateProduct.class);
                                 intent.putExtra("name",label_product.getText());
                                 intent.putExtra("product",row.getId());
                                 intent.putExtra("brand", label_product.getText());
-                                startActivity(intent);
+                                startActivity(intent);*/
                             }
                         });
                         row.addView(update);
