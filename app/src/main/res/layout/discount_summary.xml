@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.Light">
 
     <TextView
         android:id="@+id/productName"
@@ -19,9 +19,9 @@
 
     <TextView
         android:id="@+id/MarqueTag"
-        android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_marginStart="50dp"
+        android:layout_width="56dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="40dp"
         android:text='Marque'
         app:layout_constraintStart_toStartOf="parent"
@@ -39,24 +39,24 @@
         app:layout_constraintTop_toBottomOf="@+id/productName" />
 
     <TextView
-        android:id="@+id/newPriceTag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:text="oldPrice"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MarqueTag" />
-
-    <TextView
         android:id="@+id/oldPriceTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
-        android:text="New Price"
+        android:text="Prix Avant"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPriceTag" />
+        app:layout_constraintTop_toBottomOf="@+id/MarqueTag" />
+
+    <TextView
+        android:id="@+id/newPriceTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Prix Après "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oldPriceTag" />
 
     <TextView
         android:id="@+id/oldPrice"
@@ -66,7 +66,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/newPriceTag"
+        app:layout_constraintStart_toEndOf="@+id/oldPriceTag"
         app:layout_constraintTop_toBottomOf="@+id/productBrand" />
 
     <TextView
@@ -77,7 +77,65 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/oldPriceTag"
+        app:layout_constraintStart_toEndOf="@+id/newPriceTag"
         app:layout_constraintTop_toBottomOf="@+id/oldPrice" />
+
+    <TextView
+        android:id="@+id/validUntil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Promotion valide jusqu'au : "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newPriceTag" />
+
+    <TextView
+        android:id="@+id/date_fin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/validUntil"
+        app:layout_constraintTop_toTopOf="@+id/validUntil" />
+
+    <TextView
+        android:id="@+id/descriptionTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Description du produit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/validUntil" />
+
+    <ScrollView
+        android:id="@+id/descriptionScroll"
+        android:layout_width="310dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTag">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/descriptionView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="431dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
