@@ -161,12 +161,12 @@ public class MySqlDiscountDAO extends DiscountDAO {
                         final Date creation = sdf.parse(current.getString("date_update"));
                         Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.getInt("idDepartment")));
                         try{
-                            if (date < end && date >start) {
+                            if (date.compareTo(start)<= 0 && date.compareTo(end)>= 0) {
                                 float percentage = (float) current.getDouble("percentage");
                                 discounts.add(new PercentageDiscount(prod, start, end, creation, percentage, fidelity));
                             }
                         }catch (JSONException e){
-                            if (date < end && date >start) {
+                            if (date.compareTo(start)<= 0 && date.compareTo(end)>= 0) {
 
                                 int bougth = current.getInt("Bought");
                                 int free = current.getInt("Free");
