@@ -5,10 +5,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -27,30 +30,28 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class AdminDepartmentView extends AppCompatActivity implements AdminTab {
+public class AdminDepartmentView extends Fragment{
 
-    final Context context = this;
     DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
 
     @Override
-    protected void onResume() {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.lampall_display, container, false);
+    }
+
+
+    @Override
+    public void onResume() {
         super.onResume();
         updateDataAndView();
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.lampall_display);
-        updateDataAndView();
-    }
-
-    @Override
-    public void onBackPressed(){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
-
+    /*
     @Override
     public void openNewLampPopUp(final int lamp) {
         new AlertDialog.Builder(context)
@@ -65,10 +66,10 @@ public class AdminDepartmentView extends AppCompatActivity implements AdminTab {
                         context.startActivity(intent);
                     }})
                 .setNegativeButton(android.R.string.no, null).show();
-    }
+    }*/
 
     public void updateDataAndView(){
-        final TableLayout tl = (TableLayout) findViewById(R.id.main_table);
+        final TableLayout tl = (TableLayout) getView().findViewById(R.id.main_table);
         tl.removeAllViews();
         dao.getAll(new ResponseHandler() {
             @Override
@@ -78,12 +79,12 @@ public class AdminDepartmentView extends AppCompatActivity implements AdminTab {
                     ArrayList<Department> array = (ArrayList<Department>)object;
                     for(int i = 0 ; i < array.size() ; i++) {
                         Department department = array.get(i);
-                        final TableRow row = new TableRow(context);
+                        final TableRow row = new TableRow(getActivity());
                         row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
                         row.setId(department.getId());
                         row.setGravity(Gravity.CENTER_HORIZONTAL);
 
-                        final TextView label_lamp = new TextView(context);
+                        final TextView label_lamp = new TextView(getActivity());
                         label_lamp.setText(department.getName());
                         label_lamp.setTextColor(Color.BLACK);
                         label_lamp.setPadding(5, 5, 5, 5);
@@ -91,13 +92,13 @@ public class AdminDepartmentView extends AppCompatActivity implements AdminTab {
                         row.addView(label_lamp);
 
 
-                        Button delete = new Button(context);
+                        Button delete = new Button(getActivity());
                         delete.setText("delete");
                         delete.setWidth(tl.getWidth() / 3);
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {
-                                new AlertDialog.Builder(context)
+                                new AlertDialog.Builder(getActivity())
                                         .setTitle("Delete Lamp")
                                         .setMessage("Are you sure you want to delete this lamp?")
                                         .setIcon(android.R.drawable.ic_dialog_alert)
@@ -131,16 +132,16 @@ public class AdminDepartmentView extends AppCompatActivity implements AdminTab {
                         });
                         row.addView(delete);
 
-                        Button update = new Button(context);
+                        Button update = new Button(getActivity());
                         update.setText("update");
                         update.setWidth(tl.getWidth() / 3);
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
-                            public void onClick(View v) {
+                            public void onClick(View v) {/*
                                 Intent intent = new Intent(AdminDepartmentView.this, UpdateLamp.class);
                                 intent.putExtra("name",label_lamp.getText());
                                 intent.putExtra("department",row.getId());
-                                startActivity(intent);
+                                startActivity(intent);*/
                             }
                         });
                         row.addView(update);

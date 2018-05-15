@@ -5,10 +5,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -27,30 +30,27 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class AdminDiscountView extends AppCompatActivity implements AdminTab {
+public class AdminDiscountView extends Fragment {
 
-    final Context context = this;
     DiscountDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO();
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         updateDataAndView();
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lampall_display);
-        updateDataAndView();
     }
 
     @Override
-    public void onBackPressed(){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.lampall_display, container, false);
     }
 
+    /*
     @Override
     public void openNewLampPopUp(final int lamp) {
         new AlertDialog.Builder(context)
@@ -66,9 +66,9 @@ public class AdminDiscountView extends AppCompatActivity implements AdminTab {
                     }})
                 .setNegativeButton(android.R.string.no, null).show();
     }
-
+    */
     public void updateDataAndView(){
-        final TableLayout tl = (TableLayout) findViewById(R.id.main_table);
+        final TableLayout tl = (TableLayout) getView().findViewById(R.id.main_table);
         tl.removeAllViews();
         dao.getAll(new ResponseHandler() {
             @Override

@@ -4,7 +4,8 @@
     <string name="marque">Marque</string>
     <string name="promotionsJour">Promotions du Jour</string>
     <string name="currency"> €</string>
-
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string name="url">http://81.64.139.113:1337/api/</string>
 
 

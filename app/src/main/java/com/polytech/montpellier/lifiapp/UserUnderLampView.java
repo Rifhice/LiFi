@@ -75,7 +75,7 @@ public class UserUnderLampView extends AppCompatActivity {
                 if (object == null) {
                     System.out.println("NO PRODUCTS IN DEP");
                 } else {
-                    System.out.println("object on create userunderlamp");
+                    System.out.println("object on create userunderlamp"+object);
                     if (object instanceof JSONArray) {
                         System.out.println("object on create userunderlampin instance of " + object.toString());
 

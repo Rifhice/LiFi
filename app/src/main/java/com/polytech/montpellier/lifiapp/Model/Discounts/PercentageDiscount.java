@@ -33,7 +33,9 @@ public class PercentageDiscount extends Discount {
     @Override
     public float newPrice() {
         float oldPrice = this.oldPrice();
-        return (oldPrice - oldPrice*getPercentage());
+        System.out.println(percentage);
+        System.out.println("percebtage " + (oldPrice*getPercentage()/100));
+        return (oldPrice - oldPrice*getPercentage()/100);
     }
 
 

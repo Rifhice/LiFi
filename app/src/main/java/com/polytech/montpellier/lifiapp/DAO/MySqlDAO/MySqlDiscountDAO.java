@@ -136,4 +136,55 @@ public class MySqlDiscountDAO extends DiscountDAO {
         });
 
     }
+
+
+    public void getAllByDate(final Date date ,final ResponseHandler response) throws DAOException {
+        final ArrayList<Discount> discounts =  new ArrayList<Discount>();
+
+        Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/", new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                System.out.println("GET 1"+object.toString());
+                JSONArray jsonArray = new JSONArray();
+                jsonArray = (JSONArray) object;
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+
+
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    try {
+
+                        final JSONObject current = jsonArray.getJSONObject(i);
+                        final int fidelity = current.getInt("fidelity");
+                        final int fkProduct = current.getInt("fkProduct");
+                        final Date start = sdf.parse(current.getString("date_start"));
+                        final Date end = sdf.parse(current.getString("date_end"));
+                        final Date creation = sdf.parse(current.getString("date_update"));
+                        Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.getInt("idDepartment")));
+                        try{
+                            if (date.compareTo(start)<= 0 && date.compareTo(end)>= 0) {
+                                float percentage = (float) current.getDouble("percentage");
+                                discounts.add(new PercentageDiscount(prod, start, end, creation, percentage, fidelity));
+                            }
+                        }catch (JSONException e){
+                            if (date.compareTo(start)<= 0 && date.compareTo(end)>= 0) {
+
+                                int bougth = current.getInt("Bought");
+                                int free = current.getInt("Free");
+                                discounts.add(new QuantityDiscount(prod, start, end, creation, bougth, free, fidelity));
+                            }
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+                response.onSuccess(discounts);
+            }
+
+            @Override
+            public void onError(Object object) {
+                response.onError("ERROR");
+            }
+        });
+
+    }
 }
