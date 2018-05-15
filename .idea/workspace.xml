@@ -141,14 +141,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminProductView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="149" column="27" lean-forward="true" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
-=======
-      <file leaf-file-name="QuantityDiscount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Model/Discounts/QuantityDiscount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
->>>>>>> clickable
+              <caret line="149" column="27" lean-forward="false" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -177,15 +170,22 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AddProduct.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="203" column="16" lean-forward="false" selection-start-line="203" selection-start-column="16" selection-end-line="204" selection-end-column="44" />
-=======
-      <file leaf-file-name="MySqlDiscountDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlDiscountDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
->>>>>>> clickable
-              <folding />
+              <caret line="204" column="16" lean-forward="false" selection-start-line="204" selection-start-column="16" selection-end-line="205" selection-end-column="44" />
+              <folding>
+                <marker date="1526313384552" expanded="true" signature="2385:4572" ph="{...}" />
+                <marker date="1526313384552" expanded="true" signature="4016:4352" ph="{...}" />
+                <marker date="1526313384552" expanded="true" signature="4113:4207" ph="{...}" />
+                <marker date="1526313384552" expanded="true" signature="4302:4330" ph="{}" />
+                <marker date="1526313384552" expanded="true" signature="4625:4659" ph="{...}" />
+                <marker date="1526313384552" expanded="true" signature="4865:5391" ph="{...}" />
+                <marker date="1526313384552" expanded="true" signature="5426:7094" ph="{...}" />
+                <marker date="1526313384552" expanded="true" signature="5857:6603" ph="{...}" />
+                <marker date="1526313384552" expanded="true" signature="5931:6506" ph="{...}" />
+                <marker date="1526313384552" expanded="true" signature="6577:6593" ph="{}" />
+                <marker date="1526313384552" expanded="true" signature="6688:7084" ph="{...}" />
+                <marker date="1526313384552" expanded="true" signature="6824:6964" ph="{...}" />
+                <marker date="1526313384552" expanded="true" signature="7057:7073" ph="{}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -3145,14 +3145,22 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AddProduct.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="203" column="16" lean-forward="false" selection-start-line="203" selection-start-column="16" selection-end-line="204" selection-end-column="44" />
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlDiscountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
->>>>>>> clickable
-          <folding />
+          <caret line="204" column="16" lean-forward="false" selection-start-line="204" selection-start-column="16" selection-end-line="205" selection-end-column="44" />
+          <folding>
+            <marker date="1526313384552" expanded="true" signature="2385:4572" ph="{...}" />
+            <marker date="1526313384552" expanded="true" signature="4016:4352" ph="{...}" />
+            <marker date="1526313384552" expanded="true" signature="4113:4207" ph="{...}" />
+            <marker date="1526313384552" expanded="true" signature="4302:4330" ph="{}" />
+            <marker date="1526313384552" expanded="true" signature="4625:4659" ph="{...}" />
+            <marker date="1526313384552" expanded="true" signature="4865:5391" ph="{...}" />
+            <marker date="1526313384552" expanded="true" signature="5426:7094" ph="{...}" />
+            <marker date="1526313384552" expanded="true" signature="5857:6603" ph="{...}" />
+            <marker date="1526313384552" expanded="true" signature="5931:6506" ph="{...}" />
+            <marker date="1526313384552" expanded="true" signature="6577:6593" ph="{}" />
+            <marker date="1526313384552" expanded="true" signature="6688:7084" ph="{...}" />
+            <marker date="1526313384552" expanded="true" signature="6824:6964" ph="{...}" />
+            <marker date="1526313384552" expanded="true" signature="7057:7073" ph="{}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3185,7 +3193,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminProductView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="149" column="27" lean-forward="true" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
+          <caret line="149" column="27" lean-forward="false" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
           <folding />
         </state>
       </provider>
