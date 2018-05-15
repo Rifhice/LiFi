@@ -1,4 +1,8 @@
+<<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
+=======
+<<<<<<< refs/remotes/origin/master
+>>>>>>> AutoStash
 <component name="libraryTable">
   <library name="Gradle: com.android.support:design-27.1.1">
     <CLASSES>
@@ -14,13 +18,22 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:design-27.1.1">
     <CLASSES>
+<<<<<<< refs/remotes/origin/master
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/cd05ce4b1c63fd4b26909a04a31f6b51/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/cd05ce4b1c63fd4b26909a04a31f6b51/res" />
+=======
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/c3db1493591a0454d51b24d1429a4be7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/c3db1493591a0454d51b24d1429a4be7/res" />
+>>>>>>> AutoStash
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/design/27.1.1/6e10c7f954f63690f7846fb22352375cf1b9fbb4/design-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< refs/remotes/origin/master
 >>>>>>> Stashed changes
+=======
+>>>>>>> AutoStash
+>>>>>>> AutoStash
 </component>

@@ -1,4 +1,8 @@
+<<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
+=======
+<<<<<<< refs/remotes/origin/master
+>>>>>>> AutoStash
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-core-utils-27.1.1">
     <CLASSES>
@@ -14,13 +18,22 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-core-utils-27.1.1">
     <CLASSES>
+<<<<<<< refs/remotes/origin/master
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/85530c39713ad195a2b98a5851a0634f/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/85530c39713ad195a2b98a5851a0634f/res" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/79eccfe2d80128b5f0592ba07f3e9687/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/79eccfe2d80128b5f0592ba07f3e9687/jars/classes.jar!/" />
+>>>>>>> AutoStash
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-core-utils/27.1.1/8fb37fd2f8dbc23482865700d2c340ae030ea561/support-core-utils-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< refs/remotes/origin/master
 >>>>>>> Stashed changes
+=======
+>>>>>>> AutoStash
+>>>>>>> AutoStash
 </component>
