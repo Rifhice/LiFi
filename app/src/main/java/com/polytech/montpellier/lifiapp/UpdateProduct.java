@@ -14,6 +14,8 @@ import android.widget.MultiAutoCompleteTextView;
 import android.widget.Spinner;
 
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
@@ -29,6 +31,8 @@ import java.util.HashMap;
 
 public class UpdateProduct extends AppCompatActivity {
     int idDep = -1;
+    DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
+    ProductDAO daoP = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,24 +40,28 @@ public class UpdateProduct extends AppCompatActivity {
         setContentView(R.layout.product_add);
         Intent intent = getIntent();
         final int id = intent.getIntExtra("product",0);
+        //System.out.print("id du produit:" +id);
         final String name = intent.getStringExtra("name");
         final String brand = intent.getStringExtra("brand");
+        final String price = intent.getStringExtra("price");
         final EditText text_name = (EditText) findViewById(R.id.editText_product_addName);
         final EditText text_brand = (EditText) findViewById(R.id.editText_product_addBrand);
         final MultiAutoCompleteTextView text_description = (MultiAutoCompleteTextView) findViewById(R.id.multiTextView_product_addDescription);
         final EditText text_price = (EditText) findViewById(R.id.editText_product_addPrice);
-
-        text_name.setText(name);
-        text_brand.setText(brand);
-
         final Spinner spinnerDepartment = (Spinner) findViewById(R.id.spinner_ProductDepartement);
         final ArrayList<String> dep = new ArrayList<>();
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
         final HashMap<String, Integer> depMap=new HashMap<String, Integer>();
 
+        text_name.setText(name);
+        text_brand.setText(brand);
+        text_price.setText(price);
+
+
+
 
         //TODO vérifier departement non vide
-        AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().getAll(new ResponseHandler() {
+        dao.getAll(new ResponseHandler() {
 
             @Override
             public void onSuccess(Object object) {
@@ -77,17 +85,20 @@ public class UpdateProduct extends AppCompatActivity {
             }
         });
 
-        AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO().getById(id, new ResponseHandler() {
+        daoP.getById(id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
+                System.out.println("ICIII 1");
                 if (object instanceof JSONArray) {
                     JSONArray array = (JSONArray) object;
+                    System.out.println("ICIII 2");
                     final String department;
 
                         try {
                             JSONObject current = array.getJSONObject(0);
-                            //new Product(current.getInt(\"idProduct\"), current.getString(\"name\"),  current.getString(\"description"),  Float.parseFloat(current.getString("price")),  current.getString("brand"),new Department(current.getInt("idDepartment"), current.getString("name"))));
-                            text_price.setText(current.getString("price"));
+                            System.out.println("ICIII");
+                            //new Product(current.getInt("idProduct"), current.getString("name"),  current.getString("description"),  Float.parseFloat(current.getString("price")),  current.getString("brand"),new Department(current.getInt("idDepartment"), current.getString("name")));
+                            System.out.println(" HIH Description : " + current.getString("descriptionProduct") + "Departement : " + current.getString("nameDepartment"));
                             text_description.setText(current.getString("description"));
                             department = current.getString("department");
                             spinnerDepartment.setSelection(dep.indexOf(department));
@@ -108,14 +119,14 @@ public class UpdateProduct extends AppCompatActivity {
 
             @Override
             public void onError(Object object) {
-
+                System.out.println("ERROR");
             }
         });
 
 
 
 
-        Button validate = (Button)findViewById(R.id.validate);
+        /*Button validate = (Button)findViewById(R.id.validate);
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -146,7 +157,7 @@ public class UpdateProduct extends AppCompatActivity {
                 }
 
             }
-        });
+        });*/
 
 
 
@@ -169,7 +180,7 @@ public class UpdateProduct extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         new AlertDialog.Builder(this)
-                .setTitle("New Lamp")
+                .setTitle("Update Product")
                 .setMessage("You are leaving, are you sure ?")
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {

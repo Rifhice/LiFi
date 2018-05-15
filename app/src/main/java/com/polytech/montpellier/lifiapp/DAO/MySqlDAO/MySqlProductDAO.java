@@ -67,7 +67,10 @@ public class MySqlProductDAO extends ProductDAO {
                     } else {
                         try {
                             JSONObject current = array.getJSONObject(0);
-                            response.onSuccess(new Product(current.getInt("idProduct"), current.getString("name"),  current.getString("description"),  Float.parseFloat(current.getString("price")),  current.getString("brand"),new Department(current.getInt("idDepartment"), current.getString("name"))));
+
+                            response.onSuccess(new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
+                            //System.out.println(" ICI idProduct : " +current.getInt("idProduct") + ",name : " + current.getString("nameProduct")+",description : "+  current.getString("descriptionProduct")+ ",price : "+  Float.parseFloat(current.getString("priceProduct"))+ ",brand : "+  current.getString("brandProduct")+ ",idDepartment : " +current.getInt("idDepartment")+ "name : "+ current.getString("nameDepartment"));
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

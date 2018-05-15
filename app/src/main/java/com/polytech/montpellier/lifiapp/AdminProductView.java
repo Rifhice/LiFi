@@ -89,7 +89,7 @@ public class AdminProductView extends Fragment{
                         label_product.setText(product.getName());
                         label_product.setTextColor(Color.BLACK);
                         label_product.setPadding(5, 5, 5, 5);
-                        label_product.setWidth(tl.getWidth() / 4);
+                        label_product.setWidth(tl.getWidth() / 5);
                         row.addView(label_product);
 
                         final TextView label_marque = new TextView(getActivity());
@@ -98,12 +98,12 @@ public class AdminProductView extends Fragment{
                         label_marque.setText(text);
                         label_marque.setTextColor(Color.BLACK); // set the color
                         label_marque.setPadding(5, 5, 5, 5); // set the padding (if required)
-                        label_marque.setWidth(tl.getWidth() / 4);
+                        label_marque.setWidth(tl.getWidth() / 5);
                         row.addView(label_marque); // add the column to the table row here
 
                         Button delete = new Button(getActivity());
                         delete.setText("delete");
-                        delete.setWidth(tl.getWidth() / 4);
+                        delete.setWidth(tl.getWidth() / 5);
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {
@@ -143,7 +143,7 @@ public class AdminProductView extends Fragment{
 
                         Button update = new Button(getActivity());
                         update.setText("update");
-                        update.setWidth(tl.getWidth() / 4);
+                        update.setWidth(tl.getWidth() / 5);
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {/*
