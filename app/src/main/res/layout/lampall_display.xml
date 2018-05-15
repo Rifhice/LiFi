@@ -8,6 +8,7 @@
     android:stretchColumns="1">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="32dp"
@@ -27,4 +28,17 @@
 
         </TableLayout>
     </ScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/add_button"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2" />
+
 </android.support.constraint.ConstraintLayout>
