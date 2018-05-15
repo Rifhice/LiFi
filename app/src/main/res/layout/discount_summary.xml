@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/newPriceTag" />
 
     <TextView
-        android:id="@+id/newPrice"
+        android:id="@+id/oldPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/productBrand" />
 
     <TextView
-        android:id="@+id/oldPrice"
+        android:id="@+id/newPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -78,6 +78,6 @@
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/oldPriceTag"
-        app:layout_constraintTop_toBottomOf="@+id/newPrice" />
+        app:layout_constraintTop_toBottomOf="@+id/oldPrice" />
 
 </android.support.constraint.ConstraintLayout>
