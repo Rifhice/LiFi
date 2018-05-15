@@ -49,8 +49,7 @@
         <activity android:name="com.polytech.montpellier.lifiapp.AdminDepartmentView">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.DiscountSummary"
-            android:theme="@android:style/Theme.NoTitleBar">
+        <activity android:name="com.polytech.montpellier.lifiapp.DiscountSummary">
 
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.UpdateProduct">

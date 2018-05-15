@@ -1,6 +1,8 @@
 package com.polytech.montpellier.lifiapp;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,6 +20,8 @@ import com.polytech.montpellier.lifiapp.Model.Lamp;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.List;
 
 /**
  * Created by Kevin on 03/05/2018.
@@ -46,8 +50,7 @@ public class LampController extends AppCompatActivity {
     }
 
     public void onNewLamp(final JSONObject lamp, final Context context) throws JSONException {
-        System.out.println("IS INSTANCE : " + (context.getApplicationContext() instanceof AdminActivity));
-        if(context.getApplicationContext() instanceof AdminActivity){
+        if(AdminActivity.isIsDisplayed() && UserConnection.getInstance().isConnected()){
             //TODO check if lamp exists, if it doesn't, ask the user if he wants to register it
             lampDAO.getById(lamp.getInt("id"), new ResponseHandler() {
                 @Override

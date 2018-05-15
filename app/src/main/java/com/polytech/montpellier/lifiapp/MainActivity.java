@@ -43,8 +43,14 @@ public class MainActivity extends AppCompatActivity {
     private int nbClick = 0;
     private int milliReset = 2000;
     private int nbClickOk = 7;
-    private LampListener listener;
+    private static LampListener listener = null;
     final static int PERMISSION_REQUEST_AUDIO = 1;
+
+    public void instanciateListener(){
+        if(listener == null){
+            listener = new LampListener(this,getApplicationContext());
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,17 +116,18 @@ public class MainActivity extends AppCompatActivity {
                 builder.show();
 
             }else{
-                listener = new LampListener(this,getApplicationContext());
+                instanciateListener();
             }
 
         }else{
-            listener = new LampListener(this,getApplicationContext());
+            instanciateListener();
         }
     }
 
     @Override
      protected void onResume() {
-        super.onResume();/*
+        super.onResume();
+        /*
         if(listener != null) {
             listener.resume();
         }*/
@@ -136,7 +143,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();/*
+        super.onDestroy();
+        /*
         if(listener != null) {
             listener.destroy();
         }*/
@@ -149,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
             case PERMISSION_REQUEST_AUDIO: {
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     //Log.d(TAG, "coarse location permission granted");
-                    listener = new LampListener(this,getApplicationContext());
+                    instanciateListener();
                 } else {
                     final AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("Functionality limited");

@@ -24,17 +24,13 @@ import java.util.List;
  */
 
 public class AdminActivity extends AppCompatActivity {
-    TabHost tabHost;
-    Intent lamp;
-    Intent product;
-    Intent discount;
-    Intent department;
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
     static AdminActivity instance = null;
+    static boolean isDisplayed = true;
 
     public static AdminActivity getInstance() {
         return instance;
@@ -53,6 +49,18 @@ public class AdminActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.mytabs);
         tabLayout.setupWithViewPager(viewPager);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        AdminActivity.setIsDisplayed(false);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AdminActivity.setIsDisplayed(true);
     }
 
     public void openNewLampPopUp(final int lamp){
@@ -75,6 +83,14 @@ public class AdminActivity extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(AdminActivity.this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public static void setIsDisplayed(boolean val){
+        isDisplayed = val;
+    }
+
+    public static boolean isIsDisplayed(){
+        return isDisplayed;
     }
 
     private void setViewPager(ViewPager viewPager) {
