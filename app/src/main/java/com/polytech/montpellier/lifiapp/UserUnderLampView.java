@@ -127,6 +127,7 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                         String date_end = discount.getString("date_end");
                                                                         System.out.println("date end" + date_end);
                                                                         System.out.println("discount.lentgh " + discount.length());
+                                                                        System.out.println("discountttt " + discount);
                                                                         int fidelity = discount.getInt("fidelity");
 
                                                                         int color;
@@ -136,7 +137,8 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                             color = Color.GREEN;
                                                                         }
 
-                                                                        if (discount.length() == 8) {
+                                                                        if (discount.length() == 14) {
+                                                                            System.out.println("here walla 8");
 
                                                                             float percentage = (float) discount.getDouble("percentage");
 
@@ -173,7 +175,7 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                             row.addView(percentage_Discount);
 
                                                                             tl.addView(row);
-                                                                        } else if (discount.length() == 9) {
+                                                                        } else if (discount.length() == 15) {
 
 
                                                                             int bought = discount.getInt("Bought");
@@ -194,6 +196,7 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                                     startActivity(intent);
                                                                                 }
                                                                             });
+                                                                            System.out.println("here walla");
 
 
                                                                             TextView label_Product = new TextView(context);
