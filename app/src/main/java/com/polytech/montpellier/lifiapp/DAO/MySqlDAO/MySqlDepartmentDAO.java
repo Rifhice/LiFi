@@ -27,23 +27,11 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
         Map<String, String> params = new HashMap<String, String>();
         params.put("name", obj.getName());
 
-        Helper.getInstance().POST("http://81.64.139.113:1337/api/Department", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", params, new ResponseHandler() {
+        Helper.getInstance().POST("http://81.64.139.113:1337/api/Department", token, params, new ResponseHandler() {
 
             @Override
             public void onSuccess(Object object) {
-                if (object instanceof JSONArray) {
-                    JSONArray array = (JSONArray) object;
-                    if (array.length() == 0) {
-                        response.onSuccess(null);
-                    } else {
-                        try {
-                            JSONObject current = array.getJSONObject(0);
-                            response.onSuccess(new Department(current.getInt("id"), current.getString("name")));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
+                response.onSuccess(object);
             }
 
             @Override
@@ -88,23 +76,11 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
         params.put("name", obj.getName());
 
 
-        Helper.getInstance().POST("http://81.64.139.113:1337/api/Department", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", params, new ResponseHandler() {
+        Helper.getInstance().PUT("http://81.64.139.113:1337/api/Department/" + obj.getId(), token, params, new ResponseHandler() {
 
             @Override
             public void onSuccess(Object object) {
-                if (object instanceof JSONArray) {
-                    JSONArray array = (JSONArray) object;
-                    if (array.length() == 0) {
-                        response.onSuccess(null);
-                    } else {
-                        try {
-                            JSONObject current = array.getJSONObject(0);
-                            response.onSuccess(new Department(current.getInt("id"), current.getString("name")));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
+                response.onSuccess(object);
             }
 
             @Override

@@ -55,6 +55,12 @@
         <activity android:name="com.polytech.montpellier.lifiapp.UpdateProduct">
 
         </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.AddDepartment">
+
+        </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.UpdateDepartment">
+
+        </activity>
     </application>
 
 </manifest>

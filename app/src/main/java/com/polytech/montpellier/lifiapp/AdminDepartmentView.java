@@ -57,7 +57,8 @@ public class AdminDepartmentView extends Fragment{
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), AddDepartment.class);
+                startActivity(intent);
             }
         });
         final TableLayout tl = (TableLayout) getView().findViewById(R.id.main_table);
@@ -128,11 +129,11 @@ public class AdminDepartmentView extends Fragment{
                         update.setWidth(tl.getWidth() / 3);
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
-                            public void onClick(View v) {/*
-                                Intent intent = new Intent(AdminDepartmentView.this, UpdateLamp.class);
+                            public void onClick(View v) {
+                                Intent intent = new Intent(getActivity(), UpdateDepartment.class);
                                 intent.putExtra("name",label_lamp.getText());
-                                intent.putExtra("department",row.getId());
-                                startActivity(intent);*/
+                                intent.putExtra("id",row.getId());
+                                startActivity(intent);
                             }
                         });
                         row.addView(update);
