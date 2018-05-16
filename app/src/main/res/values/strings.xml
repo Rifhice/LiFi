@@ -19,6 +19,9 @@
     <string name="addDepartement">Add Department</string>
     <string name="newDepartement">New Department</string>
     <string name="updateDepartment">Update Department</string>
+    <string name="updateLeaveMessage">You are leaving, are you sure ?</string>
+    <string name="blankFieldMessage">Fields cannot be left blank</string>
+
 
     <string name="addLeaveMessage">You are leaving, are you sure ?</string>
 

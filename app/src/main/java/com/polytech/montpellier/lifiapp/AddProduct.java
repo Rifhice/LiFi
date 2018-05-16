@@ -91,7 +91,7 @@ public class AddProduct extends AppCompatActivity{
                     AlertDialog alertDialog = new AlertDialog.Builder(AddProduct.this).create();
                     alertDialog.setTitle("Alert");
                     alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
-                    alertDialog.setMessage("Fields cannot be left blank");
+                    alertDialog.setMessage(getResources().getString(R.string.blankFieldMessage));
                     alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
