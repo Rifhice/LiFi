@@ -23,4 +23,15 @@
         android:layout_centerInParent="true"
         app:srcCompat="@drawable/cart" />
 
+
+    <!--<steelkiwi.com.library.DotsLoaderView
+        android:id="@+id/dotsLoader"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:dlv_item_drawable="@drawable/circle_background"
+        app:dlv_line_color="@color/point_color"
+        ></steelkiwi.com.library.DotsLoaderView>
+-->
+
 </RelativeLayout>

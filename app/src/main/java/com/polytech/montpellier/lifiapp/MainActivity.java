@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -35,6 +36,8 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+//import steelkiwi.com.library.DotsLoaderView;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView testText;
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private int nbClickOk = 7;
     private static LampListener listener = null;
     final static int PERMISSION_REQUEST_AUDIO = 1;
+   // DotsLoaderView dotsLoaderView;
 
     public void instanciateListener(){
         if(listener == null){
@@ -58,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Helper.getInstance(this);
+
+       // dotsLoaderView = findViewById(R.id.dotsLoader);
+       // dowloadDemo();
+
 
         testText = (TextView)findViewById(R.id.testText);
         logo = (ImageView) findViewById(R.id.imageView_logo_main);
@@ -123,6 +131,34 @@ public class MainActivity extends AppCompatActivity {
             instanciateListener();
         }
     }
+
+   /* private void dowloadDemo() {
+        AsyncTask<String,String,String>  demoAsync = new AsyncTask<String, String, String>() {
+
+            @Override
+            protected void onPreExecute() {
+                dotsLoaderView.show();
+            }
+
+            @Override
+            protected String doInBackground(String... strings) {
+                try {
+                    Thread.sleep(500);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }return "done";
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                if(s.equals("done")){
+                    dotsLoaderView.hide();
+                }
+            }
+        };
+        demoAsync.execute();
+
+    }*/
 
     @Override
      protected void onResume() {

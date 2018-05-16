@@ -24,6 +24,7 @@
 
 
     <string name="addLeaveMessage">You are leaving, are you sure ?</string>
+    <string name="updateLeaveMessage">You are leaving, are you sure ?</string>
 
     <string name="lamp">Lamp</string>
     <string name="newLamp">New Lamp</string>
