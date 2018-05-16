@@ -10,18 +10,29 @@ import java.util.Date;
 
 public abstract class Discount {
 
+    int id;
     Product product;
     Date dateDebut;
     Date dateFin;
     Date dateCreation;
     int fidelity;
 
-    public Discount(Product product, Date dateDebut, Date dateFin, Date dateCreation, int fidelity) {
+    public Discount(int id, Product product, Date dateDebut, Date dateFin, Date dateCreation, int fidelity) {
+        this.id = id;
         this.product = product;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
         this.dateCreation = dateCreation;
         this.fidelity = fidelity;
+    }
+
+
+    public int getId() {
+        return this.id ;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Product getProduct() {

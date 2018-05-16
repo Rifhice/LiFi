@@ -171,7 +171,7 @@ public class AdminProductView extends Fragment{
                                 Intent intent = new Intent(getActivity(), UpdateProduct.class);
                                 intent.putExtra("name",label_product.getText());
                                 intent.putExtra("product",row.getId());
-                                intent.putExtra("brand", label_product.getText());
+                                intent.putExtra("brand", label_marque.getText());
                                 intent.putExtra("price", String.valueOf(product.getPrice()));
                                 startActivity(intent);
                             }
