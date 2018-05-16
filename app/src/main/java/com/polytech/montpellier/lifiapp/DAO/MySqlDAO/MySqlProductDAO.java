@@ -148,15 +148,27 @@ public class MySqlProductDAO extends ProductDAO {
             public void onSuccess(Object object) {
                 if (object instanceof JSONArray) {
                     JSONArray array = (JSONArray) object;
-                    try {
-                        for (int i = 0; i < array.length(); i++) {
-                            JSONObject current = array.getJSONObject(i);
-                            products.add(new Product(current.getInt("idProduct"), current.getString("name"),  current.getString("description"),  Float.parseFloat(current.getString("price")),  current.getString("brand"),new Department(current.optInt("idDepartment"), current.getString("name"))));
+                    for (int i = 0; i < array.length(); i++) {
+                        JSONObject current = null;
+                        Object iddep = null;
+                        try {
+                            current = array.getJSONObject(i);
+                            iddep = current.optInt("idDepartment");
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
-                        response.onSuccess(products);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                        try {
+                            if(iddep == null){
+                                products.add(new Product(current.getInt("idProduct"), current.getString("name"), current.getString("description"), Float.parseFloat(current.getString("price")), current.getString("brand"), null));
+                            }
+                            else{
+                                products.add(new Product(current.getInt("idProduct"), current.getString("name"), current.getString("description"), Float.parseFloat(current.getString("price")), current.getString("brand"), new Department(current.optInt("idDepartment"), current.getString("name"))));
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
+                    response.onSuccess(products);
                 }
             }
 
