@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< Updated upstream
 <<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
 <merger version="3"><dataSet config="main"><source path="C:\Users\Kevin\Desktop\SDK\LiFi\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\Kevin\Desktop\SDK\LiFi\app\src\debug\jniLibs"/></dataSet></merger>
@@ -12,3 +13,6 @@
 <merger version="3"><dataSet config="main"><source path="/Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/debug/jniLibs"/></dataSet></merger>
 >>>>>>> AutoStash
 >>>>>>> AutoStash
+=======
+<merger version="3"><dataSet config="main"><source path="C:\Users\chdal\Desktop\LiFi\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\chdal\Desktop\LiFi\app\src\debug\jniLibs"/></dataSet></merger>
+>>>>>>> Stashed changes

@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< Updated upstream
 <<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
 =======
@@ -315,6 +316,12 @@ ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-61:1
 INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-61:12
 INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-61:12
 INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-61:12
+=======
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+>>>>>>> Stashed changes
 MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:2:1-43:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\cd05ce4b1c63fd4b26909a04a31f6b51\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\7be651e982066bc848be5c268a350459\AndroidManifest.xml:17:1-22:12
@@ -334,20 +341,20 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\chdal\.gradle\caches
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\1382e3b2f8fb53c6ca2eba2498c7d7c7\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f223fb9f69eafbca7b6e6f90cb71f5e3\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\7fe76e181bda470554461f74658165f0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
 	package
 		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-61:12
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
 		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-61:12
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
 		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:11-69
@@ -358,7 +365,7 @@ MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-
 	android:name
 		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:5:5-59:19
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:5:5-58:19
 MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:31:5-41:19
 MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:31:5-41:19
 MERGED from [com.mcxiaoke.volley:library:1.0.6] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\library-1.0.6.aar\9b9b1f1426b3a9c5ae741dee1432e700\AndroidManifest.xml:11:5-20
@@ -376,9 +383,11 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\ch
 	android:theme
 		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:10:9-40
 activity#com.polytech.montpellier.lifiapp.MainActivity
-ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:11:9-18:20
+	android:noHistory
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:12:13-37
 	android:name
-		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:12:19-79
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:11:19-79
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
@@ -434,15 +443,13 @@ ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:49:9-51:
 	android:name
 		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:49:19-86
 activity#com.polytech.montpellier.lifiapp.DiscountSummary
-ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:52:9-55:20
-	android:theme
-		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:53:13-60
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:52:9-54:20
 	android:name
 		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:52:19-82
 activity#com.polytech.montpellier.lifiapp.UpdateProduct
-ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:56:9-58:20
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:55:9-57:20
 	android:name
-		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:56:19-80
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:55:19-80
 uses-sdk
 INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
@@ -529,7 +536,7 @@ ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1
 		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:19:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:20:5-80
-IMPLIED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-61:12 reason: com.oledcomm.soft.androidlifisdk requested WRITE_EXTERNAL_STORAGE
+IMPLIED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12 reason: com.oledcomm.soft.androidlifisdk requested WRITE_EXTERNAL_STORAGE
 	android:name
 		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:20:22-77
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
@@ -564,6 +571,7 @@ ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1
 		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:40:13-35
 	android:name
 		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:39:13-77
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:31:9-33:20
@@ -726,3 +734,5 @@ ADDED from [:androidlifisdk-release:] /Users/assilelyahyaoui/.gradle/caches/tran
 		ADDED from [:androidlifisdk-release:] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/18b2df0642268bb8d7fd8e921e05b4f0/AndroidManifest.xml:39:13-77
 >>>>>>> AutoStash
 >>>>>>> AutoStash
+=======
+>>>>>>> Stashed changes
