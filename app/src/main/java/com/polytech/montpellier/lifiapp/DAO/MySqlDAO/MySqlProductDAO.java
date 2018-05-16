@@ -8,6 +8,7 @@ import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
+import com.polytech.montpellier.lifiapp.Model.Discounts.Discount;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
 import com.polytech.montpellier.lifiapp.Model.Product;
 
@@ -55,7 +56,7 @@ public class MySqlProductDAO extends ProductDAO {
 
     @Override
     public void getById(int id, final ResponseHandler response) throws DAOException {
-
+        final ArrayList<Product> product =  new ArrayList<Product>();
         //TODO : getbyId in product.js
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Product/" + id, new ResponseHandler() {
             @Override
@@ -67,9 +68,10 @@ public class MySqlProductDAO extends ProductDAO {
                     } else {
                         try {
                             JSONObject current = array.getJSONObject(0);
-
-                            response.onSuccess(new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment"))));
-                            //System.out.println(" ICI idProduct : " +current.getInt("idProduct") + ",name : " + current.getString("nameProduct")+",description : "+  current.getString("descriptionProduct")+ ",price : "+  Float.parseFloat(current.getString("priceProduct"))+ ",brand : "+  current.getString("brandProduct")+ ",idDepartment : " +current.getInt("idDepartment")+ "name : "+ current.getString("nameDepartment"));
+                            System.out.println(" ICU idProduct : " +current.getInt("idProduct") + ",name : " + current.getString("nameProduct")+",description : "+  current.getString("descriptionProduct")+ ",price : "+  Float.parseFloat(current.getString("priceProduct"))+ ",brand : "+  current.getString("brandProduct")+ ",idDepartment : " +current.getInt("idDepartment")+ "name : "+ current.getString("nameDepartment"));
+                            Product prod = new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment")));
+                            product.add(prod);
+                            response.onSuccess(product);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -149,7 +151,7 @@ public class MySqlProductDAO extends ProductDAO {
                     try {
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject current = array.getJSONObject(i);
-                            products.add(new Product(current.getInt("idProduct"), current.getString("name"),  current.getString("description"),  Float.parseFloat(current.getString("price")),  current.getString("brand"),new Department(current.getInt("idDepartment"), current.getString("name"))));
+                            products.add(new Product(current.getInt("idProduct"), current.getString("name"),  current.getString("description"),  Float.parseFloat(current.getString("price")),  current.getString("brand"),new Department(current.optInt("idDepartment"), current.getString("name"))));
                         }
                         response.onSuccess(products);
                     } catch (JSONException e) {

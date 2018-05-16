@@ -2034,7 +2034,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
@@ -3672,6 +3672,7 @@ public final class R {
     public static final int blocking=0x7f080024;
     public static final int bottom=0x7f080025;
     public static final int buttonPanel=0x7f080026;
+<<<<<<< Updated upstream
     public static final int button_addProduct=0x7f080027;
     public static final int cancel_action=0x7f080028;
     public static final int center=0x7f080029;
@@ -3716,6 +3717,52 @@ public final class R {
     public static final int expand_activities_button=0x7f080050;
     public static final int expanded_menu=0x7f080051;
     public static final int fab=0x7f080052;
+=======
+    public static final int button_add=0x7f080027;
+    public static final int button_addProduct=0x7f080028;
+    public static final int cancel_action=0x7f080029;
+    public static final int center=0x7f08002a;
+    public static final int center_horizontal=0x7f08002b;
+    public static final int center_vertical=0x7f08002c;
+    public static final int chains=0x7f08002d;
+    public static final int checkbox=0x7f08002e;
+    public static final int chronometer=0x7f08002f;
+    public static final int clip_horizontal=0x7f080030;
+    public static final int clip_vertical=0x7f080031;
+    public static final int collapseActionView=0x7f080032;
+    public static final int container=0x7f080033;
+    public static final int contentPanel=0x7f080034;
+    public static final int coordinator=0x7f080035;
+    public static final int custom=0x7f080036;
+    public static final int customPanel=0x7f080037;
+    public static final int date_fin=0x7f080038;
+    public static final int decor_content_parent=0x7f080039;
+    public static final int default_activity_button=0x7f08003a;
+    public static final int department=0x7f08003b;
+    public static final int descriptionScroll=0x7f08003c;
+    public static final int descriptionTag=0x7f08003d;
+    public static final int descriptionView=0x7f08003e;
+    public static final int design_bottom_sheet=0x7f08003f;
+    public static final int design_menu_item_action_area=0x7f080040;
+    public static final int design_menu_item_action_area_stub=0x7f080041;
+    public static final int design_menu_item_text=0x7f080042;
+    public static final int design_navigation_view=0x7f080043;
+    public static final int dimensions=0x7f080044;
+    public static final int direct=0x7f080045;
+    public static final int disableHome=0x7f080046;
+    public static final int discount=0x7f080047;
+    public static final int editText_product_addBrand=0x7f080048;
+    public static final int editText_product_addName=0x7f080049;
+    public static final int editText_product_addPrice=0x7f08004a;
+    public static final int edit_query=0x7f08004b;
+    public static final int end=0x7f08004c;
+    public static final int end_padder=0x7f08004d;
+    public static final int enterAlways=0x7f08004e;
+    public static final int enterAlwaysCollapsed=0x7f08004f;
+    public static final int exitUntilCollapsed=0x7f080050;
+    public static final int expand_activities_button=0x7f080051;
+    public static final int expanded_menu=0x7f080052;
+>>>>>>> Stashed changes
     public static final int fill=0x7f080053;
     public static final int fill_horizontal=0x7f080054;
     public static final int fill_vertical=0x7f080055;
@@ -3954,11 +4001,12 @@ public final class R {
     public static final int notification_template_part_time=0x7f0a0041;
     public static final int product_add=0x7f0a0042;
     public static final int product_display=0x7f0a0043;
-    public static final int select_dialog_item_material=0x7f0a0044;
-    public static final int select_dialog_multichoice_material=0x7f0a0045;
-    public static final int select_dialog_singlechoice_material=0x7f0a0046;
-    public static final int support_simple_spinner_dropdown_item=0x7f0a0047;
-    public static final int user_under_lamp=0x7f0a0048;
+    public static final int productall_display=0x7f0a0044;
+    public static final int select_dialog_item_material=0x7f0a0045;
+    public static final int select_dialog_multichoice_material=0x7f0a0046;
+    public static final int select_dialog_singlechoice_material=0x7f0a0047;
+    public static final int support_simple_spinner_dropdown_item=0x7f0a0048;
+    public static final int user_under_lamp=0x7f0a0049;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f0b0000;
@@ -3993,24 +4041,25 @@ public final class R {
     public static final int abc_shareactionprovider_share_with=0x7f0c001a;
     public static final int abc_shareactionprovider_share_with_application=0x7f0c001b;
     public static final int abc_toolbar_collapse_description=0x7f0c001c;
-    public static final int app_name=0x7f0c001d;
-    public static final int appbar_scrolling_view_behavior=0x7f0c001e;
-    public static final int bottom_sheet_behavior=0x7f0c001f;
-    public static final int character_counter_pattern=0x7f0c0020;
-    public static final int currency=0x7f0c0021;
-    public static final int marque=0x7f0c0022;
-    public static final int no=0x7f0c0023;
-    public static final int password_toggle_content_description=0x7f0c0024;
-    public static final int path_password_eye=0x7f0c0025;
-    public static final int path_password_eye_mask_strike_through=0x7f0c0026;
-    public static final int path_password_eye_mask_visible=0x7f0c0027;
-    public static final int path_password_strike_through=0x7f0c0028;
-    public static final int promotionsJour=0x7f0c0029;
-    public static final int rayon=0x7f0c002a;
-    public static final int search_menu_title=0x7f0c002b;
-    public static final int status_bar_notification_info_overflow=0x7f0c002c;
-    public static final int url=0x7f0c002d;
-    public static final int yes=0x7f0c002e;
+    public static final int add=0x7f0c001d;
+    public static final int app_name=0x7f0c001e;
+    public static final int appbar_scrolling_view_behavior=0x7f0c001f;
+    public static final int bottom_sheet_behavior=0x7f0c0020;
+    public static final int character_counter_pattern=0x7f0c0021;
+    public static final int currency=0x7f0c0022;
+    public static final int marque=0x7f0c0023;
+    public static final int no=0x7f0c0024;
+    public static final int password_toggle_content_description=0x7f0c0025;
+    public static final int path_password_eye=0x7f0c0026;
+    public static final int path_password_eye_mask_strike_through=0x7f0c0027;
+    public static final int path_password_eye_mask_visible=0x7f0c0028;
+    public static final int path_password_strike_through=0x7f0c0029;
+    public static final int promotionsJour=0x7f0c002a;
+    public static final int rayon=0x7f0c002b;
+    public static final int search_menu_title=0x7f0c002c;
+    public static final int status_bar_notification_info_overflow=0x7f0c002d;
+    public static final int url=0x7f0c002e;
+    public static final int yes=0x7f0c002f;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0d0000;
@@ -9111,7 +9160,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>

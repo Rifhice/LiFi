@@ -88,35 +88,20 @@ public class UpdateProduct extends AppCompatActivity {
         daoP.getById(id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                System.out.println("ICIII 1");
-                if (object instanceof JSONArray) {
-                    JSONArray array = (JSONArray) object;
-                    System.out.println("ICIII 2");
+
+                if (object instanceof ArrayList) {
+
+                    ArrayList<Product> array = (ArrayList<Product>) object;
                     final String department;
-
-                        try {
-                            JSONObject current = array.getJSONObject(0);
-                            System.out.println("ICIII");
-                            //new Product(current.getInt("idProduct"), current.getString("name"),  current.getString("description"),  Float.parseFloat(current.getString("price")),  current.getString("brand"),new Department(current.getInt("idDepartment"), current.getString("name")));
-                            System.out.println(" HIH Description : " + current.getString("descriptionProduct") + "Departement : " + current.getString("nameDepartment"));
-                            text_description.setText(current.getString("description"));
-                            department = current.getString("department");
-                            spinnerDepartment.setSelection(dep.indexOf(department));
-
-
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-
-
+                    Product product = array.get(0);
+                    //System.out.println(" HIH Description : " + product.getDescription() + "Departement : " + product.getDepartment().getName());
+                    text_description.setText(product.getDescription());
+                    department = product.getDepartment().getName();
+                    spinnerDepartment.setSelection(dep.indexOf(department));
 
                 }
+
             }
-
-
-
             @Override
             public void onError(Object object) {
                 System.out.println("ERROR");
@@ -126,8 +111,9 @@ public class UpdateProduct extends AppCompatActivity {
 
 
 
-        /*Button validate = (Button)findViewById(R.id.validate);
-        validate.setOnClickListener(new View.OnClickListener() {
+        Button validate = (Button)findViewById(R.id.validate);
+        System.out.println("IDDI" +R.id.validate);
+        /*validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!text_name.getText().toString().isEmpty() && !text_description.getText().toString().isEmpty()
@@ -137,7 +123,7 @@ public class UpdateProduct extends AppCompatActivity {
 
                     Product product = new Product(0, text_name.getText().toString(), text_description.getText().toString(), Float.parseFloat(text_price.getText().toString()), text_brand.getText().toString(), new Department(idDep));
                     //System.out.println("Name: " + name +" Description: " + description + " price: " + price + " brand: " + brand + " idDep : " +idDep);
-                    AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO().update( product, UserConnection.getInstance().getToken(), new ResponseHandler() {
+                    daoP.update( product, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
                             System.out.println(object.toString());
@@ -162,6 +148,7 @@ public class UpdateProduct extends AppCompatActivity {
 
 
 
+
         spinnerDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -175,6 +162,7 @@ public class UpdateProduct extends AppCompatActivity {
             }
 
         });
+
     }
 
     @Override

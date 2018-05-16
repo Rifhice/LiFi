@@ -37,6 +37,7 @@ public class AdminProductView extends Fragment{
 
     ProductDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +45,7 @@ public class AdminProductView extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.lampall_display, container, false);
+        return inflater.inflate(R.layout.productall_display, container, false);
     }
 
     @Override
@@ -80,6 +81,8 @@ public class AdminProductView extends Fragment{
         });
         final TableLayout tl = (TableLayout) getView().findViewById(R.id.main_table);
         tl.removeAllViews();
+        final Button add = (Button) getView().findViewById(R.id.button_add);
+
         dao.getAll(new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
@@ -87,7 +90,7 @@ public class AdminProductView extends Fragment{
                     tl.removeAllViews();
                     ArrayList<Product> array = (ArrayList<Product>)object;
                     for(int i = 0 ; i < array.size() ; i++) {
-                        Product product = array.get(i);
+                        final Product product = array.get(i);
                         final TableRow row = new TableRow(getActivity());
                         row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
                         row.setId(product.getId());
@@ -100,6 +103,8 @@ public class AdminProductView extends Fragment{
                         label_product.setWidth(tl.getWidth() / 5);
                         row.addView(label_product);
 
+
+
                         final TextView label_marque = new TextView(getActivity());
                         String text = product.getBrand();
 
@@ -108,6 +113,13 @@ public class AdminProductView extends Fragment{
                         label_marque.setPadding(5, 5, 5, 5); // set the padding (if required)
                         label_marque.setWidth(tl.getWidth() / 5);
                         row.addView(label_marque); // add the column to the table row here
+
+                        final TextView label_price = new TextView(getActivity());
+                        label_price.setText(String.valueOf(product.getPrice())+ "€");
+                        label_price.setTextColor(Color.BLACK);
+                        label_price.setPadding(5, 5, 5, 5);
+                        label_price.setWidth(tl.getWidth() / 5);
+                        row.addView(label_price);
 
                         Button delete = new Button(getActivity());
                         delete.setText("delete");
@@ -154,12 +166,13 @@ public class AdminProductView extends Fragment{
                         update.setWidth(tl.getWidth() / 5);
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
-                            public void onClick(View v) {/*
-                                Intent intent = new Intent(AdminProductView.this, UpdateProduct.class);
+                            public void onClick(View v) {
+                                Intent intent = new Intent(getActivity(), UpdateProduct.class);
                                 intent.putExtra("name",label_product.getText());
                                 intent.putExtra("product",row.getId());
                                 intent.putExtra("brand", label_product.getText());
-                                startActivity(intent);*/
+                                intent.putExtra("price", String.valueOf(product.getPrice()));
+                                startActivity(intent);
                             }
                         });
                         row.addView(update);
