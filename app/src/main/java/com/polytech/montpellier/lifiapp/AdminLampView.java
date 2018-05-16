@@ -97,14 +97,14 @@ public class AdminLampView extends Fragment{
                         row.addView(label_department); // add the column to the table row here
 
                         Button delete = new Button(getActivity());
-                        delete.setText("delete");
+                        delete.setText(getResources().getString(R.string.delete));
                         delete.setWidth(tl.getWidth() / 4);
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {
                                 new AlertDialog.Builder(getActivity())
-                                        .setTitle("Delete Lamp")
-                                        .setMessage("Are you sure you want to delete this lamp?")
+                                        .setTitle(getResources().getString(R.string.deleteLamp))
+                                        .setMessage(getResources().getString(R.string.deleteLampMessage))
                                         .setIcon(android.R.drawable.ic_dialog_alert)
                                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
@@ -137,7 +137,7 @@ public class AdminLampView extends Fragment{
                         row.addView(delete);
 
                         Button update = new Button(getActivity());
-                        update.setText("update");
+                        update.setText(getResources().getString(R.string.update));
                         update.setWidth(tl.getWidth() / 4);
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override

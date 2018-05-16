@@ -7,37 +7,41 @@
     android:layout_height="match_parent">
 
 
-
-
     <TextView
         android:id="@+id/textView_product_addName"
-        android:layout_width="48dp"
+        android:layout_width="wrap_content"
         android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
-        android:text="Nom :"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:text="Name : "
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_product_addName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView_product_addBrand"
-        android:layout_width="74dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="50dp"
-        android:text="Marque : "
+        android:text="Brand : "
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_product_addBrand"
         app:layout_constraintEnd_toEndOf="@+id/textView_product_addName"
         app:layout_constraintStart_toStartOf="@+id/textView_product_addName"
         app:layout_constraintTop_toBottomOf="@+id/textView_product_addName" />
 
     <TextView
         android:id="@+id/textView_product_addPrice"
-        android:layout_width="39dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="50dp"
-        android:text="Prix :"
+        android:text="Price : "
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_product_addPrice"
         app:layout_constraintEnd_toEndOf="@+id/textView_product_addBrand"
         app:layout_constraintStart_toStartOf="@+id/textView_product_addBrand"
         app:layout_constraintTop_toBottomOf="@+id/textView_product_addBrand" />
@@ -48,11 +52,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
-        android:text="Description"
+        android:text="Description : "
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_product_addPrice"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toStartOf="@+id/textView_product_addPrice"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
@@ -95,9 +98,12 @@
         android:id="@+id/multiTextView_product_addDescription"
         android:layout_width="282dp"
         android:layout_height="78dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_product_addDescription"
-        tools:layout_editor_absoluteX="51dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_product_addDescription" />
 
     <Button
         android:id="@+id/button_addProduct"
@@ -105,6 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
+        android:text="Add"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,10 +133,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
-        android:text="Rayon :"
+        android:text="Department : "
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_ProductDepartement"
         app:layout_constraintEnd_toEndOf="@+id/textView_product_addPrice"
         app:layout_constraintStart_toStartOf="@+id/textView_product_addPrice"
         app:layout_constraintTop_toBottomOf="@+id/textView_product_addPrice" />

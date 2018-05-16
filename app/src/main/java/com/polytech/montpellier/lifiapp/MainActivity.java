@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-                builder.setTitle("This app needs audio record access");
-                builder.setMessage("Please grant audio record access so this app can detect LiFi.");
+                builder.setTitle(getResources().getString(R.string.audioAccessPermition));
+                builder.setMessage(getResources().getString(R.string.audioAccessPermissionMessage));
                 builder.setPositiveButton(android.R.string.ok, null);
 
                 builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
@@ -160,8 +160,8 @@ public class MainActivity extends AppCompatActivity {
                     instanciateListener();
                 } else {
                     final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                    builder.setTitle("Functionality limited");
-                    builder.setMessage("Since audio access has not been granted, this app will not be able to discover LiFi.");
+                    builder.setTitle(getResources().getString(R.string.functionalityLimited));
+                    builder.setMessage(getResources().getString(R.string.noAudioNoLifi));
                     builder.setPositiveButton(android.R.string.ok, null);
                     builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
 

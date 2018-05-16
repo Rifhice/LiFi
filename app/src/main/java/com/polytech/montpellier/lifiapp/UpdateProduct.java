@@ -19,18 +19,15 @@ import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
-import com.polytech.montpellier.lifiapp.Model.Lamp;
 import com.polytech.montpellier.lifiapp.Model.Product;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class UpdateProduct extends AppCompatActivity {
     int idDep = -1;
+
+    //Declaration DAO
     DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
     ProductDAO daoP = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
 
@@ -39,16 +36,17 @@ public class UpdateProduct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_add);
         Intent intent = getIntent();
+
+        //initialization fields
         final int id = intent.getIntExtra("product",0);
-        //System.out.print("id du produit:" +id);
         final String name = intent.getStringExtra("name");
         final String brand = intent.getStringExtra("brand");
         final String price = intent.getStringExtra("price");
-        final EditText text_name = (EditText) findViewById(R.id.editText_product_addName);
-        final EditText text_brand = (EditText) findViewById(R.id.editText_product_addBrand);
-        final MultiAutoCompleteTextView text_description = (MultiAutoCompleteTextView) findViewById(R.id.multiTextView_product_addDescription);
-        final EditText text_price = (EditText) findViewById(R.id.editText_product_addPrice);
-        final Spinner spinnerDepartment = (Spinner) findViewById(R.id.spinner_ProductDepartement);
+        final EditText text_name =  findViewById(R.id.editText_product_addName);
+        final EditText text_brand =  findViewById(R.id.editText_product_addBrand);
+        final MultiAutoCompleteTextView text_description = findViewById(R.id.multiTextView_product_addDescription);
+        final EditText text_price = findViewById(R.id.editText_product_addPrice);
+        final Spinner spinnerDepartment =  findViewById(R.id.spinner_ProductDepartement);
         final ArrayList<String> dep = new ArrayList<>();
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
         final HashMap<String, Integer> depMap=new HashMap<String, Integer>();
@@ -58,9 +56,6 @@ public class UpdateProduct extends AppCompatActivity {
         text_price.setText(price);
 
 
-
-
-        //TODO vérifier departement non vide
         dao.getAll(new ResponseHandler() {
 
             @Override
@@ -94,23 +89,21 @@ public class UpdateProduct extends AppCompatActivity {
                     ArrayList<Product> array = (ArrayList<Product>) object;
                     final String department;
                     Product product = array.get(0);
-                    //System.out.println(" HIH Description : " + product.getDescription() + "Departement : " + product.getDepartment().getName());
                     text_description.setText(product.getDescription());
 
                     department = product.getDepartment().getName();
                     spinnerDepartment.setSelection(dep.indexOf(department));
 
-
-
                 }
 
             }
+
             @Override
             public void onError(Object object) {
                 System.out.println("ERROR");
             }
-        });
 
+        });
 
         spinnerDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -135,14 +128,10 @@ public class UpdateProduct extends AppCompatActivity {
                 if (!text_name.getText().toString().isEmpty() && !text_description.getText().toString().isEmpty()
                         && !text_brand.getText().toString().isEmpty() && !text_price.getText().toString().isEmpty() && idDep>=0) {
 
-                    System.out.println("Cliiiick");
-
                     Product product = new Product(id, text_name.getText().toString(), text_description.getText().toString(), Float.parseFloat(text_price.getText().toString()), text_brand.getText().toString(), new Department(idDep));
-                    System.out.println("ID: " + product.getId() + "Name: " + product.getName() +" Description: " + product.getDescription() + " price: " + product.getPrice() + " brand: " + product.getBrand() + " idDep : " +product.getDepartment().getId());
                     daoP.update( product, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
-
                             System.out.println(object.toString());
                             finish();
                         }
@@ -155,26 +144,29 @@ public class UpdateProduct extends AppCompatActivity {
 
                 }
                 else{
-                    //TODO: faire une alerte si un des champs est vide
+                    android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(UpdateProduct.this).create();
+                    alertDialog.setTitle("Alert");
+                    alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+                    alertDialog.setMessage(getResources().getString(R.string.blankFieldMessage));
+                    alertDialog.setButton(android.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.show();
 
                 }
 
             }
         });
-
-
-
-
-
-
-
     }
 
     @Override
     public void onBackPressed(){
         new AlertDialog.Builder(this)
-                .setTitle("Update Product")
-                .setMessage("You are leaving, are you sure ?")
+                .setTitle(getResources().getString(R.string.updateProduct))
+                .setMessage(getResources().getString(R.string.updateLeaveMessage))
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 

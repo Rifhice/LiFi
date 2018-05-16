@@ -61,6 +61,9 @@
         <activity android:name="com.polytech.montpellier.lifiapp.UpdateDepartment">
 
         </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.ProductSummary">
+
+        </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.AddDiscount">
 
         </activity>

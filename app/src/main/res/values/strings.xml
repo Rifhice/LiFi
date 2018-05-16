@@ -1,13 +1,74 @@
 <resources>
+
     <string name="app_name">E-Mart</string>
+    <string name="name">Name</string>
     <string name="rayon">Rayon</string>
     <string name="marque">Marque</string>
+    <string name="password">Password</string>
     <string name="promotionsJour">Promotions du Jour</string>
-    <string name="currency"> €</string>
+    <string name="currency">\u20ac</string>
+    <string name="validate">Validate</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="url">http://81.64.139.113:1337/api/</string>
     <string name="add">Add</string>
+    <string name="delete">Delete</string>
+    <string name="deleteProduct">Delete Product</string>
+    <string name="deleteMessage">Are you sure you want to delete this product?</string>
+    <string name="update">Update</string>
+    <string name="addDepartement">Add Department</string>
+    <string name="newDepartement">New Department</string>
+    <string name="updateDepartment">Update Department</string>
+    <string name="updateLeaveMessage">You are leaving, are you sure ?</string>
+    <string name="blankFieldMessage">Fields cannot be left blank</string>
 
 
+    <string name="addLeaveMessage">You are leaving, are you sure ?</string>
+
+    <string name="lamp">Lamp</string>
+    <string name="newLamp">New Lamp</string>
+    <string name="deleteLamp">Delete Lamp</string>
+    <string name="deleteLampMessage">Are you sure you want to delete this lamp?</string>
+    <string name="newLampDetectedMessage">You are standing under a new lamp, do you want to add it ?</string>
+
+
+    <string name="product">Product</string>
+    <string name="newProduct">New Product</string>
+    <string name="updateProduct">Update Product</string>
+    <string name="descriptionProduct">Description du Produit</string>
+    <string name="description">Description</string>
+
+    <string name="price">Prix</string>
+
+    <string name="BeforePrice">Prix Avant</string>
+    <string name="afterPrice">Prix Après</string>
+    <string name="discountValidUntil">Promotion valide jusqu\'au</string>
+
+
+
+
+
+    <string name="discount">Discount</string>
+    <string name="newDiscount">New Discount</string>
+    <string name="deleteDiscount">Delete Discount</string>
+    <string name="updateDiscount">Update Discount</string>
+
+    <string name="deleteDiscountMessage">Are you sure you want to delete this discount?</string>
+
+    <string name="departement">Department</string>
+    <string name="bought">Achete</string>
+    <string name="free">Gratuit</string>
+    <string name="percentOff">% off</string>
+
+
+    <string name="audioAccessPermition">This app needs audio record access</string>
+    <string name="audioAccessPermissionMessage">Please grant audio record access so this app can detect LiFi.</string>
+    <string name="functionalityLimited">Functionality limited</string>
+    <string name="noAudioNoLifi">Since audio access has not been granted, this app will not be able to discover LiFi.</string>
+
+
+
+
+
+    <!--    getResources().getString(R.string.delete)-->
 </resources>
