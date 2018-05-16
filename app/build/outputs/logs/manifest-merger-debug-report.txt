@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< Updated upstream
 ADDED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-60:12
 INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-60:12
 INJECTED from /Users/assilelyahyaoui/Documents/Polytech S8/LIFI/LiFi/app/src/main/AndroidManifest.xml:2:1-60:12
@@ -253,3 +254,258 @@ ADDED from [:androidlifisdk-release:] /Users/assilelyahyaoui/.gradle/caches/tran
 		ADDED from [:androidlifisdk-release:] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/18b2df0642268bb8d7fd8e921e05b4f0/AndroidManifest.xml:40:13-35
 	android:name
 		ADDED from [:androidlifisdk-release:] /Users/assilelyahyaoui/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/18b2df0642268bb8d7fd8e921e05b4f0/AndroidManifest.xml:39:13-77
+=======
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:2:1-43:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\cd05ce4b1c63fd4b26909a04a31f6b51\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\7be651e982066bc848be5c268a350459\AndroidManifest.xml:17:1-22:12
+MERGED from [com.mcxiaoke.volley:library:1.0.6] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\library-1.0.6.aar\9b9b1f1426b3a9c5ae741dee1432e700\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\5bd8626dc9d247fdda1fd14dbe37a6c0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\328978534411e94ca5596bd342a175dc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\bd2f38d7e23352b3c9449b0b759504fd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\90305ec334ca9cf9511d3292d37e24ed\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\c2d7b24674e6cb6832412630c7de4a63\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\dcd0d8e00ac425c9294c0ae3b96f00cf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\f9a0f5e68c4c88e981c254c7d1805513\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\b6b29fe61825583831abb8026343486e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\85530c39713ad195a2b98a5851a0634f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\1d54f00ecea304c0c38ada63bc5ec387\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\03866fb570ac824c660b0e2e7dc5da7e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\da682c7091cf3cd24a63bdd95acbe4c7\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\1382e3b2f8fb53c6ca2eba2498c7d7c7\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f223fb9f69eafbca7b6e6f90cb71f5e3\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\7fe76e181bda470554461f74658165f0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+	package
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12
+		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:4:5-67
+MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:13:5-67
+MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:13:5-67
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:4:22-64
+application
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:5:5-58:19
+MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:31:5-41:19
+MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:31:5-41:19
+MERGED from [com.mcxiaoke.volley:library:1.0.6] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\library-1.0.6.aar\9b9b1f1426b3a9c5ae741dee1432e700\AndroidManifest.xml:11:5-20
+MERGED from [com.mcxiaoke.volley:library:1.0.6] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\library-1.0.6.aar\9b9b1f1426b3a9c5ae741dee1432e700\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\5bd8626dc9d247fdda1fd14dbe37a6c0\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\5bd8626dc9d247fdda1fd14dbe37a6c0\AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:9:9-35
+	android:label
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:8:9-41
+	android:icon
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:10:9-40
+activity#com.polytech.montpellier.lifiapp.MainActivity
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:11:9-18:20
+	android:noHistory
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:12:13-37
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:11:19-79
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:16:27-74
+activity#com.polytech.montpellier.lifiapp.Login
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:19:9-21:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:19:19-72
+activity#com.polytech.montpellier.lifiapp.FirstLamp
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:22:9-24:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:22:19-76
+activity#com.polytech.montpellier.lifiapp.AdminActivity
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:25:9-27:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:25:19-80
+activity#com.polytech.montpellier.lifiapp.AdminProductView
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:28:9-30:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:28:19-83
+activity#com.polytech.montpellier.lifiapp.LampController
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:31:9-33:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:31:19-81
+activity#com.polytech.montpellier.lifiapp.UserUnderLampView
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:34:9-36:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:34:19-84
+activity#com.polytech.montpellier.lifiapp.AddProduct
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:37:9-39:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:37:19-77
+activity#com.polytech.montpellier.lifiapp.AddLamp
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:40:9-42:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:40:19-74
+activity#com.polytech.montpellier.lifiapp.UpdateLamp
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:43:9-45:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:43:19-77
+activity#com.polytech.montpellier.lifiapp.AdminDiscountView
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:46:9-48:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:46:19-84
+activity#com.polytech.montpellier.lifiapp.AdminDepartmentView
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:49:9-51:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:49:19-86
+activity#com.polytech.montpellier.lifiapp.DiscountSummary
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:52:9-54:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:52:19-82
+activity#com.polytech.montpellier.lifiapp.UpdateProduct
+ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:55:9-57:20
+	android:name
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:55:19-80
+uses-sdk
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:7:5-9:41
+MERGED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\cd05ce4b1c63fd4b26909a04a31f6b51\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\cd05ce4b1c63fd4b26909a04a31f6b51\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\7be651e982066bc848be5c268a350459\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\7be651e982066bc848be5c268a350459\AndroidManifest.xml:20:5-44
+MERGED from [com.mcxiaoke.volley:library:1.0.6] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\library-1.0.6.aar\9b9b1f1426b3a9c5ae741dee1432e700\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mcxiaoke.volley:library:1.0.6] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\library-1.0.6.aar\9b9b1f1426b3a9c5ae741dee1432e700\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\5bd8626dc9d247fdda1fd14dbe37a6c0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\5bd8626dc9d247fdda1fd14dbe37a6c0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\328978534411e94ca5596bd342a175dc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\328978534411e94ca5596bd342a175dc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\bd2f38d7e23352b3c9449b0b759504fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\bd2f38d7e23352b3c9449b0b759504fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\90305ec334ca9cf9511d3292d37e24ed\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\90305ec334ca9cf9511d3292d37e24ed\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\c2d7b24674e6cb6832412630c7de4a63\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\c2d7b24674e6cb6832412630c7de4a63\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\dcd0d8e00ac425c9294c0ae3b96f00cf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\dcd0d8e00ac425c9294c0ae3b96f00cf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\f9a0f5e68c4c88e981c254c7d1805513\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\f9a0f5e68c4c88e981c254c7d1805513\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\b6b29fe61825583831abb8026343486e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\b6b29fe61825583831abb8026343486e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\85530c39713ad195a2b98a5851a0634f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\85530c39713ad195a2b98a5851a0634f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\1d54f00ecea304c0c38ada63bc5ec387\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\1d54f00ecea304c0c38ada63bc5ec387\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\03866fb570ac824c660b0e2e7dc5da7e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\03866fb570ac824c660b0e2e7dc5da7e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\da682c7091cf3cd24a63bdd95acbe4c7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\da682c7091cf3cd24a63bdd95acbe4c7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\1382e3b2f8fb53c6ca2eba2498c7d7c7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\1382e3b2f8fb53c6ca2eba2498c7d7c7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f223fb9f69eafbca7b6e6f90cb71f5e3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f223fb9f69eafbca7b6e6f90cb71f5e3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\7fe76e181bda470554461f74658165f0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\7fe76e181bda470554461f74658165f0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:11:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:12:22-77
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:14:22-76
+uses-permission#android.permission.BLUETOOTH
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:15:5-68
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:15:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:16:5-74
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:16:22-71
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:17:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:18:5-81
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:18:22-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:19:5-81
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:19:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:20:5-80
+IMPLIED from C:\Users\chdal\Desktop\LiFi\app\src\main\AndroidManifest.xml:2:1-60:12 reason: com.oledcomm.soft.androidlifisdk requested WRITE_EXTERNAL_STORAGE
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:20:22-77
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:21:5-84
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:21:22-81
+uses-permission#android.permission.USB_PERMISSION
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:22:5-73
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:22:22-70
+uses-feature#android.hardware.usb.host
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:24:5-26:35
+	android:required
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:26:9-32
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:25:9-49
+uses-feature#android.hardware.bluetooth_le
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:27:5-29:35
+	android:required
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:29:9-32
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:28:9-53
+service#com.oledcomm.soft.androidlifisdk.v4.BluetoothLeService
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:35:9-37:38
+	android:enabled
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:37:13-35
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:36:13-82
+service#com.oledcomm.soft.androidlifisdk.v5.USBHIDService
+ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:38:9-40:38
+	android:enabled
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:40:13-35
+	android:name
+		ADDED from [:androidlifisdk-release:] C:\Users\chdal\.gradle\caches\transforms-1\files-1.1\androidlifisdk-release.aar\924efdcd3a326957ebf02c4afceab247\AndroidManifest.xml:39:13-77
+>>>>>>> Stashed changes

@@ -96,8 +96,11 @@ public class UpdateProduct extends AppCompatActivity {
                     Product product = array.get(0);
                     //System.out.println(" HIH Description : " + product.getDescription() + "Departement : " + product.getDepartment().getName());
                     text_description.setText(product.getDescription());
+
                     department = product.getDepartment().getName();
                     spinnerDepartment.setSelection(dep.indexOf(department));
+
+
 
                 }
 
@@ -124,8 +127,8 @@ public class UpdateProduct extends AppCompatActivity {
         });
 
 
-        Button validate = (Button)findViewById(R.id.validate);
-        /*validate.setOnClickListener( new View.OnClickListener() {
+        Button validate = (Button)findViewById(R.id.button_addProduct);
+        validate.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 System.out.println("Cliiiick");
@@ -153,10 +156,10 @@ public class UpdateProduct extends AppCompatActivity {
                 else{
                     //TODO: faire une alerte si un des champs est vide
                     System.out.println("Champs vides");
-                }
+                }*/
 
             }
-        });*/
+        });
 
 
 

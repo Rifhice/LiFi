@@ -66,16 +66,28 @@ public class MySqlProductDAO extends ProductDAO {
                     if (array.length() == 0) {
                         response.onSuccess(null);
                     } else {
-                        try {
-                            JSONObject current = array.getJSONObject(0);
-                            System.out.println(" ICU idProduct : " +current.getInt("idProduct") + ",name : " + current.getString("nameProduct")+",description : "+  current.getString("descriptionProduct")+ ",price : "+  Float.parseFloat(current.getString("priceProduct"))+ ",brand : "+  current.getString("brandProduct")+ ",idDepartment : " +current.getInt("idDepartment")+ "name : "+ current.getString("nameDepartment"));
-                            Product prod = new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("nameDepartment")));
-                            product.add(prod);
+                            JSONObject current = null;
+                            Object iddep = null;
+                            try {
+                                current = array.getJSONObject(0);
+                                iddep = current.optInt("idDepartment");
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            try {
+                                if(iddep == null){
+                                    product.add(new Product(current.getInt("idProduct"), current.getString("nameProduct"), current.getString("descriptionProduct"), Float.parseFloat(current.getString("priceProduct")), current.getString("brandProduct"), null));
+                                }
+                                else{
+                                    product.add(new Product(current.getInt("idProduct"), current.getString("nameProduct"), current.getString("descriptionProduct"), Float.parseFloat(current.getString("priceProduct")), current.getString("brandProduct"), new Department(current.optInt("idDepartment"), current.getString("nameDepartment"))));
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                            //System.out.println(" ICU idProduct : " +current.getInt("idProduct") + ",name : " + current.getString("nameProduct")+",description : "+  current.getString("descriptionProduct")+ ",price : "+  Float.parseFloat(current.getString("priceProduct"))+ ",brand : "+  current.getString("brandProduct")+ ",idDepartment : " +current.getInt("idDepartment")+ "name : "+ current.getString("nameDepartment"));
                             response.onSuccess(product);
 
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
                     }
                 }
             }
