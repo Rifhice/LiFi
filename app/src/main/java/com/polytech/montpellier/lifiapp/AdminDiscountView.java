@@ -90,7 +90,7 @@ public void openNewLampPopUp(final int lamp) {
                         row.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent = new Intent(getContext(), DiscountSummary.class); // TODO CHECK IF RIGHT
+                                Intent intent = new Intent(getActivity(), DiscountSummary.class);
                                 intent.putExtra("idDiscount", discount.getId());
                                 // intent.putExtra("idProduct",idProduct);
                                 //intent.putExtra("idDepartement", pkDep);
@@ -163,20 +163,15 @@ public void openNewLampPopUp(final int lamp) {
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                /*Intent intent = new Intent(AdminDiscountView.this, UpdateLamp.class);
-                                intent.putExtra("name",label_lamp.getText());
-                                intent.putExtra("lamp",row.getId());
-                                intent.putExtra("name_department", label_department.getText());
-                                startActivity(intent);*/
+                                Intent intent = new Intent(getActivity(), UpdateDiscount.class);
+                                intent.putExtra("discountId",row.getId());
+                               // intent.putExtra("lamp",row.getId());
+                                //intent.putExtra("name_department", label_department.getText());
+                                startActivity(intent);
                             }
                         });
                         row.addView(update);
-                        row.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                System.out.println(v.getId());
-                            }
-                        });
+;
                         tl.addView(row, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
                     }
                 }
