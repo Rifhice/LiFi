@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <component name="libraryTable">
   <library name="Gradle: com.android.support:animated-vector-drawable-27.1.1">
@@ -20,6 +21,8 @@
   </library>
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <component name="libraryTable">
   <library name="Gradle: com.android.support:animated-vector-drawable-27.1.1">
     <CLASSES>
@@ -31,7 +34,10 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/animated-vector-drawable/27.1.1/a8f4121ade2fdfcc5cb20290a05333239fee05d7/animated-vector-drawable-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< Updated upstream
 >>>>>>> AdminDiscount
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 </component>

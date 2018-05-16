@@ -31,9 +31,6 @@ public class DiscountSummary extends Activity {
         final int idProduct = intent.getIntExtra("idProduct",0);
         final int idDepartement = intent.getIntExtra("idDepartement",0);
 
-        System.out.println("idDissscoutn" + idDiscount);
-        System.out.println("textView alalal"   );
-
 
         discountDAO.getById(idDiscount, new ResponseHandler() {
             @Override
@@ -46,13 +43,12 @@ public class DiscountSummary extends Activity {
 
 
 
-                System.out.println("textView alalal" + object );
                 final TextView new_Price = (TextView) findViewById(R.id.newPrice);
                 final TextView old_Price = (TextView) findViewById(R.id.oldPrice);
                 ArrayList<Discount> discountArrayList = ( ArrayList<Discount>) object;
                 Discount discount = discountArrayList.get(0);
 
-                System.out.println("instant of " + (object instanceof PercentageDiscount));
+
 
                 if (discount instanceof PercentageDiscount){
 
@@ -63,7 +59,6 @@ public class DiscountSummary extends Activity {
                     String prodName = discountper.getProduct().getName();
                     String dateFin = new SimpleDateFormat( "yyyy-MM-dd").format(discountper.getDateFin());
                     String desc = discountper.getProduct().getDescription();
-                    System.out.println("dateFin"+dateFin);
 
                     brandTV.setText(brand);
                     prodNameTV.setText(prodName);
@@ -73,14 +68,14 @@ public class DiscountSummary extends Activity {
                     Float newString = discountper.newPrice();
                     Float oldString = discountper.oldPrice();
 
-                    double roundOffnew = Math.round(newString * 100.0) / 100.0;
+                    String roundOffnew = Double.toString(Math.round(newString * 100.0) / 100.0);
                     double roundOffold = Math.round(oldString * 100.0) / 100.0;
 
-                    System.out.println("disc new price"+Double.toString( roundOffnew) + "  "  +roundOffnew);
 
 
-                    new_Price.setText(Double.toString( roundOffnew)+" €");
-                    old_Price.setText(Double.toString( roundOffold) +" €");
+                    new_Price.setText(roundOffnew);
+                    new_Price.append(getResources().getString(R.string.currency));
+                    old_Price.setText(Double.toString( roundOffold) + getResources().getString(R.string.currency));
 
 
                 }else if (discount instanceof QuantityDiscount){
@@ -102,11 +97,10 @@ public class DiscountSummary extends Activity {
                     double roundOffnew = Math.round(newString * 100.0) / 100.0;
                     double roundOffold = Math.round(oldString * 100.0) / 100.0;
 
-                    System.out.println("disc new price"+Double.toString( roundOffnew) + "  "  +roundOffnew);
 
 
-                    new_Price.setText(Double.toString( roundOffnew) +" €");
-                    old_Price.setText(Double.toString( roundOffold) +" €");
+                    new_Price.setText(Double.toString( roundOffnew) + getResources().getString(R.string.currency));
+                    old_Price.setText(Double.toString( roundOffold) + getResources().getString(R.string.currency));
 
                     dateFinTV.setText(dateFin);
                     descriptionTV.setText(desc);

@@ -7,15 +7,13 @@
     android:layout_height="match_parent">
 
 
-
-
     <TextView
         android:id="@+id/textView_product_addName"
         android:layout_width="48dp"
         android:layout_height="25dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
-        android:text="Nom :"
+        android:text="@string/name"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,7 +23,7 @@
         android:layout_width="74dp"
         android:layout_height="0dp"
         android:layout_marginTop="50dp"
-        android:text="Marque : "
+        android:text="@string/marque"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_product_addName"
         app:layout_constraintStart_toStartOf="@+id/textView_product_addName"
@@ -36,7 +34,7 @@
         android:layout_width="39dp"
         android:layout_height="25dp"
         android:layout_marginTop="50dp"
-        android:text="Prix :"
+        android:text="@string/price"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_product_addBrand"
         app:layout_constraintStart_toStartOf="@+id/textView_product_addBrand"
@@ -47,13 +45,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
-        android:text="Description"
+        android:text="@string/description"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_product_addPrice"
         app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="@+id/textView_product_addPrice"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        tools:layout_editor_absoluteY="329dp" />
 
     <EditText
         android:id="@+id/editText_product_addBrand"
@@ -105,6 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
+        android:text="@string/validate"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,7 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
-        android:text="Rayon :"
+        android:text="@string/rayon"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_product_addPrice"
         app:layout_constraintStart_toStartOf="@+id/textView_product_addPrice"

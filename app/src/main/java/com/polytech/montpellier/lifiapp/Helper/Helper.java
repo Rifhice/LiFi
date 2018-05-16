@@ -180,6 +180,12 @@ public class Helper {
         this.queue.add(jsonObjectRequest);
 
     }
+
+    public float formatFloat(float number){
+
+return 0;
+
+    }
 }
 
 

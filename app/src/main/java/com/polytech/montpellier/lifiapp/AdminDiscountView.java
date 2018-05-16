@@ -80,11 +80,8 @@ public void openNewLampPopUp(final int lamp) {
                     ArrayList<Discount> array = (ArrayList<Discount>) object;
                     for (int i = 0; i < array.size(); i++) {
                         final Discount discount = array.get(i);
-                        System.out.println("discountprint" + discount);
-                        System.out.println("discountnaem" + discount.getDateDebut());
                         final TableRow row = new TableRow(getActivity());
                         row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-                        System.out.println("row id " + discount.getId());
                         row.setId(discount.getId());
                         row.setGravity(Gravity.CENTER_HORIZONTAL);
                         row.setOnClickListener(new View.OnClickListener() {
@@ -110,20 +107,20 @@ public void openNewLampPopUp(final int lamp) {
                         discountValue.setWidth(tl.getWidth() / 4);
 
                         if (discount instanceof QuantityDiscount) {
-                            discountValue.setText(((QuantityDiscount) discount).getBought() + "  acheté   " + ((QuantityDiscount) discount).getFree() + " gratuit");
+                            discountValue.setText(((QuantityDiscount) discount).getBought() + getResources().getString(R.string.bought)+ ((QuantityDiscount) discount).getFree() + getResources().getString(R.string.free));
                         } else if (discount instanceof PercentageDiscount) {
-                            discountValue.setText(((PercentageDiscount) discount).getPercentage() + " % off");
+                            discountValue.setText(((PercentageDiscount) discount).getPercentage() + getResources().getString(R.string.percentOff));
                         }
                         row.addView(discountValue); // add the column to the table row here
                         Button delete = new Button(getActivity());
-                        delete.setText("delete");
+                        delete.setText(getResources().getString(R.string.delete));
                         delete.setWidth(tl.getWidth() / 4);
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {
                                 new AlertDialog.Builder(getActivity())
-                                        .setTitle("Delete Lamp")
-                                        .setMessage("Are you sure you want to delete this discount?")
+                                        .setTitle(getResources().getString(R.string.deleteDiscount))
+                                        .setMessage(getResources().getString(R.string.deleteDiscountMessage))
                                         .setIcon(android.R.drawable.ic_dialog_alert)
                                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
@@ -158,7 +155,7 @@ public void openNewLampPopUp(final int lamp) {
                         row.addView(delete);
 
                         Button update = new Button(getActivity());
-                        update.setText("update");
+                        update.setText(getResources().getString(R.string.update));
                         update.setWidth(tl.getWidth() / 4);
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override

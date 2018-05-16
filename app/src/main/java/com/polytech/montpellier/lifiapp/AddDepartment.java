@@ -33,7 +33,7 @@ public class AddDepartment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_department);
         final EditText text = (EditText) findViewById(R.id.nametf);
-        text.setText("");
+        text.setText(getResources().getString(R.string.newDepartement));
         Button validate = (Button)findViewById(R.id.validate);
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,8 +74,8 @@ public class AddDepartment extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         new AlertDialog.Builder(this)
-                .setTitle("New Department")
-                .setMessage("You are leaving, are you sure ?")
+                .setTitle(getResources().getString(R.string.addDepartement))
+                .setMessage(getResources().getString(R.string.addLeaveMessage))
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 

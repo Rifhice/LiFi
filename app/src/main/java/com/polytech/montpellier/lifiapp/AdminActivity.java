@@ -65,8 +65,8 @@ public class AdminActivity extends AppCompatActivity {
 
     public void openNewLampPopUp(final int lamp){
         new AlertDialog.Builder(this)
-                .setTitle("New Lamp")
-                .setMessage("You are standing under a new lamp, do you want to add it ?")
+                .setTitle(getResources().getString(R.string.newLamp))
+                .setMessage(getResources().getString(R.string.newLampDetectedMessage))
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
@@ -95,10 +95,10 @@ public class AdminActivity extends AppCompatActivity {
 
     private void setViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new AdminLampView(), "Lamp");
-        adapter.addFragment(new AdminProductView(), "Product");
-        adapter.addFragment(new AdminDiscountView(), "Discount");
-        adapter.addFragment(new AdminDepartmentView(), "Department");
+        adapter.addFragment(new AdminLampView(), getResources().getString(R.string.lamp));
+        adapter.addFragment(new AdminProductView(), getResources().getString(R.string.product));
+        adapter.addFragment(new AdminDiscountView(), getResources().getString(R.string.discount));
+        adapter.addFragment(new AdminDepartmentView(), getResources().getString(R.string.departement));
         viewPager.setAdapter(adapter);
     }
 

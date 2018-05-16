@@ -137,8 +137,8 @@ public class AddProduct extends AppCompatActivity{
     @Override
     public void onBackPressed(){
         new AlertDialog.Builder(this)
-                .setTitle("Nouveau Produit")
-                .setMessage("Êtes-vous sûr de vouloir quitter ?")
+                .setTitle(getResources().getString(R.string.newProduct))
+                .setMessage(getResources().getString(R.string.addLeaveMessage))
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 

@@ -1,5 +1,6 @@
 package com.polytech.montpellier.lifiapp;
 
+import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 
@@ -33,6 +34,8 @@ public class UserConnection {
     public void login(String password, final ResponseHandler responseHandler){
 
         String url = "http://81.64.139.113:1337/api/Auth" ;
+       //TODO getResources().getString(R.string.url)
+
         Map<String, String> params = new HashMap<String, String>();
         params.put("password", password);
 

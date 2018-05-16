@@ -116,21 +116,21 @@ public class AdminProductView extends Fragment{
                         row.addView(label_marque); // add the column to the table row here
 
                         final TextView label_price = new TextView(getActivity());
-                        label_price.setText(String.valueOf(product.getPrice())+ "€");
+                        label_price.setText(String.valueOf(product.getPrice())+getResources().getString(R.string.currency));
                         label_price.setTextColor(Color.BLACK);
                         label_price.setPadding(5, 5, 5, 5);
                         label_price.setWidth(tl.getWidth() / 5);
                         row.addView(label_price);
 
                         Button delete = new Button(getActivity());
-                        delete.setText("delete");
+                        delete.setText(    getResources().getString(R.string.delete));
                         delete.setWidth(tl.getWidth() / 5);
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {
                                 new AlertDialog.Builder(getActivity())
-                                        .setTitle("Delete Product")
-                                        .setMessage("Are you sure you want to delete this product?")
+                                        .setTitle(getResources().getString(R.string.deleteProduct))
+                                        .setMessage(getResources().getString(R.string.deleteMessage))
                                         .setIcon(android.R.drawable.ic_dialog_alert)
                                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
@@ -163,7 +163,7 @@ public class AdminProductView extends Fragment{
                         row.addView(delete);
 
                         Button update = new Button(getActivity());
-                        update.setText("update");
+                        update.setText(getResources().getString(R.string.update));
                         update.setWidth(tl.getWidth() / 5);
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override

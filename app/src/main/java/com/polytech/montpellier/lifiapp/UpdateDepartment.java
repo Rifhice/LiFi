@@ -77,8 +77,8 @@ public class UpdateDepartment extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         new AlertDialog.Builder(this)
-                .setTitle("Update Department")
-                .setMessage("You are leaving, are you sure ?")
+                .setTitle(getResources().getString(R.string.updateDepartment))
+                .setMessage(getResources().getString(R.string.updateLeaveMessage))
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
