@@ -110,7 +110,7 @@ public class DiscountSummary extends Activity {
 
                     dateFinTV.setText(dateFin);
                     descriptionTV.setText(desc);
-
+ 
                 }
             }
 
