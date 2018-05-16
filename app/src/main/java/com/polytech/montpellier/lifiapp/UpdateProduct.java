@@ -109,14 +109,27 @@ public class UpdateProduct extends AppCompatActivity {
         });
 
 
+        spinnerDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String depName = (String) spinnerDepartment.getSelectedItem();
+                idDep = depMap.get(depName);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+
+            }
+
+        });
 
 
         Button validate = (Button)findViewById(R.id.validate);
-        System.out.println("IDDI" +R.id.validate);
-        /*validate.setOnClickListener(new View.OnClickListener() {
+        /*validate.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!text_name.getText().toString().isEmpty() && !text_description.getText().toString().isEmpty()
+                System.out.println("Cliiiick");
+                /*if (!text_name.getText().toString().isEmpty() && !text_description.getText().toString().isEmpty()
                         && !text_brand.getText().toString().isEmpty() && !text_price.getText().toString().isEmpty() && idDep>=0) {
 
 
@@ -149,19 +162,7 @@ public class UpdateProduct extends AppCompatActivity {
 
 
 
-        spinnerDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                String depName = (String) spinnerDepartment.getSelectedItem();
-                idDep = depMap.get(depName);
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-
-            }
-
-        });
 
     }
 

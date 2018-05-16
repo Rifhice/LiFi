@@ -14,6 +14,7 @@ import android.widget.Spinner;
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
+import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
@@ -29,6 +30,7 @@ public class UpdateLamp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lamp_add);
+        Helper.getInstance(this);
         Intent intent = getIntent();
         final int id = intent.getIntExtra("lamp",0);
         final String name = intent.getStringExtra("name");
