@@ -76,19 +76,12 @@ public class AddProduct extends AppCompatActivity{
         Helper.getInstance(this);
         initializeUI();
 
-
-
         editText_price = (EditText) findViewById(R.id.editText_product_addPrice);
         editText_brand = (EditText) findViewById(R.id.editText_product_addBrand);
         editText_name = (EditText) findViewById(R.id.editText_product_addName);
         editText_description = (MultiAutoCompleteTextView) findViewById(R.id.multiTextView_product_addDescription);
 
-
-
-
-
         validate = (Button) findViewById(R.id.button_addProduct);
-
 
         validate.setOnClickListener( new View.OnClickListener() {
 
@@ -104,11 +97,10 @@ public class AddProduct extends AppCompatActivity{
 
 
                     Product product = new Product(0, name, description, price, brand, new Department(idDep));
-                    System.out.println("Name: " + name +" Description: " + description + " price: " + price + " brand: " + brand + " idDep : " +idDep);
-                    daoP.create( product, "5f4dcc3b5aa765d61d8327deb882cf99", new ResponseHandler() {
+                    daoP.create(product, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
-                            System.out.println(object.toString());
+                            finish();
                         }
 
                         @Override
@@ -126,17 +118,9 @@ public class AddProduct extends AppCompatActivity{
         });
     }
 
-
-
-
-
-
-
-
     @Override
     protected void onResume() {
         super.onResume();
-
     }
 
     @Override
@@ -164,7 +148,6 @@ public class AddProduct extends AppCompatActivity{
                 .setNegativeButton(android.R.string.no, null).show();
     }
 
-
     private void initializeUI() {
         final Spinner spinnerDepartment = (Spinner) findViewById(R.id.spinner_ProductDepartement);
         final ArrayList<String> dep = new ArrayList<>();
@@ -187,8 +170,6 @@ public class AddProduct extends AppCompatActivity{
                     }
                     adapter.setDropDownViewResource(R.layout.list);
                     spinnerDepartment.setAdapter(adapter);
-
-
                 }
             }
 
@@ -203,17 +184,13 @@ public class AddProduct extends AppCompatActivity{
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String depName = (String) spinnerDepartment.getSelectedItem();
                 idDep = depMap.get(depName);
-
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
 
             }
-
         });
-
-
     }
 
 }

@@ -76,7 +76,8 @@ public class AdminProductView extends Fragment{
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), AddProduct.class);
+                startActivity(intent);
             }
         });
         final TableLayout tl = (TableLayout) getView().findViewById(R.id.main_table);

@@ -127,10 +127,10 @@ public class MySqlProductDAO extends ProductDAO {
 
     @Override
     public void delete(int id,String token, final ResponseHandler response) throws DAOException {
-        Helper.getInstance().DELETE("http://81.64.139.113:1337/api/Product/" + id, "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" , new ResponseHandler() {
+        Helper.getInstance().DELETE("http://81.64.139.113:1337/api/Product/" + id, token , new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                //TODO
+                response.onSuccess(object);
             }
 
             @Override

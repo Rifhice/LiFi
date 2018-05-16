@@ -43,7 +43,6 @@ public class AddLamp extends AppCompatActivity {
                 AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO().create(lamp,"5f4dcc3b5aa765d61d8327deb882cf99", new ResponseHandler() {
                     @Override
                     public void onSuccess(Object object) {
-                        System.out.println(object.toString());
                         finish();
                     }
 
