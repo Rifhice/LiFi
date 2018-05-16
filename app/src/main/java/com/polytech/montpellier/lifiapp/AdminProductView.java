@@ -82,7 +82,6 @@ public class AdminProductView extends Fragment{
         });
         final TableLayout tl = (TableLayout) getView().findViewById(R.id.main_table);
         tl.removeAllViews();
-        final Button add = (Button) getView().findViewById(R.id.button_add);
 
         dao.getAll(new ResponseHandler() {
             @Override
@@ -180,7 +179,12 @@ public class AdminProductView extends Fragment{
                         row.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                System.out.println(v.getId());
+                                Intent intent = new Intent(getActivity(), ProductSummary.class);
+                                intent.putExtra("name",label_product.getText());
+                                intent.putExtra("product",row.getId());
+                                intent.putExtra("brand", label_marque.getText());
+                                intent.putExtra("price", String.valueOf(product.getPrice()));
+                                startActivity(intent);
                             }
                         });
                         tl.addView(row, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
