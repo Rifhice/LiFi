@@ -1,4 +1,5 @@
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -31,6 +32,8 @@
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> animationfix
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-fragment-27.1.1">
     <CLASSES>
@@ -42,6 +45,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 >>>>>>> AdminDiscount
@@ -54,4 +58,6 @@
 =======
 >>>>>>> Stashed changes
 >>>>>>> attemps animation
+=======
+>>>>>>> animationfix
 </component>

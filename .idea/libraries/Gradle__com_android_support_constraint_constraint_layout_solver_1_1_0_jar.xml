@@ -1,4 +1,5 @@
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 <<<<<<< HEAD
 <component name="libraryTable">
   <library name="Gradle: com.android.support.constraint:constraint-layout-solver:1.1.0@jar">
@@ -24,6 +25,8 @@
 >>>>>>> master
 =======
 =======
+=======
+>>>>>>> animationfix
 <component name="libraryTable">
   <library name="Gradle: com.android.support.constraint:constraint-layout-solver:1.1.0@jar">
     <CLASSES>
@@ -32,6 +35,9 @@
     <JAVADOC />
     <SOURCES />
   </library>
+<<<<<<< refs/remotes/origin/master
 >>>>>>> Stashed changes
 >>>>>>> attemps animation
+=======
+>>>>>>> animationfix
 </component>

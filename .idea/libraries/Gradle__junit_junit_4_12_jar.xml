@@ -1,4 +1,5 @@
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 <<<<<<< HEAD
 <component name="libraryTable">
   <library name="Gradle: junit:junit:4.12@jar">
@@ -28,6 +29,8 @@
 >>>>>>> master
 =======
 =======
+=======
+>>>>>>> animationfix
 <component name="libraryTable">
   <library name="Gradle: junit:junit:4.12@jar">
     <CLASSES>
@@ -38,6 +41,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< refs/remotes/origin/master
 >>>>>>> Stashed changes
 >>>>>>> attemps animation
+=======
+>>>>>>> animationfix
 </component>

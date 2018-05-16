@@ -1,4 +1,5 @@
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -31,6 +32,8 @@
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> animationfix
 <component name="libraryTable">
   <library name="Gradle: com.android.support:appcompat-v7-27.1.1">
     <CLASSES>
@@ -42,6 +45,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< refs/remotes/origin/master
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 >>>>>>> AdminDiscount
@@ -54,4 +58,6 @@
 =======
 >>>>>>> Stashed changes
 >>>>>>> attemps animation
+=======
+>>>>>>> animationfix
 </component>

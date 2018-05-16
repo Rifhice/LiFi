@@ -1,4 +1,5 @@
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 <<<<<<< HEAD
 <component name="libraryTable">
   <library name="Gradle: android.arch.lifecycle:runtime-1.1.0">
@@ -30,6 +31,8 @@
 >>>>>>> master
 =======
 =======
+=======
+>>>>>>> animationfix
 <component name="libraryTable">
   <library name="Gradle: android.arch.lifecycle:runtime-1.1.0">
     <CLASSES>
@@ -41,6 +44,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/runtime/1.1.0/a4b0d6b8e8f51c8f95d5a0641f81ffc13ab406c7/runtime-1.1.0-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< refs/remotes/origin/master
 >>>>>>> Stashed changes
 >>>>>>> attemps animation
+=======
+>>>>>>> animationfix
 </component>

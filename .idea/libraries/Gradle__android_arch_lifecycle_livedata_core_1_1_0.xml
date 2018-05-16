@@ -1,4 +1,5 @@
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 <<<<<<< HEAD
 <component name="libraryTable">
   <library name="Gradle: android.arch.lifecycle:livedata-core-1.1.0">
@@ -30,6 +31,8 @@
 >>>>>>> master
 =======
 =======
+=======
+>>>>>>> animationfix
 <component name="libraryTable">
   <library name="Gradle: android.arch.lifecycle:livedata-core-1.1.0">
     <CLASSES>
@@ -41,6 +44,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/livedata-core/1.1.0/300f89e645a95de0bdc6d8833beeee6e3045df06/livedata-core-1.1.0-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< refs/remotes/origin/master
 >>>>>>> Stashed changes
 >>>>>>> attemps animation
+=======
+>>>>>>> animationfix
 </component>

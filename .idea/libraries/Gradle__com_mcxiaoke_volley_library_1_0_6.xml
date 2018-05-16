@@ -1,4 +1,5 @@
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 <<<<<<< HEAD
 <component name="libraryTable">
   <library name="Gradle: com.mcxiaoke.volley:library-1.0.6">
@@ -30,6 +31,8 @@
 >>>>>>> master
 =======
 =======
+=======
+>>>>>>> animationfix
 <component name="libraryTable">
   <library name="Gradle: com.mcxiaoke.volley:library-1.0.6">
     <CLASSES>
@@ -41,6 +44,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.6/c9f160883f97a4c834b1d31c5354255ed899ee25/library-1.0.6-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< refs/remotes/origin/master
 >>>>>>> Stashed changes
 >>>>>>> attemps animation
+=======
+>>>>>>> animationfix
 </component>
