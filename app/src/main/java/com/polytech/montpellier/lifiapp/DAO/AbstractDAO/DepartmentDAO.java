@@ -1,5 +1,6 @@
 package com.polytech.montpellier.lifiapp.DAO.AbstractDAO;
 
+import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 
 /**
@@ -7,5 +8,7 @@ import com.polytech.montpellier.lifiapp.Model.Department;
  */
 
 public abstract class DepartmentDAO extends DAO<Department> {
+
+    public abstract void getAllProducts(Department dep, ResponseHandler res);
 
 }

@@ -1,37 +1,12 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 <component name="libraryTable">
   <library name="Gradle: com.android.support:transition-27.1.1">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/1ab706b2a29369cfcbe39475b2301611/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/1ab706b2a29369cfcbe39475b2301611/res" />
-=======
-<component name="libraryTable">
-  <library name="Gradle: com.android.support:transition-27.1.1">
-    <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/bd2f38d7e23352b3c9449b0b759504fd/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/bd2f38d7e23352b3c9449b0b759504fd/jars/classes.jar!/" />
->>>>>>> Stashed changes
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/transition/27.1.1/88ebe6765790253d410e51a3952571565f2040e9/transition-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
-<<<<<<< Updated upstream
-=======
-<component name="libraryTable">
-  <library name="Gradle: com.android.support:transition-27.1.1">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/098904b3e26489ef5f9619541596b40d/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/098904b3e26489ef5f9619541596b40d/res" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/transition/27.1.1/88ebe6765790253d410e51a3952571565f2040e9/transition-27.1.1-sources.jar!/" />
-    </SOURCES>
-  </library>
->>>>>>> AdminDiscount
-=======
->>>>>>> Stashed changes
 </component>

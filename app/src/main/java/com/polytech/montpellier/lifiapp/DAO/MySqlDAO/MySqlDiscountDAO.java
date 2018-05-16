@@ -20,6 +20,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Kevin on 30/04/2018.
@@ -28,8 +30,33 @@ import java.util.Date;
 public class MySqlDiscountDAO extends DiscountDAO {
 
     @Override
-    public void create(Discount obj,String token, ResponseHandler response) throws DAOException {
+    public void create(Discount obj, String token, final ResponseHandler response) throws DAOException {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("fkProduct", obj.getProduct().getId() + "");
+        params.put("date_start", new SimpleDateFormat( "yyyy-MM-dd").format(obj.getDateFin()));
+        params.put("date_end",  new SimpleDateFormat( "yyyy-MM-dd").format(obj.getDateDebut()));
+        params.put("fidelity", obj.getFidelity() + "");
+        String url = "http://81.64.139.113:1337/api/Discount/";
+        if(obj instanceof PercentageDiscount){
+            params.put("percentage", ((PercentageDiscount)obj).getPercentage() + "");
+            url += "Percentage";
+        }
+        else if(obj instanceof QuantityDiscount){
+            params.put("bought", ((QuantityDiscount)obj).getBought() + "");
+            params.put("free", ((QuantityDiscount)obj).getFree() + "");
+            url += "Quantity";
+        }
+        Helper.getInstance().POST(url, token, params, new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                response.onSuccess(object);
+            }
 
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
     }
 
     @Override

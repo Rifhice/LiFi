@@ -132,4 +132,31 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
             }
         });
     }
+
+    @Override
+    public void getAllProducts(final Department dep, final ResponseHandler res) {
+        final ArrayList<Product> products =  new ArrayList<Product>();
+        Helper.getInstance().GET("http://81.64.139.113:1337/api/Department/" + dep.getId() + "/Products", new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                if (object instanceof JSONArray) {
+                    JSONArray array = (JSONArray) object;
+                    try {
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject current = array.getJSONObject(i);
+                            products.add(new Product(current.getInt("idProduct"), current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"), dep));
+                        }
+                        res.onSuccess(products);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onError(Object object) {
+
+            }
+        });
+    }
 }
