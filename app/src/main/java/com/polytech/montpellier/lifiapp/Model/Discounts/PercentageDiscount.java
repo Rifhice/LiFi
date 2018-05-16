@@ -12,8 +12,8 @@ public class PercentageDiscount extends Discount {
 
     float percentage;
 
-    public PercentageDiscount(Product product, Date dateDebut, Date dateFin, Date dateCreation, float percentage,int fidelity) {
-        super(product, dateDebut, dateFin, dateCreation, fidelity);
+    public PercentageDiscount(int id, Product product, Date dateDebut, Date dateFin, Date dateCreation, float percentage,int fidelity) {
+        super(id, product, dateDebut, dateFin, dateCreation, fidelity);
         this.percentage = percentage;
     }
 

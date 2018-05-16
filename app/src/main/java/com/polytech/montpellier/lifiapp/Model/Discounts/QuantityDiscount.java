@@ -13,8 +13,8 @@ public class QuantityDiscount extends Discount {
     int bought;
     int free;
 
-    public QuantityDiscount(Product product, Date dateDebut, Date dateFin, Date dateCreation, int bought, int free,int fidelity) {
-        super(product, dateDebut, dateFin, dateCreation,fidelity);
+    public QuantityDiscount(int id, Product product, Date dateDebut, Date dateFin, Date dateCreation, int bought, int free,int fidelity) {
+        super(id,product, dateDebut, dateFin, dateCreation,fidelity);
         this.bought = bought;
         this.free = free;
     }

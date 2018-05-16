@@ -56,7 +56,7 @@ public class DiscountSummary extends Activity {
 
                 if (discount instanceof PercentageDiscount){
 
-                    PercentageDiscount discountper = new PercentageDiscount(discount.getProduct() , discount.getDateDebut(), discount.getDateFin(), discount.getDateCreation(),
+                    PercentageDiscount discountper = new PercentageDiscount(discount.getId(),discount.getProduct() , discount.getDateDebut(), discount.getDateFin(), discount.getDateCreation(),
                             ((PercentageDiscount) discount).getPercentage(), discount.getFidelity());
 
                     String brand = discountper.getProduct().getBrand();
@@ -85,7 +85,7 @@ public class DiscountSummary extends Activity {
 
                 }else if (discount instanceof QuantityDiscount){
 
-                    QuantityDiscount discountqte = new QuantityDiscount(discount.getProduct() , discount.getDateDebut(), discount.getDateFin(), discount.getDateCreation(),
+                    QuantityDiscount discountqte = new QuantityDiscount(discount.getId(),discount.getProduct() , discount.getDateDebut(), discount.getDateFin(), discount.getDateCreation(),
                             ((QuantityDiscount) discount).getBought(), ((QuantityDiscount) discount).getFree(), discount.getFidelity());
 
                     String brand = discountqte.getProduct().getBrand();

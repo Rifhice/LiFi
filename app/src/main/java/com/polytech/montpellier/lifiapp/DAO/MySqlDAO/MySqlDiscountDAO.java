@@ -50,6 +50,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
                     try {
 
                         final JSONObject current = jsonArray.getJSONObject(i);
+                        final int id = current.getInt("idDiscount");
                         final int fidelity = current.getInt("fidelity");
                         final int fkProduct = current.getInt("fkProduct");
                         final Date start = sdf.parse(current.getString("date_start"));
@@ -58,11 +59,11 @@ public class MySqlDiscountDAO extends DiscountDAO {
                         Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.getInt("idDepartment")));
                         try{
                             float percentage = (float)current.getDouble("percentage");
-                            discounts.add(new PercentageDiscount(prod,start,end,creation,percentage,fidelity));
+                            discounts.add(new PercentageDiscount(id,prod,start,end,creation,percentage,fidelity));
                         }catch (JSONException e){
                             int bought = current.getInt("Bought");
                             int free = current.getInt("Free");
-                            discounts.add(new QuantityDiscount(prod,start, end, creation, bought, free, fidelity));
+                            discounts.add(new QuantityDiscount(id,prod,start, end, creation, bought, free, fidelity));
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -87,8 +88,18 @@ public class MySqlDiscountDAO extends DiscountDAO {
     }
 
     @Override
-    public void delete(int id,String token, ResponseHandler response) throws DAOException {
+    public void delete(int id,String token, final ResponseHandler response) throws DAOException {
+        Helper.getInstance().DELETE("http://81.64.139.113:1337/api/Discount/" + id, token, new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                response.onSuccess(object);
+            }
 
+            @Override
+            public void onError(Object object) {
+                response.onError(object);
+            }
+        });
     }
 
     @Override
@@ -108,6 +119,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
                     try {
 
                         final JSONObject current = jsonArray.getJSONObject(i);
+                        final int id = current.getInt("idDiscount");
                         final int fidelity = current.getInt("fidelity");
                         final int fkProduct = current.getInt("fkProduct");
                         final Date start = sdf.parse(current.getString("date_start"));
@@ -116,11 +128,11 @@ public class MySqlDiscountDAO extends DiscountDAO {
                         Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.getInt("idDepartment")));
                         try{
                             float percentage = (float)current.getDouble("percentage");
-                            discounts.add(new PercentageDiscount(prod,start,end,creation,percentage,fidelity));
+                            discounts.add(new PercentageDiscount(id,prod,start,end,creation,percentage,fidelity));
                         }catch (JSONException e){
                             int bougth = current.getInt("Bought");
                             int free = current.getInt("Free");
-                            discounts.add(new QuantityDiscount(prod,start, end, creation, bougth, free, fidelity));
+                            discounts.add(new QuantityDiscount(id,prod,start, end, creation, bougth, free, fidelity));
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -155,6 +167,8 @@ public class MySqlDiscountDAO extends DiscountDAO {
 
                         final JSONObject current = jsonArray.getJSONObject(i);
                         final int fidelity = current.getInt("fidelity");
+                        final int id = current.getInt("idDiscount");
+
                         final int fkProduct = current.getInt("fkProduct");
                         final Date start = sdf.parse(current.getString("date_start"));
                         final Date end = sdf.parse(current.getString("date_end"));
@@ -163,14 +177,14 @@ public class MySqlDiscountDAO extends DiscountDAO {
                         try{
                             if (date.compareTo(start)<= 0 && date.compareTo(end)>= 0) {
                                 float percentage = (float) current.getDouble("percentage");
-                                discounts.add(new PercentageDiscount(prod, start, end, creation, percentage, fidelity));
+                                discounts.add(new PercentageDiscount(id,prod, start, end, creation, percentage, fidelity));
                             }
                         }catch (JSONException e){
                             if (date.compareTo(start)<= 0 && date.compareTo(end)>= 0) {
 
                                 int bougth = current.getInt("Bought");
                                 int free = current.getInt("Free");
-                                discounts.add(new QuantityDiscount(prod, start, end, creation, bougth, free, fidelity));
+                                discounts.add(new QuantityDiscount(id,prod, start, end, creation, bougth, free, fidelity));
                             }
                         }
                     } catch (Exception e) {
