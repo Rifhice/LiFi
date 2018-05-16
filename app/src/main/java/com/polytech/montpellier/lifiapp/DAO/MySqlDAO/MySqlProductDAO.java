@@ -37,7 +37,7 @@ public class MySqlProductDAO extends ProductDAO {
         params.put("idDepartment", String.valueOf(obj.getDepartment().getId())) ;
 
         //System.out.println("Name: " + params.get("name") +" Description: " + params.get("description") + " price: " + params.get("price") + " brand: " + params.get("brand") +
-         //       " idDep : " +  params.get("idDepartement"));
+         //       " idDep : " +  params.get("idDepartment"));
 
         Helper.getInstance().POST("http://81.64.139.113:1337/api/Product",token , params, new ResponseHandler() {
             @Override
@@ -107,32 +107,19 @@ public class MySqlProductDAO extends ProductDAO {
         params.put("name", obj.getName());
         params.put("description", obj.getDescription());
         params.put("price",  String.valueOf(obj.getPrice()));
-        params.put("brand", obj.getDescription());
-        params.put("idDepartement", String.valueOf(obj.getDepartment())) ;
+        params.put("brand", obj.getBrand());
+        params.put("idDepartment", String.valueOf(obj.getDepartment().getId())) ;
 
-
-        Helper.getInstance().POST("http://81.64.139.113:1337/api/Product", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", params, new ResponseHandler() {
+        Helper.getInstance().PUT("http://81.64.139.113:1337/api/Product/" + obj.getId(), token, params, new ResponseHandler() {
 
             @Override
             public void onSuccess(Object object) {
-                if (object instanceof JSONArray) {
-                    JSONArray array = (JSONArray) object;
-                    if (array.length() == 0) {
-                        response.onSuccess(null);
-                    } else {
-                        try {
-                            JSONObject current = array.getJSONObject(0);
-                            response.onSuccess(new Product(current.getInt("idProduct"), current.getString("nameProduct"),  current.getString("descriptionProduct"),  Float.parseFloat(current.getString("priceProduct")),  current.getString("brandProduct"),new Department(current.getInt("idDepartment"), current.getString("name"))));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
+                response.onSuccess(object);
             }
 
             @Override
             public void onError(Object object) {
-
+                response.onError(object);
             }
         });
     }

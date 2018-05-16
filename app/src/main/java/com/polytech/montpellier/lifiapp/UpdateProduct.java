@@ -131,32 +131,33 @@ public class UpdateProduct extends AppCompatActivity {
         validate.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Cliiiick");
-                /*if (!text_name.getText().toString().isEmpty() && !text_description.getText().toString().isEmpty()
+
+                if (!text_name.getText().toString().isEmpty() && !text_description.getText().toString().isEmpty()
                         && !text_brand.getText().toString().isEmpty() && !text_price.getText().toString().isEmpty() && idDep>=0) {
 
+                    System.out.println("Cliiiick");
 
-
-                    Product product = new Product(0, text_name.getText().toString(), text_description.getText().toString(), Float.parseFloat(text_price.getText().toString()), text_brand.getText().toString(), new Department(idDep));
-                    //System.out.println("Name: " + name +" Description: " + description + " price: " + price + " brand: " + brand + " idDep : " +idDep);
+                    Product product = new Product(id, text_name.getText().toString(), text_description.getText().toString(), Float.parseFloat(text_price.getText().toString()), text_brand.getText().toString(), new Department(idDep));
+                    System.out.println("ID: " + product.getId() + "Name: " + product.getName() +" Description: " + product.getDescription() + " price: " + product.getPrice() + " brand: " + product.getBrand() + " idDep : " +product.getDepartment().getId());
                     daoP.update( product, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
+
                             System.out.println(object.toString());
                             finish();
                         }
 
                         @Override
                         public void onError(Object object) {
-
+                            System.out.println("ERROR");
                         }
                     });
 
                 }
                 else{
                     //TODO: faire une alerte si un des champs est vide
-                    System.out.println("Champs vides");
-                }*/
+
+                }
 
             }
         });

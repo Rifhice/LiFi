@@ -1,15 +1,24 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-fragment-27.1.1">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/61743a4fc356dc691ba7566cda318ecf/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/61743a4fc356dc691ba7566cda318ecf/jars/classes.jar!/" />
+=======
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:support-fragment-27.1.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/dcd0d8e00ac425c9294c0ae3b96f00cf/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/dcd0d8e00ac425c9294c0ae3b96f00cf/res" />
+>>>>>>> Stashed changes
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< Updated upstream
 =======
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-fragment-27.1.1">
@@ -23,4 +32,6 @@
     </SOURCES>
   </library>
 >>>>>>> AdminDiscount
+=======
+>>>>>>> Stashed changes
 </component>

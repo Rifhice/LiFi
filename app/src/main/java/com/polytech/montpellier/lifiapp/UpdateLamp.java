@@ -24,7 +24,7 @@ import java.util.HashMap;
 
 public class UpdateLamp extends AppCompatActivity {
 
-    int idDep = 0;
+    int idDep = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <component name="libraryTable">
   <library name="Gradle: com.mcxiaoke.volley:library-1.0.6">
     <CLASSES>
@@ -9,4 +10,17 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.6/c9f160883f97a4c834b1d31c5354255ed899ee25/library-1.0.6-sources.jar!/" />
     </SOURCES>
   </library>
+=======
+<component name="libraryTable">
+  <library name="Gradle: com.mcxiaoke.volley:library-1.0.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.0.6.aar/9b9b1f1426b3a9c5ae741dee1432e700/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.0.6.aar/9b9b1f1426b3a9c5ae741dee1432e700/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.6/c9f160883f97a4c834b1d31c5354255ed899ee25/library-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+>>>>>>> Stashed changes
 </component>
