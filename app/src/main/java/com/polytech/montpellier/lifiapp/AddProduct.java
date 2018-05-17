@@ -52,6 +52,7 @@ public class AddProduct extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_add);
         Helper.getInstance(this);
+        Helper.hasActiveInternetConnection(this);
         initializeUI();
 
         editText_price = (EditText) findViewById(R.id.editText_product_addPrice);

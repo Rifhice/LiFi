@@ -22,6 +22,7 @@ import android.widget.TextView;
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
+import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
 
@@ -57,6 +58,7 @@ public class AdminLampView extends Fragment{
     }
 
     public void updateDataAndView(){
+        Helper.hasActiveInternetConnection(getActivity());
         FloatingActionButton fab = getView().findViewById(R.id.fab);
         fab.setVisibility(View.INVISIBLE);
         FloatingActionButton changepass = getView().findViewById(R.id.changepassword);

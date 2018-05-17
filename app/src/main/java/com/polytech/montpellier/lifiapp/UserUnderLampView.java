@@ -45,7 +45,7 @@ public class UserUnderLampView extends AppCompatActivity {
         Helper.getInstance(this);
 
         setContentView(R.layout.user_under_lamp);
-
+        Helper.hasActiveInternetConnection(this);
         final TableLayout tl = findViewById(R.id.promotionsJourTable);
 
         TableRow tr_head = new TableRow(this);

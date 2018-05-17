@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
+import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 
@@ -22,6 +23,7 @@ public class AddDepartment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_department);
+        Helper.hasActiveInternetConnection(this);
         final EditText text =  findViewById(R.id.nametf);
         text.setText(getResources().getString(R.string.newDepartement));
         Button validate = findViewById(R.id.validate);
