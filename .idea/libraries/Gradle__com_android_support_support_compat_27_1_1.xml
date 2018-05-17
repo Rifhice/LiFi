@@ -1,12 +1,74 @@
+<<<<<<< HEAD
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-compat-27.1.1">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/03866fb570ac824c660b0e2e7dc5da7e/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/03866fb570ac824c660b0e2e7dc5da7e/jars/classes.jar!/" />
+=======
+<<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+>>>>>>> attemps animation
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:support-compat-27.1.1">
+    <CLASSES>
+<<<<<<< HEAD
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ae9f8643d7f1d7cce72ec19f868009b7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ae9f8643d7f1d7cce72ec19f868009b7/res" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/03866fb570ac824c660b0e2e7dc5da7e/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/03866fb570ac824c660b0e2e7dc5da7e/jars/classes.jar!/" />
+>>>>>>> master
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-compat/27.1.1/fe233277b6eae25ce5b2afab6daf55d73c86f0b9/support-compat-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
+<<<<<<< refs/remotes/origin/master
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> animationfix
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:support-compat-27.1.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/0db957b6650904d6a2cd4f457d4c39d5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/0db957b6650904d6a2cd4f457d4c39d5/jars/classes.jar!/" />
+>>>>>>> master
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-compat/27.1.1/fe233277b6eae25ce5b2afab6daf55d73c86f0b9/support-compat-27.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+<<<<<<< HEAD
+=======
+<<<<<<< refs/remotes/origin/master
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> AdminDiscount
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+>>>>>>> attemps animation
+=======
+>>>>>>> animationfix
+>>>>>>> master
 </component>
