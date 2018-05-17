@@ -55,21 +55,7 @@ public class AdminProductView extends Fragment{
     }
 
 
-    @Override
-    public void openNewLampPopUp(final int lamp) {
-        new AlertDialog.Builder(this)
-                .setTitle("New Lamp")
-                .setMessage("You are standing under a new lamp, do you want to add it ?")
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        Intent intent = new Intent(context, AddLamp.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.putExtra("lamp",lamp);
-                        context.startActivity(intent);
-                    }})
-                .setNegativeButton(android.R.string.no, null).show();
-    }
 
     public void updateDataAndView(){
         FloatingActionButton fab = getView().findViewById(R.id.fab);
@@ -80,7 +66,7 @@ public class AdminProductView extends Fragment{
                 startActivity(intent);
             }
         });
-        final TableLayout tl = (TableLayout) getView().findViewById(R.id.main_table);
+        final TableLayout tl = getView().findViewById(R.id.main_table);
         tl.removeAllViews();
 
         dao.getAll(new ResponseHandler() {
@@ -122,7 +108,7 @@ public class AdminProductView extends Fragment{
                         row.addView(label_price);
 
                         Button delete = new Button(getActivity());
-                        delete.setText(    getResources().getString(R.string.delete));
+                        delete.setText(getResources().getString(R.string.delete));
                         delete.setWidth(tl.getWidth() / 5);
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -198,5 +184,22 @@ public class AdminProductView extends Fragment{
             }
         });
     }
+
+
+    /*@Override
+    public void openNewLampPopUp(final int lamp) {
+        new AlertDialog.Builder(this)
+                .setTitle("New Lamp")
+                .setMessage("You are standing under a new lamp, do you want to add it ?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        Intent intent = new Intent(context, AddLamp.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra("lamp",lamp);
+                        context.startActivity(intent);
+                    }})
+                .setNegativeButton(android.R.string.no, null).show();
+    }*/
 
 }
