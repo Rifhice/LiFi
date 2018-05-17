@@ -1,8 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: androidlifisdk-release:@aar">
     <CLASSES>
+<<<<<<< Updated upstream
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/924efdcd3a326957ebf02c4afceab247/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/924efdcd3a326957ebf02c4afceab247/jars/classes.jar!/" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/18b2df0642268bb8d7fd8e921e05b4f0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/18b2df0642268bb8d7fd8e921e05b4f0/jars/classes.jar!/" />
+>>>>>>> Stashed changes
     </CLASSES>
     <JAVADOC />
     <SOURCES />

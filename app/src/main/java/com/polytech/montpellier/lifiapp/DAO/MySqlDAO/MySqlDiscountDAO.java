@@ -29,6 +29,7 @@ import java.util.Map;
 
 public class MySqlDiscountDAO extends DiscountDAO {
 
+    String url = "http://81.64.139.113:1337/api/Discount/" ;
     @Override
     public void create(Discount obj, String token, final ResponseHandler response) throws DAOException {
         Map<String, String> params = new HashMap<String, String>();
@@ -110,8 +111,43 @@ public class MySqlDiscountDAO extends DiscountDAO {
 
 
     @Override
-    public void update(Discount obj,String token, ResponseHandler response) throws DAOException {
+    public void update(Discount obj,String token, final ResponseHandler response) throws DAOException {
+        StringBuilder url = new StringBuilder();
+        url.append(this.url);
 
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("fkProduct", String.valueOf(obj.getProduct().getId()));
+        params.put("date_start", String.valueOf(obj.getDateDebut()));
+        params.put("date_end",  String.valueOf(obj.getDateFin()));
+
+
+            if(obj instanceof PercentageDiscount){
+                params.put("percentage",  String.valueOf(((PercentageDiscount) obj).getPercentage()));
+                params.put("fidelity", String.valueOf(obj.getFidelity()));
+                url.append("Percentage/");
+            }else if(obj instanceof QuantityDiscount){
+                params.put("bought", String.valueOf(((QuantityDiscount) obj).getBought()));
+                params.put("free", String.valueOf(((QuantityDiscount) obj).getFree()));
+                params.put("fidelity", String.valueOf(obj.getFidelity()));
+                url.append("Quantity/");
+
+            }
+
+        url.append(obj.getId());
+        String urlString = url.toString();
+
+        Helper.getInstance().PUT(urlString, token, params, new ResponseHandler() {
+
+            @Override
+            public void onSuccess(Object object) {
+                response.onSuccess(object);
+            }
+
+            @Override
+            public void onError(Object object) {
+                response.onError(object);
+            }
+        });
     }
 
     @Override
