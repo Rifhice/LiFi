@@ -1413,6 +1413,7 @@ int string add 0x7f0c001f
 int string addDepartement 0x7f0c0020
 int string addLeaveMessage 0x7f0c0021
 int string afterPrice 0x7f0c0022
+<<<<<<< Updated upstream
 int string app_name 0x7f0c0023
 int string appbar_scrolling_view_behavior 0x7f0c0024
 int string audioAccessPermissionMessage 0x7f0c0025
@@ -1447,6 +1448,42 @@ int string newLamp 0x7f0c0041
 int string newLampDetectedMessage 0x7f0c0042
 int string newProduct 0x7f0c0043
 int string newpassword 0x7f0c0044
+=======
+int string alert 0x7f0c0023
+int string app_name 0x7f0c0024
+int string appbar_scrolling_view_behavior 0x7f0c0025
+int string audioAccessPermissionMessage 0x7f0c0026
+int string audioAccessPermition 0x7f0c0027
+int string blankFieldMessage 0x7f0c0028
+int string bottom_sheet_behavior 0x7f0c0029
+int string bought 0x7f0c002a
+int string character_counter_pattern 0x7f0c002b
+int string currency 0x7f0c002c
+int string delete 0x7f0c002d
+int string deleteDiscount 0x7f0c002e
+int string deleteDiscountMessage 0x7f0c002f
+int string deleteLamp 0x7f0c0030
+int string deleteLampMessage 0x7f0c0031
+int string deleteMessage 0x7f0c0032
+int string deleteProduct 0x7f0c0033
+int string departement 0x7f0c0034
+int string description 0x7f0c0035
+int string descriptionProduct 0x7f0c0036
+int string discount 0x7f0c0037
+int string discountValidUntil 0x7f0c0038
+int string free 0x7f0c0039
+int string functionalityLimited 0x7f0c003a
+int string lamp 0x7f0c003b
+int string loginFailed 0x7f0c003c
+int string loginSuccess 0x7f0c003d
+int string marque 0x7f0c003e
+int string name 0x7f0c003f
+int string newDepartement 0x7f0c0040
+int string newDiscount 0x7f0c0041
+int string newLamp 0x7f0c0042
+int string newLampDetectedMessage 0x7f0c0043
+int string newProduct 0x7f0c0044
+>>>>>>> Stashed changes
 int string no 0x7f0c0045
 int string noAudioNoLifi 0x7f0c0046
 int string password 0x7f0c0047

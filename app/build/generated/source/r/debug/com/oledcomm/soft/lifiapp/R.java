@@ -4263,6 +4263,7 @@ public final class R {
     public static final int addDepartement=0x7f0c0020;
     public static final int addLeaveMessage=0x7f0c0021;
     public static final int afterPrice=0x7f0c0022;
+<<<<<<< Updated upstream
     public static final int app_name=0x7f0c0023;
     public static final int appbar_scrolling_view_behavior=0x7f0c0024;
     public static final int audioAccessPermissionMessage=0x7f0c0025;
@@ -4297,6 +4298,42 @@ public final class R {
     public static final int newLampDetectedMessage=0x7f0c0042;
     public static final int newProduct=0x7f0c0043;
     public static final int newpassword=0x7f0c0044;
+=======
+    public static final int alert=0x7f0c0023;
+    public static final int app_name=0x7f0c0024;
+    public static final int appbar_scrolling_view_behavior=0x7f0c0025;
+    public static final int audioAccessPermissionMessage=0x7f0c0026;
+    public static final int audioAccessPermition=0x7f0c0027;
+    public static final int blankFieldMessage=0x7f0c0028;
+    public static final int bottom_sheet_behavior=0x7f0c0029;
+    public static final int bought=0x7f0c002a;
+    public static final int character_counter_pattern=0x7f0c002b;
+    public static final int currency=0x7f0c002c;
+    public static final int delete=0x7f0c002d;
+    public static final int deleteDiscount=0x7f0c002e;
+    public static final int deleteDiscountMessage=0x7f0c002f;
+    public static final int deleteLamp=0x7f0c0030;
+    public static final int deleteLampMessage=0x7f0c0031;
+    public static final int deleteMessage=0x7f0c0032;
+    public static final int deleteProduct=0x7f0c0033;
+    public static final int departement=0x7f0c0034;
+    public static final int description=0x7f0c0035;
+    public static final int descriptionProduct=0x7f0c0036;
+    public static final int discount=0x7f0c0037;
+    public static final int discountValidUntil=0x7f0c0038;
+    public static final int free=0x7f0c0039;
+    public static final int functionalityLimited=0x7f0c003a;
+    public static final int lamp=0x7f0c003b;
+    public static final int loginFailed=0x7f0c003c;
+    public static final int loginSuccess=0x7f0c003d;
+    public static final int marque=0x7f0c003e;
+    public static final int name=0x7f0c003f;
+    public static final int newDepartement=0x7f0c0040;
+    public static final int newDiscount=0x7f0c0041;
+    public static final int newLamp=0x7f0c0042;
+    public static final int newLampDetectedMessage=0x7f0c0043;
+    public static final int newProduct=0x7f0c0044;
+>>>>>>> Stashed changes
     public static final int no=0x7f0c0045;
     public static final int noAudioNoLifi=0x7f0c0046;
     public static final int password=0x7f0c0047;

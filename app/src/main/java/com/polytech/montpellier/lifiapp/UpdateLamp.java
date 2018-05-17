@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
@@ -25,6 +27,8 @@ import java.util.HashMap;
 public class UpdateLamp extends AppCompatActivity {
 
     int idDep = -1;
+    LampDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO();
+    DepartmentDAO daoD = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,19 +45,34 @@ public class UpdateLamp extends AppCompatActivity {
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Lamp lamp = new Lamp(id,text.getText().toString(),new Department(idDep));
-                AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO().update(lamp,UserConnection.getInstance().getToken(), new ResponseHandler() {
-                    @Override
-                    public void onSuccess(Object object) {
-                        System.out.println(object.toString());
-                        finish();
-                    }
+                if (!text.getText().toString().isEmpty()) {
+                    Lamp lamp = new Lamp(id, text.getText().toString(), new Department(idDep));
+                    dao.update(lamp, UserConnection.getInstance().getToken(), new ResponseHandler() {
+                        @Override
+                        public void onSuccess(Object object) {
+                            System.out.println(object.toString());
+                            finish();
+                        }
 
-                    @Override
-                    public void onError(Object object) {
+                        @Override
+                        public void onError(Object object) {
 
-                    }
-                });
+                        }
+                    });
+                }
+                else{
+                    android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(UpdateLamp.this).create();
+                    alertDialog.setTitle(getResources().getString(R.string.alert));
+                    alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+                    alertDialog.setMessage(getResources().getString(R.string.blankFieldMessage));
+                    alertDialog.setButton(android.app.AlertDialog.BUTTON_NEUTRAL, getResources().getString(R.string.OK),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.show();
+                }
             }
         });
 
@@ -62,8 +81,7 @@ public class UpdateLamp extends AppCompatActivity {
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
         final HashMap<String, Integer> depMap=new HashMap<String, Integer>();
 
-        //TODO vérifier departement non vide
-        AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().getAll(new ResponseHandler() {
+        daoD.getAll(new ResponseHandler() {
 
             @Override
             public void onSuccess(Object object) {

@@ -54,10 +54,10 @@ public class AddLamp extends AppCompatActivity {
                 }
                 else{
                     android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(AddLamp.this).create();
-                    alertDialog.setTitle("Alert");
+                    alertDialog.setTitle(getResources().getString(R.string.alert));
                     alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
                     alertDialog.setMessage(getResources().getString(R.string.blankFieldMessage));
-                    alertDialog.setButton(android.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                    alertDialog.setButton(android.app.AlertDialog.BUTTON_NEUTRAL, getResources().getString(R.string.OK),
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.dismiss();

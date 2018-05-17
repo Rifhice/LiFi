@@ -6,28 +6,20 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TableLayout;
-import android.widget.TextView;
 
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
-import com.polytech.montpellier.lifiapp.Model.Lamp;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 public class UpdateDepartment extends AppCompatActivity {
-
+    DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,34 +33,48 @@ public class UpdateDepartment extends AppCompatActivity {
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Department dep = new Department(id,text.getText().toString());
-                AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().update(dep,UserConnection.getInstance().getToken(), new ResponseHandler() {
-                    @Override
-                    public void onSuccess(Object object) {
-                        if (object instanceof JSONObject) {
-                            JSONObject obj = (JSONObject)object;
-                            try {
-                                if (obj.getInt("code") == 200) {
-                                    if(obj.getInt("affectedRows") != 0){
-                                        finish();
-                                    }
-                                    else{
+                if(!text.getText().toString().isEmpty()) {
+                    Department dep = new Department(id, text.getText().toString());
+                    dao.update(dep, UserConnection.getInstance().getToken(), new ResponseHandler() {
+                        @Override
+                        public void onSuccess(Object object) {
+                            if (object instanceof JSONObject) {
+                                JSONObject obj = (JSONObject) object;
+                                try {
+                                    if (obj.getInt("code") == 200) {
+                                        if (obj.getInt("affectedRows") != 0) {
+                                            finish();
+                                        } else {
+                                            System.out.println("Error updating");
+                                        }
+                                    } else {
                                         System.out.println("Error updating");
                                     }
-                                } else {
-                                    System.out.println("Error updating");
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
                                 }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
                             }
                         }
-                    }
 
-                    @Override
-                    public void onError(Object object) {
+                        @Override
+                        public void onError(Object object) {
 
-                    }
-                });
+                        }
+                    });
+                }
+                else{
+                    android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(UpdateDepartment.this).create();
+                    alertDialog.setTitle(getResources().getString(R.string.alert));
+                    alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+                    alertDialog.setMessage(getResources().getString(R.string.blankFieldMessage));
+                    alertDialog.setButton(android.app.AlertDialog.BUTTON_NEUTRAL, getResources().getString(R.string.OK),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.show();
+                }
             }
         });
 

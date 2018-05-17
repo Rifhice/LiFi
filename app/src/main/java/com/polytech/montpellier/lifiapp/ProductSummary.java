@@ -52,7 +52,7 @@ public class ProductSummary extends Activity {
                     Product product = array.get(0);
                     textView_description.setText(product.getDescription());
                     if (product.getDepartment().getName().isEmpty() ||product.getDepartment().getName().equals("") || product.getDepartment().getName() == null ||product.getDepartment().getName() == "null") {
-                        String none = "None";
+                        String none = "N/A";
                         textView_department.setText(none);
 
                     } else {
