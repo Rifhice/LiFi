@@ -8,18 +8,18 @@
     android:focusableInTouchMode="true">
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/endDateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="-16dp"
         android:onClick="setDateStart"
-        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/startDateButton"
         app:layout_constraintTop_toTopOf="@+id/enddate" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/startDateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -46,9 +46,9 @@
         android:id="@+id/enddate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
+        android:layout_below="@+id/endDateButton"
         android:layout_marginTop="52dp"
-        android:layout_toLeftOf="@+id/button1"
+        android:layout_toLeftOf="@+id/endDateButton"
         android:text="End date :"
         android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintStart_toStartOf="@+id/startdate"
@@ -62,7 +62,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/button1"
+        app:layout_constraintStart_toStartOf="@+id/endDateButton"
         app:layout_constraintTop_toTopOf="@+id/department" />
 
     <TextView
