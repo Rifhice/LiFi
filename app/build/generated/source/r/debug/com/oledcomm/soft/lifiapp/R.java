@@ -2034,7 +2034,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
@@ -3994,93 +3994,94 @@ public final class R {
   }
   public static final class string {
     public static final int BeforePrice=0x7f0c0000;
-    public static final int abc_action_bar_home_description=0x7f0c0001;
-    public static final int abc_action_bar_up_description=0x7f0c0002;
-    public static final int abc_action_menu_overflow_description=0x7f0c0003;
-    public static final int abc_action_mode_done=0x7f0c0004;
-    public static final int abc_activity_chooser_view_see_all=0x7f0c0005;
-    public static final int abc_activitychooserview_choose_application=0x7f0c0006;
-    public static final int abc_capital_off=0x7f0c0007;
-    public static final int abc_capital_on=0x7f0c0008;
-    public static final int abc_font_family_body_1_material=0x7f0c0009;
-    public static final int abc_font_family_body_2_material=0x7f0c000a;
-    public static final int abc_font_family_button_material=0x7f0c000b;
-    public static final int abc_font_family_caption_material=0x7f0c000c;
-    public static final int abc_font_family_display_1_material=0x7f0c000d;
-    public static final int abc_font_family_display_2_material=0x7f0c000e;
-    public static final int abc_font_family_display_3_material=0x7f0c000f;
-    public static final int abc_font_family_display_4_material=0x7f0c0010;
-    public static final int abc_font_family_headline_material=0x7f0c0011;
-    public static final int abc_font_family_menu_material=0x7f0c0012;
-    public static final int abc_font_family_subhead_material=0x7f0c0013;
-    public static final int abc_font_family_title_material=0x7f0c0014;
-    public static final int abc_search_hint=0x7f0c0015;
-    public static final int abc_searchview_description_clear=0x7f0c0016;
-    public static final int abc_searchview_description_query=0x7f0c0017;
-    public static final int abc_searchview_description_search=0x7f0c0018;
-    public static final int abc_searchview_description_submit=0x7f0c0019;
-    public static final int abc_searchview_description_voice=0x7f0c001a;
-    public static final int abc_shareactionprovider_share_with=0x7f0c001b;
-    public static final int abc_shareactionprovider_share_with_application=0x7f0c001c;
-    public static final int abc_toolbar_collapse_description=0x7f0c001d;
-    public static final int add=0x7f0c001e;
-    public static final int addDepartement=0x7f0c001f;
-    public static final int addLeaveMessage=0x7f0c0020;
-    public static final int afterPrice=0x7f0c0021;
-    public static final int app_name=0x7f0c0022;
-    public static final int appbar_scrolling_view_behavior=0x7f0c0023;
-    public static final int audioAccessPermissionMessage=0x7f0c0024;
-    public static final int audioAccessPermition=0x7f0c0025;
-    public static final int blankFieldMessage=0x7f0c0026;
-    public static final int bottom_sheet_behavior=0x7f0c0027;
-    public static final int bought=0x7f0c0028;
-    public static final int character_counter_pattern=0x7f0c0029;
-    public static final int currency=0x7f0c002a;
-    public static final int delete=0x7f0c002b;
-    public static final int deleteDiscount=0x7f0c002c;
-    public static final int deleteDiscountMessage=0x7f0c002d;
-    public static final int deleteLamp=0x7f0c002e;
-    public static final int deleteLampMessage=0x7f0c002f;
-    public static final int deleteMessage=0x7f0c0030;
-    public static final int deleteProduct=0x7f0c0031;
-    public static final int departement=0x7f0c0032;
-    public static final int description=0x7f0c0033;
-    public static final int descriptionProduct=0x7f0c0034;
-    public static final int discount=0x7f0c0035;
-    public static final int discountValidUntil=0x7f0c0036;
-    public static final int free=0x7f0c0037;
-    public static final int functionalityLimited=0x7f0c0038;
-    public static final int lamp=0x7f0c0039;
-    public static final int marque=0x7f0c003a;
-    public static final int name=0x7f0c003b;
-    public static final int newDepartement=0x7f0c003c;
-    public static final int newDiscount=0x7f0c003d;
-    public static final int newLamp=0x7f0c003e;
-    public static final int newLampDetectedMessage=0x7f0c003f;
-    public static final int newProduct=0x7f0c0040;
-    public static final int no=0x7f0c0041;
-    public static final int noAudioNoLifi=0x7f0c0042;
-    public static final int password=0x7f0c0043;
-    public static final int password_toggle_content_description=0x7f0c0044;
-    public static final int path_password_eye=0x7f0c0045;
-    public static final int path_password_eye_mask_strike_through=0x7f0c0046;
-    public static final int path_password_eye_mask_visible=0x7f0c0047;
-    public static final int path_password_strike_through=0x7f0c0048;
-    public static final int percentOff=0x7f0c0049;
-    public static final int price=0x7f0c004a;
-    public static final int product=0x7f0c004b;
-    public static final int promotionsJour=0x7f0c004c;
-    public static final int rayon=0x7f0c004d;
-    public static final int search_menu_title=0x7f0c004e;
-    public static final int status_bar_notification_info_overflow=0x7f0c004f;
-    public static final int update=0x7f0c0050;
-    public static final int updateDepartment=0x7f0c0051;
-    public static final int updateDiscount=0x7f0c0052;
-    public static final int updateLeaveMessage=0x7f0c0053;
-    public static final int updateProduct=0x7f0c0054;
-    public static final int url=0x7f0c0055;
-    public static final int validate=0x7f0c0056;
-    public static final int yes=0x7f0c0057;
+    public static final int OK=0x7f0c0001;
+    public static final int abc_action_bar_home_description=0x7f0c0002;
+    public static final int abc_action_bar_up_description=0x7f0c0003;
+    public static final int abc_action_menu_overflow_description=0x7f0c0004;
+    public static final int abc_action_mode_done=0x7f0c0005;
+    public static final int abc_activity_chooser_view_see_all=0x7f0c0006;
+    public static final int abc_activitychooserview_choose_application=0x7f0c0007;
+    public static final int abc_capital_off=0x7f0c0008;
+    public static final int abc_capital_on=0x7f0c0009;
+    public static final int abc_font_family_body_1_material=0x7f0c000a;
+    public static final int abc_font_family_body_2_material=0x7f0c000b;
+    public static final int abc_font_family_button_material=0x7f0c000c;
+    public static final int abc_font_family_caption_material=0x7f0c000d;
+    public static final int abc_font_family_display_1_material=0x7f0c000e;
+    public static final int abc_font_family_display_2_material=0x7f0c000f;
+    public static final int abc_font_family_display_3_material=0x7f0c0010;
+    public static final int abc_font_family_display_4_material=0x7f0c0011;
+    public static final int abc_font_family_headline_material=0x7f0c0012;
+    public static final int abc_font_family_menu_material=0x7f0c0013;
+    public static final int abc_font_family_subhead_material=0x7f0c0014;
+    public static final int abc_font_family_title_material=0x7f0c0015;
+    public static final int abc_search_hint=0x7f0c0016;
+    public static final int abc_searchview_description_clear=0x7f0c0017;
+    public static final int abc_searchview_description_query=0x7f0c0018;
+    public static final int abc_searchview_description_search=0x7f0c0019;
+    public static final int abc_searchview_description_submit=0x7f0c001a;
+    public static final int abc_searchview_description_voice=0x7f0c001b;
+    public static final int abc_shareactionprovider_share_with=0x7f0c001c;
+    public static final int abc_shareactionprovider_share_with_application=0x7f0c001d;
+    public static final int abc_toolbar_collapse_description=0x7f0c001e;
+    public static final int add=0x7f0c001f;
+    public static final int addDepartement=0x7f0c0020;
+    public static final int addLeaveMessage=0x7f0c0021;
+    public static final int afterPrice=0x7f0c0022;
+    public static final int app_name=0x7f0c0023;
+    public static final int appbar_scrolling_view_behavior=0x7f0c0024;
+    public static final int audioAccessPermissionMessage=0x7f0c0025;
+    public static final int audioAccessPermition=0x7f0c0026;
+    public static final int blankFieldMessage=0x7f0c0027;
+    public static final int bottom_sheet_behavior=0x7f0c0028;
+    public static final int bought=0x7f0c0029;
+    public static final int character_counter_pattern=0x7f0c002a;
+    public static final int currency=0x7f0c002b;
+    public static final int delete=0x7f0c002c;
+    public static final int deleteDiscount=0x7f0c002d;
+    public static final int deleteDiscountMessage=0x7f0c002e;
+    public static final int deleteLamp=0x7f0c002f;
+    public static final int deleteLampMessage=0x7f0c0030;
+    public static final int deleteMessage=0x7f0c0031;
+    public static final int deleteProduct=0x7f0c0032;
+    public static final int departement=0x7f0c0033;
+    public static final int description=0x7f0c0034;
+    public static final int descriptionProduct=0x7f0c0035;
+    public static final int discount=0x7f0c0036;
+    public static final int discountValidUntil=0x7f0c0037;
+    public static final int free=0x7f0c0038;
+    public static final int functionalityLimited=0x7f0c0039;
+    public static final int lamp=0x7f0c003a;
+    public static final int marque=0x7f0c003b;
+    public static final int name=0x7f0c003c;
+    public static final int newDepartement=0x7f0c003d;
+    public static final int newDiscount=0x7f0c003e;
+    public static final int newLamp=0x7f0c003f;
+    public static final int newLampDetectedMessage=0x7f0c0040;
+    public static final int newProduct=0x7f0c0041;
+    public static final int no=0x7f0c0042;
+    public static final int noAudioNoLifi=0x7f0c0043;
+    public static final int password=0x7f0c0044;
+    public static final int password_toggle_content_description=0x7f0c0045;
+    public static final int path_password_eye=0x7f0c0046;
+    public static final int path_password_eye_mask_strike_through=0x7f0c0047;
+    public static final int path_password_eye_mask_visible=0x7f0c0048;
+    public static final int path_password_strike_through=0x7f0c0049;
+    public static final int percentOff=0x7f0c004a;
+    public static final int price=0x7f0c004b;
+    public static final int product=0x7f0c004c;
+    public static final int promotionsJour=0x7f0c004d;
+    public static final int rayon=0x7f0c004e;
+    public static final int search_menu_title=0x7f0c004f;
+    public static final int status_bar_notification_info_overflow=0x7f0c0050;
+    public static final int update=0x7f0c0051;
+    public static final int updateDepartment=0x7f0c0052;
+    public static final int updateDiscount=0x7f0c0053;
+    public static final int updateLeaveMessage=0x7f0c0054;
+    public static final int updateProduct=0x7f0c0055;
+    public static final int url=0x7f0c0056;
+    public static final int validate=0x7f0c0057;
+    public static final int yes=0x7f0c0058;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0d0000;
@@ -9181,7 +9182,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>

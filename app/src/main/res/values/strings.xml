@@ -10,6 +10,7 @@
     <string name="validate">Validate</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="OK">OK</string>
     <string name="url">http://81.64.139.113:1337/api/</string>
     <string name="add">Add</string>
     <string name="delete">Delete</string>
@@ -19,7 +20,7 @@
     <string name="addDepartement">Add Department</string>
     <string name="newDepartement">New Department</string>
     <string name="updateDepartment">Update Department</string>
-    <string name="updateLeaveMessage">You are leaving, are you sure ?</string>
+    <string name="updateLeaveMessage">You are leaving, are you sure ? All your modifications will be lost</string>
     <string name="blankFieldMessage">Fields cannot be left blank</string>
 
 
