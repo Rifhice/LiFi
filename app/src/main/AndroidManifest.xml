@@ -67,6 +67,9 @@
         <activity android:name="com.polytech.montpellier.lifiapp.AddDiscount">
 
         </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.ChangePassword">
+
+        </activity>
     </application>
 
 </manifest>

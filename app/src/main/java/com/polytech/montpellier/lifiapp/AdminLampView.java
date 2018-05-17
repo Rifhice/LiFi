@@ -1,17 +1,20 @@
 package com.polytech.montpellier.lifiapp;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
+import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -56,6 +59,78 @@ public class AdminLampView extends Fragment{
     public void updateDataAndView(){
         FloatingActionButton fab = getView().findViewById(R.id.fab);
         fab.setVisibility(View.INVISIBLE);
+        FloatingActionButton changepass = getView().findViewById(R.id.changepassword);
+        changepass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Password");
+
+                LinearLayout layout = new LinearLayout(getActivity());
+                layout.setOrientation(LinearLayout.VERTICAL);
+                // Add a TextView here for the "Title" label, as noted in the comments
+                final EditText new1 = new EditText(getActivity());
+                new1.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                new1.setHint("New password");
+                layout.addView(new1); // Notice this is an add method
+
+                // Add another TextView here for the "Description" label
+                final EditText new2 = new EditText(getActivity());
+                new2.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                new2.setHint("New password");
+                layout.addView(new2); // Another add method
+
+                builder.setView(layout); // Again this is a set method, not add
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if(!new1.getText().toString().equals(new2.getText().toString())){
+                            AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                            alertDialog.setTitle("Alert");
+                            alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+                            alertDialog.setMessage("Password not equals");
+                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                            alertDialog.show();
+                        }
+                        else{
+                            UserConnection.getInstance().changePassword(new1.getText().toString(), new ResponseHandler() {
+                                @Override
+                                public void onSuccess(Object object) {
+                                    System.out.println(object);
+                                }
+
+                                @Override
+                                public void onError(Object object) {
+                                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                                    alertDialog.setTitle("Alert");
+                                    alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+                                    alertDialog.setMessage("Error");
+                                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    dialog.dismiss();
+                                                }
+                                            });
+                                    alertDialog.show();
+                                }
+                            });
+                        }
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
+            }
+        });
         final TableLayout tl =  getView().findViewById(R.id.main_table);
         tl.removeAllViews();
         dao.getAll(new ResponseHandler() {

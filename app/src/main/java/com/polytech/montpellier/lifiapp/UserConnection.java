@@ -52,9 +52,7 @@ public class UserConnection {
 
                        if (json.getInt("code") == 200){
                            setToken(json.getString("token"));
-
-                           responseHandler.onSuccess(null);
-
+                           responseHandler.onSuccess(object);
                        }
                        else {
                            responseHandler.onError(null);
@@ -78,9 +76,43 @@ public class UserConnection {
 
             }
         });
+    }
+
+    public void changePassword(String newPass, final ResponseHandler res){
+        String url = "http://81.64.139.113:1337/api/Auth" ;
+        //TODO getResources().getString(R.string.url)
+
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("password", newPass);
 
 
-        System.out.println(password);
+        Helper.getInstance().PUT(url, token, params,  new ResponseHandler() {
+            @Override
+            public void onSuccess(Object object) {
+                if (object instanceof JSONObject){
+                    try {
+                        JSONObject json = (JSONObject) object;
+
+                        if (json.getInt("code") == 200){
+                            setToken(json.getString("token"));
+                            res.onSuccess(object);
+                        }
+                        else {
+                            res.onError(null);
+                        }
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        res.onError(null);
+                    }
+                }
+            }
+
+            @Override
+            public void onError(Object object) {
+                res.onError(null);
+            }
+        });
     }
 
     public boolean isConnected(){

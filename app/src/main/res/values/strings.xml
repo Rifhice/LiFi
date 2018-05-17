@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">E-Mart</string>
+    <string name="change_pass">Change password</string>
     <string name="name">Name</string>
     <string name="rayon">Rayon</string>
     <string name="marque">Marque</string>
@@ -22,6 +23,8 @@
     <string name="updateDepartment">Update Department</string>
     <string name="updateLeaveMessage">You are leaving, are you sure ? All your modifications will be lost</string>
     <string name="blankFieldMessage">Fields cannot be left blank</string>
+    <string name="currentpassword">Current password</string>
+    <string name="newpassword">New password</string>
 
 
     <string name="addLeaveMessage">You are leaving, are you sure ?</string>
