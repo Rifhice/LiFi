@@ -22,6 +22,7 @@ public class AddDepartment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_department);
+
         final EditText text =  findViewById(R.id.nametf);
         text.setText(getResources().getString(R.string.newDepartement));
         Button validate = findViewById(R.id.validate);

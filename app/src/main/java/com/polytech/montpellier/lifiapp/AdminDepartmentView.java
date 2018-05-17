@@ -136,11 +136,24 @@ public class AdminDepartmentView extends Fragment{
         });
         final TableLayout tl = (TableLayout) getView().findViewById(R.id.main_table);
         tl.removeAllViews();
+
+
         dao.getAll(new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if(object instanceof ArrayList) {
                     tl.removeAllViews();
+
+
+                    // adding table header
+                    TextView label_header = new TextView(getActivity());
+                    label_header.setId(200);
+                    label_header.setText(R.string.departementname);
+                    label_header.setTextColor(Color.BLUE);
+                    label_header.setPadding(5, 5, 5, 5);
+                    label_header.setWidth(tl.getWidth() / 4);
+                    tl.addView(label_header);// add the column to the table row here
+
                     ArrayList<Department> array = (ArrayList<Department>)object;
                     for(int i = 0 ; i < array.size() ; i++) {
                         Department department = array.get(i);

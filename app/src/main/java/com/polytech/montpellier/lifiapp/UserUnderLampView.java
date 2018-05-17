@@ -11,9 +11,13 @@ import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import java.util.Date;
+import java.text.*;
+import java.util.Locale;
 
 
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
@@ -34,7 +38,7 @@ public class UserUnderLampView extends AppCompatActivity {
 
     final Context context = this;
 
-    ProductDAO daoProduct = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
+    DiscountDAO daoDiscount = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO();
 
 
     @SuppressLint("ResourceType")
@@ -68,6 +72,14 @@ public class UserUnderLampView extends AppCompatActivity {
         Intent intent = getIntent();
         intent.getStringExtra("lampName");
         final int pkDep = intent.getIntExtra("lampDep", 0);
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        final Date dateToday = new Date();
+
+
+        DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
+
+
 
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Department/" + pkDep + "/Products/", new ResponseHandler() {
             @Override
@@ -107,7 +119,8 @@ public class UserUnderLampView extends AppCompatActivity {
                                                     System.out.println("current Discounr  " + currentDiscount);
                                                     final int idDiscount = currentDiscount.getInt("idDiscount");
 
-                                                    Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/" + idDiscount, new ResponseHandler() {
+                                                    daoDiscount.getAllByDate(dateToday, new ResponseHandler() {
+
                                                         @Override
                                                         public void onSuccess(Object object) {
                                                             if (object == null) {
@@ -115,7 +128,6 @@ public class UserUnderLampView extends AppCompatActivity {
                                                             } else {
 
 
-                                                                System.out.println("OBJECT IDDISCOUNT" + object);
 
                                                                 JSONArray discounts = (JSONArray) object;
 
@@ -125,9 +137,10 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                         JSONObject discount = discounts.getJSONObject(i);
 
                                                                         String date_end = discount.getString("date_end");
-                                                                        System.out.println("date end" + date_end);
-                                                                        System.out.println("discount.lentgh " + discount.length());
-                                                                        System.out.println("discountttt " + discount);
+
+                                                                        String date_start = discount.getString("date_start");
+
+
                                                                         int fidelity = discount.getInt("fidelity");
 
                                                                         int color;
@@ -137,92 +150,93 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                             color = Color.GREEN;
                                                                         }
 
-                                                                        if (discount.length() == 14) {
-                                                                            System.out.println("here walla 8");
+                                                                         if (discount.length() == 14) {
+                                                                                System.out.println("here walla 8");
 
-                                                                            float percentage = (float) discount.getDouble("percentage");
+                                                                                float percentage = (float) discount.getDouble("percentage");
 
-                                                                            TableRow row = new TableRow(context);
-                                                                            row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-                                                                            row.setGravity(Gravity.CENTER_HORIZONTAL);
-                                                                            row.setBackgroundColor(color);
-                                                                            row.setId(discount.getInt("idDiscount"));
-                                                                            row.setOnClickListener(new View.OnClickListener() {
-                                                                                @Override
-                                                                                public void onClick(View v) {
-                                                                                    Intent intent = new Intent(UserUnderLampView.this, DiscountSummary.class);
-                                                                                    intent.putExtra("idDiscount",idDiscount);
-                                                                                    intent.putExtra("idProduct",idProduct);
-                                                                                    intent.putExtra("idDepartement", pkDep);
-                                                                                    startActivity(intent);
-                                                                                }
-                                                                            });
-
-
-                                                                            TextView label_Product = new TextView(context);
-                                                                            label_Product.setText(nameProduct);
-                                                                            label_Product.setTextColor(Color.BLACK);
-                                                                            label_Product.setPadding(5, 5, 5, 5);
-                                                                            label_Product.setWidth(tl.getWidth() / 4);
-                                                                            row.addView(label_Product);
-
-                                                                            TextView percentage_Discount = new TextView(context);
-                                                                            percentage_Discount.setText(percentage + "% off");
-                                                                            percentage_Discount.setTextColor(Color.BLACK);
-                                                                            percentage_Discount.setPadding(5, 5, 5, 5);
-                                                                            percentage_Discount.setWidth(tl.getWidth() / 4);
-
-                                                                            row.addView(percentage_Discount);
-
-                                                                            tl.addView(row);
-                                                                        } else if (discount.length() == 15) {
+                                                                                TableRow row = new TableRow(context);
+                                                                                row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+                                                                                row.setGravity(Gravity.CENTER_HORIZONTAL);
+                                                                                row.setBackgroundColor(color);
+                                                                                row.setId(discount.getInt("idDiscount"));
+                                                                                row.setOnClickListener(new View.OnClickListener() {
+                                                                                    @Override
+                                                                                    public void onClick(View v) {
+                                                                                        Intent intent = new Intent(UserUnderLampView.this, DiscountSummary.class);
+                                                                                        intent.putExtra("idDiscount", idDiscount);
+                                                                                        intent.putExtra("idProduct", idProduct);
+                                                                                        intent.putExtra("idDepartement", pkDep);
+                                                                                        startActivity(intent);
+                                                                                    }
+                                                                                });
 
 
-                                                                            int bought = discount.getInt("Bought");
-                                                                            int free = discount.getInt("Free");
+                                                                                TextView label_Product = new TextView(context);
+                                                                                label_Product.setText(nameProduct);
+                                                                                label_Product.setTextColor(Color.BLACK);
+                                                                                label_Product.setPadding(5, 5, 5, 5);
+                                                                                label_Product.setWidth(tl.getWidth() / 4);
+                                                                                row.addView(label_Product);
 
-                                                                            TableRow row = new TableRow(context);
-                                                                            row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-                                                                            row.setGravity(Gravity.CENTER_HORIZONTAL);
-                                                                            row.setBackgroundColor(color);
-                                                                            row.setId(discount.getInt("idDiscount"));
-                                                                            row.setOnClickListener(new View.OnClickListener() {
-                                                                                @Override
-                                                                                public void onClick(View v) {
-                                                                                    Intent intent = new Intent(UserUnderLampView.this, DiscountSummary.class);
-                                                                                    intent.putExtra("idDiscount",idDiscount);
-                                                                                    intent.putExtra("idProduct",idProduct);
-                                                                                    intent.putExtra("idDepartement", pkDep);
-                                                                                    startActivity(intent);
-                                                                                }
-                                                                            });
-                                                                            System.out.println("here walla");
+                                                                                TextView percentage_Discount = new TextView(context);
+                                                                                percentage_Discount.setText(percentage + "% off");
+                                                                                percentage_Discount.setTextColor(Color.BLACK);
+                                                                                percentage_Discount.setPadding(5, 5, 5, 5);
+                                                                                percentage_Discount.setWidth(tl.getWidth() / 4);
+
+                                                                                row.addView(percentage_Discount);
+
+                                                                                tl.addView(row);
+                                                                            } else if (discount.length() == 15) {
 
 
-                                                                            TextView label_Product = new TextView(context);
-                                                                            label_Product.setText(nameProduct);
-                                                                            label_Product.setTextColor(Color.BLACK);
-                                                                            label_Product.setPadding(5, 5, 5, 5);
-                                                                            label_Product.setWidth(tl.getWidth() / 4);
-                                                                            row.addView(label_Product);
+                                                                                int bought = discount.getInt("Bought");
+                                                                                int free = discount.getInt("Free");
 
-                                                                            TextView boughtView = new TextView(context);
-                                                                            boughtView.setText(bought + " acheté");
-                                                                            boughtView.setTextColor(Color.BLACK);
-                                                                            boughtView.setPadding(5, 5, 5, 5);
-                                                                            boughtView.setWidth(tl.getWidth() / 4);
-                                                                            row.addView(boughtView);
+                                                                                TableRow row = new TableRow(context);
+                                                                                row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+                                                                                row.setGravity(Gravity.CENTER_HORIZONTAL);
+                                                                                row.setBackgroundColor(color);
+                                                                                row.setId(discount.getInt("idDiscount"));
+                                                                                row.setOnClickListener(new View.OnClickListener() {
+                                                                                    @Override
+                                                                                    public void onClick(View v) {
+                                                                                        Intent intent = new Intent(UserUnderLampView.this, DiscountSummary.class);
+                                                                                        intent.putExtra("idDiscount", idDiscount);
+                                                                                        intent.putExtra("idProduct", idProduct);
+                                                                                        intent.putExtra("idDepartement", pkDep);
+                                                                                        startActivity(intent);
+                                                                                    }
+                                                                                });
+                                                                                System.out.println("here walla");
 
-                                                                            TextView freeView = new TextView(context);
-                                                                            freeView.setText(free + " offert");
-                                                                            freeView.setTextColor(Color.BLACK);
-                                                                            freeView.setPadding(5, 5, 5, 5);
-                                                                            freeView.setWidth(tl.getWidth() / 4);
-                                                                            row.addView(freeView);
 
-                                                                            tl.addView(row);
+                                                                                TextView label_Product = new TextView(context);
+                                                                                label_Product.setText(nameProduct);
+                                                                                label_Product.setTextColor(Color.BLACK);
+                                                                                label_Product.setPadding(5, 5, 5, 5);
+                                                                                label_Product.setWidth(tl.getWidth() / 4);
+                                                                                row.addView(label_Product);
 
-                                                                        }// lseif lenght 9
+                                                                                TextView boughtView = new TextView(context);
+                                                                                boughtView.setText(bought + " acheté");
+                                                                                boughtView.setTextColor(Color.BLACK);
+                                                                                boughtView.setPadding(5, 5, 5, 5);
+                                                                                boughtView.setWidth(tl.getWidth() / 4);
+                                                                                row.addView(boughtView);
+
+                                                                                TextView freeView = new TextView(context);
+                                                                                freeView.setText(free + " offert");
+                                                                                freeView.setTextColor(Color.BLACK);
+                                                                                freeView.setPadding(5, 5, 5, 5);
+                                                                                freeView.setWidth(tl.getWidth() / 4);
+                                                                                row.addView(freeView);
+
+                                                                                tl.addView(row);
+
+                                                                            }// lseif lenght 9
+
 
 
                                                                     } catch (JSONException e) {
@@ -281,6 +295,8 @@ public class UserUnderLampView extends AppCompatActivity {
         Intent intent = new Intent(UserUnderLampView.this, MainActivity.class);
         startActivity(intent);
     }
+
+
 
 }
 
