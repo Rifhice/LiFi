@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< refs/remotes/origin/master
-<<<<<<< refs/remotes/origin/master
-<<<<<<< HEAD
->>>>>>> master
 <component name="libraryTable">
   <library name="Gradle: android.arch.lifecycle:livedata-core-1.1.0">
     <CLASSES>
@@ -15,44 +9,4 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/livedata-core/1.1.0/300f89e645a95de0bdc6d8833beeee6e3045df06/livedata-core-1.1.0-sources.jar!/" />
     </SOURCES>
   </library>
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< Updated upstream
->>>>>>> attemps animation
-<component name="libraryTable">
-  <library name="Gradle: android.arch.lifecycle:livedata-core-1.1.0">
-    <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/1382e3b2f8fb53c6ca2eba2498c7d7c7/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/1382e3b2f8fb53c6ca2eba2498c7d7c7/jars/classes.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/livedata-core/1.1.0/300f89e645a95de0bdc6d8833beeee6e3045df06/livedata-core-1.1.0-sources.jar!/" />
-    </SOURCES>
-  </library>
-<<<<<<< refs/remotes/origin/master
->>>>>>> master
-=======
-=======
-=======
->>>>>>> animationfix
-<component name="libraryTable">
-  <library name="Gradle: android.arch.lifecycle:livedata-core-1.1.0">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/8acdf5db0345f3e46edb052f6a550669/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/8acdf5db0345f3e46edb052f6a550669/res" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/livedata-core/1.1.0/300f89e645a95de0bdc6d8833beeee6e3045df06/livedata-core-1.1.0-sources.jar!/" />
-    </SOURCES>
-  </library>
-<<<<<<< refs/remotes/origin/master
->>>>>>> Stashed changes
->>>>>>> attemps animation
-=======
->>>>>>> animationfix
->>>>>>> master
 </component>

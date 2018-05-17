@@ -54,7 +54,7 @@ public class AdminProductView extends Fragment{
         updateDataAndView();
     }
 
-    /*
+
     @Override
     public void openNewLampPopUp(final int lamp) {
         new AlertDialog.Builder(this)
@@ -70,7 +70,7 @@ public class AdminProductView extends Fragment{
                     }})
                 .setNegativeButton(android.R.string.no, null).show();
     }
-    */
+
     public void updateDataAndView(){
         FloatingActionButton fab = getView().findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

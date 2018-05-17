@@ -1,74 +1,12 @@
-<<<<<<< HEAD
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-fragment-27.1.1">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/dcd0d8e00ac425c9294c0ae3b96f00cf/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/dcd0d8e00ac425c9294c0ae3b96f00cf/res" />
-=======
-<<<<<<< refs/remotes/origin/master
-<<<<<<< refs/remotes/origin/master
-=======
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< HEAD
->>>>>>> attemps animation
-<component name="libraryTable">
-  <library name="Gradle: com.android.support:support-fragment-27.1.1">
-    <CLASSES>
-<<<<<<< HEAD
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/61743a4fc356dc691ba7566cda318ecf/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/61743a4fc356dc691ba7566cda318ecf/jars/classes.jar!/" />
-=======
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/dcd0d8e00ac425c9294c0ae3b96f00cf/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/dcd0d8e00ac425c9294c0ae3b96f00cf/res" />
->>>>>>> master
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
-<<<<<<< refs/remotes/origin/master
-=======
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> animationfix
-<component name="libraryTable">
-  <library name="Gradle: com.android.support:support-fragment-27.1.1">
-    <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/83031ea9ab9abc2cbc861a34e1331b7a/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/83031ea9ab9abc2cbc861a34e1331b7a/jars/classes.jar!/" />
->>>>>>> master
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/" />
-    </SOURCES>
-  </library>
-<<<<<<< HEAD
-=======
-<<<<<<< refs/remotes/origin/master
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> AdminDiscount
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
->>>>>>> attemps animation
-=======
->>>>>>> animationfix
->>>>>>> master
 </component>
