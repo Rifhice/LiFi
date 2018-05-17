@@ -1,6 +1,8 @@
 package com.polytech.montpellier.lifiapp.Helper;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.provider.SyncStateContract;
 import android.support.annotation.NonNull;
 import android.util.Base64;
@@ -15,11 +17,15 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.JsonObject;
+import com.oledcomm.soft.lifiapp.R;
 //import com.oledcomm.soft.lifiapp.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.SQLOutput;
 import java.util.Collection;
 import java.util.HashMap;
@@ -182,9 +188,32 @@ public class Helper {
     }
 
     public float formatFloat(float number){
+        return 0;
+    }
 
-return 0;
+    public static boolean hasActiveInternetConnection(Context context) {
+        try {
+            HttpURLConnection urlc = (HttpURLConnection)
+                    (new URL("http://clients3.google.com/generate_204")
+                            .openConnection());
+            urlc.setRequestProperty("User-Agent", "Test");
+            urlc.setRequestProperty("Connection", "close");
+            urlc.setConnectTimeout(1500);
+            urlc.connect();
+            return (urlc.getResponseCode() == 204 && urlc.getContentLength() == 0);
+        } catch (IOException e) {
+            System.out.println("Error");
+        }
+        new AlertDialog.Builder(context)
+                .setTitle("Internet")
+                .setMessage("No internet connection !")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                    }})
+                .setNegativeButton(android.R.string.no, null).show();
+        return false;
     }
 }
 

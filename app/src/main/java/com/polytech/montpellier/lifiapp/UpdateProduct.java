@@ -17,6 +17,7 @@ import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
+import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Product;
@@ -35,6 +36,7 @@ public class UpdateProduct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_add);
+        Helper.hasActiveInternetConnection(this);
         Intent intent = getIntent();
 
         //initialization fields

@@ -30,6 +30,7 @@ public class UpdateLamp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lamp_add);
+        Helper.hasActiveInternetConnection(this);
         Helper.getInstance(this);
         Intent intent = getIntent();
         final int id = intent.getIntExtra("lamp",0);

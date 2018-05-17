@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
+import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
@@ -32,6 +33,7 @@ public class UpdateDepartment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_department);
+        Helper.hasActiveInternetConnection(this);
         final EditText text = (EditText) findViewById(R.id.nametf);
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
