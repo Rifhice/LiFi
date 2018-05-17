@@ -1,6 +1,5 @@
 package com.polytech.montpellier.lifiapp;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,8 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,13 +22,11 @@ import android.widget.TextView;
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
-import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Discounts.Discount;
 import com.polytech.montpellier.lifiapp.Model.Discounts.PercentageDiscount;
 import com.polytech.montpellier.lifiapp.Model.Discounts.QuantityDiscount;
-import com.polytech.montpellier.lifiapp.Model.Lamp;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -56,23 +53,7 @@ public class AdminDiscountView extends Fragment {
         return inflater.inflate(R.layout.lampall_display, container, false);
     }
 
-    /*
-@Override
-public void openNewLampPopUp(final int lamp) {
-    new AlertDialog.Builder(context)
-            .setTitle("New Lamp")
-            .setMessage("You are standing under a new lamp, do you want to add it ?")
-            .setIcon(android.R.drawable.ic_dialog_alert)
-            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
-                public void onClick(DialogInterface dialog, int whichButton) {
-                    Intent intent = new Intent(context, AddLamp.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtra("lamp",lamp);
-                    context.startActivity(intent);
-                }})
-            .setNegativeButton(android.R.string.no, null).show();
-}
-*/
     public void updateDataAndView() {
         FloatingActionButton fab = getView().findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -173,8 +154,6 @@ public void openNewLampPopUp(final int lamp) {
                             public void onClick(View v) {
                                 Intent intent = new Intent(getActivity(), DiscountSummary.class);
                                 intent.putExtra("idDiscount", discount.getId());
-                                // intent.putExtra("idProduct",idProduct);
-                                //intent.putExtra("idDepartement", pkDep);
                                 startActivity(intent);
                             }
                         });
@@ -246,8 +225,6 @@ public void openNewLampPopUp(final int lamp) {
                             public void onClick(View v) {
                                 Intent intent = new Intent(getActivity(), UpdateDiscount.class);
                                 intent.putExtra("discountId",row.getId());
-                               // intent.putExtra("lamp",row.getId());
-                                //intent.putExtra("name_department", label_department.getText());
                                 startActivity(intent);
                             }
                         });

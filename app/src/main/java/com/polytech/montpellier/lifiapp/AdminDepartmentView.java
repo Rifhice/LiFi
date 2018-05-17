@@ -1,6 +1,5 @@
 package com.polytech.montpellier.lifiapp;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,8 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,11 +22,9 @@ import android.widget.TextView;
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
-import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
-import com.polytech.montpellier.lifiapp.Model.Lamp;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -216,7 +213,7 @@ public class AdminDepartmentView extends Fragment{
                         row.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                System.out.println(v.getId());
+                                //System.out.println(v.getId());
                             }
                         });
                         tl.addView(row, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
