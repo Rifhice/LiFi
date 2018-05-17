@@ -84,7 +84,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
                         final Date start = sdf.parse(current.getString("date_start"));
                         final Date end = sdf.parse(current.getString("date_end"));
                         final Date creation = sdf.parse(current.getString("date_update"));
-                        Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.getInt("idDepartment")));
+                        Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.optInt("idDepartment")));
                         try{
                             float percentage = (float)current.getDouble("percentage");
                             discounts.add(new PercentageDiscount(id,prod,start,end,creation,percentage,fidelity));
@@ -188,7 +188,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
                         final Date start = sdf.parse(current.getString("date_start"));
                         final Date end = sdf.parse(current.getString("date_end"));
                         final Date creation = sdf.parse(current.getString("date_update"));
-                        Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.getInt("idDepartment")));
+                        Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.optInt("idDepartment")));
                         try{
                             float percentage = (float)current.getDouble("percentage");
                             discounts.add(new PercentageDiscount(id,prod,start,end,creation,percentage,fidelity));
@@ -236,7 +236,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
                         final Date start = sdf.parse(current.getString("date_start"));
                         final Date end = sdf.parse(current.getString("date_end"));
                         final Date creation = sdf.parse(current.getString("date_update"));
-                        Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.getInt("idDepartment")));
+                        Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.optInt("idDepartment")));
                         try{
                             if (date.compareTo(start)<= 0 && date.compareTo(end)>= 0) {
                                 float percentage = (float) current.getDouble("percentage");

@@ -28,6 +28,10 @@
     <string name="loginSuccess">Login Success</string>
     <string name="loginFailed">Bad password</string>
     <string name="alert">Alert</string>
+    <string name="passwordNotEquals">Password not equals</string>
+    <string name="error">Error</string>
+    <string name="cancel">Cancel</string>
+    <string name="deleteAllDepartment">You cannot delete all departments</string>
 
 
     <string name="addLeaveMessage">You are leaving, are you sure ?</string>

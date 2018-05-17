@@ -31,6 +31,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class AdminDepartmentView extends Fragment{
 
@@ -67,32 +68,32 @@ public class AdminDepartmentView extends Fragment{
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("Password");
+                builder.setTitle(getResources().getString(R.string.password));
 
                 LinearLayout layout = new LinearLayout(getActivity());
                 layout.setOrientation(LinearLayout.VERTICAL);
                 // Add a TextView here for the "Title" label, as noted in the comments
                 final EditText new1 = new EditText(getActivity());
                 new1.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                new1.setHint("New password");
+                new1.setHint(getResources().getString(R.string.newpassword));
                 layout.addView(new1); // Notice this is an add method
 
                 // Add another TextView here for the "Description" label
                 final EditText new2 = new EditText(getActivity());
                 new2.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                new2.setHint("New password");
+                new2.setHint(getResources().getString(R.string.newpassword));
                 layout.addView(new2); // Another add method
 
                 builder.setView(layout); // Again this is a set method, not add
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(getResources().getString(R.string.OK), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if(!new1.getText().toString().equals(new2.getText().toString())){
                             AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
-                            alertDialog.setTitle("Alert");
+                            alertDialog.setTitle(getResources().getString(R.string.alert));
                             alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
-                            alertDialog.setMessage("Password not equals");
-                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                            alertDialog.setMessage(getResources().getString(R.string.passwordNotEquals));
+                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getResources().getString(R.string.OK),
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
                                             dialog.dismiss();
@@ -110,10 +111,10 @@ public class AdminDepartmentView extends Fragment{
                                 @Override
                                 public void onError(Object object) {
                                     AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
-                                    alertDialog.setTitle("Alert");
+                                    alertDialog.setTitle(getResources().getString(R.string.alert));
                                     alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
-                                    alertDialog.setMessage("Error");
-                                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                    alertDialog.setMessage(getResources().getString(R.string.error));
+                                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getResources().getString(R.string.OK),
                                             new DialogInterface.OnClickListener() {
                                                 public void onClick(DialogInterface dialog, int which) {
                                                     dialog.dismiss();
@@ -125,7 +126,7 @@ public class AdminDepartmentView extends Fragment{
                         }
                     }
                 });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();
@@ -135,6 +136,7 @@ public class AdminDepartmentView extends Fragment{
             }
         });
         final TableLayout tl = (TableLayout) getView().findViewById(R.id.main_table);
+        final ArrayList<Integer> dep = new ArrayList<>();
         tl.removeAllViews();
         dao.getAll(new ResponseHandler() {
             @Override
@@ -156,6 +158,24 @@ public class AdminDepartmentView extends Fragment{
                         label_lamp.setWidth(tl.getWidth() / 3);
                         row.addView(label_lamp);
 
+                        dao.getAll(new ResponseHandler() {
+
+                            @Override
+                            public void onSuccess(Object object) {
+
+                                if (object instanceof ArrayList) {
+
+                                    ArrayList<Department> array = (ArrayList<Department>) object;
+                                    dep.add(array.size());
+
+                                }
+                            }
+
+                            @Override
+                            public void onError(Object object) {
+
+                            }
+                        });
 
                         Button delete = new Button(getActivity());
                         delete.setText(getResources().getString(R.string.delete));
@@ -163,37 +183,61 @@ public class AdminDepartmentView extends Fragment{
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {
-                                new AlertDialog.Builder(getActivity())
-                                        .setTitle(getResources().getString(R.string.deleteLamp))
-                                        .setMessage(getResources().getString(R.string.deleteLampMessage))
-                                        .setIcon(android.R.drawable.ic_dialog_alert)
-                                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                System.out.println(dep.get(0));
 
-                                            public void onClick(DialogInterface dialog, int whichButton) {
-                                                AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().delete(row.getId(), UserConnection.getInstance().getToken(), new ResponseHandler() {
-                                                    @Override
-                                                    public void onSuccess(Object object) {
-                                                        if(object instanceof JSONObject){
-                                                            System.out.println("JSON : " + object.toString());
-                                                            JSONObject res = (JSONObject) object;
-                                                            try {
-                                                                if(res.getInt("affectedRows") != 0){
-                                                                    tl.removeView(tl.findViewById(row.getId()));
+                                if(dep.get(0) >1) {
+                                    new AlertDialog.Builder(getActivity())
+                                            .setTitle(getResources().getString(R.string.deleteLamp))
+                                            .setMessage(getResources().getString(R.string.deleteLampMessage))
+                                            .setIcon(android.R.drawable.ic_dialog_alert)
+                                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                                                public void onClick(DialogInterface dialog, int whichButton) {
+
+
+
+                                                    dao.delete(row.getId(), UserConnection.getInstance().getToken(), new ResponseHandler() {
+                                                        @Override
+                                                        public void onSuccess(Object object) {
+                                                            if (object instanceof JSONObject) {
+                                                                System.out.println("JSON : " + object.toString());
+                                                                JSONObject res = (JSONObject) object;
+                                                                try {
+                                                                    if (res.getInt("affectedRows") != 0) {
+                                                                        tl.removeView(tl.findViewById(row.getId()));
+                                                                    }
+                                                                } catch (JSONException e) {
+                                                                    e.printStackTrace();
                                                                 }
-                                                            } catch (JSONException e) {
-                                                                e.printStackTrace();
                                                             }
                                                         }
-                                                    }
 
-                                                    @Override
-                                                    public void onError(Object object) {
+                                                        @Override
+                                                        public void onError(Object object) {
 
-                                                    }
-                                                });
-                                            }})
-                                        .setNegativeButton(android.R.string.no, null).show();
+                                                        }
+                                                    });
+                                                    System.out.println(dep.get(0));
+                                                    dep.set(0, dep.get(0) - 1) ;
+                                                }
+
+
+                                            })
+                                            .setNegativeButton(android.R.string.no, null).show();
+
+
+                                }else{
+                                    new android.app.AlertDialog.Builder(getActivity())
+                                            .setTitle(getResources().getString(R.string.alert))
+                                            .setMessage(getResources().getString(R.string.deleteAllDepartment))
+                                            .setIcon(android.R.drawable.ic_dialog_alert)
+                                            .setPositiveButton(android.R.string.yes, null).show();
+
+                                }
+
+
                             }
+
                         });
                         row.addView(delete);
 

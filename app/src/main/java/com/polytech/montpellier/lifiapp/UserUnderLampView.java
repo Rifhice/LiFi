@@ -153,7 +153,7 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                                     Intent intent = new Intent(UserUnderLampView.this, DiscountSummary.class);
                                                                                     intent.putExtra("idDiscount",idDiscount);
                                                                                     intent.putExtra("idProduct",idProduct);
-                                                                                    intent.putExtra("idDepartement", pkDep);
+                                                                                    intent.putExtra("idDepartment", pkDep);
                                                                                     startActivity(intent);
                                                                                 }
                                                                             });

@@ -18,9 +18,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.content.Context;
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
+import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 
 import java.util.Calendar;
 

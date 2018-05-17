@@ -261,20 +261,5 @@ public class AdminProductView extends Fragment{
     }
 
 
-    /*@Override
-    public void openNewLampPopUp(final int lamp) {
-        new AlertDialog.Builder(this)
-                .setTitle("New Lamp")
-                .setMessage("You are standing under a new lamp, do you want to add it ?")
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        Intent intent = new Intent(context, AddLamp.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.putExtra("lamp",lamp);
-                        context.startActivity(intent);
-                    }})
-                .setNegativeButton(android.R.string.no, null).show();
-    }*/
 
 }

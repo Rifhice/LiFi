@@ -57,7 +57,6 @@ public class MySqlProductDAO extends ProductDAO {
     @Override
     public void getById(int id, final ResponseHandler response) throws DAOException {
         final ArrayList<Product> product =  new ArrayList<Product>();
-        //TODO : getbyId in product.js
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Product/" + id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
@@ -84,8 +83,6 @@ public class MySqlProductDAO extends ProductDAO {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-
-                            //System.out.println(" ICU idProduct : " +current.getInt("idProduct") + ",name : " + current.getString("nameProduct")+",description : "+  current.getString("descriptionProduct")+ ",price : "+  Float.parseFloat(current.getString("priceProduct"))+ ",brand : "+  current.getString("brandProduct")+ ",idDepartment : " +current.getInt("idDepartment")+ "name : "+ current.getString("nameDepartment"));
                             response.onSuccess(product);
 
                     }

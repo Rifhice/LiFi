@@ -10,9 +10,13 @@ import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
+import com.polytech.montpellier.lifiapp.Model.Product;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 /**
  * Created by Kevin on 03/05/2018.
@@ -71,10 +75,14 @@ public class LampController extends AppCompatActivity {
                     public void onSuccess(Object object) {
                         if(object != null){
                             Intent intent = new Intent(context, UserUnderLampView.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            Lamp lamp = (Lamp)object;
-                            intent.putExtra("lamp",lamp.getId());
+                            ArrayList<Lamp> array = (ArrayList<Lamp>)object;
+                            Lamp lamp = array.get(0);
+
+                            intent.putExtra("lamp", lamp.getId());
                             intent.putExtra("lampName",lamp.getName());
-                            intent.putExtra("lampDep",lamp.getDepartment().getId());
+                            if(lamp.getDepartment() != null){
+                                intent.putExtra("lampDep",lamp.getDepartment().getId());
+                            }
 
 
                             context.startActivity(intent);
