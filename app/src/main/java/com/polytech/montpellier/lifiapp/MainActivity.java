@@ -2,12 +2,11 @@ package com.polytech.montpellier.lifiapp;
 
 import android.Manifest;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.AsyncTask;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -21,25 +20,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-//import com.oledcomm.soft.androidlifisdk.ILiFiPosition;
-//import com.oledcomm.soft.androidlifisdk.LiFiSdkManager;
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
-import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
-
-//import steelkiwi.com.library.DotsLoaderView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private int nbClickOk = 7;
     private static LampListener listener = null;
     final static int PERMISSION_REQUEST_AUDIO = 1;
-   // DotsLoaderView dotsLoaderView;
+
 
     public void instanciateListener(){
         if(listener == null){
@@ -69,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
         Helper.hasActiveInternetConnection(this);
         Helper.getInstance(this);
 
-       // dotsLoaderView = findViewById(R.id.dotsLoader);
-       // dowloadDemo();
 
 
         testText = (TextView)findViewById(R.id.testText);
@@ -175,33 +157,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-   /* private void dowloadDemo() {
-        AsyncTask<String,String,String>  demoAsync = new AsyncTask<String, String, String>() {
-
-            @Override
-            protected void onPreExecute() {
-                dotsLoaderView.show();
-            }
-
-            @Override
-            protected String doInBackground(String... strings) {
-                try {
-                    Thread.sleep(500);
-                }catch (InterruptedException e){
-                    e.printStackTrace();
-                }return "done";
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-                if(s.equals("done")){
-                    dotsLoaderView.hide();
-                }
-            }
-        };
-        demoAsync.execute();
-
-    }*/
 
     @Override
      protected void onResume() {
@@ -224,7 +179,6 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode) {
             case PERMISSION_REQUEST_AUDIO: {
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //Log.d(TAG, "coarse location permission granted");
                     instanciateListener();
                 } else {
                     final AlertDialog.Builder builder = new AlertDialog.Builder(this);

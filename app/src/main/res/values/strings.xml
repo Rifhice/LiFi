@@ -25,6 +25,9 @@
     <string name="blankFieldMessage">Fields cannot be left blank</string>
     <string name="currentpassword">Current password</string>
     <string name="newpassword">New password</string>
+    <string name="loginSuccess">Login Success</string>
+    <string name="loginFailed">Bad password</string>
+    <string name="alert">Alert</string>
 
 
     <string name="addLeaveMessage">You are leaving, are you sure ?</string>

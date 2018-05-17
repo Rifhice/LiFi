@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: android.arch.core:runtime-1.1.0">
     <CLASSES>
+<<<<<<< refs/remotes/origin/master
 <<<<<<< HEAD
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/27159be82099e58c192890b0be80c292/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/27159be82099e58c192890b0be80c292/jars/classes.jar!/" />
@@ -8,6 +9,10 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f223fb9f69eafbca7b6e6f90cb71f5e3/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f223fb9f69eafbca7b6e6f90cb71f5e3/jars/classes.jar!/" />
 >>>>>>> master
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/06d25e81afb8f4397ec9112730455403/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/06d25e81afb8f4397ec9112730455403/jars/classes.jar!/" />
+>>>>>>> update discount
     </CLASSES>
     <JAVADOC />
     <SOURCES>

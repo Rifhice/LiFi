@@ -31,7 +31,6 @@ import com.polytech.montpellier.lifiapp.Model.Discounts.PercentageDiscount;
 import com.polytech.montpellier.lifiapp.Model.Discounts.QuantityDiscount;
 import com.polytech.montpellier.lifiapp.Model.Product;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -70,8 +69,8 @@ public class AddDiscount extends AppCompatActivity {
         fidelity = (CheckBox)findViewById(R.id.checkBox);
         swi = (Switch) findViewById(R.id.switch1);
 
-        startButton = (Button) findViewById(R.id.button1);
-        endButton = (Button) findViewById(R.id.button2);
+        startButton = (Button) findViewById(R.id.endDateButton);
+        endButton = (Button) findViewById(R.id.startDateButton);
 
         startDate = Calendar.getInstance();
         endDate = Calendar.getInstance();

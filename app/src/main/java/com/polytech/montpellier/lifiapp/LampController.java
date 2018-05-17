@@ -1,16 +1,9 @@
 package com.polytech.montpellier.lifiapp;
 
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TableLayout;
-import android.widget.TextView;
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
@@ -20,8 +13,6 @@ import com.polytech.montpellier.lifiapp.Model.Lamp;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.List;
 
 /**
  * Created by Kevin on 03/05/2018.
@@ -51,7 +42,6 @@ public class LampController extends AppCompatActivity {
 
     public void onNewLamp(final JSONObject lamp, final Context context) throws JSONException {
         if(AdminActivity.isIsDisplayed() && UserConnection.getInstance().isConnected()){
-            //TODO check if lamp exists, if it doesn't, ask the user if he wants to register it
             lampDAO.getById(lamp.getInt("id"), new ResponseHandler() {
                 @Override
                 public void onSuccess(Object object) {
@@ -74,14 +64,12 @@ public class LampController extends AppCompatActivity {
             });
         }
         else {
-            //TODO check if lamp exists, if it does display info, if it doesn't, no behaviour
             System.out.println("\nLiFi reçu: id = " + lamp.toString());
             if(lamp.has("id")) {
                 lampDAO.getById(lamp.getInt("id"), new ResponseHandler() {
                     @Override
                     public void onSuccess(Object object) {
                         if(object != null){
-                            //TODO update the view
                             Intent intent = new Intent(context, UserUnderLampView.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             Lamp lamp = (Lamp)object;
                             intent.putExtra("lamp",lamp.getId());
@@ -89,7 +77,6 @@ public class LampController extends AppCompatActivity {
                             intent.putExtra("lampDep",lamp.getDepartment().getId());
 
 
-                            //TODO Add lamp as parameter
                             context.startActivity(intent);
                             System.out.println("It exists");
                         }
