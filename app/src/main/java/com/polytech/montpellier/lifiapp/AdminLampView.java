@@ -142,11 +142,11 @@ public class AdminLampView extends Fragment{
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                /*Intent intent = new Intent(AdminLampView.this, UpdateLamp.class);
+                                Intent intent = new Intent(getActivity(), UpdateLamp.class);
                                 intent.putExtra("name",label_lamp.getText());
                                 intent.putExtra("lamp",row.getId());
                                 intent.putExtra("name_department", label_department.getText());
-                                startActivity(intent);*/
+                                startActivity(intent);
                             }
                         });
                         row.addView(update);

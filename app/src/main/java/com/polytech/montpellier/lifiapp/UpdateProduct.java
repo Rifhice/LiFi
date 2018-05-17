@@ -120,7 +120,7 @@ public class UpdateProduct extends AppCompatActivity {
         });
 
 
-        Button validate = (Button)findViewById(R.id.button_addProduct);
+        Button validate = findViewById(R.id.button_addProduct);
         validate.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {

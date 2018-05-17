@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<component name="libraryTable">
-  <library name="Gradle: androidlifisdk-release:@aar">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/4155cafd7c8a65069063b1aedddc7992/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/androidlifisdk-release.aar/4155cafd7c8a65069063b1aedddc7992/res" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-=======
 <component name="libraryTable">
   <library name="Gradle: androidlifisdk-release:@aar">
     <CLASSES>
@@ -18,5 +7,4 @@
     <JAVADOC />
     <SOURCES />
   </library>
->>>>>>> master
 </component>

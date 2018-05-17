@@ -77,11 +77,9 @@
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.UpdateDepartment" >
         </activity>
-<<<<<<< HEAD
-        <activity android:name="com.polytech.montpellier.lifiapp.AddDiscount" >
-=======
         <activity android:name="com.polytech.montpellier.lifiapp.ProductSummary" >
->>>>>>> master
+        </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.AddDiscount" >
         </activity>
 
         <service

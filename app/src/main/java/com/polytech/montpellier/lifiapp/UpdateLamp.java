@@ -41,7 +41,7 @@ public class UpdateLamp extends AppCompatActivity {
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Lamp lamp = new Lamp(id,text.getText().toString(),new Department(2));
+                Lamp lamp = new Lamp(id,text.getText().toString(),new Department(idDep));
                 AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO().update(lamp,UserConnection.getInstance().getToken(), new ResponseHandler() {
                     @Override
                     public void onSuccess(Object object) {

@@ -1,6 +1,8 @@
 package com.polytech.montpellier.lifiapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -53,7 +55,17 @@ public class Login extends AppCompatActivity {
     }
 
     public void loginError(){
-
+        AlertDialog alertDialog = new AlertDialog.Builder(Login.this).create();
+        alertDialog.setTitle("Alert");
+        alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+        alertDialog.setMessage("Bad Password");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
     }
 
 }
