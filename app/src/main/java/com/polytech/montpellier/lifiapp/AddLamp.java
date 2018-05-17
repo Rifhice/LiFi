@@ -11,8 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TableLayout;
-import android.widget.TextView;
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
@@ -39,18 +37,34 @@ public class AddLamp extends AppCompatActivity {
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Lamp lamp = new Lamp(id,text.getText().toString(),new Department(idDep));
-                AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO().create(lamp,"5f4dcc3b5aa765d61d8327deb882cf99", new ResponseHandler() {
-                    @Override
-                    public void onSuccess(Object object) {
-                        finish();
-                    }
 
-                    @Override
-                    public void onError(Object object) {
+                if (!text.getText().toString().isEmpty()) {
+                    Lamp lamp = new Lamp(id, text.getText().toString(), new Department(idDep));
+                    AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO().create(lamp, UserConnection.getInstance().getToken(), new ResponseHandler() {
+                        @Override
+                        public void onSuccess(Object object) {
+                            finish();
+                        }
 
-                    }
-                });
+                        @Override
+                        public void onError(Object object) {
+
+                        }
+                    });
+                }
+                else{
+                    android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(AddLamp.this).create();
+                    alertDialog.setTitle("Alert");
+                    alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+                    alertDialog.setMessage(getResources().getString(R.string.blankFieldMessage));
+                    alertDialog.setButton(android.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.show();
+                }
             }
         });
 
