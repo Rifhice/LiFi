@@ -6,6 +6,7 @@ import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
+import com.polytech.montpellier.lifiapp.MainActivity;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Discounts.Discount;
 import com.polytech.montpellier.lifiapp.Model.Discounts.PercentageDiscount;
@@ -29,7 +30,7 @@ import java.util.Map;
 
 public class MySqlDiscountDAO extends DiscountDAO {
 
-    String url = "http://81.64.139.113:1337/api/Discount/" ;
+    String url = MainActivity.url + "Discount/" ;
     @Override
     public void create(Discount obj, String token, final ResponseHandler response) throws DAOException {
         Map<String, String> params = new HashMap<String, String>();
@@ -37,7 +38,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
         params.put("date_start", new SimpleDateFormat( "yyyy-MM-dd").format(obj.getDateFin()));
         params.put("date_end",  new SimpleDateFormat( "yyyy-MM-dd").format(obj.getDateDebut()));
         params.put("fidelity", obj.getFidelity() + "");
-        String url = "http://81.64.139.113:1337/api/Discount/";
+        String url = MainActivity.url + "Discount/";
         if(obj instanceof PercentageDiscount){
             params.put("percentage", ((PercentageDiscount)obj).getPercentage() + "");
             url += "Percentage";
@@ -65,7 +66,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
         final ArrayList<Discount> discounts =  new ArrayList<Discount>();
         System.out.println("IDRECEIVEDDAO" + id);
 
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/"+id, new ResponseHandler() {
+        Helper.getInstance().GET(MainActivity.url + "Discount/"+id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 System.out.println("OBJECT RECEIVED" + object);
@@ -155,7 +156,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
 
     @Override
     public void delete(int id,String token, final ResponseHandler response) throws DAOException {
-        Helper.getInstance().DELETE("http://81.64.139.113:1337/api/Discount/" + id, token, new ResponseHandler() {
+        Helper.getInstance().DELETE(MainActivity.url + "Discount/" + id, token, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 response.onSuccess(object);
@@ -172,7 +173,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
     public void getAll(final ResponseHandler response) throws DAOException {
         final ArrayList<Discount> discounts =  new ArrayList<Discount>();
 
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/", new ResponseHandler() {
+        Helper.getInstance().GET(MainActivity.url + "Discount/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
 //                System.out.println("GET 1"+object.toString());
@@ -219,7 +220,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
     public void getAllByDate(final Date date ,final ResponseHandler response) throws DAOException {
         final ArrayList<Discount> discounts =  new ArrayList<Discount>();
 
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/", new ResponseHandler() {
+        Helper.getInstance().GET(MainActivity.url + "Discount/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 JSONArray jsonArray = new JSONArray();

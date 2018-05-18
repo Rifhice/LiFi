@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private int nbClickOk = 7;
     private static LampListener listener = null;
     final static int PERMISSION_REQUEST_AUDIO = 1;
+    public static String url;
 
 
     public void instanciateListener(){
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Resources res = getResources();
+        url = res.getString(R.string.url);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         Helper.hasActiveInternetConnection(this);

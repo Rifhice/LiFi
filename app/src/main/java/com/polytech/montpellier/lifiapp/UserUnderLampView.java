@@ -88,7 +88,7 @@ public class UserUnderLampView extends AppCompatActivity {
 
 
 
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Department/" + pkDep + "/Products/", new ResponseHandler() {
+        Helper.getInstance().GET(MainActivity.url + "Department/" + pkDep + "/Products/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if (object == null) {

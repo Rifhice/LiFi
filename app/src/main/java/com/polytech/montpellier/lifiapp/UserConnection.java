@@ -33,7 +33,7 @@ public class UserConnection {
     
     public void login(String password, final ResponseHandler responseHandler){
 
-        String url = "http://81.64.139.113:1337/api/Auth" ;
+        String url = MainActivity.url + "Auth" ;
        //TODO getResources().getString(R.string.url)
 
         Map<String, String> params = new HashMap<String, String>();
@@ -79,7 +79,7 @@ public class UserConnection {
     }
 
     public void changePassword(String newPass, final ResponseHandler res){
-        String url = "http://81.64.139.113:1337/api/Auth" ;
+        String url = MainActivity.url + "Auth" ;
         //TODO getResources().getString(R.string.url)
 
         Map<String, String> params = new HashMap<String, String>();
