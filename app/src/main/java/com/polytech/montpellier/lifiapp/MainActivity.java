@@ -55,9 +55,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Resources res = getResources();
         url = res.getString(R.string.url);
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        Helper.hasActiveInternetConnection(this);
+
         Helper.getInstance(this);
 
 

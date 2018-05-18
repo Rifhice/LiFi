@@ -1,5 +1,8 @@
 package com.polytech.montpellier.lifiapp;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +13,8 @@ import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import android.support.v7.app.AppCompatActivity;
 
 public class ChangePassword  extends AppCompatActivity {
+
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +40,15 @@ public class ChangePassword  extends AppCompatActivity {
 
                 @Override
                 public void onError(Object object) {
-                    System.out.println("ERRORREQUEST : " + object);
+                    new AlertDialog.Builder(context)
+                            .setTitle(getResources().getString(R.string.error))
+                            .setMessage(getResources().getString(R.string.erroroccured))
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+
+                                public void onClick(DialogInterface dialog, int whichButton) {
+
+                                }}).show();
                 }
             });
         }

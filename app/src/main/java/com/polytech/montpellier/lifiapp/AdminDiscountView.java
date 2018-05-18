@@ -1,5 +1,6 @@
 package com.polytech.montpellier.lifiapp;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,7 +9,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.Gravity;
@@ -282,7 +282,15 @@ public class AdminDiscountView extends Fragment {
 
             @Override
             public void onError(Object object) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle(getResources().getString(R.string.error))
+                        .setMessage(getResources().getString(R.string.erroroccured))
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                            public void onClick(DialogInterface dialog, int whichButton) {
+
+                            }}).show();
             }
         });
     }

@@ -1,9 +1,10 @@
 package com.polytech.montpellier.lifiapp;
 
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,7 +28,7 @@ import java.util.HashMap;
 
 public class UpdateProduct extends AppCompatActivity {
     int idDep = -1;
-
+    final Context context = this;
     //Declaration DAO
     DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
     ProductDAO daoP = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
@@ -78,7 +79,15 @@ public class UpdateProduct extends AppCompatActivity {
 
             @Override
             public void onError(Object object) {
+                new AlertDialog.Builder(context)
+                        .setTitle(getResources().getString(R.string.error))
+                        .setMessage(getResources().getString(R.string.erroroccured))
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                            public void onClick(DialogInterface dialog, int whichButton) {
+
+                            }}).show();
             }
         });
 
@@ -102,7 +111,15 @@ public class UpdateProduct extends AppCompatActivity {
 
             @Override
             public void onError(Object object) {
-                System.out.println("ERROR");
+                new AlertDialog.Builder(context)
+                        .setTitle(getResources().getString(R.string.error))
+                        .setMessage(getResources().getString(R.string.erroroccured))
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+
+                            public void onClick(DialogInterface dialog, int whichButton) {
+
+                            }}).show();
             }
 
         });
@@ -141,7 +158,15 @@ public class UpdateProduct extends AppCompatActivity {
 
                         @Override
                         public void onError(Object object) {
-                            System.out.println("ERROR");
+                            new AlertDialog.Builder(context)
+                                    .setTitle(getResources().getString(R.string.error))
+                                    .setMessage(getResources().getString(R.string.erroroccured))
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+
+                                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                                        }}).show();
                         }
                     });
 

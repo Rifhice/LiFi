@@ -1,5 +1,6 @@
 package com.polytech.montpellier.lifiapp;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -8,7 +9,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -161,7 +161,15 @@ public class UpdateDiscount extends AppCompatActivity {
 
                             @Override
                             public void onError(Object object) {
+                                new AlertDialog.Builder(context)
+                                        .setTitle(getResources().getString(R.string.error))
+                                        .setMessage(getResources().getString(R.string.erroroccured))
+                                        .setIcon(android.R.drawable.ic_dialog_alert)
+                                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                                            public void onClick(DialogInterface dialog, int whichButton) {
+
+                                            }}).show();
                             }
                         });
 
@@ -199,7 +207,15 @@ public class UpdateDiscount extends AppCompatActivity {
 
                                     @Override
                                     public void onError(Object object) {
+                                        new AlertDialog.Builder(context)
+                                                .setTitle(getResources().getString(R.string.error))
+                                                .setMessage(getResources().getString(R.string.erroroccured))
+                                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                                                    public void onClick(DialogInterface dialog, int whichButton) {
+
+                                                    }}).show();
                                     }
                                 });
 
@@ -230,7 +246,15 @@ public class UpdateDiscount extends AppCompatActivity {
 
             @Override
             public void onError(Object object) {
+                new AlertDialog.Builder(context)
+                        .setTitle(getResources().getString(R.string.error))
+                        .setMessage(getResources().getString(R.string.erroroccured))
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                            public void onClick(DialogInterface dialog, int whichButton) {
+
+                            }}).show();
             }
         });
 
@@ -339,13 +363,20 @@ public class UpdateDiscount extends AppCompatActivity {
                     AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().update(discount, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
-                            System.out.println(object.toString());
                             finish();
                         }
 
                         @Override
                         public void onError(Object object) {
+                            new AlertDialog.Builder(context)
+                                    .setTitle(getResources().getString(R.string.error))
+                                    .setMessage(getResources().getString(R.string.erroroccured))
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                                        }}).show();
                         }
                     });
                 }
@@ -366,7 +397,15 @@ public class UpdateDiscount extends AppCompatActivity {
 
                         @Override
                         public void onError(Object object) {
+                            new AlertDialog.Builder(context)
+                                    .setTitle(getResources().getString(R.string.error))
+                                    .setMessage(getResources().getString(R.string.erroroccured))
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                                        }}).show();
                         }
                     });
                 }else{

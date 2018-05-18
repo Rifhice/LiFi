@@ -1,9 +1,10 @@
 package com.polytech.montpellier.lifiapp;
 
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +21,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class UpdateDepartment extends AppCompatActivity {
+
+    final Context context = this;
     DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +64,15 @@ public class UpdateDepartment extends AppCompatActivity {
 
                         @Override
                         public void onError(Object object) {
+                            new AlertDialog.Builder(context)
+                                    .setTitle(getResources().getString(R.string.error))
+                                    .setMessage(getResources().getString(R.string.erroroccured))
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                                        }}).show();
                         }
                     });
                 }

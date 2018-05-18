@@ -1,6 +1,9 @@
 package com.polytech.montpellier.lifiapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -17,6 +20,8 @@ import com.polytech.montpellier.lifiapp.Model.Product;
 import java.util.ArrayList;
 
 public class ProductSummary extends Activity {
+
+    final Context context = this;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,7 +73,15 @@ public class ProductSummary extends Activity {
             }
                 @Override
                 public void onError (Object object) {
-                    System.out.println("ERROR");
+                    new AlertDialog.Builder(context)
+                            .setTitle(getResources().getString(R.string.error))
+                            .setMessage(getResources().getString(R.string.erroroccured))
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+
+                                public void onClick(DialogInterface dialog, int whichButton) {
+
+                                }}).show();
                 }
         });
 

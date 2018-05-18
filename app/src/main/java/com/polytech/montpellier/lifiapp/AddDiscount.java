@@ -136,7 +136,15 @@ public class AddDiscount extends AppCompatActivity {
 
             @Override
             public void onError(Object object) {
+                new AlertDialog.Builder(context)
+                        .setTitle(getResources().getString(R.string.error))
+                        .setMessage(getResources().getString(R.string.erroroccured))
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                            public void onClick(DialogInterface dialog, int whichButton) {
+
+                            }}).show();
             }
         });
 
@@ -185,7 +193,15 @@ public class AddDiscount extends AppCompatActivity {
 
                     @Override
                     public void onError(Object object) {
+                        new AlertDialog.Builder(context)
+                                .setTitle(getResources().getString(R.string.error))
+                                .setMessage(getResources().getString(R.string.erroroccured))
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+
+                                    }}).show();
                     }
                 });
 
@@ -339,7 +355,15 @@ public class AddDiscount extends AppCompatActivity {
 
                         @Override
                         public void onError(Object object) {
+                            new AlertDialog.Builder(context)
+                                    .setTitle(getResources().getString(R.string.error))
+                                    .setMessage(getResources().getString(R.string.erroroccured))
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                                        }}).show();
                         }
                     });
                 }else{
@@ -360,7 +384,15 @@ public class AddDiscount extends AppCompatActivity {
 
                         @Override
                         public void onError(Object object) {
+                            new AlertDialog.Builder(context)
+                                    .setTitle(getResources().getString(R.string.error))
+                                    .setMessage(getResources().getString(R.string.erroroccured))
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
+                                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                                        }}).show();
                         }
                     });
                 }else{
