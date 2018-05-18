@@ -101,7 +101,9 @@ public class MySqlDiscountDAO extends DiscountDAO {
                     }
                     response.onSuccess(discounts);
                 }
-                response.onSuccess(object);
+                else {
+                    response.onSuccess(object);
+                }
             }
 
             @Override
