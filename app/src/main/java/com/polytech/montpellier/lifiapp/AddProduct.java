@@ -89,17 +89,19 @@ public class AddProduct extends AppCompatActivity{
 
                 }
                 else{
-                    AlertDialog alertDialog = new AlertDialog.Builder(AddProduct.this).create();
-                    alertDialog.setTitle(getResources().getString(R.string.alert));
-                    alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
-                    alertDialog.setMessage(getResources().getString(R.string.blankFieldMessage));
-                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getResources().getString(R.string.OK),
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-                    alertDialog.show();
+
+                    if(editText_name.getText().toString().isEmpty()) {
+                        editText_name.setError("Name must not be left blank");
+                    }
+                    if(editText_brand.getText().toString().isEmpty()) {
+                        editText_brand.setError("Brand must not be left blank");
+                    }
+                    if(editText_description.getText().toString().isEmpty()) {
+                        editText_description.setError("Description must not be left blank");
+                    }
+                    if(editText_price.getText().toString().isEmpty()) {
+                        editText_price.setError("Price must not be left blank");
+                    }
                 }
             }
         });
