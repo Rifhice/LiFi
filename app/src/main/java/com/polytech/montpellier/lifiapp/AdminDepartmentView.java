@@ -160,24 +160,6 @@ public class AdminDepartmentView extends Fragment{
                         label_lamp.setWidth(tl.getWidth() / 3);
                         row.addView(label_lamp);
 
-                        dao.getAll(new ResponseHandler() {
-
-                            @Override
-                            public void onSuccess(Object object) {
-
-                                if (object instanceof ArrayList) {
-
-                                    ArrayList<Department> array = (ArrayList<Department>) object;
-                                    dep.add(array.size());
-
-                                }
-                            }
-
-                            @Override
-                            public void onError(Object object) {
-
-                            }
-                        });
 
                         Button delete = new Button(getActivity());
                         delete.setText(getResources().getString(R.string.delete));
@@ -185,12 +167,10 @@ public class AdminDepartmentView extends Fragment{
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {
-                                System.out.println(dep.get(0));
 
-                                if(dep.get(0) >1) {
                                     new AlertDialog.Builder(getActivity())
-                                            .setTitle(getResources().getString(R.string.deleteLamp))
-                                            .setMessage(getResources().getString(R.string.deleteLampMessage))
+                                            .setTitle(getResources().getString(R.string.deleteDepartment))
+                                            .setMessage(getResources().getString(R.string.deleteDepartmentMessage))
                                             .setIcon(android.R.drawable.ic_dialog_alert)
                                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
@@ -219,8 +199,6 @@ public class AdminDepartmentView extends Fragment{
 
                                                         }
                                                     });
-                                                    System.out.println(dep.get(0));
-                                                    dep.set(0, dep.get(0) - 1) ;
                                                 }
 
 
@@ -228,14 +206,6 @@ public class AdminDepartmentView extends Fragment{
                                             .setNegativeButton(android.R.string.no, null).show();
 
 
-                                }else{
-                                    new android.app.AlertDialog.Builder(getActivity())
-                                            .setTitle(getResources().getString(R.string.alert))
-                                            .setMessage(getResources().getString(R.string.deleteAllDepartment))
-                                            .setIcon(android.R.drawable.ic_dialog_alert)
-                                            .setPositiveButton(android.R.string.yes, null).show();
-
-                                }
 
 
                             }

@@ -146,6 +146,7 @@ public class AdminProductView extends Fragment{
         final TableLayout tl = getView().findViewById(R.id.main_table);
         tl.removeAllViews();
 
+
         dao.getAll(new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
@@ -159,34 +160,38 @@ public class AdminProductView extends Fragment{
                         row.setId(product.getId());
                         row.setGravity(Gravity.CENTER_HORIZONTAL);
 
+                        String text = product.getName() +"\n" + product.getBrand();
                         final TextView label_product = new TextView(getActivity());
-                        label_product.setText(product.getName());
+                        label_product.setText(text);
                         label_product.setTextColor(Color.BLACK);
                         label_product.setPadding(5, 5, 5, 5);
-                        label_product.setWidth(tl.getWidth() / 5);
+                        label_product.setWidth(tl.getWidth() / 6);
                         row.addView(label_product);
 
 
 
-                        final TextView label_marque = new TextView(getActivity());
-                        String text = product.getBrand();
 
-                        label_marque.setText(text);
-                        label_marque.setTextColor(Color.BLACK); // set the color
-                        label_marque.setPadding(5, 5, 5, 5); // set the padding (if required)
-                        label_marque.setWidth(tl.getWidth() / 5);
-                        row.addView(label_marque); // add the column to the table row here
+
 
                         final TextView label_price = new TextView(getActivity());
-                        label_price.setText(String.valueOf(product.getPrice())+getResources().getString(R.string.currency));
+                        String price = String.valueOf(product.getPrice())+getResources().getString(R.string.currency);
+                        label_price.setText(price);
                         label_price.setTextColor(Color.BLACK);
                         label_price.setPadding(5, 5, 5, 5);
-                        label_price.setWidth(tl.getWidth() / 5);
+                        label_price.setWidth(tl.getWidth() / 6);
                         row.addView(label_price);
+
+                        final TextView label_dep = new TextView(getActivity());
+                        label_dep.setText(product.getDepartment().getName());
+                        label_dep.setTextColor(Color.BLACK);
+                        label_dep.setPadding(5, 5, 5, 5);
+                        label_dep.setWidth(tl.getWidth() / 6);
+                        row.addView(label_dep);
+
 
                         Button delete = new Button(getActivity());
                         delete.setText(getResources().getString(R.string.delete));
-                        delete.setWidth(tl.getWidth() / 5);
+                        delete.setWidth(tl.getWidth() / 6);
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {
@@ -226,30 +231,38 @@ public class AdminProductView extends Fragment{
 
                         Button update = new Button(getActivity());
                         update.setText(getResources().getString(R.string.update));
-                        update.setWidth(tl.getWidth() / 5);
+                        update.setWidth(tl.getWidth() / 6);
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 Intent intent = new Intent(getActivity(), UpdateProduct.class);
-                                intent.putExtra("name",label_product.getText());
+                                intent.putExtra("name",product.getName());
                                 intent.putExtra("product",row.getId());
-                                intent.putExtra("brand", label_marque.getText());
+                                intent.putExtra("brand", product.getBrand());
                                 intent.putExtra("price", String.valueOf(product.getPrice()));
                                 startActivity(intent);
                             }
                         });
                         row.addView(update);
-                        row.setOnClickListener(new View.OnClickListener() {
+
+                        Button info = new Button(getActivity());
+                        info.setText(getResources().getString(R.string.info));
+                        info.setWidth(tl.getWidth() /8);
+
+                        info.setOnClickListener(new View.OnClickListener() {
                             @Override
-                            public void onClick(View v) {
+                            public void onClick(final View v) {
                                 Intent intent = new Intent(getActivity(), ProductSummary.class);
-                                intent.putExtra("name",label_product.getText());
+                                intent.putExtra("name",product.getName());
                                 intent.putExtra("product",row.getId());
-                                intent.putExtra("brand", label_marque.getText());
+                                intent.putExtra("brand", product.getBrand());
                                 intent.putExtra("price", String.valueOf(product.getPrice()));
                                 startActivity(intent);
                             }
                         });
+                        row.addView(info);
+
+
                         tl.addView(row, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
                     }
                 }
