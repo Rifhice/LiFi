@@ -123,6 +123,7 @@ public class UpdateProduct extends AppCompatActivity {
 
 
         Button validate = findViewById(R.id.button_addProduct);
+        validate.setText(R.string.update);
         validate.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {

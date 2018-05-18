@@ -61,7 +61,7 @@ public class AddProduct extends AppCompatActivity{
         editText_description = (MultiAutoCompleteTextView) findViewById(R.id.multiTextView_product_addDescription);
 
         validate = (Button) findViewById(R.id.button_addProduct);
-
+        validate.setText(R.string.add);
         validate.setOnClickListener( new View.OnClickListener() {
 
             @Override

@@ -144,7 +144,32 @@ public class AdminDiscountView extends Fragment {
             @Override
             public void onSuccess(Object object) {
                 if (object instanceof ArrayList) {
+
                     tl.removeAllViews();
+
+                    // Adding table header
+                    final TableRow headerRow = new TableRow(getActivity());
+
+                    TextView label_header_brand = new TextView(getActivity());
+                    label_header_brand.setId(200);
+                    label_header_brand.setText(R.string.product + R.string.andSign +R.string.marque);
+                    label_header_brand.setTextColor(Color.BLUE);
+                    label_header_brand.setPadding(5, 5, 5, 5);
+                    label_header_brand.setWidth(tl.getWidth() / 4);
+                    headerRow.addView(label_header_brand);
+
+                    TextView label_header_promotion = new TextView(getActivity());
+                    label_header_promotion.setId(200);
+                    label_header_promotion.setText(R.string.discount);
+                    label_header_promotion.setTextColor(Color.BLUE);
+                    label_header_promotion.setPadding(5, 5, 5, 5);
+                    label_header_promotion.setWidth(tl.getWidth() / 4);
+                    headerRow.addView(label_header_promotion);
+
+                    tl.addView(headerRow);// add the column to the table row here
+
+
+                    // Displaying the discounts
                     ArrayList<Discount> array = (ArrayList<Discount>) object;
                     for (int i = 0; i < array.size(); i++) {
                         final Discount discount = array.get(i);
@@ -173,7 +198,7 @@ public class AdminDiscountView extends Fragment {
                         discountValue.setWidth(tl.getWidth() / 4);
 
                         if (discount instanceof QuantityDiscount) {
-                            discountValue.setText(((QuantityDiscount) discount).getBought() + getResources().getString(R.string.bought)+ ((QuantityDiscount) discount).getFree() + getResources().getString(R.string.free));
+                            discountValue.setText(((QuantityDiscount) discount).getBought() +" "+ getResources().getString(R.string.bought)+" "+ ((QuantityDiscount) discount).getFree() + " "+getResources().getString(R.string.free));
                         } else if (discount instanceof PercentageDiscount) {
                             discountValue.setText(((PercentageDiscount) discount).getPercentage() + getResources().getString(R.string.percentOff));
                         }

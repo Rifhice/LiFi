@@ -173,7 +173,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                System.out.println("GET 1"+object.toString());
+//                System.out.println("GET 1"+object.toString());
                 JSONArray jsonArray = new JSONArray();
                 jsonArray = (JSONArray) object;
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -213,14 +213,13 @@ public class MySqlDiscountDAO extends DiscountDAO {
 
     }
 
-
+    @Override
     public void getAllByDate(final Date date ,final ResponseHandler response) throws DAOException {
         final ArrayList<Discount> discounts =  new ArrayList<Discount>();
 
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                System.out.println("GET 1"+object.toString());
                 JSONArray jsonArray = new JSONArray();
                 jsonArray = (JSONArray) object;
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
