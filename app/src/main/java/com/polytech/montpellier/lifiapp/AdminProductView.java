@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -152,6 +153,38 @@ public class AdminProductView extends Fragment{
             public void onSuccess(Object object) {
                 if(object instanceof ArrayList) {
                     tl.removeAllViews();
+
+                    // Adding table header
+                    final TableRow headerRow = new TableRow(getActivity());
+
+                    TextView label_header_brand = new TextView(getActivity());
+                    label_header_brand.setId(200);
+                    Resources res = getResources();
+                    String brand = res.getString(R.string.product) + res.getString(R.string.andSign) + res.getString(R.string.marque);
+                    label_header_brand.setText(brand);
+                    label_header_brand.setTextColor(Color.BLUE);
+                    label_header_brand.setPadding(5, 5, 5, 5);
+                    label_header_brand.setWidth(tl.getWidth() / 7);
+                    headerRow.addView(label_header_brand);
+
+                    TextView label_header_promotion = new TextView(getActivity());
+                    label_header_promotion.setId(200);
+                    label_header_promotion.setText(R.string.price);
+                    label_header_promotion.setTextColor(Color.BLUE);
+                    label_header_promotion.setPadding(5, 5, 5, 5);
+                    label_header_promotion.setWidth(tl.getWidth() / 7);
+                    headerRow.addView(label_header_promotion);
+
+                    TextView label_header_department = new TextView(getActivity());
+                    label_header_department.setId(200);
+                    label_header_department.setText(R.string.departement);
+                    label_header_department.setTextColor(Color.BLUE);
+                    label_header_department.setPadding(5, 5, 5, 5);
+                    label_header_department.setWidth(tl.getWidth() / 6);
+                    headerRow.addView(label_header_department);
+
+                    tl.addView(headerRow);// add the column to the table row here
+
                     ArrayList<Product> array = (ArrayList<Product>)object;
                     for(int i = 0 ; i < array.size() ; i++) {
                         final Product product = array.get(i);
@@ -165,20 +198,15 @@ public class AdminProductView extends Fragment{
                         label_product.setText(text);
                         label_product.setTextColor(Color.BLACK);
                         label_product.setPadding(5, 5, 5, 5);
-                        label_product.setWidth(tl.getWidth() / 6);
+                        label_product.setWidth(tl.getWidth() / 5);
                         row.addView(label_product);
-
-
-
-
-
 
                         final TextView label_price = new TextView(getActivity());
                         String price = String.valueOf(product.getPrice())+getResources().getString(R.string.currency);
                         label_price.setText(price);
                         label_price.setTextColor(Color.BLACK);
                         label_price.setPadding(5, 5, 5, 5);
-                        label_price.setWidth(tl.getWidth() / 6);
+                        label_price.setWidth(tl.getWidth() / 8);
                         row.addView(label_price);
 
                         final TextView label_dep = new TextView(getActivity());

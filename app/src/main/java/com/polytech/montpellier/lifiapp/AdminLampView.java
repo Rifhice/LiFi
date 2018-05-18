@@ -3,6 +3,7 @@ package com.polytech.montpellier.lifiapp;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -140,6 +141,29 @@ public class AdminLampView extends Fragment{
             public void onSuccess(Object object) {
                 if(object instanceof ArrayList) {
                     tl.removeAllViews();
+
+                    // Adding table header
+                    final TableRow headerRow = new TableRow(getActivity());
+
+                    TextView label_header_brand = new TextView(getActivity());
+                    label_header_brand.setId(200);
+                    Resources res = getResources();
+                    label_header_brand.setText(R.string.lamp);
+                    label_header_brand.setTextColor(Color.BLUE);
+                    label_header_brand.setPadding(5, 5, 5, 5);
+                    label_header_brand.setWidth(tl.getWidth() / 4);
+                    headerRow.addView(label_header_brand);
+
+                    TextView label_header_promotion = new TextView(getActivity());
+                    label_header_promotion.setId(200);
+                    label_header_promotion.setText(R.string.departement);
+                    label_header_promotion.setTextColor(Color.BLUE);
+                    label_header_promotion.setPadding(5, 5, 5, 5);
+                    label_header_promotion.setWidth(tl.getWidth() / 4);
+                    headerRow.addView(label_header_promotion);
+
+                    tl.addView(headerRow);// add the column to the table row here
+
                     ArrayList<Lamp> array = (ArrayList<Lamp>)object;
                     for(int i = 0 ; i < array.size() ; i++) {
                         Lamp lamp = array.get(i);

@@ -3,6 +3,7 @@ package com.polytech.montpellier.lifiapp;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -152,7 +153,9 @@ public class AdminDiscountView extends Fragment {
 
                     TextView label_header_brand = new TextView(getActivity());
                     label_header_brand.setId(200);
-                    label_header_brand.setText(R.string.product + R.string.andSign +R.string.marque);
+                    Resources res = getResources();
+                    String brand = res.getString(R.string.product) + res.getString(R.string.andSign) + res.getString(R.string.marque);
+                    label_header_brand.setText(brand);
                     label_header_brand.setTextColor(Color.BLUE);
                     label_header_brand.setPadding(5, 5, 5, 5);
                     label_header_brand.setWidth(tl.getWidth() / 4);
@@ -195,7 +198,7 @@ public class AdminDiscountView extends Fragment {
                         final TextView discountValue = new TextView(getActivity());
                         discountValue.setTextColor(Color.BLACK); // set the color
                         discountValue.setPadding(5, 5, 5, 5); // set the padding (if required)
-                        discountValue.setWidth(tl.getWidth() / 4);
+                        discountValue.setWidth(tl.getWidth() / 6);
 
                         if (discount instanceof QuantityDiscount) {
                             discountValue.setText(((QuantityDiscount) discount).getBought() +" "+ getResources().getString(R.string.bought)+" "+ ((QuantityDiscount) discount).getFree() + " "+getResources().getString(R.string.free));
@@ -205,7 +208,7 @@ public class AdminDiscountView extends Fragment {
                         row.addView(discountValue); // add the column to the table row here
                         Button delete = new Button(getActivity());
                         delete.setText(getResources().getString(R.string.delete));
-                        delete.setWidth(tl.getWidth() / 4);
+                        delete.setWidth(tl.getWidth() / 6);
                         delete.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {
@@ -247,7 +250,7 @@ public class AdminDiscountView extends Fragment {
 
                         Button update = new Button(getActivity());
                         update.setText(getResources().getString(R.string.update));
-                        update.setWidth(tl.getWidth() / 4);
+                        update.setWidth(tl.getWidth() / 6);
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -258,6 +261,20 @@ public class AdminDiscountView extends Fragment {
                         });
                         row.addView(update);
 ;
+                        Button info = new Button(getActivity());
+                        info.setText(getResources().getString(R.string.info));
+                        info.setWidth(tl.getWidth() /6);
+
+                        info.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(final View v) {
+                                Intent intent = new Intent(getActivity(), DiscountSummary.class);
+                                intent.putExtra("idDiscount", discount.getId());
+                                startActivity(intent);
+                            }
+                        });
+                        row.addView(info);
+
                         tl.addView(row, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
                     }
                 }
