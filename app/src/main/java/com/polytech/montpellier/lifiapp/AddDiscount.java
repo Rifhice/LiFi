@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -35,6 +36,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 public class AddDiscount extends AppCompatActivity {
 
@@ -60,6 +62,10 @@ public class AddDiscount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_discount);
         Helper.hasActiveInternetConnection(this);
+        Intent intent = getIntent();
+        final int baseIdProd = intent.getIntExtra("idProduct", -1);
+        final int baseIdDep = intent.getIntExtra("idDepartment", -1);
+        System.out.println("BASEIDRECEIVED" + baseIdDep + " " + baseIdProd);
         percentageText = (TextView)findViewById(R.id.percentagetext);
         boughtText = (TextView)findViewById(R.id.boughttext);
         freeText = (TextView)findViewById(R.id.freetext);
@@ -99,6 +105,13 @@ public class AddDiscount extends AppCompatActivity {
                     }
                     adapter.setDropDownViewResource(R.layout.list);
                     spinnerDepartment.setAdapter(adapter);
+                    if(baseIdDep != -1) {
+                        for (Map.Entry<String, Integer> entry : depMap.entrySet()) {
+                            if (entry.getValue().equals(baseIdDep)) {
+                                spinnerDepartment.setSelection(dep.indexOf(entry.getKey()));
+                            }
+                        }
+                    }
                 }
             }
 
@@ -136,6 +149,13 @@ public class AddDiscount extends AppCompatActivity {
                             }
                             prodAdapter.setDropDownViewResource(R.layout.list);
                             spinnerProduct.setAdapter(prodAdapter);
+                            if(baseIdProd != -1) {
+                                for (Map.Entry<String, Integer> entry : prodMap.entrySet()) {
+                                    if (entry.getValue().equals(baseIdProd)) {
+                                        spinnerProduct.setSelection(prod.indexOf(entry.getKey()));
+                                    }
+                                }
+                            }
                         }
                     }
 
