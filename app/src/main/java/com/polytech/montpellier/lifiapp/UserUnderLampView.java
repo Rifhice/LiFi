@@ -55,7 +55,7 @@ public class UserUnderLampView extends AppCompatActivity {
         setContentView(R.layout.user_under_lamp);
         Helper.hasActiveInternetConnection(this);
         final TableLayout tl = findViewById(R.id.promotionsJourTable);
-        final TextView rayonTV = findViewById(R.id.rayondbTV);
+        final TextView rayonTV = findViewById(R.id.rayonTV);
 
         TableRow tr_head = new TableRow(this);
         tr_head.setId(10);
@@ -77,6 +77,7 @@ public class UserUnderLampView extends AppCompatActivity {
         Intent intent = getIntent();
         intent.getStringExtra("lampName");
         final int pkDep = intent.getIntExtra("lampDep", 0);
+        rayonTV.append(": " + intent.getStringExtra("lampDepName"));
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         final Date dateToday = new Date();

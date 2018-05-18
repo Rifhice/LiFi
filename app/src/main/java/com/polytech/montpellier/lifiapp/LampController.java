@@ -82,6 +82,7 @@ public class LampController extends AppCompatActivity {
                             intent.putExtra("lampName",lamp.getName());
                             if(lamp.getDepartment() != null){
                                 intent.putExtra("lampDep",lamp.getDepartment().getId());
+                                intent.putExtra("lampDepName",lamp.getDepartment().getName());
                             }
 
 
