@@ -23,30 +23,55 @@ public class AddDepartment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_department);
+        //Check for the internet
         Helper.hasActiveInternetConnection(this);
+
+        //TextField for the name
         final EditText text =  findViewById(R.id.nametf);
         text.setText(getResources().getString(R.string.newDepartement));
         Button validate = findViewById(R.id.validate);
+        //Action on click
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //If the text field is empty we show error
                 if (!text.getText().toString().isEmpty()) {
+                    //We create a department with a default id and a name corresponding to the textfield
                     Department dep = new Department(0, text.getText().toString());
+                    //We insert the department in the database
                     AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().create(dep, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
+                            //We check if the response is a JSON
                             if (object instanceof JSONObject) {
                                 JSONObject obj = (JSONObject) object;
                                 try {
+                                    //If the code is 200, the request succeeded
                                     if (obj.getInt("code") == 200) {
+                                        //If we inserted more than one line, it succeeded
                                         if (obj.getInt("insertId") != 0) {
                                             finish();
                                         } else {
-                                            System.out.println("Error inserting");
+                                            new AlertDialog.Builder(this)
+                                                    .setTitle(getResources().getString(R.string.error))
+                                                    .setMessage(getResources().getString(R.string.erroroccured))
+                                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+
+                                                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                                                        }}).show();
                                         }
                                     } else {
-                                        System.out.println("Error inserting");
+                                        new AlertDialog.Builder(this)
+                                                .setTitle(getResources().getString(R.string.error))
+                                                .setMessage(getResources().getString(R.string.erroroccured))
+                                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+
+                                                    public void onClick(DialogInterface dialog, int whichButton) {
+
+                                                    }}).show();
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -61,7 +86,9 @@ public class AddDepartment extends AppCompatActivity {
                     });
                 }
                 else{
+                    //If the textfield is empty
                     if(text.getText().toString().isEmpty()) {
+                        //We show an error
                         text.setError(getResources().getString(R.string.name) + getResources().getString(R.string.leftBlank));
                     }
                 }
@@ -73,6 +100,7 @@ public class AddDepartment extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
+        //Notify the user that he will lose it's modification
         new AlertDialog.Builder(this)
                 .setTitle(getResources().getString(R.string.addDepartement))
                 .setMessage(getResources().getString(R.string.addLeaveMessage))

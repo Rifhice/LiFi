@@ -30,18 +30,27 @@ public class AddLamp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lamp_add);
+        //Check for the internet
         Helper.hasActiveInternetConnection(this);
+
+        //Retrieve arguments from previous page
         Intent intent = getIntent();
         final int id = intent.getIntExtra("lamp",0);
+
+        //Retrieve graphic elements
         final EditText text = (EditText) findViewById(R.id.nametf);
         text.setText("");
         Button validate = (Button)findViewById(R.id.validate);
+
+        //Action on click for the button validate
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //Field verification
                 if (!text.getText().toString().isEmpty()) {
+                    //Creating object according to data in form
                     Lamp lamp = new Lamp(id, text.getText().toString(), new Department(idDep));
+                    //Inserting the lamp in the database
                     AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO().create(lamp, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
@@ -62,12 +71,13 @@ public class AddLamp extends AppCompatActivity {
             }
         });
 
+        //Initialize the department spinner
         final Spinner spinnerDepartment = (Spinner) findViewById(R.id.spinner_department);
         final ArrayList<String> dep = new ArrayList<>();
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
         final HashMap<String, Integer> depMap=new HashMap<String, Integer>();
 
-        //TODO vérifier departement non vide
+        //Get all the department to populate the spinner
         AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().getAll(new ResponseHandler() {
 
             @Override

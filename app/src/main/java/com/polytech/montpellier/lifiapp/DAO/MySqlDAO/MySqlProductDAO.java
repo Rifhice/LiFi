@@ -7,6 +7,7 @@ import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DAOException;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
+import com.polytech.montpellier.lifiapp.MainActivity;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Discounts.Discount;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
@@ -39,7 +40,7 @@ public class MySqlProductDAO extends ProductDAO {
         //System.out.println("Name: " + params.get("name") +" Description: " + params.get("description") + " price: " + params.get("price") + " brand: " + params.get("brand") +
          //       " idDep : " +  params.get("idDepartment"));
 
-        Helper.getInstance().POST("http://81.64.139.113:1337/api/Product",token , params, new ResponseHandler() {
+        Helper.getInstance().POST(MainActivity.url + "Product",token , params, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 response.onSuccess(object);
@@ -57,7 +58,7 @@ public class MySqlProductDAO extends ProductDAO {
     @Override
     public void getById(int id, final ResponseHandler response) throws DAOException {
         final ArrayList<Product> product =  new ArrayList<Product>();
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Product/" + id, new ResponseHandler() {
+        Helper.getInstance().GET(MainActivity.url + "Product/" + id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if (object instanceof JSONArray) {
@@ -107,7 +108,7 @@ public class MySqlProductDAO extends ProductDAO {
         params.put("brand", obj.getBrand());
         params.put("idDepartment", String.valueOf(obj.getDepartment().getId())) ;
 
-        Helper.getInstance().PUT("http://81.64.139.113:1337/api/Product/" + obj.getId(), token, params, new ResponseHandler() {
+        Helper.getInstance().PUT(MainActivity.url + "Product/" + obj.getId(), token, params, new ResponseHandler() {
 
             @Override
             public void onSuccess(Object object) {
@@ -123,7 +124,7 @@ public class MySqlProductDAO extends ProductDAO {
 
     @Override
     public void delete(int id,String token, final ResponseHandler response) throws DAOException {
-        Helper.getInstance().DELETE("http://81.64.139.113:1337/api/Product/" + id, token , new ResponseHandler() {
+        Helper.getInstance().DELETE(MainActivity.url + "Product/" + id, token , new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 response.onSuccess(object);
@@ -139,7 +140,7 @@ public class MySqlProductDAO extends ProductDAO {
     @Override
     public void getAll(final ResponseHandler response) throws DAOException {
         final ArrayList<Product> products =  new ArrayList<Product>();
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Product/", new ResponseHandler() {
+        Helper.getInstance().GET(MainActivity.url + "Product/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if (object instanceof JSONArray) {

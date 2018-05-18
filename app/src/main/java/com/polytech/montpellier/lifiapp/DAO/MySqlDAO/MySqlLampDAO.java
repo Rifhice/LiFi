@@ -7,6 +7,7 @@ import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DAOException;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
+import com.polytech.montpellier.lifiapp.MainActivity;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
 import com.polytech.montpellier.lifiapp.Model.Product;
@@ -34,7 +35,7 @@ public class MySqlLampDAO extends LampDAO {
         params.put("name", obj.getName());
         params.put("idDepartment",  String.valueOf(obj.getDepartment().getId()));
 
-        Helper.getInstance().POST("http://81.64.139.113:1337/api/Lamp",token , params, new ResponseHandler() {
+        Helper.getInstance().POST(MainActivity.url + "Lamp",token , params, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 response.onSuccess(object);
@@ -50,7 +51,7 @@ public class MySqlLampDAO extends LampDAO {
     public void getById(final int id, final ResponseHandler response) throws DAOException {
         final ArrayList<Lamp> lamp =  new ArrayList<Lamp>();
 
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Lamp/" + id, new ResponseHandler() {
+        Helper.getInstance().GET(MainActivity.url + "Lamp/" + id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if (object instanceof JSONArray) {
@@ -96,7 +97,7 @@ public class MySqlLampDAO extends LampDAO {
         Map<String, String> params = new HashMap<String, String>();
         params.put("name", obj.getName());
         params.put("idDepartment",  String.valueOf(obj.getDepartment().getId()));
-        Helper.getInstance().PUT("http://81.64.139.113:1337/api/Lamp/" + obj.getId(), token, params, new ResponseHandler() {
+        Helper.getInstance().PUT(MainActivity.url + "Lamp/" + obj.getId(), token, params, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 response.onSuccess(object);
@@ -111,7 +112,7 @@ public class MySqlLampDAO extends LampDAO {
 
     @Override
     public void delete(int id,String token, final ResponseHandler response) throws DAOException {
-        Helper.getInstance().DELETE("http://81.64.139.113:1337/api/Lamp/" + id, token, new ResponseHandler() {
+        Helper.getInstance().DELETE(MainActivity.url + "Lamp/" + id, token, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 response.onSuccess(object);
@@ -127,7 +128,7 @@ public class MySqlLampDAO extends LampDAO {
     @Override
     public void getAll(final ResponseHandler response) throws DAOException {
         final ArrayList<Lamp> lamps =  new ArrayList<Lamp>();
-        Helper.getInstance().GET("http://81.64.139.113:1337/api/Lamp/", new ResponseHandler() {
+        Helper.getInstance().GET(MainActivity.url + "Lamp/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 if (object instanceof JSONArray) {

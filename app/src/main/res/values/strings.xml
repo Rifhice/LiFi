@@ -35,6 +35,7 @@
     <string name="alert">Alert</string>
     <string name="passwordNotEquals">Password not equals</string>
     <string name="error">Error</string>
+    <string name="erroroccured">An error occured</string>
     <string name="cancel">Cancel</string>
     <string name="info">Info</string>
     <string name="leftBlank"> must not be left blank</string>

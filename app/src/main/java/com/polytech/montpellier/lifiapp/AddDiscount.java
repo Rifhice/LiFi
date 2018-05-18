@@ -41,11 +41,15 @@ import java.util.Map;
 public class AddDiscount extends AppCompatActivity {
 
     final Context context = this;
-    private Button startButton, endButton;
+
     private Calendar startDate, endDate;
     private int currentId;
-    private int idDepartment, idProduct;
 
+    //Potential idDepartment an product if coming from the product summary page
+    private int idDepartment, idProduct;
+    //All graphics elements
+
+    private Button startButton, endButton;
     TextView percentageText;
     TextView boughtText;
     TextView freeText;
@@ -61,11 +65,16 @@ public class AddDiscount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_discount);
+        //Check for internet
         Helper.hasActiveInternetConnection(this);
+
+        //Get the intent to retreive potential arguments
         Intent intent = getIntent();
+        //Retrieve potential argument (only get them if coming from the product summary page), value by default : -1
         final int baseIdProd = intent.getIntExtra("idProduct", -1);
         final int baseIdDep = intent.getIntExtra("idDepartment", -1);
-        System.out.println("BASEIDRECEIVED" + baseIdDep + " " + baseIdProd);
+
+        //Retrieve all the graphical elements
         percentageText = (TextView)findViewById(R.id.percentagetext);
         boughtText = (TextView)findViewById(R.id.boughttext);
         freeText = (TextView)findViewById(R.id.freetext);
@@ -78,34 +87,44 @@ public class AddDiscount extends AppCompatActivity {
         startButton = (Button) findViewById(R.id.endDateButton);
         endButton = (Button) findViewById(R.id.startDateButton);
 
+        //Set up the end date and start date to today
         startDate = Calendar.getInstance();
         endDate = Calendar.getInstance();
-
         startButton.setText(dateToString(startDate));
         endButton.setText(dateToString(endDate));
 
+        //Iniatialize the spinner
         final Spinner spinnerDepartment = (Spinner) findViewById(R.id.departmentSpinner);
+        //ArrayList containint all the deparment name
         final ArrayList<String> dep = new ArrayList<>();
+        //Adapter used for the layout of the spinner
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
+        //Hashmap containing as keys the name of department and as value their id in the database
         final HashMap<String, Integer> depMap=new HashMap<String, Integer>();
 
-        //TODO vérifier departement non vide
+        //Uses the DAO to get all department to then populate the spinner
         AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().getAll(new ResponseHandler() {
 
             @Override
             public void onSuccess(Object object) {
-
+                //On response we populate the arraylist and the hashmap
                 if (object instanceof ArrayList) {
 
                     ArrayList<Department> array = (ArrayList<Department>) object;
                     for (int i = 0; i < array.size(); i++) {
                         Department department = array.get(i);
+                        //Populate the name arraylist
                         dep.add(department.getName());
+                        //Populate the hashmap
                         depMap.put(department.getName(), department.getId());
                     }
+                    //Set the layout of the adapter
                     adapter.setDropDownViewResource(R.layout.list);
                     spinnerDepartment.setAdapter(adapter);
+
+                    //If we are coming from the poduct summary page, we preselect the department corresponding to the product
                     if(baseIdDep != -1) {
+                        //Search in the hashmap by value to retrieve the key
                         for (Map.Entry<String, Integer> entry : depMap.entrySet()) {
                             if (entry.getValue().equals(baseIdDep)) {
                                 spinnerDepartment.setSelection(dep.indexOf(entry.getKey()));
@@ -121,26 +140,31 @@ public class AddDiscount extends AppCompatActivity {
             }
         });
 
+        //Function trigerred whenever a element is selected in the spinner
         spinnerDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                //We retrieve the name of the current element
                 String depName = (String) spinnerDepartment.getSelectedItem();
+                //Set the id of the current element
                 idDepartment = depMap.get(depName);
+
                 idProduct = -1;
                 Department current = new Department(idDepartment, depName);
+
+                //Set up the second spinner for the products the same way than above
                 final Spinner spinnerProduct = (Spinner) findViewById(R.id.productSpinner);
                 final ArrayList<String> prod = new ArrayList<>();
                 final ArrayAdapter<String> prodAdapter = new ArrayAdapter<String>( context, R.layout.list,R.id.list1, prod);
                 final HashMap<String, Integer> prodMap = new HashMap<String, Integer>();
 
-                //TODO vérifier departement non vide
+                //Populating the spinner with all the products in the department
                 AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().getAllProducts(current, new ResponseHandler() {
 
                     @Override
                     public void onSuccess(Object object) {
 
                         if (object instanceof ArrayList) {
-
                             ArrayList<Product> array = (ArrayList<Product>) object;
                             for (int i = 0; i < array.size(); i++) {
                                 Product product= array.get(i);
@@ -186,7 +210,9 @@ public class AddDiscount extends AppCompatActivity {
             }
 
         });
+        //Updatetype allow to adapt the UI to the selected type of discount
         updateType(isPercentage);
+        //Whenever the switch changes value, we change the ui and the attribute accordingly
         swi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                if(isChecked){
@@ -280,7 +306,9 @@ public class AddDiscount extends AppCompatActivity {
         }
     }
 
+    //Function trigerred whenever the user clicks the "validate" button
     public void validate(View view){
+        //If this function we initialize a discount according to the data in the form
         int fid = 0;
         if(fidelity.isChecked()){
             fid = 1;
@@ -350,9 +378,10 @@ public class AddDiscount extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
+        //Notify the user that he will lose all modifications
         new AlertDialog.Builder(this)
-                .setTitle("New Discount")
-                .setMessage("You are leaving, are you sure ?")
+                .setTitle(R.string.newDiscount)
+                .setMessage(R.string.addLeaveMessage)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 

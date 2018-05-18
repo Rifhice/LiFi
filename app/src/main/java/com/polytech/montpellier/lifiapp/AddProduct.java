@@ -52,9 +52,11 @@ public class AddProduct extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_add);
         Helper.getInstance(this);
+        //Check for the internet
         Helper.hasActiveInternetConnection(this);
         initializeUI();
 
+        //Retrieve graphical elements
         editText_price = (EditText) findViewById(R.id.editText_product_addPrice);
         editText_brand = (EditText) findViewById(R.id.editText_product_addBrand);
         editText_name = (EditText) findViewById(R.id.editText_product_addName);
@@ -66,6 +68,7 @@ public class AddProduct extends AppCompatActivity{
 
             @Override
             public void onClick(View v) {
+                //Form verification
                 if (!editText_name.getText().toString().isEmpty() && !editText_description.getText().toString().isEmpty()
                         && !editText_brand.getText().toString().isEmpty() && !editText_price.getText().toString().isEmpty() && idDep>=0) {
 
@@ -73,8 +76,9 @@ public class AddProduct extends AppCompatActivity{
                     description = editText_description.getText().toString();
                     price = Float.parseFloat(editText_price.getText().toString());
                     brand = editText_brand.getText().toString();
-
+                    //Creating the product according to the data in the form
                     Product product = new Product(0, name, description, price, brand, new Department(idDep));
+                    //Insert the product in the database
                     daoP.create(product, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
@@ -89,7 +93,6 @@ public class AddProduct extends AppCompatActivity{
 
                 }
                 else{
-
                     if(editText_name.getText().toString().isEmpty()) {
                         editText_name.setError( getResources().getString(R.string.name) + getResources().getString(R.string.leftBlank));
                     }
@@ -138,11 +141,12 @@ public class AddProduct extends AppCompatActivity{
     }
 
     private void initializeUI() {
+        //Initialize the department spinner
         final Spinner spinnerDepartment = findViewById(R.id.spinner_ProductDepartement);
         final ArrayList<String> dep = new ArrayList<>();
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
         final HashMap<String, Integer> depMap=new HashMap<String, Integer>();
-
+        //Get all the deparment to populate the spinner
         dao.getAll(new ResponseHandler() {
 
             @Override
