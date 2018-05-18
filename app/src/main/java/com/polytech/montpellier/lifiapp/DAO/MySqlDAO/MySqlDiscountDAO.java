@@ -63,41 +63,45 @@ public class MySqlDiscountDAO extends DiscountDAO {
     @Override
     public void getById(int id,final ResponseHandler response) throws DAOException {
         final ArrayList<Discount> discounts =  new ArrayList<Discount>();
-
+        System.out.println("IDRECEIVEDDAO" + id);
 
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/"+id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-               // System.out.println("GET 1"+object.toString());
-                JSONArray jsonArray = new JSONArray();
-                jsonArray = (JSONArray) object;
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                System.out.println("OBJECT RECEIVED" + object);
+                if(object != null) {
+                    System.out.println("GET 1"+object.toString());
+                    JSONArray jsonArray = new JSONArray();
+                    jsonArray = (JSONArray) object;
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 
 
-                for (int i = 0; i < jsonArray.length(); i++) {
-                    try {
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        try {
 
-                        final JSONObject current = jsonArray.getJSONObject(i);
-                        final int id = current.getInt("idDiscount");
-                        final int fidelity = current.getInt("fidelity");
-                        final int fkProduct = current.getInt("fkProduct");
-                        final Date start = sdf.parse(current.getString("date_start"));
-                        final Date end = sdf.parse(current.getString("date_end"));
-                        final Date creation = sdf.parse(current.getString("date_update"));
-                        Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float)current.getDouble("price"), current.getString("brand"),new Department(current.optInt("idDepartment")));
-                        try{
-                            float percentage = (float)current.getDouble("percentage");
-                            discounts.add(new PercentageDiscount(id,prod,start,end,creation,percentage,fidelity));
-                        }catch (JSONException e){
-                            int bought = current.getInt("Bought");
-                            int free = current.getInt("Free");
-                            discounts.add(new QuantityDiscount(id,prod,start, end, creation, bought, free, fidelity));
+                            final JSONObject current = jsonArray.getJSONObject(i);
+                            final int id = current.getInt("idDiscount");
+                            final int fidelity = current.getInt("fidelity");
+                            final int fkProduct = current.getInt("fkProduct");
+                            final Date start = sdf.parse(current.getString("date_start"));
+                            final Date end = sdf.parse(current.getString("date_end"));
+                            final Date creation = sdf.parse(current.getString("date_update"));
+                            Product prod = new Product(fkProduct, current.getString("name"), current.getString("description"), (float) current.getDouble("price"), current.getString("brand"), new Department(current.getInt("idDepartment"),current.getString("nameDepartment")));
+                            try {
+                                float percentage = (float) current.getDouble("percentage");
+                                discounts.add(new PercentageDiscount(id, prod, start, end, creation, percentage, fidelity));
+                            } catch (JSONException e) {
+                                int bought = current.getInt("bought");
+                                int free = current.getInt("free");
+                                discounts.add(new QuantityDiscount(id, prod, start, end, creation, bought, free, fidelity));
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
-                    } catch (Exception e) {
-                        e.printStackTrace();
                     }
+                    response.onSuccess(discounts);
                 }
-                response.onSuccess(discounts);
+                response.onSuccess(object);
             }
 
             @Override
@@ -117,20 +121,17 @@ public class MySqlDiscountDAO extends DiscountDAO {
 
         Map<String, String> params = new HashMap<String, String>();
         params.put("fkProduct", String.valueOf(obj.getProduct().getId()));
-        params.put("date_start", String.valueOf(obj.getDateDebut()));
-        params.put("date_end",  String.valueOf(obj.getDateFin()));
-
+        params.put("date_start", new SimpleDateFormat( "yyyy-MM-dd").format(obj.getDateFin()));
+        params.put("date_end",  new SimpleDateFormat( "yyyy-MM-dd").format(obj.getDateDebut()));
+        params.put("fidelity", String.valueOf(obj.getFidelity()));
 
             if(obj instanceof PercentageDiscount){
                 params.put("percentage",  String.valueOf(((PercentageDiscount) obj).getPercentage()));
-                params.put("fidelity", String.valueOf(obj.getFidelity()));
                 url.append("Percentage/");
             }else if(obj instanceof QuantityDiscount){
                 params.put("bought", String.valueOf(((QuantityDiscount) obj).getBought()));
                 params.put("free", String.valueOf(((QuantityDiscount) obj).getFree()));
-                params.put("fidelity", String.valueOf(obj.getFidelity()));
                 url.append("Quantity/");
-
             }
 
         url.append(obj.getId());

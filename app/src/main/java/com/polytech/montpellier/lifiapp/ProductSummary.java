@@ -77,17 +77,10 @@ public class ProductSummary extends Activity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent intent = new Intent(ProductSummary.this, AddDiscount.class);
+                Intent intent = new Intent(ProductSummary.this, AddDiscount.class);
                 intent.putExtra("idProduct",idProduct);
-                if(ar.isEmpty())
-                {
-                intent.putExtra("idDepartment", null);
-                }
-                else{
-                intent.putExtra("idDepartment", ar.get(0);
-                }
-                intent.putExtra("idDepartment",);
-                startActivity(intent);*/
+                intent.putExtra("idDepartment", ar.get(0));
+                startActivity(intent);
             }
         });
 
