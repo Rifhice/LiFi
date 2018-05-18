@@ -123,7 +123,7 @@ public class UserUnderLampView extends AppCompatActivity {
 
                                                 try {
                                                     JSONObject currentDiscount = productDiscounts.getJSONObject(i);
-                                                    System.out.println("current Discounr  " + currentDiscount);
+                                                    System.out.println("current Discount  " + currentDiscount);
                                                     final int idDiscount = currentDiscount.getInt("idDiscount");
 
 //                                                    daoDiscount.getAllByDate(dateToday, new ResponseHandler() {
