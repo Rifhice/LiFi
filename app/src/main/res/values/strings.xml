@@ -38,6 +38,7 @@
     <string name="cancel">Cancel</string>
     <string name="info">Info</string>
     <string name="leftBlank"> must not be left blank</string>
+    <string name="dateWrong">The start date must be anterior to the end date</string>
 
 
 
@@ -80,6 +81,8 @@
     <string name="bought"> Bought </string>
     <string name="free"> Free </string>
     <string name="percentOff"> % off </string>
+    <string name="boughtProduct"> Bought product </string>
+    <string name="freeProduct"> Free product </string>
 
 
     <string name="audioAccessPermition">This app needs audio record access</string>

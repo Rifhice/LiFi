@@ -2034,7 +2034,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
@@ -4048,65 +4048,69 @@ public final class R {
     public static final int blankFieldMessage=0x7f0c0029;
     public static final int bottom_sheet_behavior=0x7f0c002a;
     public static final int bought=0x7f0c002b;
-    public static final int cancel=0x7f0c002c;
-    public static final int change_pass=0x7f0c002d;
-    public static final int character_counter_pattern=0x7f0c002e;
-    public static final int currency=0x7f0c002f;
-    public static final int currentpassword=0x7f0c0030;
-    public static final int delete=0x7f0c0031;
-    public static final int deleteDepartment=0x7f0c0032;
-    public static final int deleteDepartmentMessage=0x7f0c0033;
-    public static final int deleteDiscount=0x7f0c0034;
-    public static final int deleteDiscountMessage=0x7f0c0035;
-    public static final int deleteLamp=0x7f0c0036;
-    public static final int deleteLampMessage=0x7f0c0037;
-    public static final int deleteMessage=0x7f0c0038;
-    public static final int deleteProduct=0x7f0c0039;
-    public static final int departement=0x7f0c003a;
-    public static final int departementname=0x7f0c003b;
-    public static final int description=0x7f0c003c;
-    public static final int descriptionProduct=0x7f0c003d;
-    public static final int discount=0x7f0c003e;
-    public static final int discountValidUntil=0x7f0c003f;
-    public static final int error=0x7f0c0040;
-    public static final int free=0x7f0c0041;
-    public static final int functionalityLimited=0x7f0c0042;
-    public static final int info=0x7f0c0043;
-    public static final int lamp=0x7f0c0044;
-    public static final int loginFailed=0x7f0c0045;
-    public static final int loginSuccess=0x7f0c0046;
-    public static final int marque=0x7f0c0047;
-    public static final int name=0x7f0c0048;
-    public static final int newDepartement=0x7f0c0049;
-    public static final int newDiscount=0x7f0c004a;
-    public static final int newLamp=0x7f0c004b;
-    public static final int newLampDetectedMessage=0x7f0c004c;
-    public static final int newProduct=0x7f0c004d;
-    public static final int newpassword=0x7f0c004e;
-    public static final int no=0x7f0c004f;
-    public static final int noAudioNoLifi=0x7f0c0050;
-    public static final int password=0x7f0c0051;
-    public static final int passwordNotEquals=0x7f0c0052;
-    public static final int password_toggle_content_description=0x7f0c0053;
-    public static final int path_password_eye=0x7f0c0054;
-    public static final int path_password_eye_mask_strike_through=0x7f0c0055;
-    public static final int path_password_eye_mask_visible=0x7f0c0056;
-    public static final int path_password_strike_through=0x7f0c0057;
-    public static final int percentOff=0x7f0c0058;
-    public static final int price=0x7f0c0059;
-    public static final int product=0x7f0c005a;
-    public static final int promotionsJour=0x7f0c005b;
-    public static final int rayon=0x7f0c005c;
-    public static final int search_menu_title=0x7f0c005d;
-    public static final int status_bar_notification_info_overflow=0x7f0c005e;
-    public static final int update=0x7f0c005f;
-    public static final int updateDepartment=0x7f0c0060;
-    public static final int updateDiscount=0x7f0c0061;
-    public static final int updateLeaveMessage=0x7f0c0062;
-    public static final int updateProduct=0x7f0c0063;
-    public static final int url=0x7f0c0064;
-    public static final int validate=0x7f0c0065;
-    public static final int yes=0x7f0c0066;
+    public static final int boughtProduct=0x7f0c002c;
+    public static final int cancel=0x7f0c002d;
+    public static final int change_pass=0x7f0c002e;
+    public static final int character_counter_pattern=0x7f0c002f;
+    public static final int currency=0x7f0c0030;
+    public static final int currentpassword=0x7f0c0031;
+    public static final int dateWrong=0x7f0c0032;
+    public static final int delete=0x7f0c0033;
+    public static final int deleteDepartment=0x7f0c0034;
+    public static final int deleteDepartmentMessage=0x7f0c0035;
+    public static final int deleteDiscount=0x7f0c0036;
+    public static final int deleteDiscountMessage=0x7f0c0037;
+    public static final int deleteLamp=0x7f0c0038;
+    public static final int deleteLampMessage=0x7f0c0039;
+    public static final int deleteMessage=0x7f0c003a;
+    public static final int deleteProduct=0x7f0c003b;
+    public static final int departement=0x7f0c003c;
+    public static final int departementname=0x7f0c003d;
+    public static final int description=0x7f0c003e;
+    public static final int descriptionProduct=0x7f0c003f;
+    public static final int discount=0x7f0c0040;
+    public static final int discountValidUntil=0x7f0c0041;
+    public static final int error=0x7f0c0042;
+    public static final int free=0x7f0c0043;
+    public static final int freeProduct=0x7f0c0044;
+    public static final int functionalityLimited=0x7f0c0045;
+    public static final int info=0x7f0c0046;
+    public static final int lamp=0x7f0c0047;
+    public static final int leftBlank=0x7f0c0048;
+    public static final int loginFailed=0x7f0c0049;
+    public static final int loginSuccess=0x7f0c004a;
+    public static final int marque=0x7f0c004b;
+    public static final int name=0x7f0c004c;
+    public static final int newDepartement=0x7f0c004d;
+    public static final int newDiscount=0x7f0c004e;
+    public static final int newLamp=0x7f0c004f;
+    public static final int newLampDetectedMessage=0x7f0c0050;
+    public static final int newProduct=0x7f0c0051;
+    public static final int newpassword=0x7f0c0052;
+    public static final int no=0x7f0c0053;
+    public static final int noAudioNoLifi=0x7f0c0054;
+    public static final int password=0x7f0c0055;
+    public static final int passwordNotEquals=0x7f0c0056;
+    public static final int password_toggle_content_description=0x7f0c0057;
+    public static final int path_password_eye=0x7f0c0058;
+    public static final int path_password_eye_mask_strike_through=0x7f0c0059;
+    public static final int path_password_eye_mask_visible=0x7f0c005a;
+    public static final int path_password_strike_through=0x7f0c005b;
+    public static final int percentOff=0x7f0c005c;
+    public static final int price=0x7f0c005d;
+    public static final int product=0x7f0c005e;
+    public static final int promotionsJour=0x7f0c005f;
+    public static final int rayon=0x7f0c0060;
+    public static final int search_menu_title=0x7f0c0061;
+    public static final int status_bar_notification_info_overflow=0x7f0c0062;
+    public static final int update=0x7f0c0063;
+    public static final int updateDepartment=0x7f0c0064;
+    public static final int updateDiscount=0x7f0c0065;
+    public static final int updateLeaveMessage=0x7f0c0066;
+    public static final int updateProduct=0x7f0c0067;
+    public static final int url=0x7f0c0068;
+    public static final int validate=0x7f0c0069;
+    public static final int yes=0x7f0c006a;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0d0000;
@@ -9207,7 +9211,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>

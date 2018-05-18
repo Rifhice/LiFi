@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     @Override
                                     public void onError(Object object) {
+                                        //input.setError(getResources().getString(R.string.loginFailed));
                                         AlertDialog alertDialog = new AlertDialog.Builder(context).create();
                                         alertDialog.setTitle("Alert");
                                         alertDialog.setIcon(android.R.drawable.ic_dialog_alert);

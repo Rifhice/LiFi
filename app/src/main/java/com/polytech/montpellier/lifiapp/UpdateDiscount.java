@@ -320,24 +320,67 @@ public class UpdateDiscount extends AppCompatActivity {
             fid = 1;
         }
         Discount discount;
-        if(isPercentage){
-            discount = new PercentageDiscount(currentDiscount.getId(),new Product(idProduct,"","",0,"",null),new Date(startDate.getTimeInMillis()),new Date(endDate.getTimeInMillis()),null,Float.parseFloat(percentage.getText().toString()),fid);
-        }
-        else{
-            discount = new QuantityDiscount(currentDiscount.getId(),new Product(idProduct,"","",0,"",null),new Date(startDate.getTimeInMillis()),new Date(endDate.getTimeInMillis()),null,Integer.parseInt(bought.getText().toString()), Integer.parseInt(free.getText().toString()),fid);
-        }
-        AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().update(discount, UserConnection.getInstance().getToken(), new ResponseHandler() {
-            @Override
-            public void onSuccess(Object object) {
-                System.out.println(object.toString());
-                finish();
+        if(endDate.getTimeInMillis()>startDate.getTimeInMillis()){
+            android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(UpdateDiscount.this).create();
+            alertDialog.setTitle(getResources().getString(R.string.alert));
+            alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+            alertDialog.setMessage(getResources().getString(R.string.dateWrong));
+            alertDialog.setButton(android.app.AlertDialog.BUTTON_NEUTRAL, getResources().getString(R.string.OK),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alertDialog.show();
+        }else {
+            if (isPercentage) {
+                if(!percentage.getText().toString().isEmpty()){
+                    discount = new PercentageDiscount(currentDiscount.getId(), new Product(idProduct, "", "", 0, "", null), new Date(startDate.getTimeInMillis()), new Date(endDate.getTimeInMillis()), null, Float.parseFloat(percentage.getText().toString()), fid);
+                    AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().update(discount, UserConnection.getInstance().getToken(), new ResponseHandler() {
+                        @Override
+                        public void onSuccess(Object object) {
+                            System.out.println(object.toString());
+                            finish();
+                        }
+
+                        @Override
+                        public void onError(Object object) {
+
+                        }
+                    });
+                }
+                else{
+                    if(percentage.getText().toString().isEmpty()){
+                        percentage.setError( getResources().getString(R.string.boughtProduct) + getResources().getString(R.string.leftBlank));
+                    }
+                }
+            } else {
+                if(!bought.getText().toString().isEmpty() && !free.getText().toString().isEmpty()) {
+                    discount = new QuantityDiscount(currentDiscount.getId(), new Product(idProduct, "", "", 0, "", null), new Date(startDate.getTimeInMillis()), new Date(endDate.getTimeInMillis()), null, Integer.parseInt(bought.getText().toString()), Integer.parseInt(free.getText().toString()), fid);
+                    AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().update(discount, UserConnection.getInstance().getToken(), new ResponseHandler() {
+                        @Override
+                        public void onSuccess(Object object) {
+                            System.out.println(object.toString());
+                            finish();
+                        }
+
+                        @Override
+                        public void onError(Object object) {
+
+                        }
+                    });
+                }else{
+                    if(bought.getText().toString().isEmpty()){
+                        bought.setError( getResources().getString(R.string.boughtProduct) + getResources().getString(R.string.leftBlank));
+                    }
+                    if(free.getText().toString().isEmpty()){
+                        free.setError( getResources().getString(R.string.freeProduct) + getResources().getString(R.string.leftBlank));
+                    }
+                }
+
             }
 
-            @Override
-            public void onError(Object object) {
-
-            }
-        });
+        }
     }
 
     @Override
