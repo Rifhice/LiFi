@@ -59,6 +59,7 @@ public class UpdateDiscount extends AppCompatActivity {
     CheckBox fidelity;
     Switch swi;
     boolean isPercentage = true;
+    Discount currentDiscount;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -69,126 +70,167 @@ public class UpdateDiscount extends AppCompatActivity {
         Intent intent = getIntent();
 
         final int id = intent.getIntExtra("idDiscount",0);
-
-        percentageText = (TextView)findViewById(R.id.percentagetext);
-        boughtText = (TextView)findViewById(R.id.boughttext);
-        freeText = (TextView)findViewById(R.id.freetext);
-        percentage = (EditText)findViewById(R.id.percentage);
-        bought = (EditText)findViewById(R.id.bought);
-        free = (EditText)findViewById(R.id.free);
-        fidelity = (CheckBox)findViewById(R.id.checkBox);
-        swi = (Switch) findViewById(R.id.switch1);
-
-        startButton = (Button) findViewById(R.id.endDateButton);
-        endButton = (Button) findViewById(R.id.startDateButton);
-
-        startDate = Calendar.getInstance();
-        endDate = Calendar.getInstance();
-
-        startButton.setText(dateToString(startDate));
-        endButton.setText(dateToString(endDate));
-
-
-
         final Spinner spinnerDepartment = (Spinner) findViewById(R.id.departmentSpinner);
         final ArrayList<String> dep = new ArrayList<>();
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
         final HashMap<String, Integer> depMap=new HashMap<String, Integer>();
 
-        //TODO vérifier departement non vide
-        AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().getAll(new ResponseHandler() {
-
+        AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().getById(id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
+                System.out.println("RES CALL" + object.toString());
+                if(object instanceof ArrayList){
+                    ArrayList<Discount> discounts = (ArrayList)object;
+                    percentageText = (TextView)findViewById(R.id.percentagetext);
+                    boughtText = (TextView)findViewById(R.id.boughttext);
+                    freeText = (TextView)findViewById(R.id.freetext);
+                    percentage = (EditText)findViewById(R.id.percentage);
+                    bought = (EditText)findViewById(R.id.bought);
+                    free = (EditText)findViewById(R.id.free);
+                    fidelity = (CheckBox)findViewById(R.id.checkBox);
+                    swi = (Switch) findViewById(R.id.switch1);
 
-                if (object instanceof ArrayList) {
+                    swi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                            if(isChecked){
+                                isPercentage = true;
+                                updateType(isPercentage);
+                            }
+                            else{
+                                isPercentage = false;
+                                updateType(isPercentage);
+                            }
+                        }
+                    });
 
-                    ArrayList<Department> array = (ArrayList<Department>) object;
-                    for (int i = 0; i < array.size(); i++) {
-                        Department department = array.get(i);
-                        dep.add(department.getName());
-                        depMap.put(department.getName(), department.getId());
+                    startButton = (Button) findViewById(R.id.endDateButton);
+                    endButton = (Button) findViewById(R.id.startDateButton);
+
+                    for (int j = 0; j < discounts.size(); j++) {
+
+                        startDate = Calendar.getInstance();
+                        startDate.setTime(discounts.get(j).getDateFin());
+                        endDate = Calendar.getInstance();
+                        endDate.setTime(discounts.get(j).getDateDebut());
+
+                        startButton.setText(dateToString(startDate));
+                        endButton.setText(dateToString(endDate));
+                        if(discounts.get(j).getFidelity() == 0){
+                            fidelity.setChecked(false);
+                        }
+                        else{
+                            fidelity.setChecked(true);
+                        }
+                        if(discounts.get(j) instanceof PercentageDiscount){
+                            PercentageDiscount current = (PercentageDiscount)discounts.get(j);
+                            isPercentage = true;
+                            swi.setChecked(true);
+                            swi.setVisibility(View.INVISIBLE);
+                            percentage.setText(current.getPercentage() + "");
+                        }
+                        else if(discounts.get(j) instanceof QuantityDiscount){
+                            QuantityDiscount current = (QuantityDiscount) discounts.get(j);
+                            isPercentage = false;
+                            swi.setChecked(false);
+                            swi.setVisibility(View.INVISIBLE);
+                            free.setText(current.getFree() + "");
+                            bought.setText(current.getBought() + "");
+                        }
+                        updateType(isPercentage);
+                        currentDiscount = discounts.get(j);
+
+                        //TODO vérifier departement non vide
+                        AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().getAll(new ResponseHandler() {
+
+                            @Override
+                            public void onSuccess(Object object) {
+
+                                if (object instanceof ArrayList) {
+
+                                    ArrayList<Department> array = (ArrayList<Department>) object;
+                                    for (int i = 0; i < array.size(); i++) {
+                                        Department department = array.get(i);
+                                        dep.add(department.getName());
+                                        depMap.put(department.getName(), department.getId());
+                                    }
+                                    adapter.setDropDownViewResource(R.layout.list);
+                                    spinnerDepartment.setAdapter(adapter);
+                                    spinnerDepartment.setSelection(dep.indexOf(currentDiscount.getProduct().getDepartment().getName()));
+                                }
+                            }
+
+                            @Override
+                            public void onError(Object object) {
+
+                            }
+                        });
+
+                        spinnerDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                                String depName = (String) spinnerDepartment.getSelectedItem();
+                                idDepartment = depMap.get(depName);
+                                idProduct = -1;
+                                Department current = new Department(idDepartment, depName);
+                                final Spinner spinnerProduct = (Spinner) findViewById(R.id.productSpinner);
+                                final ArrayList<String> prod = new ArrayList<>();
+                                final ArrayAdapter<String> prodAdapter = new ArrayAdapter<String>( context, R.layout.list,R.id.list1, prod);
+                                final HashMap<String, Integer> prodMap = new HashMap<String, Integer>();
+
+                                //TODO vérifier departement non vide
+                                AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().getAllProducts(current, new ResponseHandler() {
+
+                                    @Override
+                                    public void onSuccess(Object object) {
+                                        if (object instanceof ArrayList) {
+                                            ArrayList<Product> array = (ArrayList<Product>) object;
+                                            for (int i = 0; i < array.size(); i++) {
+                                                Product product= array.get(i);
+                                                prod.add(product.getName());
+                                                prodMap.put(product.getName(), product.getId());
+                                            }
+                                            prodAdapter.setDropDownViewResource(R.layout.list);
+                                            spinnerProduct.setAdapter(prodAdapter);
+                                            if(prodMap.get(currentDiscount.getProduct().getName()) != null){
+                                                spinnerProduct.setSelection(prod.indexOf(currentDiscount.getProduct().getName()));
+                                            }
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onError(Object object) {
+
+                                    }
+                                });
+
+                                spinnerProduct.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                                        String productName = (String) spinnerProduct.getSelectedItem();
+                                        idProduct = prodMap.get(productName);
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> parentView) {
+
+                                    }
+
+                                });
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parentView) {
+
+                            }
+
+                        });
                     }
-                    adapter.setDropDownViewResource(R.layout.list);
-                    spinnerDepartment.setAdapter(adapter);
                 }
             }
 
             @Override
             public void onError(Object object) {
 
-            }
-        });
-
-        spinnerDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                String depName = (String) spinnerDepartment.getSelectedItem();
-                idDepartment = depMap.get(depName);
-                idProduct = -1;
-                Department current = new Department(idDepartment, depName);
-                final Spinner spinnerProduct = (Spinner) findViewById(R.id.productSpinner);
-                final ArrayList<String> prod = new ArrayList<>();
-                final ArrayAdapter<String> prodAdapter = new ArrayAdapter<String>( context, R.layout.list,R.id.list1, prod);
-                final HashMap<String, Integer> prodMap = new HashMap<String, Integer>();
-
-                //TODO vérifier departement non vide
-                AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO().getAllProducts(current, new ResponseHandler() {
-
-                    @Override
-                    public void onSuccess(Object object) {
-
-                        if (object instanceof ArrayList) {
-
-                            ArrayList<Product> array = (ArrayList<Product>) object;
-                            for (int i = 0; i < array.size(); i++) {
-                                Product product= array.get(i);
-                                prod.add(product.getName());
-                                prodMap.put(product.getName(), product.getId());
-                            }
-                            prodAdapter.setDropDownViewResource(R.layout.list);
-                            spinnerProduct.setAdapter(prodAdapter);
-                        }
-                    }
-
-                    @Override
-                    public void onError(Object object) {
-
-                    }
-                });
-
-                spinnerProduct.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                        String productName = (String) spinnerProduct.getSelectedItem();
-                        idProduct = prodMap.get(productName);
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parentView) {
-
-                    }
-
-                });
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-
-            }
-
-        });
-        updateType(isPercentage);
-        swi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    isPercentage = true;
-                    updateType(isPercentage);
-                }
-                else{
-                    isPercentage = false;
-                    updateType(isPercentage);
-                }
             }
         });
 
@@ -279,12 +321,12 @@ public class UpdateDiscount extends AppCompatActivity {
         }
         Discount discount;
         if(isPercentage){
-            discount = new PercentageDiscount(0,new Product(idProduct,"","",0,"",null),new Date(startDate.getTimeInMillis()),new Date(endDate.getTimeInMillis()),null,Float.parseFloat(percentage.getText().toString()),fid);
+            discount = new PercentageDiscount(currentDiscount.getId(),new Product(idProduct,"","",0,"",null),new Date(startDate.getTimeInMillis()),new Date(endDate.getTimeInMillis()),null,Float.parseFloat(percentage.getText().toString()),fid);
         }
         else{
-            discount = new QuantityDiscount(0,new Product(idProduct,"","",0,"",null),new Date(startDate.getTimeInMillis()),new Date(endDate.getTimeInMillis()),null,Integer.parseInt(bought.getText().toString()), Integer.parseInt(free.getText().toString()),fid);
+            discount = new QuantityDiscount(currentDiscount.getId(),new Product(idProduct,"","",0,"",null),new Date(startDate.getTimeInMillis()),new Date(endDate.getTimeInMillis()),null,Integer.parseInt(bought.getText().toString()), Integer.parseInt(free.getText().toString()),fid);
         }
-        AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().create(discount, UserConnection.getInstance().getToken(), new ResponseHandler() {
+        AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().update(discount, UserConnection.getInstance().getToken(), new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
                 System.out.println(object.toString());

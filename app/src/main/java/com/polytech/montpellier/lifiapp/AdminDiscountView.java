@@ -227,7 +227,7 @@ public class AdminDiscountView extends Fragment {
                             @Override
                             public void onClick(View v) {
                                 Intent intent = new Intent(getActivity(), UpdateDiscount.class);
-                                intent.putExtra("discountId",row.getId());
+                                intent.putExtra("idDiscount",row.getId());
                                 startActivity(intent);
                             }
                         });

@@ -81,6 +81,8 @@
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.ChangePassword" >
         </activity>
+        <activity android:name="com.polytech.montpellier.lifiapp.UpdateDiscount" >
+        </activity>
 
         <service
             android:name="com.oledcomm.soft.androidlifisdk.v4.BluetoothLeService"
