@@ -52,7 +52,7 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
                     } else {
                         try {
                             JSONObject current = array.getJSONObject(0);
-                            response.onSuccess(new Department(current.getInt("id"), current.getString("name")));
+                            response.onSuccess(new Department(current.getInt("idDepartment"), current.getString("name")));
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -157,4 +157,6 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
             }
         });
     }
+
+
 }

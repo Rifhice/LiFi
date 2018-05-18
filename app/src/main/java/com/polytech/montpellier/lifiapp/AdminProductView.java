@@ -44,6 +44,8 @@ public class AdminProductView extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
     }
 
     @Override
@@ -186,6 +188,20 @@ public class AdminProductView extends Fragment{
                     ArrayList<Product> array = (ArrayList<Product>)object;
                     for(int i = 0 ; i < array.size() ; i++) {
                         final Product product = array.get(i);
+                        System.out.println("product11" + product);
+
+                        dao.getProductDiscounts(product, new ResponseHandler() {
+                            @Override
+                            public void onSuccess(Object object) {
+                                System.out.println("discounts of product "+object);
+                            }
+
+                            @Override
+                            public void onError(Object object) {
+                                System.out.println("FAILE");
+                            }
+                        });
+
                         final TableRow row = new TableRow(getActivity());
                         row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
                         row.setId(product.getId());
