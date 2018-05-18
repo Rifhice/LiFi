@@ -40,6 +40,7 @@ public class DiscountSummary extends Activity {
                 final TextView dateFinTV = (TextView) findViewById(R.id.date_fin);
                 final ScrollView desciptionSV = (ScrollView) findViewById(R.id.descriptionScroll);
                 final TextView descriptionTV = (TextView) findViewById(R.id.descriptionView) ;
+                final TextView discountTV = (TextView) findViewById(R.id.discount) ;
 
 
 
@@ -59,11 +60,14 @@ public class DiscountSummary extends Activity {
                     String prodName = discountper.getProduct().getName();
                     String dateFin = new SimpleDateFormat( "yyyy-MM-dd").format(discountper.getDateFin());
                     String desc = discountper.getProduct().getDescription();
+                    float percentage = discountper.getPercentage();
+
 
                     brandTV.setText(brand);
                     prodNameTV.setText(prodName);
                     dateFinTV.setText(dateFin);
                     descriptionTV.setText(desc);
+                    discountTV.setText(Float.toString(percentage) +" "+ getResources().getString(R.string.percentOff));
 
                     Float newString = discountper.newPrice();
                     Float oldString = discountper.oldPrice();
@@ -85,6 +89,7 @@ public class DiscountSummary extends Activity {
 
                     String brand = discountqte.getProduct().getBrand();
                     String prodName = discountqte.getProduct().getName();
+                    String promo = discountqte.getBought()+" " +getResources().getString(R.string.bought)+ " " + discountqte.getFree()+" " + getResources().getString(R.string.free);
 
                     brandTV.setText(brand);
                     prodNameTV.setText(prodName);
@@ -103,6 +108,7 @@ public class DiscountSummary extends Activity {
                     old_Price.setText(Double.toString( roundOffold) + getResources().getString(R.string.currency));
 
                     dateFinTV.setText(dateFin);
+                    discountTV.setText(promo);
                     descriptionTV.setText(desc);
  
                 }

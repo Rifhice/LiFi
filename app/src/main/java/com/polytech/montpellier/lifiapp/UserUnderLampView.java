@@ -17,11 +17,13 @@ import java.util.Locale;
 
 
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
+import com.polytech.montpellier.lifiapp.Model.Department;
 
 import android.support.v7.app.AppCompatActivity;
 
@@ -39,6 +41,8 @@ public class UserUnderLampView extends AppCompatActivity {
     final Context context = this;
 
     DiscountDAO daoDiscount = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO();
+    DepartmentDAO daodep = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
+
 
 
     @SuppressLint("ResourceType")
@@ -51,6 +55,7 @@ public class UserUnderLampView extends AppCompatActivity {
         setContentView(R.layout.user_under_lamp);
 
         final TableLayout tl = findViewById(R.id.promotionsJourTable);
+        final TextView rayonTV = findViewById(R.id.rayondbTV);
 
         TableRow tr_head = new TableRow(this);
         tr_head.setId(10);
@@ -119,7 +124,8 @@ public class UserUnderLampView extends AppCompatActivity {
                                                     System.out.println("current Discounr  " + currentDiscount);
                                                     final int idDiscount = currentDiscount.getInt("idDiscount");
 
-                                                    daoDiscount.getAllByDate(dateToday, new ResponseHandler() {
+//                                                    daoDiscount.getAllByDate(dateToday, new ResponseHandler() {
+                                                    Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/" + idDiscount, new ResponseHandler() {
 
                                                         @Override
                                                         public void onSuccess(Object object) {
@@ -149,8 +155,23 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                         } else {
                                                                             color = Color.GREEN;
                                                                         }
+                                                                       // rayonTV.setText(discount.getString("idDepartment"));
+                                                                        System.out.println(pkDep);
+                                                                        /*daodep.getById(pkDep, new ResponseHandler() {
+                                                                            @Override
+                                                                            public void onSuccess(Object object) {
+                                                                                rayonTV.setText("coucou");
 
-                                                                         if (discount.length() == 14) {
+                                                                            }
+
+                                                                            @Override
+                                                                            public void onError(Object object) {
+                                                                                rayonTV.setText("fail");
+
+                                                                            }
+                                                                        });*/
+                                                                        System.out.println("discount length"+discount.length());
+                                                                         if (discount.length() == 15) {
                                                                                 System.out.println("here walla 8");
 
                                                                                 float percentage = (float) discount.getDouble("percentage");
@@ -188,11 +209,11 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                                 row.addView(percentage_Discount);
 
                                                                                 tl.addView(row);
-                                                                            } else if (discount.length() == 15) {
+                                                                            } else if (discount.length() == 16) {
 
 
-                                                                                int bought = discount.getInt("Bought");
-                                                                                int free = discount.getInt("Free");
+                                                                                int bought = discount.getInt("bought");
+                                                                                int free = discount.getInt("free");
 
                                                                                 TableRow row = new TableRow(context);
                                                                                 row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));

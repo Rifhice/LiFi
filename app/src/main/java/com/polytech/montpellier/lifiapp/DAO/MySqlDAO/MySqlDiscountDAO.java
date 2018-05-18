@@ -89,8 +89,8 @@ public class MySqlDiscountDAO extends DiscountDAO {
                             float percentage = (float)current.getDouble("percentage");
                             discounts.add(new PercentageDiscount(id,prod,start,end,creation,percentage,fidelity));
                         }catch (JSONException e){
-                            int bought = current.getInt("Bought");
-                            int free = current.getInt("Free");
+                            int bought = current.getInt("bought");
+                            int free = current.getInt("free");
                             discounts.add(new QuantityDiscount(id,prod,start, end, creation, bought, free, fidelity));
                         }
                     } catch (Exception e) {
@@ -172,7 +172,7 @@ public class MySqlDiscountDAO extends DiscountDAO {
         Helper.getInstance().GET("http://81.64.139.113:1337/api/Discount/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                System.out.println("GET 1"+object.toString());
+//                System.out.println("GET 1"+object.toString());
                 JSONArray jsonArray = new JSONArray();
                 jsonArray = (JSONArray) object;
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");

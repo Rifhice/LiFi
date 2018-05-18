@@ -20,11 +20,11 @@
         android:id="@+id/MarqueTag"
         android:layout_width="56dp"
         android:layout_height="25dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
         android:text="@string/marque"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productName" />
+        app:layout_constraintTop_toBottomOf="@+id/PromotionTag" />
 
     <TextView
         android:id="@+id/productBrand"
@@ -32,10 +32,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/MarqueTag"
-        app:layout_constraintTop_toBottomOf="@+id/productName" />
+        app:layout_constraintTop_toTopOf="@+id/MarqueTag" />
 
     <TextView
         android:id="@+id/oldPriceTag"
@@ -113,11 +112,9 @@
         android:id="@+id/descriptionScroll"
         android:layout_width="310dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="50dp"
         android:layout_marginEnd="60dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descriptionTag">
@@ -125,7 +122,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/descriptionView"
@@ -135,5 +132,25 @@
                 tools:layout_editor_absoluteY="431dp" />
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/PromotionTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/discount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PromotionTag"
+        app:layout_constraintTop_toTopOf="@+id/PromotionTag" />
 
 </android.support.constraint.ConstraintLayout>
