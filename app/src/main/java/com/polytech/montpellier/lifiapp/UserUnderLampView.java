@@ -77,7 +77,7 @@ public class UserUnderLampView extends AppCompatActivity {
         final int pkDep = intent.getIntExtra("lampDep", 0);
         rayonTV.append(": " + intent.getStringExtra("lampDepName"));
 
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        final DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         final Date dateToday = new Date();
 
 
@@ -142,6 +142,7 @@ public class UserUnderLampView extends AppCompatActivity {
                                                                         String date_start = discount.getString("date_start");
 
 
+
                                                                         int fidelity = discount.getInt("fidelity");
 
                                                                         int color;
@@ -190,7 +191,6 @@ public class UserUnderLampView extends AppCompatActivity {
 
                                                                                 tl.addView(row);
                                                                             } else if (discount.has("free") && discount.has("bought")) {
-
 
                                                                                 int bought = discount.getInt("bought");
                                                                                 int free = discount.getInt("free");

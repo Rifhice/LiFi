@@ -209,6 +209,12 @@ public class MySqlDiscountDAO extends DiscountDAO {
 
     }
 
+
+    g
+
+
+
+
     @Override
     public void getAllByDate(final Date date ,final ResponseHandler response) throws DAOException {
         final ArrayList<Discount> discounts =  new ArrayList<Discount>();
