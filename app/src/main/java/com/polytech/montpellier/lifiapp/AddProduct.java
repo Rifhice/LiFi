@@ -91,16 +91,16 @@ public class AddProduct extends AppCompatActivity{
                 else{
 
                     if(editText_name.getText().toString().isEmpty()) {
-                        editText_name.setError("Name must not be left blank");
+                        editText_name.setError( getResources().getString(R.string.name) + getResources().getString(R.string.leftBlank));
                     }
                     if(editText_brand.getText().toString().isEmpty()) {
-                        editText_brand.setError("Brand must not be left blank");
+                        editText_brand.setError(getResources().getString(R.string.marque) +getResources().getString(R.string.leftBlank));
                     }
                     if(editText_description.getText().toString().isEmpty()) {
-                        editText_description.setError("Description must not be left blank");
+                        editText_description.setError(getResources().getString(R.string.description) + getResources().getString(R.string.leftBlank));
                     }
                     if(editText_price.getText().toString().isEmpty()) {
-                        editText_price.setError("Price must not be left blank");
+                        editText_price.setError(getResources().getString(R.string.price) + getResources().getString(R.string.leftBlank));
                     }
                 }
             }

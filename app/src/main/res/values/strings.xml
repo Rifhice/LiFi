@@ -37,6 +37,8 @@
     <string name="error">Error</string>
     <string name="cancel">Cancel</string>
     <string name="info">Info</string>
+    <string name="leftBlank"> must not be left blank</string>
+
 
 
     <string name="addLeaveMessage">You are leaving, are you sure ? All your modifications will be lost</string>

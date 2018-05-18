@@ -148,16 +148,16 @@ public class UpdateProduct extends AppCompatActivity {
                 }
                 else{
                     if(text_name.getText().toString().isEmpty()) {
-                        text_name.setError("Name must not be left blank");
+                        text_name.setError( getResources().getString(R.string.name) + getResources().getString(R.string.leftBlank));
                     }
                     if(text_brand.getText().toString().isEmpty()) {
-                        text_brand.setError("Brand must not be left blank");
+                        text_brand.setError(getResources().getString(R.string.marque) +getResources().getString(R.string.leftBlank));
                     }
                     if(text_description.getText().toString().isEmpty()) {
-                        text_description.setError("Description must not be left blank");
+                        text_description.setError(getResources().getString(R.string.description) + getResources().getString(R.string.leftBlank));
                     }
                     if(text_price.getText().toString().isEmpty()) {
-                        text_price.setError("Price must not be left blank");
+                        text_price.setError(getResources().getString(R.string.price) + getResources().getString(R.string.leftBlank));
                     }
 
                 }
