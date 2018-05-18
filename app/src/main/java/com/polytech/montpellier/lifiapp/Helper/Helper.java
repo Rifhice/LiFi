@@ -3,9 +3,6 @@ package com.polytech.montpellier.lifiapp.Helper;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.provider.SyncStateContract;
-import android.support.annotation.NonNull;
-import android.util.Base64;
 import android.util.Log;
 
 import com.android.volley.AuthFailureError;
@@ -16,9 +13,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.gson.JsonObject;
 import com.oledcomm.soft.lifiapp.R;
-//import com.oledcomm.soft.lifiapp.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -26,11 +21,10 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.sql.SQLOutput;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
+
+//import com.oledcomm.soft.lifiapp.R;
 
 public class Helper {
 
@@ -38,7 +32,6 @@ public class Helper {
 
     // Instantiate the RequestQueue.
    private RequestQueue queue;
-   private String url ="http://www.rifhice.com/LiFiAPI/";
 
    private Helper(Context context){
        queue = Volley.newRequestQueue(context);
@@ -61,8 +54,6 @@ public class Helper {
         new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                System.out.println(response);
-
                 try {
                     JSONArray getJSON = new JSONArray(response);
                     res.onSuccess(getJSON);
@@ -202,11 +193,10 @@ public class Helper {
             urlc.connect();
             return (urlc.getResponseCode() == 204 && urlc.getContentLength() == 0);
         } catch (IOException e) {
-            System.out.println("Error");
         }
         new AlertDialog.Builder(context)
-                .setTitle("Internet")
-                .setMessage("No internet connection !")
+                .setTitle(context.getResources().getString(R.string.internet))
+                .setMessage(context.getResources().getString(R.string.notinternet))
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 

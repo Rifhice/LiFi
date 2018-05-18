@@ -1,8 +1,5 @@
 package com.polytech.montpellier.lifiapp.DAO.MySqlDAO;
 
-import android.content.res.Resources;
-
-import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DAOException;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
@@ -10,7 +7,6 @@ import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.MainActivity;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Product;
-import com.polytech.montpellier.lifiapp.Model.Lamp;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -95,7 +91,6 @@ public class MySqlDepartmentDAO extends DepartmentDAO{
 
     @Override
     public void delete(int id, String token, final ResponseHandler response) throws DAOException {
-        System.out.println("IDRECEIVED" + id);
         Helper.getInstance().DELETE(MainActivity.url + "Department/" + id, token , new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {

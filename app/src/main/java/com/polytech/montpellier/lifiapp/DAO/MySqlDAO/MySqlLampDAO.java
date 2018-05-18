@@ -1,8 +1,5 @@
 package com.polytech.montpellier.lifiapp.DAO.MySqlDAO;
 
-import android.os.AsyncTask;
-
-import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DAOException;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
@@ -10,8 +7,6 @@ import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.MainActivity;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
-import com.polytech.montpellier.lifiapp.Model.Product;
-import com.polytech.montpellier.lifiapp.UserConnection;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -2,8 +2,6 @@ package com.polytech.montpellier.lifiapp.DAO.MySqlDAO;
 
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DAOException;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
-import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
-import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.MainActivity;
@@ -17,7 +15,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -64,14 +61,11 @@ public class MySqlDiscountDAO extends DiscountDAO {
     @Override
     public void getById(int id,final ResponseHandler response) throws DAOException {
         final ArrayList<Discount> discounts =  new ArrayList<Discount>();
-        System.out.println("IDRECEIVEDDAO" + id);
 
         Helper.getInstance().GET(MainActivity.url + "Discount/"+id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                System.out.println("OBJECT RECEIVED" + object);
                 if(object != null) {
-                    System.out.println("GET 1"+object.toString());
                     JSONArray jsonArray = new JSONArray();
                     jsonArray = (JSONArray) object;
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -176,7 +170,6 @@ public class MySqlDiscountDAO extends DiscountDAO {
         Helper.getInstance().GET(MainActivity.url + "Discount/", new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-//                System.out.println("GET 1"+object.toString());
                 JSONArray jsonArray = new JSONArray();
                 jsonArray = (JSONArray) object;
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");

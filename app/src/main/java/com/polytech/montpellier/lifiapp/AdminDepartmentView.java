@@ -1,14 +1,12 @@
 package com.polytech.montpellier.lifiapp;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -32,7 +30,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class AdminDepartmentView extends Fragment{
 
@@ -107,7 +104,7 @@ public class AdminDepartmentView extends Fragment{
                             UserConnection.getInstance().changePassword(new1.getText().toString(), new ResponseHandler() {
                                 @Override
                                 public void onSuccess(Object object) {
-                                    System.out.println(object);
+
                                 }
 
                                 @Override
@@ -195,7 +192,6 @@ public class AdminDepartmentView extends Fragment{
                                                         @Override
                                                         public void onSuccess(Object object) {
                                                             if (object instanceof JSONObject) {
-                                                                System.out.println("JSON : " + object.toString());
                                                                 JSONObject res = (JSONObject) object;
                                                                 try {
                                                                     if (res.getInt("affectedRows") != 0) {
@@ -248,12 +244,6 @@ public class AdminDepartmentView extends Fragment{
                             }
                         });
                         row.addView(update);
-                        row.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                //System.out.println(v.getId());
-                            }
-                        });
                         tl.addView(row, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
                     }
                 }

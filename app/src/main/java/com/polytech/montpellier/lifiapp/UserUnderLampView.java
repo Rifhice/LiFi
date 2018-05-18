@@ -6,31 +6,28 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
-import android.view.SoundEffectConstants;
 import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import java.util.Date;
-import java.text.*;
-import java.util.Locale;
-
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
-import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
-import com.polytech.montpellier.lifiapp.Model.Department;
-
-import android.support.v7.app.AppCompatActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Kevin on 03/05/2018.
@@ -92,18 +89,14 @@ public class UserUnderLampView extends AppCompatActivity {
             @Override
             public void onSuccess(Object object) {
                 if (object == null) {
-                    System.out.println("NO PRODUCTS IN DEP");
-                } else {
-                    System.out.println("object on create userunderlamp"+object);
-                    if (object instanceof JSONArray) {
-                        System.out.println("object on create userunderlampin instance of " + object.toString());
 
+                } else {
+                    if (object instanceof JSONArray) {
                         JSONArray depProducts = (JSONArray) object;
 
                         for (int i = 0; i < depProducts.length(); i++) {
                             try {
                                 JSONObject currentProduct = depProducts.getJSONObject(i);
-                                System.out.println("current Product  " + currentProduct);
                                 final int idProduct = currentProduct.getInt("idProduct");
                                 final String nameProduct = currentProduct.getString("name");
 

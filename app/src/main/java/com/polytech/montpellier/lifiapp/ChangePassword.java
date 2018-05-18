@@ -3,14 +3,13 @@ package com.polytech.montpellier.lifiapp;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
-import android.support.v7.app.AppCompatActivity;
 
 public class ChangePassword  extends AppCompatActivity {
 
@@ -30,11 +29,9 @@ public class ChangePassword  extends AppCompatActivity {
             //New password not equals
         }
         else{
-            System.out.println("CHANGE PASSWORD");
             UserConnection.getInstance().changePassword(new1.getText().toString(), new ResponseHandler() {
                 @Override
                 public void onSuccess(Object object) {
-                    System.out.println(object);
                     finish();
                 }
 

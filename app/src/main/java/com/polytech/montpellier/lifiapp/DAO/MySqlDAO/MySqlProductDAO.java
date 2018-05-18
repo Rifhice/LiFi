@@ -1,16 +1,12 @@
 package com.polytech.montpellier.lifiapp.DAO.MySqlDAO;
 
 
-import android.os.AsyncTask;
-
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DAOException;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.MainActivity;
 import com.polytech.montpellier.lifiapp.Model.Department;
-import com.polytech.montpellier.lifiapp.Model.Discounts.Discount;
-import com.polytech.montpellier.lifiapp.Model.Lamp;
 import com.polytech.montpellier.lifiapp.Model.Product;
 
 import org.json.JSONArray;
@@ -36,9 +32,6 @@ public class MySqlProductDAO extends ProductDAO {
         params.put("price",  String.valueOf(obj.getPrice()));
         params.put("brand", obj.getBrand());
         params.put("idDepartment", String.valueOf(obj.getDepartment().getId())) ;
-
-        //System.out.println("Name: " + params.get("name") +" Description: " + params.get("description") + " price: " + params.get("price") + " brand: " + params.get("brand") +
-         //       " idDep : " +  params.get("idDepartment"));
 
         Helper.getInstance().POST(MainActivity.url + "Product",token , params, new ResponseHandler() {
             @Override

@@ -104,7 +104,7 @@ public class AdminLampView extends Fragment{
                             UserConnection.getInstance().changePassword(new1.getText().toString(), new ResponseHandler() {
                                 @Override
                                 public void onSuccess(Object object) {
-                                    System.out.println(object);
+
                                 }
 
                                 @Override
@@ -209,7 +209,6 @@ public class AdminLampView extends Fragment{
                                                     @Override
                                                     public void onSuccess(Object object) {
                                                         if(object instanceof JSONObject){
-                                                            System.out.println("JSON : " + object.toString());
                                                             JSONObject res = (JSONObject) object;
                                                             try {
                                                                 if(res.getInt("affectedRows") != 0){
@@ -246,12 +245,7 @@ public class AdminLampView extends Fragment{
                             }
                         });
                         row.addView(update);
-                        row.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                System.out.println(v.getId());
-                            }
-                        });
+
                         tl.addView(row, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
                     }
                 }

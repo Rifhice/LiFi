@@ -12,9 +12,7 @@ import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Lamp;
-import com.polytech.montpellier.lifiapp.Model.Product;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -53,7 +51,7 @@ public class LampController extends AppCompatActivity {
                 @Override
                 public void onSuccess(Object object) {
                     if(object != null){
-                        System.out.println("It exists");
+
                     }
                     else{
                         try {
@@ -79,7 +77,6 @@ public class LampController extends AppCompatActivity {
             });
         }
         else {
-            System.out.println("\nLiFi reçu: id = " + lamp.toString());
             if(lamp.has("id")) {
                 lampDAO.getById(lamp.getInt("id"), new ResponseHandler() {
                     @Override
@@ -98,10 +95,9 @@ public class LampController extends AppCompatActivity {
 
 
                             context.startActivity(intent);
-                            System.out.println("It exists");
                         }
                         else{
-                            System.out.println("It doesn't exists");
+
                         }
                     }
 

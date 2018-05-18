@@ -1,14 +1,13 @@
 package com.polytech.montpellier.lifiapp;
 
-import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -43,12 +42,10 @@ public class UserConnection {
         Helper.getInstance().POST(url, token, params,  new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                System.out.println("login  " + object);
                 if (object instanceof JSONObject){
 
                    try {
                        JSONObject json = (JSONObject) object;
-                       System.out.println("login result " + object);
 
                        if (json.getInt("code") == 200){
                            setToken(json.getString("token"));
@@ -61,8 +58,6 @@ public class UserConnection {
                    } catch (JSONException e) {
                        e.printStackTrace();
                        responseHandler.onError(null);
-                       System.out.println("login error " );
-
                    }
 
                }
@@ -71,7 +66,6 @@ public class UserConnection {
 
             @Override
             public void onError(Object object) {
-                System.out.println("error login " + object.toString());
                 responseHandler.onError(null);
 
             }

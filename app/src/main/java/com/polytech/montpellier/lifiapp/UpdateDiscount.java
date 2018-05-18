@@ -18,23 +18,17 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.MultiAutoCompleteTextView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import com.oledcomm.soft.lifiapp.R;
-import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
-import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
-import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
-import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
 import com.polytech.montpellier.lifiapp.Model.Discounts.Discount;
 import com.polytech.montpellier.lifiapp.Model.Discounts.PercentageDiscount;
 import com.polytech.montpellier.lifiapp.Model.Discounts.QuantityDiscount;
-import com.polytech.montpellier.lifiapp.Model.Lamp;
 import com.polytech.montpellier.lifiapp.Model.Product;
 
 import java.util.ArrayList;
@@ -78,7 +72,6 @@ public class UpdateDiscount extends AppCompatActivity {
         AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().getById(id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
-                System.out.println("RES CALL" + object.toString());
                 if(object instanceof ArrayList){
                     ArrayList<Discount> discounts = (ArrayList)object;
                     percentageText = (TextView)findViewById(R.id.percentagetext);
@@ -391,7 +384,6 @@ public class UpdateDiscount extends AppCompatActivity {
                     AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().update(discount, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
-                            System.out.println(object.toString());
                             finish();
                         }
 

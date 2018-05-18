@@ -1,7 +1,6 @@
 package com.polytech.montpellier.lifiapp;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -9,7 +8,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -114,7 +112,7 @@ public class AdminProductView extends Fragment{
                             UserConnection.getInstance().changePassword(new1.getText().toString(), new ResponseHandler() {
                                 @Override
                                 public void onSuccess(Object object) {
-                                    System.out.println(object);
+
                                 }
 
                                 @Override
@@ -234,7 +232,6 @@ public class AdminProductView extends Fragment{
                                                     @Override
                                                     public void onSuccess(Object object) {
                                                         if(object instanceof JSONObject){
-                                                            System.out.println("JSON : " + object.toString());
                                                             JSONObject res = (JSONObject) object;
                                                             try {
                                                                 if(res.getInt("affectedRows") != 0){

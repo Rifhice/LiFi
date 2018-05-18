@@ -92,6 +92,8 @@
     <string name="functionalityLimited">Functionality limited</string>
     <string name="noAudioNoLifi">Since audio access has not been granted, this app will not be able to discover LiFi.</string>
 
+    <string name="internet">Internet</string>
+    <string name="notinternet">No internet connection !</string>
 
 
 

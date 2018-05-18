@@ -349,7 +349,6 @@ public class AddDiscount extends AppCompatActivity {
                     AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().create(discount, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
-                            System.out.println(object.toString());
                             finish();
                         }
 
@@ -378,7 +377,6 @@ public class AddDiscount extends AppCompatActivity {
                     AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO().create(discount, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
-                            System.out.println(object.toString());
                             finish();
                         }
 

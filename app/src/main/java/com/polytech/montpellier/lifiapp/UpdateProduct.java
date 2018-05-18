@@ -152,7 +152,6 @@ public class UpdateProduct extends AppCompatActivity {
                     daoP.update( product, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
-                            System.out.println(object.toString());
                             finish();
                         }
 
