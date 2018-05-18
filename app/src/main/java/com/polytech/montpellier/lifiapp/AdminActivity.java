@@ -94,9 +94,9 @@ public class AdminActivity extends AppCompatActivity {
     private void setViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new AdminLampView(), getResources().getString(R.string.lamp));
+        adapter.addFragment(new AdminDepartmentView(), getResources().getString(R.string.departement));
         adapter.addFragment(new AdminProductView(), getResources().getString(R.string.product));
         adapter.addFragment(new AdminDiscountView(), getResources().getString(R.string.discount));
-        adapter.addFragment(new AdminDepartmentView(), getResources().getString(R.string.departement));
         viewPager.setAdapter(adapter);
     }
 
