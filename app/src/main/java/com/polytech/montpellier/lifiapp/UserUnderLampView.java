@@ -21,6 +21,7 @@ import java.util.Locale;
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
+import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
