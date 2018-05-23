@@ -19,10 +19,10 @@
         <activity android:name="com.polytech.montpellier.lifiapp.FirstLamp">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.AdminActivity">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.AdminActivity">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.AdminProductView">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Product.AdminProductView">
 
         </activity>
         <activity android:name="com.polytech.montpellier.lifiapp.LampController">
@@ -31,43 +31,40 @@
         <activity android:name="com.polytech.montpellier.lifiapp.UserUnderLampView">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.AddProduct">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Product.AddProduct">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.AddLamp">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Lamp.AddLamp">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.UpdateLamp">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Lamp.UpdateLamp">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.AdminDiscountView">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Discount.AdminDiscountView">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.AdminDepartmentView">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Department.AdminDepartmentView">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.DiscountSummary">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Discount.DiscountSummary">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.UpdateProduct">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Product.UpdateProduct">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.AddDepartment">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Department.AddDepartment">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.UpdateDepartment">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Department.UpdateDepartment">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.ProductSummary">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Product.ProductSummary">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.AddDiscount">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Discount.AddDiscount">
 
         </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.ChangePassword">
-
-        </activity>
-        <activity android:name="com.polytech.montpellier.lifiapp.UpdateDiscount">
+        <activity android:name="com.polytech.montpellier.lifiapp.Admin.Discount.UpdateDiscount">
 
         </activity>
     </application>

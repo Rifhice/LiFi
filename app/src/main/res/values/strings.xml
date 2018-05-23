@@ -14,7 +14,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="OK">OK</string>
-    <string name="url">http://81.64.139.113:1337/api/</string>
+    <string name="url">http://172.20.10.7:1337/api/</string>
     <string name="add">Add</string>
     <string name="delete">Delete</string>
     <string name="deleteProduct">Delete Product</string>

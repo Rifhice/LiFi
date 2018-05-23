@@ -16,7 +16,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.text.*;
 import java.util.Locale;
 
 import com.oledcomm.soft.lifiapp.R;
@@ -24,6 +23,7 @@ import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DepartmentDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.DiscountDAO;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.ProductDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
+import com.polytech.montpellier.lifiapp.Admin.Discount.DiscountSummary;
 import com.polytech.montpellier.lifiapp.Helper.Helper;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
 import com.polytech.montpellier.lifiapp.Model.Department;
@@ -32,14 +32,8 @@ import com.polytech.montpellier.lifiapp.Model.Discounts.PercentageDiscount;
 import com.polytech.montpellier.lifiapp.Model.Discounts.QuantityDiscount;
 import com.polytech.montpellier.lifiapp.Model.Product;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 
 /**
  * Created by Kevin on 03/05/2018.
@@ -50,9 +44,9 @@ public class UserUnderLampView extends AppCompatActivity {
 
     final Context context = this;
 
-    DiscountDAO daoDiscount = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDiscountDAO();
-    DepartmentDAO daodep = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getDepartmentDAO();
-    ProductDAO daoProduit = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getProductDAO();
+    DiscountDAO daoDiscount = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getDiscountDAO();
+    DepartmentDAO daodep = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getDepartmentDAO();
+    ProductDAO daoProduit = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getProductDAO();
 
 
     @SuppressLint("ResourceType")
@@ -143,7 +137,6 @@ public class UserUnderLampView extends AppCompatActivity {
 
                                                             final Discount currentDiscount = productDiscounts.get(i);
                                                             System.out.println("current Discount  " + currentDiscount);
-                                                            System.out.println("Datelala" + currentDiscount.getDateDebut() + " " + currentDiscount.getDateFin() + " " + Calendar.getInstance().getTime());
                                                             if(currentDiscount.getDateDebut().before(Calendar.getInstance().getTime()) && currentDiscount.getDateFin().after(Calendar.getInstance().getTime())) {
                                                                 int fidelity = currentDiscount.getFidelity();
 

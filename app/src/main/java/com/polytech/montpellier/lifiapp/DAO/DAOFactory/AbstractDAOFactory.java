@@ -14,7 +14,7 @@ public abstract class AbstractDAOFactory {
     // ==================== //
     // ==== ATTRIBUTES ==== //
     // ==================== //
-    public static final int MYSQL_DAO_FACTORY = 0;
+    public static final int DISTANT_DAO_FACTORY = 0;
 
     // ================= //
     // ==== METHODS ==== //
@@ -27,10 +27,10 @@ public abstract class AbstractDAOFactory {
      */
     public static AbstractDAOFactory getFactory(int type){
         switch(type) {
-            case(MYSQL_DAO_FACTORY):
-                return new MySqlDAOFactory();
+            case(DISTANT_DAO_FACTORY):
+                return new DistantDAOFactory();
             default:
-                return new MySqlDAOFactory();
+                return new DistantDAOFactory();
         }
     }
 

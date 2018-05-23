@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.oledcomm.soft.lifiapp.R;
+import com.polytech.montpellier.lifiapp.Admin.AdminActivity;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
 import com.polytech.montpellier.lifiapp.DAO.DAOFactory.AbstractDAOFactory;
 import com.polytech.montpellier.lifiapp.Helper.ResponseHandler;
@@ -26,7 +27,7 @@ public class LampController extends AppCompatActivity {
 
     final Context context = this;
     private static LampController instance = null;
-    private LampDAO lampDAO = AbstractDAOFactory.getFactory(AbstractDAOFactory.MYSQL_DAO_FACTORY).getLampDAO();
+    private LampDAO lampDAO = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getLampDAO();
 
     private LampController(){
 
