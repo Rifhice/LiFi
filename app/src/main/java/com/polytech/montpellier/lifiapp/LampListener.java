@@ -22,10 +22,12 @@ public class LampListener{
     }
 
     private void initLiFiManager(Activity activity, final Context context){
+        //Instantiating the manager, choosing the jack audio as input for the signal.
         mLiFiSdkManager = new LiFiSdkManager(context, LiFiSdkManager.SIMPLE_JACK_LIB_VERSION, "", "", new ILiFiPosition() {
-
+            //Function trigerred whenever a new lamp signal is detected. The Json received is like { 'id' : X }
             @Override
             public void onLiFiPositionUpdate(JSONObject jsonObject) {
+                //We are passing the received JSON to the LampController class which contains the business logic
                 try {
                     LampController.getInstance().onNewLamp(jsonObject,context);
                 } catch (JSONException e) {
@@ -33,7 +35,9 @@ public class LampListener{
                 }
             }
         });
+        //Init the manager
         mLiFiSdkManager.init(activity,"");
+        //Start the manager
         mLiFiSdkManager.start();
     }
 

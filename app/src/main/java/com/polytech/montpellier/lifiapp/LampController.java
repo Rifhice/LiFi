@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.google.gson.JsonObject;
 import com.oledcomm.soft.lifiapp.R;
 import com.polytech.montpellier.lifiapp.Admin.AdminActivity;
 import com.polytech.montpellier.lifiapp.DAO.AbstractDAO.LampDAO;
@@ -47,13 +48,19 @@ public class LampController extends AppCompatActivity {
     }
 
     public void onNewLamp(final JSONObject lamp, final Context context) throws JSONException {
+        //If the admin page is open and the user is connected as admin, open a pop up to add a new lamp.
         if(AdminActivity.isIsDisplayed() && UserConnection.getInstance().isConnected()){
+            //Ask the DAO the lamp with the id given in parameter.
             lampDAO.getById(lamp.getInt("id"), new ResponseHandler() {
+                //Function triggered on success from the request.
                 @Override
                 public void onSuccess(Object object) {
+                    //If the lamp already exist in the database, there is no need to
+                    //ask the user to add it
                     if(object != null){
 
                     }
+                    //The lamp doesn't exist so we open a pop to the user
                     else{
                         try {
                             AdminActivity.getInstance().openNewLampPopUp(lamp.getInt("id"));
@@ -62,7 +69,7 @@ public class LampController extends AppCompatActivity {
                         }
                     }
                 }
-
+                //Function triggered when an error occurred with the request.
                 @Override
                 public void onError(Object object) {
                     new AlertDialog.Builder(context)
@@ -77,11 +84,15 @@ public class LampController extends AppCompatActivity {
                 }
             });
         }
+        //If the user is not connected or not on the admin page we display the received lamp
         else {
             if(lamp.has("id")) {
+                //Ask the DAO the lamp with the id given in parameter.
                 lampDAO.getById(lamp.getInt("id"), new ResponseHandler() {
+                    //Function trigered on success from the request.
                     @Override
                     public void onSuccess(Object object) {
+                        //If the lamp exist we display it's details
                         if(object != null){
                             Intent intent = new Intent(context, UserUnderLampView.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             ArrayList<Lamp> array = (ArrayList<Lamp>)object;
@@ -93,15 +104,14 @@ public class LampController extends AppCompatActivity {
                                 intent.putExtra("lampDep",lamp.getDepartment().getId());
                                 intent.putExtra("lampDepName",lamp.getDepartment().getName());
                             }
-
-
                             context.startActivity(intent);
                         }
+                        //If it doesn't exist, we aren't doing anything
                         else{
 
                         }
                     }
-
+                    //Function triggered when an error occurred with the request.
                     @Override
                     public void onError(Object object) {
                         new AlertDialog.Builder(context)
@@ -119,4 +129,6 @@ public class LampController extends AppCompatActivity {
             }
         }
     }
+
+
 }

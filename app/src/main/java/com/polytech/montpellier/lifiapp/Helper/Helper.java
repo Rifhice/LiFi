@@ -27,7 +27,6 @@ import java.util.Map;
 //import com.oledcomm.soft.lifiapp.R;
 
 public class Helper {
-
     private static Helper instance;
 
     // Instantiate the RequestQueue.
