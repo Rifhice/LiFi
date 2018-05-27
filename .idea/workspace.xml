@@ -5,11 +5,8 @@
       <config />
     </shared>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c0e9e75-6346-48ff-a48d-fbfe274acc33" name="Default" comment="" />
+    <list default="true" id="24965828-b9e1-4912-ad92-509ae8a16d75" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,254 +27,23 @@
     </system>
   </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
     <leaf>
-      <file leaf-file-name="AdminDepartmentView.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDepartmentView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="172" column="113" lean-forward="false" selection-start-line="172" selection-start-column="113" selection-end-line="172" selection-end-column="113" />
-              <folding>
-                <element signature="e#2008#2246#0" expanded="true" />
-                <element signature="e#2245#2246#0" expanded="true" />
-                <element signature="e#2374#6773#0" expanded="true" />
-                <element signature="e#2589#2632#0" expanded="true" />
-                <element signature="e#3055#3101#0" expanded="true" />
-                <element signature="e#3447#3493#0" expanded="true" />
-                <element signature="e#3679#3716#0" expanded="true" />
-                <element signature="e#3718#6400#0" expanded="true" />
-                <element signature="e#4107#4147#0" expanded="true" />
-                <element signature="e#4286#4338#0" expanded="true" />
-                <element signature="e#4419#4456#0" expanded="true" />
-                <element signature="e#4494#4772#0" expanded="true" />
-                <element signature="e#4771#4772#0" expanded="true" />
-                <element signature="e#5493#5533#0" expanded="true" />
-                <element signature="e#5688#5728#0" expanded="true" />
-                <element signature="e#5817#5854#0" expanded="true" />
-                <element signature="e#5900#6210#0" expanded="true" />
-                <element signature="e#6209#6210#0" expanded="true" />
-                <element signature="e#6399#6400#0" expanded="true" />
-                <element signature="e#6445#6486#0" expanded="true" />
-                <element signature="e#6488#6715#0" expanded="true" />
-                <element signature="e#6714#6715#0" expanded="true" />
-                <element signature="e#6772#6773#0" expanded="true" />
-                <element signature="e#8191#8232#0" expanded="true" />
-                <element signature="e#8345#10982#0" expanded="true" />
-                <element signature="e#8606#8657#0" expanded="true" />
-                <element signature="e#8949#10822#0" expanded="true" />
-                <element signature="e#10821#10822#0" expanded="true" />
-                <element signature="e#10981#10982#0" expanded="true" />
-                <element signature="e#11137#11178#0" expanded="true" />
-                <element signature="e#11291#11771#0" expanded="true" />
-                <element signature="e#11770#11771#0" expanded="true" />
-                <element signature="e#11866#12111#0" expanded="true" />
-                <element signature="e#12110#12111#0" expanded="true" />
-              </folding>
-=======
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AdminDepartmentView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDepartmentView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4746">
-              <caret line="264" column="27" lean-forward="false" selection-start-line="264" selection-start-column="27" selection-end-line="264" selection-end-column="27" />
-              <folding />
->>>>>>> master
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="AdminProductView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminProductView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="176" column="118" lean-forward="false" selection-start-line="176" selection-start-column="118" selection-end-line="176" selection-end-column="118" />
-              <folding>
-                <element signature="e#2003#2238#0" expanded="true" />
-                <element signature="e#2237#2238#0" expanded="true" />
-                <element signature="e#2366#6406#0" expanded="true" />
-                <element signature="e#3580#6066#0" expanded="true" />
-                <element signature="e#4259#4537#0" expanded="true" />
-                <element signature="e#4536#4537#0" expanded="true" />
-                <element signature="e#5566#5876#0" expanded="true" />
-                <element signature="e#5875#5876#0" expanded="true" />
-                <element signature="e#6065#6066#0" expanded="true" />
-                <element signature="e#6121#6348#0" expanded="true" />
-                <element signature="e#6347#6348#0" expanded="true" />
-                <element signature="e#6405#6406#0" expanded="true" />
-                <element signature="e#7885#7928#0" expanded="true" />
-                <element signature="e#8717#8758#0" expanded="true" />
-                <element signature="e#8871#11407#0" expanded="true" />
-                <element signature="e#9123#9171#0" expanded="true" />
-                <element signature="e#9225#9273#0" expanded="true" />
-                <element signature="e#9441#11256#0" expanded="true" />
-                <element signature="e#11255#11256#0" expanded="true" />
-                <element signature="e#11406#11407#0" expanded="true" />
-                <element signature="e#11562#11603#0" expanded="true" />
-                <element signature="e#11716#12366#0" expanded="true" />
-                <element signature="e#12365#12366#0" expanded="true" />
-                <element signature="e#12517#12556#0" expanded="true" />
-                <element signature="e#12665#13322#0" expanded="true" />
-                <element signature="e#13321#13322#0" expanded="true" />
-=======
-      <file leaf-file-name="MySqlDiscountDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlDiscountDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductSummary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/ProductSummary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-              <folding>
-                <element signature="e#3125#3483#0" expanded="true" />
-                <element signature="e#3482#3483#0" expanded="true" />
->>>>>>> master
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="44" column="65" lean-forward="false" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
-=======
-      <file leaf-file-name="AddDiscount.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AddDiscount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="153" column="74" lean-forward="false" selection-start-line="153" selection-start-column="74" selection-end-line="153" selection-end-column="74" />
-              <folding>
-                <element signature="e#7944#8359#0" expanded="true" />
-                <element signature="e#8358#8359#0" expanded="true" />
-                <element signature="e#8447#8448#0" expanded="true" />
-                <element signature="e#8478#8479#0" expanded="true" />
-                <element signature="e#8556#8557#0" expanded="true" />
-                <element signature="e#8587#8588#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuantityDiscount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Model/Discounts/QuantityDiscount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
->>>>>>> master
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="MySqlDiscountDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlDiscountDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="962">
-              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-=======
-      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Helper/Helper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+            <state relative-caret-position="768">
+              <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
               <folding>
-                <element signature="e#1735#2280#0" expanded="true" />
-                <element signature="e#2279#2280#0" expanded="true" />
+                <element signature="e#1451#1949#0" expanded="true" />
+                <element signature="e#1948#1949#0" expanded="true" />
+                <element signature="e#1951#2120#0" expanded="true" />
+                <element signature="e#2119#2120#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateDiscount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/UpdateDiscount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-407">
-              <caret line="155" column="75" lean-forward="false" selection-start-line="155" selection-start-column="75" selection-end-line="155" selection-end-column="75" />
-              <folding>
-                <element signature="e#11577#11578#0" expanded="true" />
-                <element signature="e#11608#11609#0" expanded="true" />
-                <element signature="e#11686#11687#0" expanded="true" />
-                <element signature="e#11717#11718#0" expanded="true" />
-                <element signature="e#12328#12613#0" expanded="true" />
-                <element signature="e#12612#12613#0" expanded="true" />
-                <element signature="e#15992#16172#0" expanded="true" />
-                <element signature="e#16171#16172#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DiscountSummary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DiscountSummary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
->>>>>>> master
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminDiscountView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDiscountView.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="168">
-              <caret line="126" column="72" lean-forward="false" selection-start-line="126" selection-start-column="72" selection-end-line="126" selection-end-column="72" />
-=======
-            <state relative-caret-position="2919">
-              <caret line="178" column="25" lean-forward="false" selection-start-line="178" selection-start-column="25" selection-end-line="178" selection-end-column="25" />
->>>>>>> master
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddProduct.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AddProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="-1093">
-              <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-              <folding>
-                <marker date="1526581304138" expanded="true" signature="1832:12393" ph="{...}" />
-                <marker date="1526581304138" expanded="true" signature="4469:5702" ph="{...}" />
-                <marker date="1526581304138" expanded="true" signature="4792:5672" ph="{...}" />
-                <marker date="1526581304138" expanded="true" signature="6256:12385" ph="{...}" />
-                <marker date="1526581304138" expanded="true" signature="6329:12288" ph="{...}" />
-                <marker date="1526581304138" expanded="true" signature="9262:10665" ph="{...}" />
-                <marker date="1526581304138" expanded="true" signature="9415:10408" ph="{...}" />
-                <marker date="1526581304138" expanded="true" signature="10559:10615" ph="{}" />
-                <marker date="1526581304138" expanded="true" signature="12359:12375" ph="{}" />
-              </folding>
-=======
-            <state relative-caret-position="1974">
-              <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
-              <folding />
->>>>>>> master
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>login</find>
-      <find>pass</find>
-      <find>TAILLE</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -285,7 +51,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\Kevin\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\chdal\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -2285,29 +2051,6 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlProductDAO.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/LampController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlLampDAO.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/UserUnderLampView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DiscountSummary.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/UpdateDiscount.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlDiscountDAO.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/lampall_display.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminProductView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDepartmentView.java" />
-=======
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/ProductSummary.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AddDiscount.java" />
->>>>>>> master
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="952" />
     <option name="width" value="976" />
@@ -2330,6 +2073,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2353,57 +2097,24 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="lifiapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LiFi" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="lifiapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="Helper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LiFi" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-<<<<<<< HEAD
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="LiFi" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="LiFi" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-=======
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="lifiapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
->>>>>>> master
-            </path>
-            <path>
-              <item name="LiFi" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
-    <property name="device.picker.selection" value="YDOFDIS85TDIZ5B6" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2441,7 +2152,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2455,6 +2166,8 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Auto" />
       <Auto>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
@@ -2559,103 +2272,48 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2c0e9e75-6346-48ff-a48d-fbfe274acc33" name="Default" comment="" />
-      <created>1526572154873</created>
+      <changelist id="24965828-b9e1-4912-ad92-509ae8a16d75" name="Default" comment="" />
+      <created>1527081917940</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1526572154873</updated>
+      <updated>1527081917940</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-=======
-    <frame x="92" y="-9" width="1837" height="1098" extended-state="6" />
     <editor active="true" />
->>>>>>> master
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18421052" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25383306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
->>>>>>> master
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -2665,450 +2323,15 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDepartmentView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4746">
-          <caret line="264" column="27" lean-forward="false" selection-start-line="264" selection-start-column="27" selection-end-line="264" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DiscountSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDiscountView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2919">
-          <caret line="178" column="25" lean-forward="false" selection-start-line="178" selection-start-column="25" selection-end-line="178" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminProductView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4725">
-          <caret line="262" column="0" lean-forward="false" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AddProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1974">
-          <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminLampView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlDiscountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="88" column="260" lean-forward="false" selection-start-line="88" selection-start-column="260" selection-end-line="88" selection-end-column="260" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDepartmentView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3843">
-          <caret line="220" column="27" lean-forward="false" selection-start-line="220" selection-start-column="27" selection-end-line="220" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlDiscountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDiscountView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2919">
-          <caret line="178" column="25" lean-forward="true" selection-start-line="178" selection-start-column="25" selection-end-line="178" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminProductView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4725">
-          <caret line="262" column="0" lean-forward="false" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AddProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1974">
-          <caret line="125" column="37" lean-forward="true" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminLampView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DiscountSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Login.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlDepartmentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2112">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/UserUnderLampView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="938">
-          <caret line="158" column="79" lean-forward="false" selection-start-line="158" selection-start-column="79" selection-end-line="158" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlLampDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <element signature="e#1699#1705#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlProductDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="71" column="71" lean-forward="false" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/LampListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminLampView.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-1093">
-          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding>
-            <marker date="1526581304138" expanded="true" signature="1832:12393" ph="{...}" />
-            <marker date="1526581304138" expanded="true" signature="4469:5702" ph="{...}" />
-            <marker date="1526581304138" expanded="true" signature="4792:5672" ph="{...}" />
-            <marker date="1526581304138" expanded="true" signature="6256:12385" ph="{...}" />
-            <marker date="1526581304138" expanded="true" signature="6329:12288" ph="{...}" />
-            <marker date="1526581304138" expanded="true" signature="9262:10665" ph="{...}" />
-            <marker date="1526581304138" expanded="true" signature="9415:10408" ph="{...}" />
-            <marker date="1526581304138" expanded="true" signature="10559:10615" ph="{}" />
-            <marker date="1526581304138" expanded="true" signature="12359:12375" ph="{}" />
-          </folding>
-=======
-        <state relative-caret-position="147">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
->>>>>>> master
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/LampController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-694">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DiscountSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#3586#3629#0" expanded="false" />
-            <element signature="e#3702#3745#0" expanded="false" />
-            <element signature="e#4927#4970#0" expanded="false" />
-            <element signature="e#5043#5086#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDiscountView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-436">
-          <caret line="180" column="32" lean-forward="false" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="32" />
-          <folding>
-            <marker date="1526581304134" expanded="true" signature="2033:13359" ph="{...}" />
-            <marker date="1526581304134" expanded="true" signature="4897:6130" ph="{...}" />
-            <marker date="1526581304134" expanded="true" signature="5220:6100" ph="{...}" />
-            <marker date="1526581304134" expanded="true" signature="6697:13351" ph="{...}" />
-            <marker date="1526581304134" expanded="true" signature="6770:13254" ph="{...}" />
-            <marker date="1526581304134" expanded="true" signature="10638:12045" ph="{...}" />
-            <marker date="1526581304134" expanded="true" signature="10791:11788" ph="{...}" />
-            <marker date="1526581304134" expanded="true" signature="11939:11995" ph="{}" />
-            <marker date="1526581304134" expanded="true" signature="13325:13341" ph="{}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlDiscountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="962">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-=======
-        <state relative-caret-position="4725">
-          <caret line="262" column="0" lean-forward="false" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
->>>>>>> master
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AddProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="168">
-          <caret line="126" column="72" lean-forward="false" selection-start-line="126" selection-start-column="72" selection-end-line="126" selection-end-column="72" />
-=======
-        <state relative-caret-position="1974">
-          <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
->>>>>>> master
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/department_all_display.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDepartmentView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4746">
-          <caret line="264" column="27" lean-forward="false" selection-start-line="264" selection-start-column="27" selection-end-line="264" selection-end-column="27" />
->>>>>>> master
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lampall_display.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="312">
-          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="46" />
-=======
-        <state relative-caret-position="2919">
-          <caret line="178" column="25" lean-forward="false" selection-start-line="178" selection-start-column="25" selection-end-line="178" selection-end-column="25" />
->>>>>>> master
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminProductView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="176" column="118" lean-forward="false" selection-start-line="176" selection-start-column="118" selection-end-line="176" selection-end-column="118" />
-          <folding>
-            <element signature="e#2003#2238#0" expanded="true" />
-            <element signature="e#2237#2238#0" expanded="true" />
-            <element signature="e#2366#6406#0" expanded="true" />
-            <element signature="e#3580#6066#0" expanded="true" />
-            <element signature="e#4259#4537#0" expanded="true" />
-            <element signature="e#4536#4537#0" expanded="true" />
-            <element signature="e#5566#5876#0" expanded="true" />
-            <element signature="e#5875#5876#0" expanded="true" />
-            <element signature="e#6065#6066#0" expanded="true" />
-            <element signature="e#6121#6348#0" expanded="true" />
-            <element signature="e#6347#6348#0" expanded="true" />
-            <element signature="e#6405#6406#0" expanded="true" />
-            <element signature="e#7885#7928#0" expanded="true" />
-            <element signature="e#8717#8758#0" expanded="true" />
-            <element signature="e#8871#11407#0" expanded="true" />
-            <element signature="e#9123#9171#0" expanded="true" />
-            <element signature="e#9225#9273#0" expanded="true" />
-            <element signature="e#9441#11256#0" expanded="true" />
-            <element signature="e#11255#11256#0" expanded="true" />
-            <element signature="e#11406#11407#0" expanded="true" />
-            <element signature="e#11562#11603#0" expanded="true" />
-            <element signature="e#11716#12366#0" expanded="true" />
-            <element signature="e#12365#12366#0" expanded="true" />
-            <element signature="e#12517#12556#0" expanded="true" />
-            <element signature="e#12665#13322#0" expanded="true" />
-            <element signature="e#13321#13322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="44" column="65" lean-forward="false" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DiscountSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Model/Discounts/QuantityDiscount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
->>>>>>> master
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AdminDepartmentView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="172" column="113" lean-forward="false" selection-start-line="172" selection-start-column="113" selection-end-line="172" selection-end-column="113" />
-          <folding>
-            <element signature="e#2008#2246#0" expanded="true" />
-            <element signature="e#2245#2246#0" expanded="true" />
-            <element signature="e#2374#6773#0" expanded="true" />
-            <element signature="e#2589#2632#0" expanded="true" />
-            <element signature="e#3055#3101#0" expanded="true" />
-            <element signature="e#3447#3493#0" expanded="true" />
-            <element signature="e#3679#3716#0" expanded="true" />
-            <element signature="e#3718#6400#0" expanded="true" />
-            <element signature="e#4107#4147#0" expanded="true" />
-            <element signature="e#4286#4338#0" expanded="true" />
-            <element signature="e#4419#4456#0" expanded="true" />
-            <element signature="e#4494#4772#0" expanded="true" />
-            <element signature="e#4771#4772#0" expanded="true" />
-            <element signature="e#5493#5533#0" expanded="true" />
-            <element signature="e#5688#5728#0" expanded="true" />
-            <element signature="e#5817#5854#0" expanded="true" />
-            <element signature="e#5900#6210#0" expanded="true" />
-            <element signature="e#6209#6210#0" expanded="true" />
-            <element signature="e#6399#6400#0" expanded="true" />
-            <element signature="e#6445#6486#0" expanded="true" />
-            <element signature="e#6488#6715#0" expanded="true" />
-            <element signature="e#6714#6715#0" expanded="true" />
-            <element signature="e#6772#6773#0" expanded="true" />
-            <element signature="e#8191#8232#0" expanded="true" />
-            <element signature="e#8345#10982#0" expanded="true" />
-            <element signature="e#8606#8657#0" expanded="true" />
-            <element signature="e#8949#10822#0" expanded="true" />
-            <element signature="e#10821#10822#0" expanded="true" />
-            <element signature="e#10981#10982#0" expanded="true" />
-            <element signature="e#11137#11178#0" expanded="true" />
-            <element signature="e#11291#11771#0" expanded="true" />
-            <element signature="e#11770#11771#0" expanded="true" />
-            <element signature="e#11866#12111#0" expanded="true" />
-            <element signature="e#12110#12111#0" expanded="true" />
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/DAO/MySqlDAO/MySqlDiscountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/ProductSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding>
-            <element signature="e#3125#3483#0" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/Helper/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+        <state relative-caret-position="768">
+          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
           <folding>
-            <element signature="e#1735#2280#0" expanded="true" />
-            <element signature="e#2279#2280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/UpdateDiscount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-407">
-          <caret line="155" column="75" lean-forward="false" selection-start-line="155" selection-start-column="75" selection-end-line="155" selection-end-column="75" />
-          <folding>
-            <element signature="e#11577#11578#0" expanded="true" />
-            <element signature="e#11608#11609#0" expanded="true" />
-            <element signature="e#11686#11687#0" expanded="true" />
-            <element signature="e#11717#11718#0" expanded="true" />
-            <element signature="e#12328#12613#0" expanded="true" />
-            <element signature="e#12612#12613#0" expanded="true" />
-            <element signature="e#15992#16172#0" expanded="true" />
-            <element signature="e#16171#16172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/polytech/montpellier/lifiapp/AddDiscount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="153" column="74" lean-forward="false" selection-start-line="153" selection-start-column="74" selection-end-line="153" selection-end-column="74" />
-          <folding>
-            <element signature="e#7944#8359#0" expanded="true" />
-            <element signature="e#8358#8359#0" expanded="true" />
-            <element signature="e#8447#8448#0" expanded="true" />
-            <element signature="e#8478#8479#0" expanded="true" />
-            <element signature="e#8556#8557#0" expanded="true" />
-            <element signature="e#8587#8588#0" expanded="true" />
->>>>>>> master
+            <element signature="e#1451#1949#0" expanded="true" />
+            <element signature="e#1948#1949#0" expanded="true" />
+            <element signature="e#1951#2120#0" expanded="true" />
+            <element signature="e#2119#2120#0" expanded="true" />
           </folding>
         </state>
       </provider>
