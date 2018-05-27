@@ -24,15 +24,18 @@ import org.json.JSONObject;
 public class UpdateDepartment extends AppCompatActivity {
 
     final Context context = this;
+    //Declaration of the DAO
     DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getDepartmentDAO();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_department);
+        //Check connection
         Helper.hasActiveInternetConnection(this);
         final EditText text = (EditText) findViewById(R.id.nametf);
         Intent intent = getIntent();
+        //Retrieve elements of the mother page
         String name = intent.getStringExtra("name");
         final int id = intent.getIntExtra("id",-1);
         text.setText(name);
@@ -40,6 +43,7 @@ public class UpdateDepartment extends AppCompatActivity {
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Check Form
                 if(!text.getText().toString().isEmpty()) {
                     Department dep = new Department(id, text.getText().toString());
                     dao.update(dep, UserConnection.getInstance().getToken(), new ResponseHandler() {

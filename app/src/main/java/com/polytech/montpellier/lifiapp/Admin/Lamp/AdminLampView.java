@@ -33,12 +33,11 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by Kevin on 03/05/2018.
- */
+
 
 public class AdminLampView extends Fragment{
 
+    //DAO declaration
     LampDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getLampDAO();
 
     public AdminLampView(){}
@@ -62,10 +61,12 @@ public class AdminLampView extends Fragment{
     }
 
     public void updateDataAndView(){
+        //Check connection
         Helper.hasActiveInternetConnection(getActivity());
         FloatingActionButton fab = getView().findViewById(R.id.fab);
         fab.setVisibility(View.INVISIBLE);
         FloatingActionButton changepass = getView().findViewById(R.id.changepassword);
+        //Change password
         changepass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,6 +140,7 @@ public class AdminLampView extends Fragment{
         });
         final TableLayout tl =  getView().findViewById(R.id.main_table);
         tl.removeAllViews();
+
         dao.getAll(new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
@@ -195,6 +197,7 @@ public class AdminLampView extends Fragment{
                         label_department.setWidth(tl.getWidth() / 4);
                         row.addView(label_department); // add the column to the table row here
 
+                        //Delete the lamp
                         Button delete = new Button(getActivity());
                         delete.setText(getResources().getString(R.string.delete));
                         delete.setWidth(tl.getWidth() / 4);
@@ -240,6 +243,7 @@ public class AdminLampView extends Fragment{
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                //Prepare elements for the child page
                                 Intent intent = new Intent(getActivity(), UpdateLamp.class);
                                 intent.putExtra("name",label_lamp.getText());
                                 intent.putExtra("lamp",row.getId());

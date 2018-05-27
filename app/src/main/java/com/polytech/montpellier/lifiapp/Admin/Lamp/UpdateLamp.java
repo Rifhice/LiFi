@@ -30,6 +30,8 @@ public class UpdateLamp extends AppCompatActivity {
 
     final Context context = this;
     int idDep = -1;
+
+    //DAO declaration
     LampDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getLampDAO();
     DepartmentDAO daoD = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getDepartmentDAO();
 
@@ -37,8 +39,10 @@ public class UpdateLamp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lamp_add);
+        //Check connection
         Helper.hasActiveInternetConnection(this);
         Helper.getInstance(this);
+        //Get the information of the mmother page
         Intent intent = getIntent();
         final int id = intent.getIntExtra("lamp",0);
         final String name = intent.getStringExtra("name");
@@ -46,6 +50,7 @@ public class UpdateLamp extends AppCompatActivity {
         final EditText text = (EditText) findViewById(R.id.nametf);
         text.setText(name);
         Button validate = (Button)findViewById(R.id.validate);
+        //Button to validate the update of the lamp
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,6 +89,7 @@ public class UpdateLamp extends AppCompatActivity {
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
         final HashMap<String, Integer> depMap=new HashMap<String, Integer>();
 
+        //Get all departments
         daoD.getAll(new ResponseHandler() {
 
             @Override
@@ -117,6 +123,7 @@ public class UpdateLamp extends AppCompatActivity {
             }
         });
 
+        //Get the ID of the department selected with the spinner
         spinnerDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {

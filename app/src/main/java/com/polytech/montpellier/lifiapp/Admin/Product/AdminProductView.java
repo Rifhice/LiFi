@@ -33,11 +33,10 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by Kevin on 03/05/2018.
- */
 
 public class AdminProductView extends Fragment{
+
+    //Declaration DAO
 
     ProductDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getProductDAO();
 
@@ -51,6 +50,7 @@ public class AdminProductView extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //Place the view
         return inflater.inflate(R.layout.lampall_display, container, false);
     }
 
@@ -64,7 +64,10 @@ public class AdminProductView extends Fragment{
 
 
     public void updateDataAndView(){
+        //Check for the internet
         Helper.hasActiveInternetConnection(getActivity());
+
+        //Set buttons
         FloatingActionButton fab = getView().findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +115,7 @@ public class AdminProductView extends Fragment{
                             alertDialog.show();
                         }
                         else{
+                            //Change the password
                             UserConnection.getInstance().changePassword(new1.getText().toString(), new ResponseHandler() {
                                 @Override
                                 public void onSuccess(Object object) {
@@ -148,7 +152,7 @@ public class AdminProductView extends Fragment{
         final TableLayout tl = getView().findViewById(R.id.main_table);
         tl.removeAllViews();
 
-
+        //Retrieve all the products
         dao.getAll(new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
@@ -186,20 +190,18 @@ public class AdminProductView extends Fragment{
 
                     tl.addView(headerRow);// add the column to the table row here
 
+                    //Retrieve Discount of the products
                     ArrayList<Product> array = (ArrayList<Product>)object;
                     for(int i = 0 ; i < array.size() ; i++) {
                         final Product product = array.get(i);
-                        System.out.println("product11" + product);
-
                         dao.getProductDiscounts(product, new ResponseHandler() {
                             @Override
                             public void onSuccess(Object object) {
-                                System.out.println("discounts of product "+object);
+
                             }
 
                             @Override
                             public void onError(Object object) {
-                                System.out.println("FAILE");
                             }
                         });
 
@@ -231,7 +233,7 @@ public class AdminProductView extends Fragment{
                         label_dep.setWidth(tl.getWidth() / 6);
                         row.addView(label_dep);
 
-
+                        //Delete a product
                         Button delete = new Button(getActivity());
                         delete.setText(getResources().getString(R.string.delete));
                         delete.setWidth(tl.getWidth() / 6);
@@ -277,6 +279,7 @@ public class AdminProductView extends Fragment{
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                //Prepare variables to give another file
                                 Intent intent = new Intent(getActivity(), UpdateProduct.class);
                                 intent.putExtra("name",product.getName());
                                 intent.putExtra("product",row.getId());
@@ -287,10 +290,10 @@ public class AdminProductView extends Fragment{
                         });
                         row.addView(update);
 
+                        //Button to display information about a product
                         Button info = new Button(getActivity());
                         info.setText(getResources().getString(R.string.info));
                         info.setWidth(tl.getWidth() /8);
-
                         info.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(final View v) {

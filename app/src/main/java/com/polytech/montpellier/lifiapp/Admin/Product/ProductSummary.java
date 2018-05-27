@@ -28,28 +28,33 @@ public class ProductSummary extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_display);
+        //Check the internet connection
         Helper.hasActiveInternetConnection(this);
         Intent intent = getIntent();
 
+        //Declaration of the DAO
         ProductDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getProductDAO();
 
+        //Retrieve graphical elements
         final TextView textView_brand = (TextView) findViewById(R.id.textView_detailMarque);
         final TextView textView_name = (TextView) findViewById(R.id.textView_detailName);
         final TextView textView_department = (TextView) findViewById(R.id.textView_detailRayon);
         final TextView textView_price = (TextView) findViewById(R.id.textView_detailPrix);
         final TextView textView_description = (TextView) findViewById(R.id.textView_detailDescription) ;
 
+        //Retrieve elements of the mother page
         final int idProduct = intent.getIntExtra("product",0);
         final String brand = intent.getStringExtra("brand");
         final String price = intent.getStringExtra("price");
         final String name = intent.getStringExtra("name");
         final ArrayList<Integer> ar = new ArrayList<>();
 
+        //Set Textfields
         textView_name.setText(name);
         textView_brand.setText(brand);
         textView_price.setText(price);
 
-
+        //Get the product thanks to the ID
         dao.getById(idProduct, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
@@ -86,7 +91,7 @@ public class ProductSummary extends Activity {
                 }
         });
 
-
+        //Button to add a discount to a product
         FloatingActionButton fab = findViewById(R.id.fab2);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

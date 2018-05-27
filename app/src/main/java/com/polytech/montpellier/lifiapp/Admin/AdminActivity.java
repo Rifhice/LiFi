@@ -23,12 +23,11 @@ import com.polytech.montpellier.lifiapp.MainActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Kevin on 03/05/2018.
- */
+
 
 public class AdminActivity extends AppCompatActivity {
 
+    //Retrieve graphical elements
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -68,6 +67,7 @@ public class AdminActivity extends AppCompatActivity {
     }
 
     public void openNewLampPopUp(final int lamp){
+        //If a new lamp is detected
         new AlertDialog.Builder(this)
                 .setTitle(getResources().getString(R.string.newLamp))
                 .setMessage(getResources().getString(R.string.newLampDetectedMessage))

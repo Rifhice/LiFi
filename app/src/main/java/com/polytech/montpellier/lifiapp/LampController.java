@@ -20,14 +20,13 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by Kevin on 03/05/2018.
- */
 
 public class LampController extends AppCompatActivity {
 
     final Context context = this;
     private static LampController instance = null;
+
+    //DAO declaration
     private LampDAO lampDAO = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getLampDAO();
 
     private LampController(){

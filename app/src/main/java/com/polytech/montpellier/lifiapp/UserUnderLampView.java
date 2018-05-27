@@ -35,16 +35,13 @@ import com.polytech.montpellier.lifiapp.Model.Product;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-/**
- * Created by Kevin on 03/05/2018.
- */
 
 public class UserUnderLampView extends AppCompatActivity {
 
 
     final Context context = this;
 
-    DiscountDAO daoDiscount = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getDiscountDAO();
+    //DAO declaration
     DepartmentDAO daodep = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getDepartmentDAO();
     ProductDAO daoProduit = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getProductDAO();
 
@@ -57,7 +54,10 @@ public class UserUnderLampView extends AppCompatActivity {
         Helper.getInstance(this);
 
         setContentView(R.layout.user_under_lamp);
+        //Check internet connection
         Helper.hasActiveInternetConnection(this);
+
+        //Retrieve graphical elements
         final TableLayout tl = findViewById(R.id.promotionsJourTable);
         final TextView rayonTV = findViewById(R.id.rayonTV);
 
@@ -79,6 +79,7 @@ public class UserUnderLampView extends AppCompatActivity {
         tl.addView(tr_head);
 
         final Intent intent = getIntent();
+        //Prepare elements for the child page
         intent.getStringExtra("lampName");
         final int pkDep = intent.getIntExtra("lampDep", 0);
 
@@ -225,12 +226,12 @@ public class UserUnderLampView extends AppCompatActivity {
 
                                                                     tl.addView(row);
 
-                                                                }// lseif lenght 9
+                                                                }
                                                             }
-                                                        }// for productDiscountd
+                                                        }
                                                     }
-                                                }// else
-                                            }// On success Product discounts
+                                                }
+                                            }
 
                                             @Override
                                             public void onError(Object object) {
@@ -240,14 +241,14 @@ public class UserUnderLampView extends AppCompatActivity {
                                             }
 
 
-                                        });//for depProducts
+                                        });
 
-                                    }// if
-                                }//else On success
-                            } //on success
+                                    }
+                                }
+                            }
                         }
 
-                        ;//getProducts of dep
+
 
                         @Override
                         public void onError(Object object) {
@@ -261,10 +262,10 @@ public class UserUnderLampView extends AppCompatActivity {
             @Override
             public void onError(Object object) {
 
-            }//daodep getbyid
+            }
 
 
-        });//on create
+        });
     }
 
     @Override
@@ -274,5 +275,5 @@ public class UserUnderLampView extends AppCompatActivity {
     }
 
 
-}//userunderLamp
+}
 

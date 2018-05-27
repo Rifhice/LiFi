@@ -58,9 +58,10 @@ public class MainActivity extends AppCompatActivity {
         Helper.getInstance(this);
 
 
-
+        //Retrieve graphical elements
         testText = (TextView)findViewById(R.id.testText);
         logo = (ImageView) findViewById(R.id.imageView_logo_main);
+        //To go to the admin section
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

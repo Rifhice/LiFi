@@ -34,6 +34,7 @@ import java.util.ArrayList;
 
 public class AdminDepartmentView extends Fragment{
 
+    //Declaration of the DAO
     DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getDepartmentDAO();
 
     @Override
@@ -54,7 +55,10 @@ public class AdminDepartmentView extends Fragment{
     }
 
     public void updateDataAndView(){
+        //Check the internet connection
         Helper.hasActiveInternetConnection(getActivity());
+
+        //Buttons
         FloatingActionButton fab = getView().findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +106,7 @@ public class AdminDepartmentView extends Fragment{
                             alertDialog.show();
                         }
                         else{
+                            //Change the password
                             UserConnection.getInstance().changePassword(new1.getText().toString(), new ResponseHandler() {
                                 @Override
                                 public void onSuccess(Object object) {
@@ -231,6 +236,7 @@ public class AdminDepartmentView extends Fragment{
                         });
                         row.addView(delete);
 
+                        //Update
                         Button update = new Button(getActivity());
                         update.setText(getResources().getString(R.string.update));
                         update.setWidth(tl.getWidth() / 3);
@@ -238,6 +244,7 @@ public class AdminDepartmentView extends Fragment{
                             @Override
                             public void onClick(View v) {
                                 Intent intent = new Intent(getActivity(), UpdateDepartment.class);
+                                //Prepare elements for the chil page
                                 intent.putExtra("name",label_lamp.getText());
                                 intent.putExtra("id",row.getId());
                                 startActivity(intent);

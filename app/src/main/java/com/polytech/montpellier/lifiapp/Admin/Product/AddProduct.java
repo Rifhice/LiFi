@@ -172,6 +172,7 @@ public class AddProduct extends AppCompatActivity{
             }
         });
 
+        //Get the ID of the selected element of the spinner
         spinnerDepartment.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {

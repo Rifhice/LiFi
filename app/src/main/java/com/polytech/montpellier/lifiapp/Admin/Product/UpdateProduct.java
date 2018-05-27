@@ -30,6 +30,7 @@ import java.util.HashMap;
 public class UpdateProduct extends AppCompatActivity {
     int idDep = -1;
     final Context context = this;
+
     //Declaration DAO
     DepartmentDAO dao = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getDepartmentDAO();
     ProductDAO daoP = AbstractDAOFactory.getFactory(AbstractDAOFactory.DISTANT_DAO_FACTORY).getProductDAO();
@@ -55,11 +56,12 @@ public class UpdateProduct extends AppCompatActivity {
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list,R.id.list1, dep);
         final HashMap<String, Integer> depMap=new HashMap<String, Integer>();
 
+        //Initialize Textfields
         text_name.setText(name);
         text_brand.setText(brand);
         text_price.setText(price);
 
-
+        //Get all the departments
         dao.getAll(new ResponseHandler() {
 
             @Override
@@ -92,6 +94,7 @@ public class UpdateProduct extends AppCompatActivity {
             }
         });
 
+        //Get the product thanks to an ID
         daoP.getById(id, new ResponseHandler() {
             @Override
             public void onSuccess(Object object) {
@@ -125,6 +128,7 @@ public class UpdateProduct extends AppCompatActivity {
 
         });
 
+        //Get the id of the selected item
         spinnerDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -139,17 +143,19 @@ public class UpdateProduct extends AppCompatActivity {
 
         });
 
-
+        //Button to validate the modifications of the product
         Button validate = findViewById(R.id.button_addProduct);
         validate.setText(R.string.update);
         validate.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                //Check form
                 if (!text_name.getText().toString().isEmpty() && !text_description.getText().toString().isEmpty()
                         && !text_brand.getText().toString().isEmpty() && !text_price.getText().toString().isEmpty() && idDep>=0) {
 
                     Product product = new Product(id, text_name.getText().toString(), text_description.getText().toString(), Float.parseFloat(text_price.getText().toString()), text_brand.getText().toString(), new Department(idDep));
+                    //Update the products with the new fields
                     daoP.update( product, UserConnection.getInstance().getToken(), new ResponseHandler() {
                         @Override
                         public void onSuccess(Object object) {
@@ -172,6 +178,7 @@ public class UpdateProduct extends AppCompatActivity {
 
                 }
                 else{
+                    //Check if the textfield is blank
                     if(text_name.getText().toString().isEmpty()) {
                         text_name.setError( getResources().getString(R.string.name) + getResources().getString(R.string.leftBlank));
                     }

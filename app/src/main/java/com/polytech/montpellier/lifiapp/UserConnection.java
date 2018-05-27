@@ -10,9 +10,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-/**
- * Created by Kevin on 03/05/2018.
- */
 
 public class UserConnection {
 
@@ -33,8 +30,6 @@ public class UserConnection {
     public void login(String password, final ResponseHandler responseHandler){
 
         String url = MainActivity.url + "Auth" ;
-       //TODO getResources().getString(R.string.url)
-
         Map<String, String> params = new HashMap<String, String>();
         params.put("password", password);
 
@@ -74,8 +69,6 @@ public class UserConnection {
 
     public void changePassword(String newPass, final ResponseHandler res){
         String url = MainActivity.url + "Auth" ;
-        //TODO getResources().getString(R.string.url)
-
         Map<String, String> params = new HashMap<String, String>();
         params.put("password", newPass);
 
